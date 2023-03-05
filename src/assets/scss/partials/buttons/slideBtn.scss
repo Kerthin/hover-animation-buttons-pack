@@ -1,0 +1,185 @@
+/*____________________________________________________________
+# Slide Button Variables
+____________________________________________________________*/
+$slideBtnWidth: 160px;
+$slideBtnHeight: ($slideBtnWidth / 100) * 32.5;
+
+$slideInnerWidth: ($slideBtnWidth / 100) * 95;
+$slideInnerHeight: ($slideInnerWidth / 100) * 29;
+
+$slideInnerWidthMargin: $slideBtnWidth - $slideInnerWidth;
+$slideInnerHeightMargin: $slideBtnHeight - $slideInnerHeight;
+
+$slideBtnFontSize: $slideBtnHeight / 3.14;
+
+$slideBtnTime: .3s;
+
+/*____________________________________________________________
+# Slide Button
+____________________________________________________________*/
+.slideBtn {
+  position: relative;
+  margin: 20px;
+  width: $slideBtnWidth;
+  height: $slideBtnHeight;
+  background-color: transparent;
+  cursor: pointer;
+  
+  .slideBtn__gradientBlock {
+    position: absolute;
+    width: $slideInnerWidth;
+    height: $slideInnerHeight;
+    background: repeating-linear-gradient(135deg, #fff, #fff 10px, #13334c 10px, #13334c 20px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  
+  .slideBtn__moveBlock {
+    position: absolute;
+    width: $slideInnerWidth;
+    height: $slideInnerHeight;
+    line-height: $slideInnerHeight;
+    font-family: "Roboto Slab";
+    font-size: $slideBtnFontSize;
+    font-weight: 900;
+    color: #C00000;
+    border: 2px solid #C00000;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: top $slideBtnTime, bottom $slideBtnTime, left $slideBtnTime, right $slideBtnTime, color $slideBtnTime;
+    z-index: 1;
+    cursor: pointer;
+    
+    &:after {
+      position: absolute;
+      content: "";
+      background: #C00000;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+  }
+}
+/*____________________________________________________________
+## Slide Buttons Mod
+____________________________________________________________*/
+._lr {
+  .slideBtn__gradientBlock {
+    bottom: 0;
+    left: 0;
+  }
+  .slideBtn__moveBlock {
+    top: 0;
+    right: 0;
+    
+    &:after {
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+    }
+  }
+  
+  &:hover {
+    .slideBtn__moveBlock {
+      top: $slideInnerHeightMargin;
+      right: $slideInnerWidthMargin;
+      color: #fff;
+      
+      &:after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+._rl {
+  .slideBtn__gradientBlock {
+    bottom: 0;
+    right: 0;
+  }
+  .slideBtn__moveBlock {
+    top: 0;
+    left: 0;
+    
+    &:after {
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+    }
+  }
+  
+  &:hover {
+    .slideBtn__moveBlock {
+      top: $slideInnerHeightMargin;
+      left: $slideInnerWidthMargin;
+      color: #fff;
+      
+      &:after {
+        left: auto;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+._tb {
+  .slideBtn__gradientBlock {
+    top: 0;
+    right: 0;
+  }
+  .slideBtn__moveBlock {
+    bottom: 0;
+    left: 0;
+    
+    &:after {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+    }
+  }
+  
+  &:hover {
+    .slideBtn__moveBlock {
+      bottom: $slideInnerHeightMargin;
+      left: $slideInnerWidthMargin;
+      color: #fff;
+      
+      &:after {
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+._bt {
+  .slideBtn__gradientBlock {
+    top: 0;
+    left: 0;
+  }
+  .slideBtn__moveBlock {
+    bottom: 0;
+    right: 0;
+    
+    &:after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+    }
+  }
+  
+  &:hover {
+    .slideBtn__moveBlock {
+      bottom: $slideInnerHeightMargin;
+      right: $slideInnerWidthMargin;
+      color: #fff;
+      
+      &:after {
+        top: auto;
+        bottom: 0;
+        height: 100%;
+      }
+    }
+  }
+}

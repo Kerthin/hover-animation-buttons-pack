@@ -1,6 +1,7 @@
 /*____________________________________________________________
 
 # Container
+# @import Buttons Styles
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -60,4 +61,175 @@ ____________________________________________________________*/
 
 .presentWrap__buttonsBlock._column {
     flex-direction: column;
+}
+
+/*____________________________________________________________
+# @import Buttons Styles
+____________________________________________________________*/
+/*____________________________________________________________
+## @import slideBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Slide Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Slide Button
+____________________________________________________________*/
+.slideBtn {
+    position: relative;
+    margin: 20px;
+    width: 160px;
+    height: 52px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slideBtn .slideBtn__gradientBlock {
+    position: absolute;
+    width: 152px;
+    height: 44.08px;
+    background: repeating-linear-gradient(135deg, #fff, #fff 10px, #13334c 10px, #13334c 20px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.slideBtn .slideBtn__moveBlock {
+    position: absolute;
+    width: 152px;
+    height: 44.08px;
+    line-height: 44.08px;
+    font-family: "Roboto Slab";
+    font-size: 16.5605095541px;
+    font-weight: 900;
+    color: #C00000;
+    border: 2px solid #C00000;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, color 0.3s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slideBtn .slideBtn__moveBlock:after {
+    position: absolute;
+    content: "";
+    background: #C00000;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+/*____________________________________________________________
+## Slide Buttons Mod
+____________________________________________________________*/
+._lr .slideBtn__gradientBlock {
+    bottom: 0;
+    left: 0;
+}
+
+._lr .slideBtn__moveBlock {
+    top: 0;
+    right: 0;
+}
+
+._lr .slideBtn__moveBlock:after {
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+}
+
+._lr:hover .slideBtn__moveBlock {
+    top: 7.92px;
+    right: 8px;
+    color: #fff;
+}
+
+._lr:hover .slideBtn__moveBlock:after {
+    left: 0;
+    width: 100%;
+}
+
+._rl .slideBtn__gradientBlock {
+    bottom: 0;
+    right: 0;
+}
+
+._rl .slideBtn__moveBlock {
+    top: 0;
+    left: 0;
+}
+
+._rl .slideBtn__moveBlock:after {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+}
+
+._rl:hover .slideBtn__moveBlock {
+    top: 7.92px;
+    left: 8px;
+    color: #fff;
+}
+
+._rl:hover .slideBtn__moveBlock:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+._tb .slideBtn__gradientBlock {
+    top: 0;
+    right: 0;
+}
+
+._tb .slideBtn__moveBlock {
+    bottom: 0;
+    left: 0;
+}
+
+._tb .slideBtn__moveBlock:after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+}
+
+._tb:hover .slideBtn__moveBlock {
+    bottom: 7.92px;
+    left: 8px;
+    color: #fff;
+}
+
+._tb:hover .slideBtn__moveBlock:after {
+    top: 0;
+    height: 100%;
+}
+
+._bt .slideBtn__gradientBlock {
+    top: 0;
+    left: 0;
+}
+
+._bt .slideBtn__moveBlock {
+    bottom: 0;
+    right: 0;
+}
+
+._bt .slideBtn__moveBlock:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+}
+
+._bt:hover .slideBtn__moveBlock {
+    bottom: 7.92px;
+    right: 8px;
+    color: #fff;
+}
+
+._bt:hover .slideBtn__moveBlock:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
 }

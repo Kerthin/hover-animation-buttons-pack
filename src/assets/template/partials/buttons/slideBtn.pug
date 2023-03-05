@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Slide Buttons
+  .presentWrap__buttonsBlock
+
+    mixin slideBtnMix(btnMod, btnText)
+      button.slideBtn(class=`${btnMod}`)
+        .slideBtn__gradientBlock
+        .slideBtn__moveBlock #{btnText}
+
+    +slideBtnMix('_lr', 'Left Right')
+    +slideBtnMix('_rl', 'Right Left')
+    +slideBtnMix('_tb', 'Top Bottom')
+    +slideBtnMix('_bt', 'Bottom Top')
