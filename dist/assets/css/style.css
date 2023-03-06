@@ -2,6 +2,8 @@
 
 # Container
 # @import Buttons Styles
+    ## @import slideBtn.scss
+    ## @import borderBreakPointBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -232,4 +234,153 @@ ____________________________________________________________*/
     top: auto;
     bottom: 0;
     height: 100%;
+}
+
+/*____________________________________________________________
+## @import borderBreakPointBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Border Break Point Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Border Break Point Button
+____________________________________________________________*/
+.borderPointBtnWrap {
+    position: relative;
+    margin: 20px 25px;
+    width: 200px;
+    height: 65px;
+    overflow: hidden;
+}
+
+.borderPointBtnWrap:before, .borderPointBtnWrap:after {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s;
+    z-index: 2;
+}
+
+.borderPointBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto Slab";
+    font-size: 20.7006369427px;
+    font-weight: 900;
+    text-transform: capitalize;
+    border: 5px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.borderPointBtn:before, .borderPointBtn:after {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s;
+    z-index: 2;
+}
+
+/*____________________________________________________________
+## Border Break Point Mod
+____________________________________________________________*/
+.borderPointBtnWrap {
+  /*____________________________________________________________
+  ### Border Double Break Point Mod
+  ____________________________________________________________*/
+}
+
+.borderPointBtnWrap._left_right:before, .borderPointBtnWrap._left_right:after {
+    width: calc(5px * 1.5);
+    height: 5px;
+}
+
+.borderPointBtnWrap._left_right:before {
+    top: 0;
+    left: 20%;
+}
+
+.borderPointBtnWrap._left_right:after {
+    bottom: 0;
+    right: 20%;
+}
+
+.borderPointBtnWrap._left_right:hover:before {
+    left: 70%;
+}
+
+.borderPointBtnWrap._left_right:hover:after {
+    right: 70%;
+}
+
+.borderPointBtnWrap._right_left:before, .borderPointBtnWrap._right_left:after {
+    width: calc(5px * 1.5);
+    height: 5px;
+}
+
+.borderPointBtnWrap._right_left:before {
+    top: 0;
+    right: 20%;
+}
+
+.borderPointBtnWrap._right_left:after {
+    bottom: 0;
+    left: 20%;
+}
+
+.borderPointBtnWrap._right_left:hover:before {
+    right: 70%;
+}
+
+.borderPointBtnWrap._right_left:hover:after {
+    left: 70%;
+}
+
+.borderPointBtnWrap._top_bottom:before, .borderPointBtnWrap._top_bottom:after {
+    width: 5px;
+    height: calc(5px * 1.5);
+}
+
+.borderPointBtnWrap._top_bottom:before {
+    top: 20%;
+    left: 0;
+}
+
+.borderPointBtnWrap._top_bottom:after {
+    bottom: 20%;
+    right: 0;
+}
+
+.borderPointBtnWrap._top_bottom:hover:before {
+    top: 70%;
+}
+
+.borderPointBtnWrap._top_bottom:hover:after {
+    bottom: 70%;
+}
+
+.borderPointBtnWrap._bottom_top:before, .borderPointBtnWrap._bottom_top:after {
+    width: 5px;
+    height: calc(5px * 1.5);
+}
+
+.borderPointBtnWrap._bottom_top:before {
+    bottom: 20%;
+    left: 0;
+}
+
+.borderPointBtnWrap._bottom_top:after {
+    top: 20%;
+    right: 0;
+}
+
+.borderPointBtnWrap._bottom_top:hover:before {
+    bottom: 70%;
+}
+
+.borderPointBtnWrap._bottom_top:hover:after {
+    top: 70%;
 }

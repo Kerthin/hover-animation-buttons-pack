@@ -2,6 +2,8 @@
 
 # Container
 # @import Buttons Styles
+    ## @import slideBtn.scss
+    ## @import borderBreakPointBtn.scss
 
 ____________________________________________________________*/
 
@@ -17,3 +19,8 @@ ____________________________________________________________*/
 ## @import slideBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/slideBtn.scss';
+
+/*____________________________________________________________
+## @import borderBreakPointBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/borderBreakPointBtn.scss';

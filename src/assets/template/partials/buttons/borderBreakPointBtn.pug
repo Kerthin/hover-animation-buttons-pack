@@ -1,0 +1,12 @@
+section.presentWrap
+  h1.presentWrap__title Slide Buttons
+  .presentWrap__buttonsBlock
+
+    mixin borderPointBtn(firstPointSide, secondPointSide)
+      .borderPointBtnWrap(class=`_${firstPointSide}_${secondPointSide}`)
+        button.borderPointBtn #{firstPointSide} #{secondPointSide}
+
+    +borderPointBtn('left', 'right')
+    +borderPointBtn('right', 'left')
+    +borderPointBtn('top', 'bottom')
+    +borderPointBtn('bottom', 'top')
