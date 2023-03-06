@@ -108,4 +108,112 @@ ____________________________________________________________*/
   @include borderDoublePointModMix(right, left, $vertical: false);
   @include borderDoublePointModMix(top, bottom, $vertical: true);
   @include borderDoublePointModMix(bottom, top, $vertical: true);
+
+  /*____________________________________________________________
+  #### Border Quad Point Mod
+  ____________________________________________________________*/
+  @mixin borderQuadPointModMix($firstPointSide, $secondPointSide, $thirdPointSide, $fourthPointSide, $vertical: false) {
+    &._#{$firstPointSide}_#{$secondPointSide}_#{$thirdPointSide}_#{$fourthPointSide} {
+
+      // Inner
+      .borderPointBtn {
+        &:before,
+        &:after {
+          @if $vertical == false {
+            width: $borderPointWidth;
+            height: calc(#{$borderPointWidth} * 1.5);
+          } @else {
+            width: calc(#{$borderPointWidth} * 1.5);
+            height: $borderPointWidth;
+          }
+        }
+
+        @if $vertical == false {
+          &:before {
+            #{$thirdPointSide}: calc((-#{$borderPointWidth} * 1.5) * 2);
+            left: -$borderPointWidth;
+          }
+          &:after {
+            #{$fourthPointSide}: calc((-#{$borderPointWidth} * 1.5) * 2);
+            right: -$borderPointWidth;
+          }
+        } @else {
+          &:before {
+            top: -$borderPointWidth;
+            #{$thirdPointSide}: calc((-#{$borderPointWidth} * 1.5) * 2);
+          }
+          &:after {
+            bottom: -$borderPointWidth;
+            #{$fourthPointSide}: calc((-#{$borderPointWidth} * 1.5) * 2);
+          }
+        }
+
+        &:hover {
+          &:before,
+          &:after {
+            transition-delay: calc((#{$borderPointBtnTime} / 3) * 2);
+          }
+        }
+      }
+
+      // Outer
+      &:before,
+      &:after {
+        @if $vertical == true {
+          width: $borderPointWidth;
+          height: calc(#{$borderPointWidth} * 1.5);
+        } @else {
+          width: calc(#{$borderPointWidth} * 1.5);
+          height: $borderPointWidth;
+        }
+        transition-delay: calc((#{$borderPointBtnTime} / 3) * 2);
+      }
+
+      @if $vertical == true {
+        &:before {
+          #{$firstPointSide}: 20%;
+          left: 0;
+        }
+        &:after {
+          #{$secondPointSide}: 20%;
+          right: 0;
+        }
+      } @else {
+        &:before {
+          top: 0;
+          #{$firstPointSide}: 20%;
+        }
+        &:after {
+          bottom: 0;
+          #{$secondPointSide}: 20%;
+        }
+      }
+
+      &:hover {
+        &:before,
+        &:after {
+          transition-delay: 0s;
+        }
+        &:before {
+          #{$firstPointSide}: 100%;
+        }
+        &:after {
+          #{$secondPointSide}: 100%;
+        }
+        .borderPointBtn {
+          &:before {
+            #{$thirdPointSide}: 70%;
+          }
+          &:after {
+            #{$fourthPointSide}: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  @include borderQuadPointModMix(left, right, bottom, top, $vertical: false);
+  @include borderQuadPointModMix(right, left, top, bottom, $vertical: false);
+  @include borderQuadPointModMix(top, bottom, right, left, $vertical: true);
+  @include borderQuadPointModMix(bottom, top, left, right, $vertical: true);
 }

@@ -10,3 +10,12 @@ section.presentWrap
     +borderPointBtn('right', 'left')
     +borderPointBtn('top', 'bottom')
     +borderPointBtn('bottom', 'top')
+
+    mixin borderPointQuadBtn(firstPointSide, secondPointSide, thirdPointSide, fourthPointSide)
+      .borderPointBtnWrap(class=`_${firstPointSide}_${secondPointSide}_${thirdPointSide}_${fourthPointSide}`)
+        button.borderPointBtn #{firstPointSide} #{secondPointSide} #{thirdPointSide} #{fourthPointSide}
+  
+    +borderPointQuadBtn('left', 'right', 'bottom', 'top')
+    +borderPointQuadBtn('right', 'left', 'top', 'bottom')
+    +borderPointQuadBtn('top', 'bottom', 'right', 'left')
+    +borderPointQuadBtn('bottom', 'top', 'left', 'right')

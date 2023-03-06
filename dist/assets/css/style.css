@@ -291,6 +291,9 @@ ____________________________________________________________*/
   /*____________________________________________________________
   ### Border Double Break Point Mod
   ____________________________________________________________*/
+  /*____________________________________________________________
+  #### Border Quad Point Mod
+  ____________________________________________________________*/
 }
 
 .borderPointBtnWrap._left_right:before, .borderPointBtnWrap._left_right:after {
@@ -383,4 +386,224 @@ ____________________________________________________________*/
 
 .borderPointBtnWrap._bottom_top:hover:after {
     top: 70%;
+}
+
+.borderPointBtnWrap._left_right_bottom_top .borderPointBtn:before, .borderPointBtnWrap._left_right_bottom_top .borderPointBtn:after {
+    width: 5px;
+    height: calc(5px * 1.5);
+}
+
+.borderPointBtnWrap._left_right_bottom_top .borderPointBtn:before {
+    bottom: calc((-5px * 1.5) * 2);
+    left: -5px;
+}
+
+.borderPointBtnWrap._left_right_bottom_top .borderPointBtn:after {
+    top: calc((-5px * 1.5) * 2);
+    right: -5px;
+}
+
+.borderPointBtnWrap._left_right_bottom_top .borderPointBtn:hover:before, .borderPointBtnWrap._left_right_bottom_top .borderPointBtn:hover:after {
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._left_right_bottom_top:before, .borderPointBtnWrap._left_right_bottom_top:after {
+    width: calc(5px * 1.5);
+    height: 5px;
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._left_right_bottom_top:before {
+    top: 0;
+    left: 20%;
+}
+
+.borderPointBtnWrap._left_right_bottom_top:after {
+    bottom: 0;
+    right: 20%;
+}
+
+.borderPointBtnWrap._left_right_bottom_top:hover:before, .borderPointBtnWrap._left_right_bottom_top:hover:after {
+    transition-delay: 0s;
+}
+
+.borderPointBtnWrap._left_right_bottom_top:hover:before {
+    left: 100%;
+}
+
+.borderPointBtnWrap._left_right_bottom_top:hover:after {
+    right: 100%;
+}
+
+.borderPointBtnWrap._left_right_bottom_top:hover .borderPointBtn:before {
+    bottom: 70%;
+}
+
+.borderPointBtnWrap._left_right_bottom_top:hover .borderPointBtn:after {
+    top: 70%;
+}
+
+.borderPointBtnWrap._right_left_top_bottom .borderPointBtn:before, .borderPointBtnWrap._right_left_top_bottom .borderPointBtn:after {
+    width: 5px;
+    height: calc(5px * 1.5);
+}
+
+.borderPointBtnWrap._right_left_top_bottom .borderPointBtn:before {
+    top: calc((-5px * 1.5) * 2);
+    left: -5px;
+}
+
+.borderPointBtnWrap._right_left_top_bottom .borderPointBtn:after {
+    bottom: calc((-5px * 1.5) * 2);
+    right: -5px;
+}
+
+.borderPointBtnWrap._right_left_top_bottom .borderPointBtn:hover:before, .borderPointBtnWrap._right_left_top_bottom .borderPointBtn:hover:after {
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._right_left_top_bottom:before, .borderPointBtnWrap._right_left_top_bottom:after {
+    width: calc(5px * 1.5);
+    height: 5px;
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._right_left_top_bottom:before {
+    top: 0;
+    right: 20%;
+}
+
+.borderPointBtnWrap._right_left_top_bottom:after {
+    bottom: 0;
+    left: 20%;
+}
+
+.borderPointBtnWrap._right_left_top_bottom:hover:before, .borderPointBtnWrap._right_left_top_bottom:hover:after {
+    transition-delay: 0s;
+}
+
+.borderPointBtnWrap._right_left_top_bottom:hover:before {
+    right: 100%;
+}
+
+.borderPointBtnWrap._right_left_top_bottom:hover:after {
+    left: 100%;
+}
+
+.borderPointBtnWrap._right_left_top_bottom:hover .borderPointBtn:before {
+    top: 70%;
+}
+
+.borderPointBtnWrap._right_left_top_bottom:hover .borderPointBtn:after {
+    bottom: 70%;
+}
+
+.borderPointBtnWrap._top_bottom_right_left .borderPointBtn:before, .borderPointBtnWrap._top_bottom_right_left .borderPointBtn:after {
+    width: calc(5px * 1.5);
+    height: 5px;
+}
+
+.borderPointBtnWrap._top_bottom_right_left .borderPointBtn:before {
+    top: -5px;
+    right: calc((-5px * 1.5) * 2);
+}
+
+.borderPointBtnWrap._top_bottom_right_left .borderPointBtn:after {
+    bottom: -5px;
+    left: calc((-5px * 1.5) * 2);
+}
+
+.borderPointBtnWrap._top_bottom_right_left .borderPointBtn:hover:before, .borderPointBtnWrap._top_bottom_right_left .borderPointBtn:hover:after {
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._top_bottom_right_left:before, .borderPointBtnWrap._top_bottom_right_left:after {
+    width: 5px;
+    height: calc(5px * 1.5);
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._top_bottom_right_left:before {
+    top: 20%;
+    left: 0;
+}
+
+.borderPointBtnWrap._top_bottom_right_left:after {
+    bottom: 20%;
+    right: 0;
+}
+
+.borderPointBtnWrap._top_bottom_right_left:hover:before, .borderPointBtnWrap._top_bottom_right_left:hover:after {
+    transition-delay: 0s;
+}
+
+.borderPointBtnWrap._top_bottom_right_left:hover:before {
+    top: 100%;
+}
+
+.borderPointBtnWrap._top_bottom_right_left:hover:after {
+    bottom: 100%;
+}
+
+.borderPointBtnWrap._top_bottom_right_left:hover .borderPointBtn:before {
+    right: 70%;
+}
+
+.borderPointBtnWrap._top_bottom_right_left:hover .borderPointBtn:after {
+    left: 70%;
+}
+
+.borderPointBtnWrap._bottom_top_left_right .borderPointBtn:before, .borderPointBtnWrap._bottom_top_left_right .borderPointBtn:after {
+    width: calc(5px * 1.5);
+    height: 5px;
+}
+
+.borderPointBtnWrap._bottom_top_left_right .borderPointBtn:before {
+    top: -5px;
+    left: calc((-5px * 1.5) * 2);
+}
+
+.borderPointBtnWrap._bottom_top_left_right .borderPointBtn:after {
+    bottom: -5px;
+    right: calc((-5px * 1.5) * 2);
+}
+
+.borderPointBtnWrap._bottom_top_left_right .borderPointBtn:hover:before, .borderPointBtnWrap._bottom_top_left_right .borderPointBtn:hover:after {
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._bottom_top_left_right:before, .borderPointBtnWrap._bottom_top_left_right:after {
+    width: 5px;
+    height: calc(5px * 1.5);
+    transition-delay: calc((0.3s / 3) * 2);
+}
+
+.borderPointBtnWrap._bottom_top_left_right:before {
+    bottom: 20%;
+    left: 0;
+}
+
+.borderPointBtnWrap._bottom_top_left_right:after {
+    top: 20%;
+    right: 0;
+}
+
+.borderPointBtnWrap._bottom_top_left_right:hover:before, .borderPointBtnWrap._bottom_top_left_right:hover:after {
+    transition-delay: 0s;
+}
+
+.borderPointBtnWrap._bottom_top_left_right:hover:before {
+    bottom: 100%;
+}
+
+.borderPointBtnWrap._bottom_top_left_right:hover:after {
+    top: 100%;
+}
+
+.borderPointBtnWrap._bottom_top_left_right:hover .borderPointBtn:before {
+    left: 70%;
+}
+
+.borderPointBtnWrap._bottom_top_left_right:hover .borderPointBtn:after {
+    right: 70%;
 }
