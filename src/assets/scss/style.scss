@@ -4,6 +4,7 @@
 # @import Buttons Styles
     ## @import slideBtn.scss
     ## @import borderBreakPointBtn.scss
+    ## @import glitchBtn.scss
 
 ____________________________________________________________*/
 
@@ -24,3 +25,8 @@ ____________________________________________________________*/
 ## @import borderBreakPointBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/borderBreakPointBtn.scss';
+
+/*____________________________________________________________
+## @import glitchBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/glitchBtn.scss';
