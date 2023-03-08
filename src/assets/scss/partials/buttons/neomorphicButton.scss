@@ -1,0 +1,95 @@
+/*____________________________________________________________
+# Neomorphic Button Variables
+____________________________________________________________*/
+$neomorphicBtnWidth: 200px;
+$neomorphicBtnHeight: ($neomorphicBtnWidth / 100) * 32.5;
+
+$neomorphicKeyInnerWidth: ($neomorphicBtnWidth / 100) * 94;
+$neomorphicKeyInnerHeight: ($neomorphicBtnHeight / 100) * 85;
+
+$neomorphicBtnFontSize: $neomorphicBtnHeight / 4;
+
+/*____________________________________________________________
+# Neomorphic Button
+____________________________________________________________*/
+.neomorphicButton {
+  position: relative;
+  margin: 20px;
+  width: $neomorphicBtnWidth;
+  height: $neomorphicBtnHeight;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: $neomorphicBtnFontSize;
+	cursor: pointer;
+  
+  &._keyboard {
+    background: #f5f6e7;
+    border-radius: 5px;
+    box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.1px #ccc;
+    color: #424234;
+    
+    &:before {
+      position: absolute;
+      content: attr(neomorphic-key);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: $neomorphicKeyInnerWidth;
+      height: $neomorphicKeyInnerHeight;
+      line-height: $neomorphicKeyInnerHeight;
+      border-radius: 5px;
+      background-color: #f5f6e7;
+      box-shadow: -1px -1px 2px 0.1px #fff, 3px 3px 6px 0.1px #ccc;
+    }
+    
+    &:hover {
+      &:before {
+        font-size: calc(#{$neomorphicBtnFontSize} / 1.0666);
+		    box-shadow: inset -3px -3px 5px 0.1px #fff, inset 3px 3px 5px 0.7px #ccc;
+      }
+    }
+  }
+  
+  &._light {
+    color: #000;
+    border: 1px solid rgba(0,0,0,0.0);
+    border-radius: 30px;
+    background-color: #f2f3f7;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.1),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    
+    &:hover {
+      font-size: calc(#{$neomorphicBtnFontSize} / 1.0666);
+      border: 1px solid rgba(0,0,0,0.01);
+      box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                  inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                  -0.5px -0.5px 0 rgba(255,255,255,1),
+                  0.5px 0.5px 0 rgba(0,0,0,0.15),
+                  0px 12px 10px -10px rgba(0,0,0,0.05);
+    }
+  }
+  
+  &._dark {
+    color: #f2f3f7;
+    border: 1px solid rgba(0,0,0,0.0);
+    border-radius: 30px;
+    background-color: #283245;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.2),
+                -6px -6px 10px -1px rgba(255,255,255,0.05);
+    
+    &:hover {
+      font-size: calc(#{$neomorphicBtnFontSize} / 1.0666);
+      border: 1px solid rgba(0,0,0,0.01);
+      box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                  inset -4px -4px 6px -1px rgba(255,255,255,0.05),
+                  -0.5px -0.5px 0 rgba(0,0,0,0.1),
+                  0.5px 0.5px 0 rgba(0,0,0,0.15),
+                  0px 12px 10px -10px rgba(0,0,0,0.05);
+    }
+  }
+}
+
+.neomorphicWrap {
+  display: inline-flex;
+  background: #283245;
+}

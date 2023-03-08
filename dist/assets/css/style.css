@@ -5,6 +5,7 @@
     ## @import slideBtn.scss
     ## @import borderBreakPointBtn.scss
     ## @import glitchBtn.scss
+    ## @import neomorphicButton.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -665,70 +666,148 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(43px, 200px, 45px, 0);
+        clip: rect(41px, 200px, 34px, 0);
     }
 
     6.25% {
-        clip: rect(54px, 200px, 2px, 0);
+        clip: rect(54px, 200px, 17px, 0);
     }
 
     12.5% {
-        clip: rect(16px, 200px, 50px, 0);
+        clip: rect(37px, 200px, 12px, 0);
     }
 
     18.75% {
-        clip: rect(43px, 200px, 15px, 0);
+        clip: rect(56px, 200px, 28px, 0);
     }
 
     25% {
-        clip: rect(38px, 200px, 61px, 0);
+        clip: rect(47px, 200px, 65px, 0);
     }
 
     31.25% {
-        clip: rect(12px, 200px, 62px, 0);
-    }
-
-    37.5% {
-        clip: rect(55px, 200px, 49px, 0);
-    }
-
-    43.75% {
         clip: rect(45px, 200px, 63px, 0);
     }
 
+    37.5% {
+        clip: rect(53px, 200px, 47px, 0);
+    }
+
+    43.75% {
+        clip: rect(64px, 200px, 57px, 0);
+    }
+
     50% {
-        clip: rect(46px, 200px, 25px, 0);
+        clip: rect(17px, 200px, 10px, 0);
     }
 
     56.25% {
-        clip: rect(43px, 200px, 14px, 0);
+        clip: rect(11px, 200px, 16px, 0);
     }
 
     62.5% {
-        clip: rect(29px, 200px, 19px, 0);
+        clip: rect(54px, 200px, 52px, 0);
     }
 
     68.75% {
-        clip: rect(24px, 200px, 1px, 0);
+        clip: rect(38px, 200px, 20px, 0);
     }
 
     75% {
-        clip: rect(28px, 200px, 17px, 0);
+        clip: rect(54px, 200px, 30px, 0);
     }
 
     81.25% {
-        clip: rect(5px, 200px, 64px, 0);
+        clip: rect(17px, 200px, 39px, 0);
     }
 
     87.5% {
-        clip: rect(37px, 200px, 9px, 0);
+        clip: rect(52px, 200px, 58px, 0);
     }
 
     93.75% {
-        clip: rect(49px, 200px, 38px, 0);
+        clip: rect(46px, 200px, 32px, 0);
     }
 
     100% {
-        clip: rect(10px, 200px, 2px, 0);
+        clip: rect(52px, 200px, 46px, 0);
     }
+}
+/*____________________________________________________________
+## @import neomorphicButton.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Neomorphic Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Neomorphic Button
+____________________________________________________________*/
+.neomorphicButton {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 16.25px;
+    cursor: pointer;
+}
+
+.neomorphicButton._keyboard {
+    background: #f5f6e7;
+    border-radius: 5px;
+    box-shadow: -3px -3px 9px 0.1px #fff, 3px 3px 9px 0.1px #ccc;
+    color: #424234;
+}
+
+.neomorphicButton._keyboard:before {
+    position: absolute;
+    content: attr(neomorphic-key);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 188px;
+    height: 55.25px;
+    line-height: 55.25px;
+    border-radius: 5px;
+    background-color: #f5f6e7;
+    box-shadow: -1px -1px 2px 0.1px #fff, 3px 3px 6px 0.1px #ccc;
+}
+
+.neomorphicButton._keyboard:hover:before {
+    font-size: calc(16.25px / 1.0666);
+    box-shadow: inset -3px -3px 5px 0.1px #fff, inset 3px 3px 5px 0.7px #ccc;
+}
+
+.neomorphicButton._light {
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    background-color: #f2f3f7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.neomorphicButton._light:hover {
+    font-size: calc(16.25px / 1.0666);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0 rgb(255, 255, 255), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.neomorphicButton._dark {
+    color: #f2f3f7;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    background-color: #283245;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2), -6px -6px 10px -1px rgba(255, 255, 255, 0.05);
+}
+
+.neomorphicButton._dark:hover {
+    font-size: calc(16.25px / 1.0666);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.05), -0.5px -0.5px 0 rgba(0, 0, 0, 0.1), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.neomorphicWrap {
+    display: inline-flex;
+    background: #283245;
 }
