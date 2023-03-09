@@ -666,71 +666,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(63px, 200px, 17px, 0);
+        clip: rect(30px, 200px, 11px, 0);
     }
 
     6.25% {
-        clip: rect(3px, 200px, 7px, 0);
+        clip: rect(25px, 200px, 13px, 0);
     }
 
     12.5% {
-        clip: rect(38px, 200px, 35px, 0);
+        clip: rect(15px, 200px, 47px, 0);
     }
 
     18.75% {
-        clip: rect(8px, 200px, 64px, 0);
+        clip: rect(12px, 200px, 31px, 0);
     }
 
     25% {
-        clip: rect(11px, 200px, 4px, 0);
+        clip: rect(38px, 200px, 19px, 0);
     }
 
     31.25% {
-        clip: rect(50px, 200px, 23px, 0);
+        clip: rect(63px, 200px, 60px, 0);
     }
 
     37.5% {
-        clip: rect(27px, 200px, 38px, 0);
+        clip: rect(6px, 200px, 47px, 0);
     }
 
     43.75% {
-        clip: rect(40px, 200px, 39px, 0);
+        clip: rect(35px, 200px, 61px, 0);
     }
 
     50% {
-        clip: rect(63px, 200px, 23px, 0);
+        clip: rect(45px, 200px, 29px, 0);
     }
 
     56.25% {
-        clip: rect(46px, 200px, 31px, 0);
+        clip: rect(56px, 200px, 28px, 0);
     }
 
     62.5% {
-        clip: rect(35px, 200px, 51px, 0);
+        clip: rect(26px, 200px, 61px, 0);
     }
 
     68.75% {
-        clip: rect(53px, 200px, 42px, 0);
+        clip: rect(51px, 200px, 22px, 0);
     }
 
     75% {
-        clip: rect(30px, 200px, 52px, 0);
+        clip: rect(14px, 200px, 14px, 0);
     }
 
     81.25% {
-        clip: rect(25px, 200px, 25px, 0);
+        clip: rect(4px, 200px, 62px, 0);
     }
 
     87.5% {
-        clip: rect(19px, 200px, 9px, 0);
+        clip: rect(60px, 200px, 52px, 0);
     }
 
     93.75% {
-        clip: rect(64px, 200px, 19px, 0);
+        clip: rect(52px, 200px, 11px, 0);
     }
 
     100% {
-        clip: rect(61px, 200px, 46px, 0);
+        clip: rect(43px, 200px, 1px, 0);
     }
 }
 /*____________________________________________________________
