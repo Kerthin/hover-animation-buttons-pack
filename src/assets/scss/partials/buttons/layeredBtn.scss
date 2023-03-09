@@ -1,0 +1,287 @@
+/*____________________________________________________________
+# Layered Button Variables
+____________________________________________________________*/
+$layeredBtnWidth_big: 350px;
+$layeredBtnHeight_big: ($layeredBtnWidth_big / 100) * 32;
+$layeredBtnFontSize_big: $layeredBtnHeight_big / 1.375;
+
+$layeredBtnWidth_mid: 280px;
+$layeredBtnHeight_mid: ($layeredBtnWidth_mid / 100) * 32;
+$layeredBtnFontSize_mid: $layeredBtnHeight_mid / 1.375;
+
+$layeredBtnWidth_sm: 175px;
+$layeredBtnHeight_sm: ($layeredBtnWidth_sm / 100) * 32;
+$layeredBtnFontSize_sm: $layeredBtnHeight_sm / 1.375;
+
+/*____________________________________________________________
+# Layered Button
+____________________________________________________________*/
+.layeredBtn {
+  display: block;
+  margin: 10px;
+  text-align: center;
+  font-family: 'Niconne';
+  color: #fcedd8;
+  background: #d52e3f;
+  transition: text-shadow .2s;
+  cursor: pointer;
+  
+  &._big {
+    width: $layeredBtnWidth_big;
+    height: $layeredBtnHeight_big;
+    line-height: $layeredBtnHeight_big;
+    font-size: $layeredBtnFontSize_big;
+    border-radius: calc(#{$layeredBtnHeight_big} / 2);
+    
+    &._anim {
+      &:hover {animation: shadowShift_big .5s .2s infinite;}
+    }
+    
+    &:hover {
+			text-shadow:  1.6px 1.6px 0px #eb452b,
+                    3.3px 3.3px 0px #efa032,
+                    5px 5px 0px #46b59b,
+                    6.6px 6.6px 0px #017e7f,
+                    8.3px 8.3px 0px #052939;
+		}
+  }
+  &._mid {
+    width: $layeredBtnWidth_mid;
+    height: $layeredBtnHeight_mid;
+    line-height: $layeredBtnHeight_mid;
+    font-size: $layeredBtnFontSize_mid;
+    border-radius: calc(#{$layeredBtnHeight_mid} / 2);
+    
+    &._anim {
+      &:hover {animation: shadowShift_mid .5s .2s infinite;}
+    }
+    
+    &:hover {
+			text-shadow:  1.28px 1.28px 0px #eb452b,
+                    2.64px 2.64px 0px #efa032,
+                    4px 4px 0px #46b59b,
+                    5.28px 5.28px 0px #017e7f,
+                    6.64px 6.64px 0px #052939;
+		}
+  }
+
+  &._sm {
+    width: $layeredBtnWidth_sm;
+    height: $layeredBtnHeight_sm;
+    line-height: $layeredBtnHeight_sm;
+    font-size: $layeredBtnFontSize_sm;
+    border-radius: calc(#{$layeredBtnHeight_sm} / 2);
+    
+    &._anim {
+      &:hover {animation: shadowShift_sm .5s .2s infinite;}
+    }
+    
+    &:hover {
+			text-shadow:  .8px .8px 0px #eb452b,
+                    1.6px 1.6px 0px #efa032,
+                    2.5px 2.5px 0px #46b59b,
+                    3.3px 3.3px 0px #017e7f,
+                    4.1px 4.1px 0px #052939;
+		}
+  }
+}
+
+/*____________________________________________________________
+## Layered Buttons Keyframes Animations
+____________________________________________________________*/
+@keyframes shadowShift_big {
+	0% {
+		text-shadow:  1.6px 1.6px 0px #eb452b,
+                  3.3px 3.3px 0px #efa032,
+                  5px 5px 0px #46b59b,
+                  6.6px 6.6px 0px #017e7f,
+                  8.3px 8.3px 0px #052939,
+                  10px 10px 0px #c11a2b;
+	}
+ 
+	16.66% {
+		text-shadow:	1.6px 1.6px 0px #c11a2b,
+                  3.3px 3.3px 0px #eb452b,
+                  5px 5px 0px #efa032,
+                  6.6px 6.6px 0px #46b59b,
+                  8.3px 8.3px 0px #017e7f,
+                  10px 10px 0px #052939;
+	}
+ 
+	33.32% {
+		text-shadow:	1.6px 1.6px 0px #052939,
+                  3.3px 3.3px 0px #c11a2b,
+                  5px 5px 0px #eb452b,
+                  6.6px 6.6px 0px #efa032,
+                  8.3px 8.3px 0px #46b59b,
+                  10px 10px 0px #017e7f;
+	}
+ 
+	50% {
+		text-shadow:	1.6px 1.6px 0px #017e7f,
+                  3.3px 3.3px 0px #052939,
+                  5px 5px 0px #c11a2b,
+                  6.6px 6.6px 0px #eb452b,
+                  8.3px 8.3px 0px #efa032,
+                  10px 10px 0px #46b59b;
+	}
+
+	66.66% {
+		text-shadow:	1.6px 1.6px 0px #46b59b,
+                  3.3px 3.3px 0px #017e7f,
+                  5px 5px 0px #052939,
+                  6.6px 6.6px 0px #c11a2b,
+                  8.3px 8.3px 0px #eb452b,
+                  10px 10px 0px #efa032;
+	}
+
+	83.3% {
+		text-shadow:	1.6px 1.6px 0px #efa032,
+                  3.3px 3.3px 0px #46b59b,
+                  5px 5px 0px #017e7f,
+                  6.6px 6.6px 0px #052939,
+                  8.3px 8.3px 0px #c11a2b,
+                  10px 10px 0px #eb452b;
+	}
+
+	100% {
+		text-shadow:	1.6px 1.6px 0px #eb452b,
+                  3.3px 3.3px 0px #efa032,
+                  5px 5px 0px #46b59b,
+                  6.6px 6.6px 0px #017e7f,
+                  8.3px 8.3px 0px #052939,
+                  10px 10px 0px #c11a2b;
+	}
+}
+
+/* Middle */
+@keyframes shadowShift_mid {
+	0% {
+		text-shadow:	1.28px 1.28px 0px #eb452b,
+                  2.64px 2.64px 0px #efa032,
+                  4px 4px 0px #46b59b,
+                  5.28px 5.28px 0px #017e7f,
+                  6.64px 6.64px 0px #052939,
+                  8px 8px 0px #c11a2b;
+	}
+ 
+	16.66% {
+		text-shadow:	1.28px 1.28px 0px #c11a2b,
+                  2.64px 2.64px 0px #eb452b,
+                  4px 4px 0px #efa032,
+                  5.28px 5.28px 0px #46b59b,
+                  6.64px 6.64px 0px #017e7f,
+                  8px 8px 0px #052939;
+	}
+ 
+	33.32% {
+		text-shadow:	1.28px 1.28px 0px #052939,
+                  2.64px 2.64px 0px #c11a2b,
+                  4px 4px 0px #eb452b,
+                  5.28px 5.28px 0px #efa032,
+                  6.64px 6.64px 0px #46b59b,
+                  8px 8px 0px #017e7f;
+	}
+ 
+	50% {
+		text-shadow:	1.28px 1.28px 0px #017e7f,
+                  2.64px 2.64px 0px #052939,
+                  4px 4px 0px #c11a2b,
+                  5.28px 5.28px 0px #eb452b,
+                  6.64px 6.64px 0px #efa032,
+                  8px 8px 0px #46b59b;
+	}
+
+	66.66% {
+		text-shadow:	1.28px 1.28px 0px #46b59b,
+                  2.64px 2.64px 0px #017e7f,
+                  4px 4px 0px #052939,
+                  5.28px 5.28px 0px #c11a2b,
+                  6.64px 6.64px 0px #eb452b,
+                  8px 8px 0px #efa032;
+	}
+
+	83.3% {
+		text-shadow:	1.28px 1.28px 0px #efa032,
+                  2.64px 2.64px 0px #46b59b,
+                  4px 4px 0px #017e7f,
+                  5.28px 5.28px 0px #052939,
+                  6.64px 6.64px 0px #c11a2b,
+                  8px 8px 0px #eb452b;
+	}
+
+	100% {
+		text-shadow:	1.28px 1.28px 0px #eb452b,
+                  2.64px 2.64px 0px #efa032,
+                  4px 4px 0px #46b59b,
+                  5.28px 5.28px 0px #017e7f,
+                  6.64px 6.64px 0px #052939,
+                  8px 8px 0px #c11a2b;
+	}
+}
+
+/* Small */
+@keyframes shadowShift_sm {
+	0% {
+		text-shadow:	.8px .8px 0px #eb452b,
+                  1.6px 1.6px 0px #efa032,
+                  2.5px 2.5px 0px #46b59b,
+                  3.3px 3.3px 0px #017e7f,
+                  4.1px 4.1px 0px #052939,
+                  5px 5px 0px #c11a2b;
+	}
+ 
+	16.66% {
+		text-shadow:	.8px .8px 0px #c11a2b,
+                  1.6px 1.6px 0px #eb452b,
+                  2.5px 2.5px 0px #efa032,
+                  3.3px 3.3px 0px #46b59b,
+                  4.1px 4.1px 0px #017e7f,
+                  5px 5px 0px #052939;
+	}
+ 
+	33.32% {
+		text-shadow:	.8px .8px 0px #052939,
+                  1.6px 1.6px 0px #c11a2b,
+                  2.5px 2.5px 0px #eb452b,
+                  3.3px 3.3px 0px #efa032,
+                  4.1px 4.1px 0px #46b59b,
+                  5px 5px 0px #017e7f;
+	}
+ 
+	50% {
+		text-shadow:	.8px .8px 0px #017e7f,
+                  1.6px 1.6px 0px #052939,
+                  2.5px 2.5px 0px #c11a2b,
+                  3.3px 3.3px 0px #eb452b,
+                  4.1px 4.1px 0px #efa032,
+                  5px 5px 0px #46b59b;
+	}
+
+	66.66% {
+		text-shadow:	.8px .8px 0px #46b59b,
+                  1.6px 1.6px 0px #017e7f,
+                  2.5px 2.5px 0px #052939,
+                  3.3px 3.3px 0px #c11a2b,
+                  4.1px 4.1px 0px #eb452b,
+                  5px 5px 0px #efa032;
+	}
+
+	83.3% {
+		text-shadow:	.8px .8px 0px #efa032,
+                  1.6px 1.6px 0px #46b59b,
+                  2.5px 2.5px 0px #017e7f,
+                  3.3px 3.3px 0px #052939,
+                  4.1px 4.1px 0px #c11a2b,
+                  5px 5px 0px #eb452b;
+	}
+
+	100% {
+		text-shadow:	.8px .8px 0px #eb452b,
+                  1.6px 1.6px 0px #efa032,
+                  2.5px 2.5px 0px #46b59b,
+                  3.3px 3.3px 0px #017e7f,
+                  4.1px 4.1px 0px #052939,
+                  5px 5px 0px #c11a2b;
+	}
+}
