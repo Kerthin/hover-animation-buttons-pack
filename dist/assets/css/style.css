@@ -666,71 +666,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(38px, 200px, 32px, 0);
+        clip: rect(2px, 200px, 36px, 0);
     }
 
     6.25% {
-        clip: rect(20px, 200px, 47px, 0);
+        clip: rect(22px, 200px, 59px, 0);
     }
 
     12.5% {
-        clip: rect(35px, 200px, 42px, 0);
+        clip: rect(1px, 200px, 4px, 0);
     }
 
     18.75% {
-        clip: rect(38px, 200px, 20px, 0);
+        clip: rect(27px, 200px, 38px, 0);
     }
 
     25% {
-        clip: rect(15px, 200px, 6px, 0);
+        clip: rect(16px, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(49px, 200px, 57px, 0);
+        clip: rect(10px, 200px, 30px, 0);
     }
 
     37.5% {
-        clip: rect(64px, 200px, 22px, 0);
+        clip: rect(4px, 200px, 9px, 0);
     }
 
     43.75% {
-        clip: rect(64px, 200px, 54px, 0);
+        clip: rect(40px, 200px, 15px, 0);
     }
 
     50% {
-        clip: rect(29px, 200px, 16px, 0);
+        clip: rect(53px, 200px, 15px, 0);
     }
 
     56.25% {
-        clip: rect(50px, 200px, 63px, 0);
+        clip: rect(42px, 200px, 26px, 0);
     }
 
     62.5% {
-        clip: rect(32px, 200px, 27px, 0);
+        clip: rect(55px, 200px, 13px, 0);
     }
 
     68.75% {
-        clip: rect(23px, 200px, 56px, 0);
+        clip: rect(54px, 200px, 21px, 0);
     }
 
     75% {
-        clip: rect(53px, 200px, 45px, 0);
+        clip: rect(28px, 200px, 58px, 0);
     }
 
     81.25% {
-        clip: rect(12px, 200px, 65px, 0);
+        clip: rect(31px, 200px, 57px, 0);
     }
 
     87.5% {
-        clip: rect(54px, 200px, 4px, 0);
+        clip: rect(27px, 200px, 7px, 0);
     }
 
     93.75% {
-        clip: rect(27px, 200px, 46px, 0);
+        clip: rect(18px, 200px, 9px, 0);
     }
 
     100% {
-        clip: rect(4px, 200px, 2px, 0);
+        clip: rect(36px, 200px, 13px, 0);
     }
 }
 /*____________________________________________________________
@@ -975,6 +975,12 @@ ____________________________________________________________*/
 /*____________________________________________________________
 ## @import rattleBtn.scss
 ____________________________________________________________*/
+/*____________________________________________________________
+# Rattle Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Rattle Button
+____________________________________________________________*/
 .rattleBtn {
     display: block;
     margin: 20px auto;
@@ -999,7 +1005,7 @@ ____________________________________________________________*/
 }
 
 /*____________________________________________________________
-### Rattle Button Keyframes Animation
+## Rattle Button Keyframes Animation
 ____________________________________________________________*/
 @keyframes rattleAnimation {
     0% {
@@ -1028,4 +1034,350 @@ ____________________________________________________________*/
         word-spacing: 3px;
         transform: rotate(-1deg);
     }
+}
+/*____________________________________________________________
+## @import arrowBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Arrow Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Arrow Button
+____________________________________________________________*/
+.arrowBtn {
+    display: flex;
+    position: relative;
+    margin: 20px auto;
+    width: 225px;
+    height: 68.0175px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.arrowBtn._color:hover .arrowBtn__item {
+    background: #b998dc;
+}
+
+.arrowBtn._color:hover .arrowBtn__item::before {
+    border-right-color: #b998dc;
+}
+
+.arrowBtn._close {
+    border-radius: 4.5px;
+    overflow: hidden;
+}
+
+.arrowBtn:hover .arrowBtn__name {
+    text-shadow: -0.8px 0.8px 0px #eb452b, -1.6px 1.6px 0px #efa032, -2.5px 2.5px 0px #46b59b, -3.3px 3.3px 0px #017e7f, -4.1px 4.1px 0px #052939;
+}
+
+.arrowBtn__item {
+    position: absolute;
+    width: 25px;
+    height: 68.0175px;
+    background: #fff5b4;
+    transition: margin-left 0.3s, background 0.3s;
+    z-index: 2;
+}
+
+.arrowBtn__item::before, .arrowBtn__item::after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    border: 0;
+}
+
+.arrowBtn__item::before {
+    border-top: 34.00875px solid transparent;
+    border-bottom: 34.00875px solid transparent;
+    border-right: 34.00875px solid #fff5b4;
+    left: -34.00875px;
+    transition: border-right 0.3s;
+}
+
+.arrowBtn__item::after {
+    border-top: 34.00875px solid transparent;
+    border-bottom: 34.00875px solid transparent;
+    border-right: 34.00875px solid #fff;
+    right: 0;
+}
+
+.arrowBtn__item:nth-child(1) {
+    margin-left: calc((1 - 1) * 25px);
+    background-color: #fff5b4;
+    transition-delay: calc((1 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(1)::before {
+    border-right-color: #fff5b4;
+    transition-delay: calc((11 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(1)::before {
+    transition-delay: calc((1 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(1)::before {
+    transition-delay: calc((11 - 1) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(1) {
+    margin-left: calc(-10px + ((1 - 1) * 25px));
+    transition-delay: calc((11 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(2) {
+    margin-left: calc((2 - 1) * 25px);
+    background-color: #fedd99;
+    transition-delay: calc((2 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(2)::before {
+    border-right-color: #fedd99;
+    transition-delay: calc((11 - 2) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(2)::before {
+    transition-delay: calc((2 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(2)::before {
+    transition-delay: calc((11 - 2) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(2) {
+    margin-left: calc(-10px + ((2 - 1) * 25px));
+    transition-delay: calc((11 - 2) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(3) {
+    margin-left: calc((3 - 1) * 25px);
+    background-color: #ffc185;
+    transition-delay: calc((3 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(3)::before {
+    border-right-color: #ffc185;
+    transition-delay: calc((11 - 3) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(3)::before {
+    transition-delay: calc((3 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(3)::before {
+    transition-delay: calc((11 - 3) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(3) {
+    margin-left: calc(-10px + ((3 - 1) * 25px));
+    transition-delay: calc((11 - 3) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(4) {
+    margin-left: calc((4 - 1) * 25px);
+    background-color: #ffa579;
+    transition-delay: calc((4 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(4)::before {
+    border-right-color: #ffa579;
+    transition-delay: calc((11 - 4) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(4)::before {
+    transition-delay: calc((4 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(4)::before {
+    transition-delay: calc((11 - 4) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(4) {
+    margin-left: calc(-10px + ((4 - 1) * 25px));
+    transition-delay: calc((11 - 4) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(5) {
+    margin-left: calc((5 - 1) * 25px);
+    background-color: #fa8b75;
+    transition-delay: calc((5 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(5)::before {
+    border-right-color: #fa8b75;
+    transition-delay: calc((11 - 5) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(5)::before {
+    transition-delay: calc((5 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(5)::before {
+    transition-delay: calc((11 - 5) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(5) {
+    margin-left: calc(-10px + ((5 - 1) * 25px));
+    transition-delay: calc((11 - 5) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(6) {
+    margin-left: calc((6 - 1) * 25px);
+    background-color: #f16d79;
+    transition-delay: calc((6 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(6)::before {
+    border-right-color: #f16d79;
+    transition-delay: calc((11 - 6) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(6)::before {
+    transition-delay: calc((6 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(6)::before {
+    transition-delay: calc((11 - 6) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(6) {
+    margin-left: calc(-10px + ((6 - 1) * 25px));
+    transition-delay: calc((11 - 6) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(7) {
+    margin-left: calc((7 - 1) * 25px);
+    background-color: #e15383;
+    transition-delay: calc((7 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(7)::before {
+    border-right-color: #e15383;
+    transition-delay: calc((11 - 7) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(7)::before {
+    transition-delay: calc((7 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(7)::before {
+    transition-delay: calc((11 - 7) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(7) {
+    margin-left: calc(-10px + ((7 - 1) * 25px));
+    transition-delay: calc((11 - 7) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(8) {
+    margin-left: calc((8 - 1) * 25px);
+    background-color: #dc3977;
+    transition-delay: calc((8 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(8)::before {
+    border-right-color: #dc3977;
+    transition-delay: calc((11 - 8) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(8)::before {
+    transition-delay: calc((8 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(8)::before {
+    transition-delay: calc((11 - 8) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(8) {
+    margin-left: calc(-10px + ((8 - 1) * 25px));
+    transition-delay: calc((11 - 8) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(9) {
+    margin-left: calc((9 - 1) * 25px);
+    background-color: #b9267b;
+    transition-delay: calc((9 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(9)::before {
+    border-right-color: #b9267b;
+    transition-delay: calc((11 - 9) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(9)::before {
+    transition-delay: calc((9 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(9)::before {
+    transition-delay: calc((11 - 9) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(9) {
+    margin-left: calc(-10px + ((9 - 1) * 25px));
+    transition-delay: calc((11 - 9) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(10) {
+    margin-left: calc((10 - 1) * 25px);
+    background-color: #7c1e6f;
+    transition-delay: calc((10 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(10)::before {
+    border-right-color: #7c1e6f;
+    transition-delay: calc((11 - 10) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(10)::before {
+    transition-delay: calc((10 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(10)::before {
+    transition-delay: calc((11 - 10) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(10) {
+    margin-left: calc(-10px + ((10 - 1) * 25px));
+    transition-delay: calc((11 - 10) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(11) {
+    margin-left: calc((11 - 1) * 25px);
+    background-color: #521449;
+    transition-delay: calc((11 - 1) * 0.1s);
+}
+
+.arrowBtn__item:nth-child(11)::before {
+    border-right-color: #521449;
+    transition-delay: calc((11 - 11) * 0.1s);
+}
+
+.arrowBtn._color_fill .arrowBtn__item:nth-child(11)::before {
+    transition-delay: calc((11 - 1) * 0.1s);
+}
+
+.arrowBtn._color_fill:hover .arrowBtn__item:nth-child(11)::before {
+    transition-delay: calc((11 - 11) * 0.1s);
+}
+
+.arrowBtn:hover .arrowBtn__item:nth-child(11) {
+    margin-left: calc(-10px + ((11 - 1) * 25px));
+    transition-delay: calc((11 - 11) * 0.1s);
+}
+
+.arrowBtn__name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Niconne";
+    font-size: 40.0102941176px;
+    color: #eee5ce;
+    transition: text-shadow 0.3s;
+    transition-delay: 0.3666666667s;
+    z-index: 3;
 }

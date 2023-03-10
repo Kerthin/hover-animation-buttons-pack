@@ -1,0 +1,17 @@
+section.presentWrap
+  h1.presentWrap__title Arrow Buttons
+  .presentWrap__buttonsBlock._column
+
+    mixin arrowBtnMix(arrowBtnType, arrowBtnName)
+      button.arrowBtn(class=`${arrowBtnType}`)
+        - var arrowBtnItems = 1;
+        while arrowBtnItems <= 11
+          .arrowBtn__item(id=`_${arrowBtnItems++}`)
+        span.arrowBtn__name #{arrowBtnName}
+    +arrowBtnMix('', 'Button')
+    +arrowBtnMix('_color', 'Button')
+    +arrowBtnMix('_color _color_fill', 'Button')
+    
+    +arrowBtnMix('_close', 'Button')
+    +arrowBtnMix('_color _close', 'Button')
+    +arrowBtnMix('_color _color_fill _close', 'Button')

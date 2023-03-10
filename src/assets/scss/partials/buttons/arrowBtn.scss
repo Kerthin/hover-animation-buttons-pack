@@ -1,0 +1,164 @@
+/*____________________________________________________________
+# Arrow Button Variables
+____________________________________________________________*/
+$arrowBtnItemsColor: (  #fff5b4,
+                        #fedd99,
+                        #ffc185,
+                        #ffa579,
+                        #fa8b75,
+                        #f16d79,
+                        #e15383,
+                        #dc3977,
+                        #b9267b,
+                        #7c1e6f,
+                        #521449);
+
+$arrowBtnItemWidth: 25px;
+$arrowBtnHoverMarginLeft: -10px;
+
+$arrowBtnWidth: (length($arrowBtnItemsColor) - 2) * $arrowBtnItemWidth;
+$arrowBtnHeight: ($arrowBtnWidth / 100) * 30.23;
+
+$arrowSize: $arrowBtnHeight / 2;
+
+$arrowBtnBorderRadius: ($arrowBtnWidth / 100) * 2;
+
+$arrowBtnFontSize: $arrowBtnHeight / 1.7;
+$arrowBtnFontTransitionDelay: (length($arrowBtnItemsColor) / 3) * .1s;
+
+$arrowBtnTransitionTime: .3s;
+$arrowBtnTransitionDelayTime: .1s;
+
+/*____________________________________________________________
+# Arrow Button
+____________________________________________________________*/
+.arrowBtn {
+  display: flex;
+  position: relative;
+  margin: 20px auto;
+  width: $arrowBtnWidth;
+  height: $arrowBtnHeight;
+  background: transparent;
+  cursor: pointer;
+  
+  &._color {
+    
+    &:hover {
+      
+      .arrowBtn__item {
+        background: #b998dc;
+        
+        &::before {
+          
+          border-right-color: #b998dc;
+        }
+      }
+    }
+  }
+  
+  &._close {
+    border-radius: $arrowBtnBorderRadius;
+    overflow: hidden;
+  }
+  
+  &:hover {
+    
+    .arrowBtn__name {
+      text-shadow:  -.8px .8px 0px #eb452b,
+                    -1.6px 1.6px 0px #efa032,
+                    -2.5px 2.5px 0px #46b59b,
+                    -3.3px 3.3px 0px #017e7f,
+                    -4.1px 4.1px 0px #052939;
+    }
+  }
+}
+
+.arrowBtn__item {
+  position: absolute;
+  width: $arrowBtnItemWidth;
+  height: $arrowBtnHeight;
+  background: #fff5b4;
+  transition: margin-left $arrowBtnTransitionTime, background $arrowBtnTransitionTime;
+  z-index: 2;
+  
+  &::before,
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    border: 0;
+  }
+  
+  &::before {
+    border-top: $arrowSize solid transparent;
+    border-bottom: $arrowSize solid transparent;
+    border-right: $arrowSize solid #fff5b4;
+    left: -$arrowSize;
+    transition: border-right $arrowBtnTransitionTime;
+  }
+  &::after {
+    border-top: $arrowSize solid transparent;
+    border-bottom: $arrowSize solid transparent;
+    border-right: $arrowSize solid #fff;
+    right: 0;
+  }
+}
+
+@for $i from 1 through length($arrowBtnItemsColor) {
+  .arrowBtn__item:nth-child(#{$i}) {
+    margin-left: calc((#{$i} - 1) * #{$arrowBtnItemWidth});
+    background-color: nth($arrowBtnItemsColor, $i);
+  transition-delay: calc((#{$i} - 1) * #{$arrowBtnTransitionDelayTime});
+    
+    &::before {
+      border-right-color: nth($arrowBtnItemsColor, $i);
+      transition-delay: calc((#{length($arrowBtnItemsColor)} - #{$i}) * #{$arrowBtnTransitionDelayTime});
+    }
+  }
+  .arrowBtn {
+    
+    &._color_fill {
+      
+      .arrowBtn__item:nth-child(#{$i}) {
+        
+        &::before {
+          transition-delay: calc((#{$i} - 1) * #{$arrowBtnTransitionDelayTime});
+        }
+      }
+      
+      &:hover {
+        
+        .arrowBtn__item:nth-child(#{$i}) {
+
+          &::before {
+            transition-delay: calc((#{length($arrowBtnItemsColor)} - #{$i}) * #{$arrowBtnTransitionDelayTime});
+          }
+        }
+      }
+    }
+    
+    &:hover {
+      
+      .arrowBtn__item:nth-child(#{$i}) {
+        margin-left: calc(#{$arrowBtnHoverMarginLeft} + ((#{$i} - 1) * #{$arrowBtnItemWidth}));
+        transition-delay: calc((#{length($arrowBtnItemsColor)} - #{$i}) * #{$arrowBtnTransitionDelayTime});
+      }
+    }
+  }
+}
+
+.arrowBtn__name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Niconne';
+  font-size: $arrowBtnFontSize;
+  color: #eee5ce;
+  transition: text-shadow $arrowBtnTransitionTime;
+  transition-delay: $arrowBtnFontTransitionDelay;
+  z-index: 3;
+}

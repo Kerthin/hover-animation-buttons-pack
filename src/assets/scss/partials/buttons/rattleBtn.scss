@@ -1,3 +1,6 @@
+/*____________________________________________________________
+# Rattle Button Variables
+____________________________________________________________*/
 $rattleBtnWidth: 300px;
 $rattleBtnHeight: ($rattleBtnWidth / 100) * 27;
 $rattleBtnFontSize: $rattleBtnHeight / 1.6;
@@ -5,6 +8,9 @@ $rattleBtnFontSize: $rattleBtnHeight / 1.6;
 $palette-rattle-button-bg: #f7ebc2;
 $palette-rattle-text: #166bde;
 
+/*____________________________________________________________
+# Rattle Button
+____________________________________________________________*/
 .rattleBtn {
   display: block;
   margin: 20px auto;
@@ -32,7 +38,7 @@ $palette-rattle-text: #166bde;
 }
 
 /*____________________________________________________________
-### Rattle Button Keyframes Animation
+## Rattle Button Keyframes Animation
 ____________________________________________________________*/
 @keyframes rattleAnimation {
    0% {
