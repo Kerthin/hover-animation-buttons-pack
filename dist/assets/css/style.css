@@ -666,71 +666,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(30px, 200px, 11px, 0);
+        clip: rect(38px, 200px, 32px, 0);
     }
 
     6.25% {
-        clip: rect(25px, 200px, 13px, 0);
+        clip: rect(20px, 200px, 47px, 0);
     }
 
     12.5% {
-        clip: rect(15px, 200px, 47px, 0);
+        clip: rect(35px, 200px, 42px, 0);
     }
 
     18.75% {
-        clip: rect(12px, 200px, 31px, 0);
+        clip: rect(38px, 200px, 20px, 0);
     }
 
     25% {
-        clip: rect(38px, 200px, 19px, 0);
+        clip: rect(15px, 200px, 6px, 0);
     }
 
     31.25% {
-        clip: rect(63px, 200px, 60px, 0);
+        clip: rect(49px, 200px, 57px, 0);
     }
 
     37.5% {
-        clip: rect(6px, 200px, 47px, 0);
+        clip: rect(64px, 200px, 22px, 0);
     }
 
     43.75% {
-        clip: rect(35px, 200px, 61px, 0);
+        clip: rect(64px, 200px, 54px, 0);
     }
 
     50% {
-        clip: rect(45px, 200px, 29px, 0);
+        clip: rect(29px, 200px, 16px, 0);
     }
 
     56.25% {
-        clip: rect(56px, 200px, 28px, 0);
+        clip: rect(50px, 200px, 63px, 0);
     }
 
     62.5% {
-        clip: rect(26px, 200px, 61px, 0);
+        clip: rect(32px, 200px, 27px, 0);
     }
 
     68.75% {
-        clip: rect(51px, 200px, 22px, 0);
+        clip: rect(23px, 200px, 56px, 0);
     }
 
     75% {
-        clip: rect(14px, 200px, 14px, 0);
+        clip: rect(53px, 200px, 45px, 0);
     }
 
     81.25% {
-        clip: rect(4px, 200px, 62px, 0);
+        clip: rect(12px, 200px, 65px, 0);
     }
 
     87.5% {
-        clip: rect(60px, 200px, 52px, 0);
+        clip: rect(54px, 200px, 4px, 0);
     }
 
     93.75% {
-        clip: rect(52px, 200px, 11px, 0);
+        clip: rect(27px, 200px, 46px, 0);
     }
 
     100% {
-        clip: rect(43px, 200px, 1px, 0);
+        clip: rect(4px, 200px, 2px, 0);
     }
 }
 /*____________________________________________________________
@@ -970,5 +970,62 @@ ____________________________________________________________*/
 
     100% {
         text-shadow: 0.8px 0.8px 0px #eb452b, 1.6px 1.6px 0px #efa032, 2.5px 2.5px 0px #46b59b, 3.3px 3.3px 0px #017e7f, 4.1px 4.1px 0px #052939, 5px 5px 0px #c11a2b;
+    }
+}
+/*____________________________________________________________
+## @import rattleBtn.scss
+____________________________________________________________*/
+.rattleBtn {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+    height: 81px;
+    background-color: #f7ebc2;
+    border-radius: calc(81px / 2);
+    cursor: pointer;
+}
+
+.rattleBtn:hover .rattleBtn__text {
+    animation: rattleAnimation 0.09s infinite alternate;
+}
+
+.rattleBtn__text {
+    display: block;
+    color: #166bde;
+    font-family: "Jolly Lodger";
+    font-size: 50.625px;
+    text-align: center;
+    text-shadow: 0 4px 0 #000, -2px -2px 0 #f7ebc2, -3px -3px 0 #166bde;
+}
+
+/*____________________________________________________________
+### Rattle Button Keyframes Animation
+____________________________________________________________*/
+@keyframes rattleAnimation {
+    0% {
+        letter-spacing: -0.8px;
+        word-spacing: 1px;
+        transform: rotate(2deg);
+    }
+
+    25% {
+        font-size: 49px;
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        text-shadow: 0 1px 0 #000, 1px 1px 0 #f7ebc2, 1px 1px 0 #166bde, -2px -4px 0 #f7ebc2, -3px -4px 0 rgba(22, 107, 222, 0.6);
+        transform: rotate(1deg);
+    }
+
+    75% {
+        font-size: 51px;
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        font-size: 48px;
+        word-spacing: 3px;
+        transform: rotate(-1deg);
     }
 }

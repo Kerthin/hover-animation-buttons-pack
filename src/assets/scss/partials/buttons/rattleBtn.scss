@@ -1,0 +1,68 @@
+$rattleBtnWidth: 300px;
+$rattleBtnHeight: ($rattleBtnWidth / 100) * 27;
+$rattleBtnFontSize: $rattleBtnHeight / 1.6;
+
+$palette-rattle-button-bg: #f7ebc2;
+$palette-rattle-text: #166bde;
+
+.rattleBtn {
+  display: block;
+  margin: 20px auto;
+  width: $rattleBtnWidth;
+  height: $rattleBtnHeight;
+  background-color: $palette-rattle-button-bg;
+  border-radius: calc(#{$rattleBtnHeight} / 2);
+  cursor: pointer;
+  
+  &:hover {
+    .rattleBtn__text {
+      animation: rattleAnimation 0.09s infinite alternate;
+    }
+  }
+}
+.rattleBtn__text {
+  display: block;
+  color: $palette-rattle-text;
+  font-family: 'Jolly Lodger';
+  font-size: $rattleBtnFontSize;
+  text-align: center;
+  text-shadow: 0 4px 0 #000, 
+              -2px -2px 0 $palette-rattle-button-bg,
+              -3px -3px 0 $palette-rattle-text;
+}
+
+/*____________________________________________________________
+### Rattle Button Keyframes Animation
+____________________________________________________________*/
+@keyframes rattleAnimation {
+   0% {
+     letter-spacing: -.8px;
+     word-spacing: 1px;
+     transform: rotate(2deg);
+   }
+  
+  25% {
+    font-size: 49px;
+    transform: rotate(-1deg);
+  }
+  
+  50% {
+    text-shadow: 0 1px 0 #000, 
+                1px 1px 0 $palette-rattle-button-bg,
+                1px 1px 0 $palette-rattle-text,
+                -2px -4px 0 $palette-rattle-button-bg,
+                -3px -4px 0 rgba($palette-rattle-text, 0.6);
+    transform: rotate(1deg);
+  }
+  
+  75% {
+   font-size: 51px;
+    transform: rotate(-2deg);
+  }
+  
+  100% {
+   font-size: 48px;
+    word-spacing: 3px;
+    transform: rotate(-1deg);
+  }
+}
