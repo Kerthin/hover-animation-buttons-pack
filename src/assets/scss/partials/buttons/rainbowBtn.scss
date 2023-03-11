@@ -1,0 +1,153 @@
+/*____________________________________________________________
+# Rainbow Button Variables
+____________________________________________________________*/
+$rainbowBtnItemsColor: (#ffc185,
+                        #ffa579,
+                        #fa8b75,
+                        #f16d79,
+                        #e15383,
+                        #dc3977,
+                        #b9267b);
+
+$rainbowBtnItemWidth: 30px;
+
+$rainbowBtnWidth: 200px;
+$rainbowBtnHeight: ($rainbowBtnWidth / 100) * 32.5;
+
+$rainbowBtnItemWrapWidth: $rainbowBtnItemWidth * length($rainbowBtnItemsColor);
+$rainbowBtnItemWrapDegree: 30deg;
+
+$rainbowBtnFontSize: $rainbowBtnHeight / 2.03125;
+
+$rainbowBtnItemsTransition: .5s;
+$rainbowBtnItemsDelay: .08s;
+
+$rainbowBtnTextOutTransitionDelay: ($rainbowBtnItemsTransition * (length($rainbowBtnItemsColor) / 2)) * .1;
+$rainbowBtnTextHvrTransitionDelay: ($rainbowBtnItemsTransition * length($rainbowBtnItemsColor)) * .1;
+
+/*____________________________________________________________
+# Rainbow Button
+____________________________________________________________*/
+.rainbowBtn {
+  position: relative;
+  display: flex;
+  margin: 20px 25px;
+  width: $rainbowBtnWidth;
+  height: $rainbowBtnHeight;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ff8fa2;
+  
+  @mixin rainbowItemsHoverModMix ($name, $property) {
+    &.#{$name} {
+      .rainbowBtn__item {
+        &:after {
+          #{$property}: 0;
+        }
+      }
+    }
+  }
+  @include rainbowItemsHoverModMix(_b, bottom);
+  @include rainbowItemsHoverModMix(_tb, bottom);
+  @include rainbowItemsHoverModMix(_bt, top);
+  
+  &._radius {
+    border-radius: calc(#{$rainbowBtnHeight} / 2);
+    
+    .rainbowBtn__item {
+      
+      &:after {
+        border-radius: calc(#{$rainbowBtnItemWidth} / 2);
+      }
+    }
+  }
+  
+  &:hover {
+    
+    .rainbowBtn__item {
+      &::after {
+        height: 100%;
+      }
+    }
+    
+    .rainbowBtn__startText {
+      opacity: 0;
+      transition-delay: $rainbowBtnTextHvrTransitionDelay;
+    }
+    .rainbowBtn__endText {
+      opacity: 1;
+      transition-delay: $rainbowBtnTextHvrTransitionDelay;
+    }
+  }
+  
+  &._tb {
+    &:hover {
+      .rainbowBtn__item {
+        &::after {
+          top: 0;
+        }
+      }
+    }
+  }
+  
+  &._bt {
+    &:hover {
+      .rainbowBtn__item {
+        &::after {
+          top: auto;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.rainbowBtn__startText,
+.rainbowBtn__endText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $rainbowBtnFontSize;
+  color: #eee5ce;
+  transition: opacity .2s;
+  transition-delay: $rainbowBtnTextOutTransitionDelay;
+}
+.rainbowBtn__endText {
+  opacity: 0;
+}
+
+.rainbowBtn__itemWrap {
+  position: absolute;
+  top: -$rainbowBtnHeight;
+  // (!) The width of the itemWrap must be greater than the width of the button
+  left: calc((-#{$rainbowBtnItemWrapWidth} + #{$rainbowBtnWidth}) / 2);
+  width: $rainbowBtnItemWrapWidth;
+  height: calc(#{$rainbowBtnHeight} * 3);
+  transform: rotate($rainbowBtnItemWrapDegree);
+}
+.rainbowBtn__item {
+  position: relative;
+  float: left;
+  width: $rainbowBtnItemWidth;
+  height: 100%;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: #C00000;
+    transition: height $rainbowBtnItemsTransition;
+  }
+  
+  @for $i from 1 through length($rainbowBtnItemsColor) {
+    &:nth-child(#{$i}) {
+      &:after {
+        background-color: nth($arrowBtnItemsColor, $i);
+        transition-delay: calc((#{$i} - 1) * #{$rainbowBtnItemsDelay});
+      }
+    }
+  }
+}

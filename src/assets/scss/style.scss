@@ -6,6 +6,10 @@
     ## @import borderBreakPointBtn.scss
     ## @import glitchBtn.scss
     ## @import neomorphicButton.scss
+    ## @import layeredBtn.scss
+    ## @import rattleBtn.scss
+    ## @import arrowBtn.scss
+    ## @import rainbowBtn.scss
 
 ____________________________________________________________*/
 
@@ -51,3 +55,8 @@ ____________________________________________________________*/
 ## @import arrowBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/arrowBtn.scss';
+
+/*____________________________________________________________
+## @import rainbowBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/rainbowBtn.scss';

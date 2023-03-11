@@ -6,6 +6,10 @@
     ## @import borderBreakPointBtn.scss
     ## @import glitchBtn.scss
     ## @import neomorphicButton.scss
+    ## @import layeredBtn.scss
+    ## @import rattleBtn.scss
+    ## @import arrowBtn.scss
+    ## @import rainbowBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -666,71 +670,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(2px, 200px, 36px, 0);
+        clip: rect(44px, 200px, 45px, 0);
     }
 
     6.25% {
-        clip: rect(22px, 200px, 59px, 0);
+        clip: rect(19px, 200px, 58px, 0);
     }
 
     12.5% {
-        clip: rect(1px, 200px, 4px, 0);
+        clip: rect(41px, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(27px, 200px, 38px, 0);
+        clip: rect(40px, 200px, 37px, 0);
     }
 
     25% {
-        clip: rect(16px, 200px, 3px, 0);
+        clip: rect(12px, 200px, 38px, 0);
     }
 
     31.25% {
-        clip: rect(10px, 200px, 30px, 0);
+        clip: rect(51px, 200px, 22px, 0);
     }
 
     37.5% {
-        clip: rect(4px, 200px, 9px, 0);
+        clip: rect(62px, 200px, 47px, 0);
     }
 
     43.75% {
-        clip: rect(40px, 200px, 15px, 0);
+        clip: rect(19px, 200px, 52px, 0);
     }
 
     50% {
-        clip: rect(53px, 200px, 15px, 0);
+        clip: rect(17px, 200px, 43px, 0);
     }
 
     56.25% {
-        clip: rect(42px, 200px, 26px, 0);
+        clip: rect(45px, 200px, 37px, 0);
     }
 
     62.5% {
-        clip: rect(55px, 200px, 13px, 0);
+        clip: rect(50px, 200px, 64px, 0);
     }
 
     68.75% {
-        clip: rect(54px, 200px, 21px, 0);
+        clip: rect(44px, 200px, 8px, 0);
     }
 
     75% {
-        clip: rect(28px, 200px, 58px, 0);
+        clip: rect(12px, 200px, 13px, 0);
     }
 
     81.25% {
-        clip: rect(31px, 200px, 57px, 0);
+        clip: rect(35px, 200px, 58px, 0);
     }
 
     87.5% {
-        clip: rect(27px, 200px, 7px, 0);
+        clip: rect(25px, 200px, 54px, 0);
     }
 
     93.75% {
-        clip: rect(18px, 200px, 9px, 0);
+        clip: rect(50px, 200px, 21px, 0);
     }
 
     100% {
-        clip: rect(36px, 200px, 13px, 0);
+        clip: rect(1px, 200px, 42px, 0);
     }
 }
 /*____________________________________________________________
@@ -1380,4 +1384,144 @@ ____________________________________________________________*/
     transition: text-shadow 0.3s;
     transition-delay: 0.3666666667s;
     z-index: 3;
+}
+
+/*____________________________________________________________
+## @import rainbowBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Rainbow Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Rainbow Button
+____________________________________________________________*/
+.rainbowBtn {
+    position: relative;
+    display: flex;
+    margin: 20px 25px;
+    width: 200px;
+    height: 65px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #ff8fa2;
+}
+
+.rainbowBtn._b .rainbowBtn__item:after {
+    bottom: 0;
+}
+
+.rainbowBtn._tb .rainbowBtn__item:after {
+    bottom: 0;
+}
+
+.rainbowBtn._bt .rainbowBtn__item:after {
+    top: 0;
+}
+
+.rainbowBtn._radius {
+    border-radius: calc(65px / 2);
+}
+
+.rainbowBtn._radius .rainbowBtn__item:after {
+    border-radius: calc(30px / 2);
+}
+
+.rainbowBtn:hover .rainbowBtn__item::after {
+    height: 100%;
+}
+
+.rainbowBtn:hover .rainbowBtn__startText {
+    opacity: 0;
+    transition-delay: 0.35s;
+}
+
+.rainbowBtn:hover .rainbowBtn__endText {
+    opacity: 1;
+    transition-delay: 0.35s;
+}
+
+.rainbowBtn._tb:hover .rainbowBtn__item::after {
+    top: 0;
+}
+
+.rainbowBtn._bt:hover .rainbowBtn__item::after {
+    top: auto;
+    bottom: 0;
+}
+
+.rainbowBtn__startText,
+.rainbowBtn__endText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #eee5ce;
+    transition: opacity 0.2s;
+    transition-delay: 0.175s;
+}
+
+.rainbowBtn__endText {
+    opacity: 0;
+}
+
+.rainbowBtn__itemWrap {
+    position: absolute;
+    top: -65px;
+    left: calc((-210px + 200px) / 2);
+    width: 210px;
+    height: calc(65px * 3);
+    transform: rotate(30deg);
+}
+
+.rainbowBtn__item {
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 100%;
+}
+
+.rainbowBtn__item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: #C00000;
+    transition: height 0.5s;
+}
+
+.rainbowBtn__item:nth-child(1):after {
+    background-color: #fff5b4;
+    transition-delay: calc((1 - 1) * 0.08s);
+}
+
+.rainbowBtn__item:nth-child(2):after {
+    background-color: #fedd99;
+    transition-delay: calc((2 - 1) * 0.08s);
+}
+
+.rainbowBtn__item:nth-child(3):after {
+    background-color: #ffc185;
+    transition-delay: calc((3 - 1) * 0.08s);
+}
+
+.rainbowBtn__item:nth-child(4):after {
+    background-color: #ffa579;
+    transition-delay: calc((4 - 1) * 0.08s);
+}
+
+.rainbowBtn__item:nth-child(5):after {
+    background-color: #fa8b75;
+    transition-delay: calc((5 - 1) * 0.08s);
+}
+
+.rainbowBtn__item:nth-child(6):after {
+    background-color: #f16d79;
+    transition-delay: calc((6 - 1) * 0.08s);
+}
+
+.rainbowBtn__item:nth-child(7):after {
+    background-color: #e15383;
+    transition-delay: calc((7 - 1) * 0.08s);
 }

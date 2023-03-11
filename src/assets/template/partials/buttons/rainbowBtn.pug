@@ -1,0 +1,18 @@
+section.presentWrap
+  h1.presentWrap__title Rainbow Buttons
+  .presentWrap__buttonsBlock
+
+    mixin rainbowBtnMix(rainbowBtnType, rainbowBtnStart, rainbowBtnEnd)
+      button.rainbowBtn(class=`${rainbowBtnType}`)
+        span.rainbowBtn__startText #{rainbowBtnStart}
+        .rainbowBtn__itemWrap
+          - var rainbowBtnItems = 1;
+          while rainbowBtnItems <= 7
+            .rainbowBtn__item(id=`__${rainbowBtnItems++}`)
+        span.rainbowBtn__endText #{rainbowBtnEnd}
+    +rainbowBtnMix('', 'Hover', 'Button')
+    +rainbowBtnMix('_b', 'Hover', 'Button')
+    +rainbowBtnMix('_tb', 'Hover', 'Button')
+    +rainbowBtnMix('_bt', 'Hover', 'Button')
+    +rainbowBtnMix('_tb _radius', 'Hover', 'Button')
+    +rainbowBtnMix('_bt _radius', 'Hover', 'Button')
