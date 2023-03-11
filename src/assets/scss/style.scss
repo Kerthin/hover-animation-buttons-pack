@@ -10,6 +10,7 @@
     ## @import rattleBtn.scss
     ## @import arrowBtn.scss
     ## @import rainbowBtn.scss
+    ## @import expandingBtn.scss
 
 ____________________________________________________________*/
 
@@ -60,3 +61,8 @@ ____________________________________________________________*/
 ## @import rainbowBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/rainbowBtn.scss';
+
+/*____________________________________________________________
+## @import expandingBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/expandingBtn.scss';

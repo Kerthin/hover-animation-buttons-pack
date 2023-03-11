@@ -10,6 +10,7 @@
     ## @import rattleBtn.scss
     ## @import arrowBtn.scss
     ## @import rainbowBtn.scss
+    ## @import expandingBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -670,71 +671,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(44px, 200px, 45px, 0);
+        clip: rect(16px, 200px, 45px, 0);
     }
 
     6.25% {
-        clip: rect(19px, 200px, 58px, 0);
+        clip: rect(38px, 200px, 1px, 0);
     }
 
     12.5% {
-        clip: rect(41px, 200px, 10px, 0);
+        clip: rect(39px, 200px, 20px, 0);
     }
 
     18.75% {
-        clip: rect(40px, 200px, 37px, 0);
+        clip: rect(50px, 200px, 62px, 0);
     }
 
     25% {
-        clip: rect(12px, 200px, 38px, 0);
+        clip: rect(56px, 200px, 57px, 0);
     }
 
     31.25% {
-        clip: rect(51px, 200px, 22px, 0);
+        clip: rect(33px, 200px, 47px, 0);
     }
 
     37.5% {
-        clip: rect(62px, 200px, 47px, 0);
+        clip: rect(51px, 200px, 59px, 0);
     }
 
     43.75% {
-        clip: rect(19px, 200px, 52px, 0);
+        clip: rect(1px, 200px, 52px, 0);
     }
 
     50% {
-        clip: rect(17px, 200px, 43px, 0);
+        clip: rect(42px, 200px, 43px, 0);
     }
 
     56.25% {
-        clip: rect(45px, 200px, 37px, 0);
+        clip: rect(60px, 200px, 25px, 0);
     }
 
     62.5% {
-        clip: rect(50px, 200px, 64px, 0);
+        clip: rect(17px, 200px, 46px, 0);
     }
 
     68.75% {
-        clip: rect(44px, 200px, 8px, 0);
+        clip: rect(51px, 200px, 17px, 0);
     }
 
     75% {
-        clip: rect(12px, 200px, 13px, 0);
+        clip: rect(15px, 200px, 50px, 0);
     }
 
     81.25% {
-        clip: rect(35px, 200px, 58px, 0);
+        clip: rect(57px, 200px, 45px, 0);
     }
 
     87.5% {
-        clip: rect(25px, 200px, 54px, 0);
+        clip: rect(61px, 200px, 33px, 0);
     }
 
     93.75% {
-        clip: rect(50px, 200px, 21px, 0);
+        clip: rect(47px, 200px, 20px, 0);
     }
 
     100% {
-        clip: rect(1px, 200px, 42px, 0);
+        clip: rect(61px, 200px, 17px, 0);
     }
 }
 /*____________________________________________________________
@@ -1524,4 +1525,218 @@ ____________________________________________________________*/
 .rainbowBtn__item:nth-child(7):after {
     background-color: #e15383;
     transition-delay: calc((7 - 1) * 0.08s);
+}
+
+/*____________________________________________________________
+## @import expandingBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Expanding Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Expanding Button
+____________________________________________________________*/
+.expandingBtn {
+    position: relative;
+    display: flex;
+    margin: 20px 25px;
+    width: 240px;
+    height: 99.9984px;
+    border: 1.5499752px solid #292c2c;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+}
+
+.expandingBtn:hover .expandingBtn__bgRect {
+    transition-delay: 0s;
+}
+
+.expandingBtn:hover .expandingBtn__bgRect:nth-child(1) {
+    top: 19.99968px;
+}
+
+.expandingBtn:hover .expandingBtn__bgRect:nth-child(2) {
+    bottom: 19.99968px;
+}
+
+.expandingBtn:hover .expandingBtn__inner {
+    width: 100%;
+    height: 100%;
+    border: 0px solid #292c2c;
+    transition-delay: 0.3s;
+}
+
+.expandingBtn:hover .expandingBtn__sideBlock {
+    height: 100%;
+    transition-delay: 0.3s;
+}
+
+.expandingBtn:hover .expandingBtn__mainBlock {
+    width: 85%;
+    transition-delay: calc(0.3s - (0.3s / 3));
+}
+
+.expandingBtn:hover .expandingBtn__startSlide {
+    width: 100%;
+}
+
+.expandingBtn:hover .expandingBtn__endNameWrap {
+    opacity: 1;
+    transition-delay: calc((0.3s * 2) + (0.3s / 3));
+}
+
+.expandingBtn:hover .expandingBtn__endNameWrap .expandingBtn__endSlide {
+    width: 0;
+    transition-delay: calc((0.3s * 2) + (0.3s / 3));
+}
+
+.expandingBtn__bgRect {
+    position: absolute;
+    width: 39.9984px;
+    height: 39.9984px;
+    border: 1.5499752px solid #292c2c;
+    transition: top 0.3s, bottom 0.3s;
+    transition-delay: 0.3s;
+}
+
+.expandingBtn__bgRect:nth-child(1) {
+    top: 6.999888px;
+    right: 49.92px;
+    background-color: #56c299;
+}
+
+.expandingBtn__bgRect:nth-child(2) {
+    bottom: 6.999888px;
+    left: 49.92px;
+    background-color: #dd4f5b;
+}
+
+.expandingBtn__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 199.9992px;
+    height: 59.99976px;
+    border: 1.5499752px solid #292c2c;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #facf6f;
+    transition: width 0.3s, height 0.3s, border 0.3s;
+    transition-delay: 0s;
+}
+
+.expandingBtn__sideBlock {
+    position: absolute;
+    bottom: 0;
+    width: 15%;
+    height: 0;
+    border-right: 1.5499752px solid #292c2c;
+    overflow: hidden;
+    transition: width 0.3s, height 0.3s;
+}
+
+.expandingBtn__mainBlock {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s, height 0.3s;
+    transition-delay: calc(0.3s - (0.3s / 3));
+}
+
+.expandingBtn__sideName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(-1, -1);
+    font-family: "Roboto Slab";
+    font-size: 18.0017281728px;
+    color: #292c2c;
+    writing-mode: vertical-lr;
+}
+
+.expandingBtn__angle {
+    position: absolute;
+    width: 9.99996px;
+    height: 9.99996px;
+    border-style: solid;
+    border-color: #292c2c;
+}
+
+.expandingBtn__angle._top_left {
+    top: 9.99996px;
+    left: 9.99996px;
+    border-top-width: 1.5499752px;
+    border-left-width: 1.5499752px;
+}
+
+.expandingBtn__angle._top_right {
+    top: 9.99996px;
+    right: 9.99996px;
+    border-top-width: 1.5499752px;
+    border-right-width: 1.5499752px;
+}
+
+.expandingBtn__angle._bottom_left {
+    bottom: 9.99996px;
+    left: 9.99996px;
+    border-bottom-width: 1.5499752px;
+    border-left-width: 1.5499752px;
+}
+
+.expandingBtn__angle._bottom_right {
+    bottom: 9.99996px;
+    right: 9.99996px;
+    border-bottom-width: 1.5499752px;
+    border-right-width: 1.5499752px;
+}
+
+.expandingBtn__startNameWrap,
+.expandingBtn__endNameWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.expandingBtn__startName,
+.expandingBtn__endName {
+    font-family: "Roboto Slab";
+    font-size: 23.999904px;
+    color: #292c2c;
+}
+
+.expandingBtn__underline {
+    position: absolute;
+    bottom: 0;
+    width: 18.0044291073px;
+    height: 1.5499752px;
+    background-color: #292c2c;
+}
+
+.expandingBtn__startSlide,
+.expandingBtn__endSlide {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #facf6f;
+    transition: width 0.3s;
+    transition-delay: calc(0.3s + (0.3s / 3));
+}
+
+.expandingBtn__endNameWrap {
+    opacity: 0;
+    transition-delay: calc(0.3s / 2);
+}
+
+.expandingBtn__endNameWrap .expandingBtn__underline {
+    width: 14.99994px;
+}
+
+.expandingBtn__endNameWrap .expandingBtn__endSlide {
+    width: 100%;
+    transition-delay: calc(0.3s / 6);
 }
