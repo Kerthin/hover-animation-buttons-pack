@@ -12,6 +12,7 @@
     ## @import rainbowBtn.scss
     ## @import expandingBtn.scss
     ## @import circleBtn.scss
+    ## @import gradientBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -672,71 +673,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(60px, 200px, 44px, 0);
+        clip: rect(59px, 200px, 29px, 0);
     }
 
     6.25% {
-        clip: rect(1px, 200px, 23px, 0);
+        clip: rect(62px, 200px, 29px, 0);
     }
 
     12.5% {
-        clip: rect(52px, 200px, 51px, 0);
+        clip: rect(17px, 200px, 21px, 0);
     }
 
     18.75% {
-        clip: rect(9px, 200px, 45px, 0);
+        clip: rect(40px, 200px, 19px, 0);
     }
 
     25% {
-        clip: rect(3px, 200px, 11px, 0);
+        clip: rect(12px, 200px, 52px, 0);
     }
 
     31.25% {
-        clip: rect(18px, 200px, 21px, 0);
+        clip: rect(65px, 200px, 33px, 0);
     }
 
     37.5% {
-        clip: rect(61px, 200px, 57px, 0);
+        clip: rect(10px, 200px, 21px, 0);
     }
 
     43.75% {
-        clip: rect(58px, 200px, 2px, 0);
+        clip: rect(14px, 200px, 50px, 0);
     }
 
     50% {
-        clip: rect(44px, 200px, 50px, 0);
+        clip: rect(62px, 200px, 8px, 0);
     }
 
     56.25% {
-        clip: rect(61px, 200px, 59px, 0);
+        clip: rect(32px, 200px, 3px, 0);
     }
 
     62.5% {
-        clip: rect(18px, 200px, 18px, 0);
+        clip: rect(12px, 200px, 27px, 0);
     }
 
     68.75% {
-        clip: rect(4px, 200px, 42px, 0);
+        clip: rect(4px, 200px, 8px, 0);
     }
 
     75% {
-        clip: rect(12px, 200px, 25px, 0);
+        clip: rect(30px, 200px, 42px, 0);
     }
 
     81.25% {
-        clip: rect(48px, 200px, 60px, 0);
+        clip: rect(26px, 200px, 18px, 0);
     }
 
     87.5% {
-        clip: rect(4px, 200px, 58px, 0);
+        clip: rect(29px, 200px, 47px, 0);
     }
 
     93.75% {
-        clip: rect(54px, 200px, 19px, 0);
+        clip: rect(4px, 200px, 9px, 0);
     }
 
     100% {
-        clip: rect(23px, 200px, 50px, 0);
+        clip: rect(55px, 200px, 28px, 0);
     }
 }
 /*____________________________________________________________
@@ -1812,4 +1813,53 @@ ____________________________________________________________*/
     border: 2px solid #292c2c;
     border-radius: 50%;
     background-color: #facf6f;
+}
+
+/*____________________________________________________________
+## @import gradientBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Gradient Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Gradient Button
+____________________________________________________________*/
+.gradientBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    border: 2px solid #d6b615;
+    border-radius: calc(65px / 2);
+    background: repeating-linear-gradient(-51.6deg, #d6b615, #d6b615 15.38px, #000 15.38px, #000 30.76px);
+    background-size: 80%;
+    transition: background-position 0.4s;
+    cursor: pointer;
+}
+
+.gradientBtn:before {
+    content: "Button";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: calc((32px / 100) * 2.857);
+    color: #fff;
+    line-height: 65px;
+    border-radius: calc(65px / 2);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background 0.4s, text-shadow 0.4s;
+}
+
+.gradientBtn:hover {
+    background-position: calc(200px / 2);
+}
+
+.gradientBtn:hover:before {
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 2px 2px 0 #000;
 }

@@ -12,6 +12,7 @@
     ## @import rainbowBtn.scss
     ## @import expandingBtn.scss
     ## @import circleBtn.scss
+    ## @import gradientBtn.scss
 
 ____________________________________________________________*/
 
@@ -72,3 +73,8 @@ ____________________________________________________________*/
 ## @import circleBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/circleBtn.scss';
+
+/*____________________________________________________________
+## @import gradientBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/gradientBtn.scss';
