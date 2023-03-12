@@ -1,0 +1,48 @@
+/*____________________________________________________________
+# Border Fill Button Variables
+____________________________________________________________*/
+$borderFillBtnWidth: 200px;
+$borderFillBtnHeight: ($borderFillBtnWidth / 100) * 32.5;
+
+$borderFillBtnFontSize: $borderFillBtnHeight / 2.3;
+
+$borderFillBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Border Fill Button
+____________________________________________________________*/
+.borderFillBtn {
+  position: relative;
+  margin: 20px;
+  width: $borderFillBtnWidth;
+  height: $borderFillBtnHeight;
+  background-color: #57D1C9;
+  border-width: calc(#{$borderFillBtnHeight} / 2);
+  border-style: solid;
+  border-color: #ED5485;
+  transition: border-width $borderFillBtnSpeed;
+  cursor: pointer;
+  
+  &._radius {
+    border-radius: calc(#{$borderFillBtnHeight} / 2);
+  }
+  
+  &:hover {
+    border-width: calc(#{$borderFillBtnHeight} / 13);
+    
+    .borderFillBtn__text {
+      letter-spacing: calc(#{$borderFillBtnFontSize} / 2.8);
+    }
+  }
+}
+.borderFillBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  font-size: $borderFillBtnFontSize;
+  letter-spacing: calc(#{$borderFillBtnFontSize} / 3.5);
+  color: #FFFBCB;
+  transition: letter-spacing $borderFillBtnSpeed;
+}

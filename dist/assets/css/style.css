@@ -13,6 +13,7 @@
     ## @import expandingBtn.scss
     ## @import circleBtn.scss
     ## @import gradientBtn.scss
+    ## @import borderFillBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -673,71 +674,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(59px, 200px, 29px, 0);
+        clip: rect(23px, 200px, 31px, 0);
     }
 
     6.25% {
-        clip: rect(62px, 200px, 29px, 0);
+        clip: rect(20px, 200px, 23px, 0);
     }
 
     12.5% {
-        clip: rect(17px, 200px, 21px, 0);
+        clip: rect(54px, 200px, 27px, 0);
     }
 
     18.75% {
-        clip: rect(40px, 200px, 19px, 0);
+        clip: rect(6px, 200px, 53px, 0);
     }
 
     25% {
-        clip: rect(12px, 200px, 52px, 0);
+        clip: rect(42px, 200px, 33px, 0);
     }
 
     31.25% {
-        clip: rect(65px, 200px, 33px, 0);
+        clip: rect(51px, 200px, 7px, 0);
     }
 
     37.5% {
-        clip: rect(10px, 200px, 21px, 0);
+        clip: rect(33px, 200px, 39px, 0);
     }
 
     43.75% {
-        clip: rect(14px, 200px, 50px, 0);
+        clip: rect(36px, 200px, 3px, 0);
     }
 
     50% {
-        clip: rect(62px, 200px, 8px, 0);
+        clip: rect(4px, 200px, 48px, 0);
     }
 
     56.25% {
-        clip: rect(32px, 200px, 3px, 0);
+        clip: rect(24px, 200px, 57px, 0);
     }
 
     62.5% {
-        clip: rect(12px, 200px, 27px, 0);
+        clip: rect(58px, 200px, 47px, 0);
     }
 
     68.75% {
-        clip: rect(4px, 200px, 8px, 0);
+        clip: rect(15px, 200px, 39px, 0);
     }
 
     75% {
-        clip: rect(30px, 200px, 42px, 0);
+        clip: rect(25px, 200px, 19px, 0);
     }
 
     81.25% {
-        clip: rect(26px, 200px, 18px, 0);
+        clip: rect(27px, 200px, 10px, 0);
     }
 
     87.5% {
-        clip: rect(29px, 200px, 47px, 0);
+        clip: rect(35px, 200px, 59px, 0);
     }
 
     93.75% {
-        clip: rect(4px, 200px, 9px, 0);
+        clip: rect(12px, 200px, 17px, 0);
     }
 
     100% {
-        clip: rect(55px, 200px, 28px, 0);
+        clip: rect(6px, 200px, 2px, 0);
     }
 }
 /*____________________________________________________________
@@ -1862,4 +1863,50 @@ ____________________________________________________________*/
 .gradientBtn:hover:before {
     background-color: rgba(0, 0, 0, 0);
     text-shadow: 2px 2px 0 #000;
+}
+
+/*____________________________________________________________
+## @import borderFillBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Border Fill Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Border Fill Button
+____________________________________________________________*/
+.borderFillBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #57D1C9;
+    border-width: calc(65px / 2);
+    border-style: solid;
+    border-color: #ED5485;
+    transition: border-width 0.3s;
+    cursor: pointer;
+}
+
+.borderFillBtn._radius {
+    border-radius: calc(65px / 2);
+}
+
+.borderFillBtn:hover {
+    border-width: calc(65px / 13);
+}
+
+.borderFillBtn:hover .borderFillBtn__text {
+    letter-spacing: calc(28.2608695652px / 2.8);
+}
+
+.borderFillBtn__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 28.2608695652px;
+    letter-spacing: calc(28.2608695652px / 3.5);
+    color: #FFFBCB;
+    transition: letter-spacing 0.3s;
 }

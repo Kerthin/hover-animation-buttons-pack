@@ -13,6 +13,7 @@
     ## @import expandingBtn.scss
     ## @import circleBtn.scss
     ## @import gradientBtn.scss
+    ## @import borderFillBtn.scss
 
 ____________________________________________________________*/
 
@@ -78,3 +79,8 @@ ____________________________________________________________*/
 ## @import gradientBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/gradientBtn.scss';
+
+/*____________________________________________________________
+## @import borderFillBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/borderFillBtn.scss';
