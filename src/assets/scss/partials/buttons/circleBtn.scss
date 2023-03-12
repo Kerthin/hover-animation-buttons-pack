@@ -1,0 +1,70 @@
+/*____________________________________________________________
+# Circle Button Variables
+____________________________________________________________*/
+$circleBtnSize: 80px;
+$circleBtnInnerSize: ($circleBtnSize / 100) * 35;
+
+$circleBtnBorder: $circleBtnSize / 40;
+
+/*____________________________________________________________
+# Circle Button
+____________________________________________________________*/
+.circleBtn {
+	position: relative;
+  margin: 20px;
+	width: $circleBtnSize;
+	height: $circleBtnSize;
+	border: $circleBtnBorder solid #292c2c;
+	border-radius: 50%;
+	background-color: #fff;
+	transform: scale(.9);
+	transition: all .4s;
+	cursor: pointer;
+  overflow: hidden;
+  
+  &:hover {
+    transform: scale(1);
+    
+    .circleBtn__textWrap {
+      animation-play-state: running;
+    }
+  }
+}
+.circleBtn__textWrap {
+	position: absolute;
+	top: -20%;
+	left: -20%;
+	width: 140%;
+	height: 140%;
+	animation-name: circleTextRotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+@keyframes circleTextRotate {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}
+
+.circleBtn__text {
+	font-family: Galeria;
+	font-size: 30px;
+	fill: #292c2c;
+}
+.circleBtn__inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: $circleBtnInnerSize;
+	height: $circleBtnInnerSize;
+	border: $circleBtnBorder solid #292c2c;
+	border-radius: 50%;
+	background-color: #facf6f;
+}

@@ -11,6 +11,7 @@
     ## @import arrowBtn.scss
     ## @import rainbowBtn.scss
     ## @import expandingBtn.scss
+    ## @import circleBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -671,71 +672,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(16px, 200px, 45px, 0);
+        clip: rect(60px, 200px, 44px, 0);
     }
 
     6.25% {
-        clip: rect(38px, 200px, 1px, 0);
+        clip: rect(1px, 200px, 23px, 0);
     }
 
     12.5% {
-        clip: rect(39px, 200px, 20px, 0);
+        clip: rect(52px, 200px, 51px, 0);
     }
 
     18.75% {
-        clip: rect(50px, 200px, 62px, 0);
+        clip: rect(9px, 200px, 45px, 0);
     }
 
     25% {
-        clip: rect(56px, 200px, 57px, 0);
+        clip: rect(3px, 200px, 11px, 0);
     }
 
     31.25% {
-        clip: rect(33px, 200px, 47px, 0);
+        clip: rect(18px, 200px, 21px, 0);
     }
 
     37.5% {
-        clip: rect(51px, 200px, 59px, 0);
+        clip: rect(61px, 200px, 57px, 0);
     }
 
     43.75% {
-        clip: rect(1px, 200px, 52px, 0);
+        clip: rect(58px, 200px, 2px, 0);
     }
 
     50% {
-        clip: rect(42px, 200px, 43px, 0);
+        clip: rect(44px, 200px, 50px, 0);
     }
 
     56.25% {
-        clip: rect(60px, 200px, 25px, 0);
+        clip: rect(61px, 200px, 59px, 0);
     }
 
     62.5% {
-        clip: rect(17px, 200px, 46px, 0);
+        clip: rect(18px, 200px, 18px, 0);
     }
 
     68.75% {
-        clip: rect(51px, 200px, 17px, 0);
+        clip: rect(4px, 200px, 42px, 0);
     }
 
     75% {
-        clip: rect(15px, 200px, 50px, 0);
+        clip: rect(12px, 200px, 25px, 0);
     }
 
     81.25% {
-        clip: rect(57px, 200px, 45px, 0);
+        clip: rect(48px, 200px, 60px, 0);
     }
 
     87.5% {
-        clip: rect(61px, 200px, 33px, 0);
+        clip: rect(4px, 200px, 58px, 0);
     }
 
     93.75% {
-        clip: rect(47px, 200px, 20px, 0);
+        clip: rect(54px, 200px, 19px, 0);
     }
 
     100% {
-        clip: rect(61px, 200px, 17px, 0);
+        clip: rect(23px, 200px, 50px, 0);
     }
 }
 /*____________________________________________________________
@@ -1739,4 +1740,76 @@ ____________________________________________________________*/
 .expandingBtn__endNameWrap .expandingBtn__endSlide {
     width: 100%;
     transition-delay: calc(0.3s / 6);
+}
+
+/*____________________________________________________________
+## @import circleBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Button
+____________________________________________________________*/
+.circleBtn {
+    position: relative;
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #292c2c;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: scale(0.9);
+    transition: all 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.circleBtn:hover {
+    transform: scale(1);
+}
+
+.circleBtn:hover .circleBtn__textWrap {
+    animation-play-state: running;
+}
+
+.circleBtn__textWrap {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    animation-name: circleTextRotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+@keyframes circleTextRotate {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+.circleBtn__text {
+    font-family: Galeria;
+    font-size: 30px;
+    fill: #292c2c;
+}
+
+.circleBtn__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    border: 2px solid #292c2c;
+    border-radius: 50%;
+    background-color: #facf6f;
 }
