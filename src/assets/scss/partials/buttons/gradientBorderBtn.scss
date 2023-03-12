@@ -1,0 +1,73 @@
+/*____________________________________________________________
+# Gradient Border Buttons Variables
+____________________________________________________________*/
+$gradientBorderBtnWidth: 200px;
+$gradientBorderBtnHeight: ($gradientBorderBtnWidth / 100) * 32.5;
+
+$gradientBorderBtnPadding: ($gradientBorderBtnWidth / 100) * 1.75;
+
+$gradientBorderBtnFontSize: $gradientBorderBtnHeight / 2.3;
+
+$palette-rainbow-array: (#fdde5c,
+                         #f8ab5e,
+                         #f56a62,
+                         #a176c8,
+                         #759beb,
+                         #65beb3,
+                         #70db96);
+
+$palette-matte-array: (#FF7260,
+                       #FF3B1D,
+                       #9BD7D5,
+                       #7BDFF2,
+                       #FFF5C3,
+                       #FFFBCB,
+                       #e3e1c8);
+
+/*____________________________________________________________
+# Gradient Border Buttons
+____________________________________________________________*/
+.gradientBorderBtn {
+  position: relative;
+  margin: 20px;
+  padding: $gradientBorderBtnPadding;
+  width: $gradientBorderBtnWidth;
+  height: $gradientBorderBtnHeight;
+  cursor: pointer;
+  transition: background-position .6s;
+  
+  &._rainbow {
+    background: repeating-linear-gradient(
+      -45deg,
+      $palette-rainbow-array
+    );
+  }
+  
+  &._matte {
+    background: repeating-linear-gradient(
+      -45deg,
+      $palette-matte-array
+    );
+  }
+  
+  &._radius {
+    border-radius: calc(#{$gradientBorderBtnHeight} / 2);
+    
+    .gradientBorderBtn__inner {
+      border-radius: calc(#{$gradientBorderBtnHeight} / 2);
+    }
+  }
+  
+  &:hover {
+    background-position: $gradientBorderBtnWidth;
+  }
+}
+
+.gradientBorderBtn__inner {
+  width: 100%;
+  height: 100%;
+  font-size: $gradientBorderBtnFontSize;
+  line-height: calc(#{$gradientBorderBtnHeight} - (#{$gradientBorderBtnPadding} * 2));
+  color: #000;
+  background: #fff;
+}

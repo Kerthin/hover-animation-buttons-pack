@@ -674,71 +674,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(23px, 200px, 31px, 0);
+        clip: rect(24px, 200px, 50px, 0);
     }
 
     6.25% {
-        clip: rect(20px, 200px, 23px, 0);
+        clip: rect(22px, 200px, 48px, 0);
     }
 
     12.5% {
-        clip: rect(54px, 200px, 27px, 0);
+        clip: rect(23px, 200px, 58px, 0);
     }
 
     18.75% {
-        clip: rect(6px, 200px, 53px, 0);
+        clip: rect(4px, 200px, 62px, 0);
     }
 
     25% {
-        clip: rect(42px, 200px, 33px, 0);
+        clip: rect(30px, 200px, 2px, 0);
     }
 
     31.25% {
-        clip: rect(51px, 200px, 7px, 0);
+        clip: rect(23px, 200px, 64px, 0);
     }
 
     37.5% {
-        clip: rect(33px, 200px, 39px, 0);
+        clip: rect(30px, 200px, 14px, 0);
     }
 
     43.75% {
-        clip: rect(36px, 200px, 3px, 0);
+        clip: rect(33px, 200px, 44px, 0);
     }
 
     50% {
-        clip: rect(4px, 200px, 48px, 0);
+        clip: rect(43px, 200px, 48px, 0);
     }
 
     56.25% {
-        clip: rect(24px, 200px, 57px, 0);
+        clip: rect(29px, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(58px, 200px, 47px, 0);
+        clip: rect(9px, 200px, 43px, 0);
     }
 
     68.75% {
-        clip: rect(15px, 200px, 39px, 0);
+        clip: rect(43px, 200px, 43px, 0);
     }
 
     75% {
-        clip: rect(25px, 200px, 19px, 0);
+        clip: rect(54px, 200px, 32px, 0);
     }
 
     81.25% {
-        clip: rect(27px, 200px, 10px, 0);
+        clip: rect(31px, 200px, 14px, 0);
     }
 
     87.5% {
-        clip: rect(35px, 200px, 59px, 0);
+        clip: rect(3px, 200px, 56px, 0);
     }
 
     93.75% {
-        clip: rect(12px, 200px, 17px, 0);
+        clip: rect(35px, 200px, 12px, 0);
     }
 
     100% {
-        clip: rect(6px, 200px, 2px, 0);
+        clip: rect(46px, 200px, 52px, 0);
     }
 }
 /*____________________________________________________________
@@ -1909,4 +1909,52 @@ ____________________________________________________________*/
     letter-spacing: calc(28.2608695652px / 3.5);
     color: #FFFBCB;
     transition: letter-spacing 0.3s;
+}
+
+/*____________________________________________________________
+## @import gradientBorderBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Gradient Border Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Gradient Border Buttons
+____________________________________________________________*/
+.gradientBorderBtn {
+    position: relative;
+    margin: 20px;
+    padding: 3.5px;
+    width: 200px;
+    height: 65px;
+    cursor: pointer;
+    transition: background-position 0.6s;
+}
+
+.gradientBorderBtn._rainbow {
+    background: repeating-linear-gradient(-45deg, #fdde5c, #f8ab5e, #f56a62, #a176c8, #759beb, #65beb3, #70db96);
+}
+
+.gradientBorderBtn._matte {
+    background: repeating-linear-gradient(-45deg, #FF7260, #FF3B1D, #9BD7D5, #7BDFF2, #FFF5C3, #FFFBCB, #e3e1c8);
+}
+
+.gradientBorderBtn._radius {
+    border-radius: calc(65px / 2);
+}
+
+.gradientBorderBtn._radius .gradientBorderBtn__inner {
+    border-radius: calc(65px / 2);
+}
+
+.gradientBorderBtn:hover {
+    background-position: 200px;
+}
+
+.gradientBorderBtn__inner {
+    width: 100%;
+    height: 100%;
+    font-size: 28.2608695652px;
+    line-height: calc(65px - (3.5px * 2));
+    color: #000;
+    background: #fff;
 }
