@@ -14,6 +14,8 @@
     ## @import circleBtn.scss
     ## @import gradientBtn.scss
     ## @import borderFillBtn.scss
+    ## @import gradientBorderBtn.scss
+    ## @import angleMoveBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -674,71 +676,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(24px, 200px, 50px, 0);
+        clip: rect(49px, 200px, 46px, 0);
     }
 
     6.25% {
-        clip: rect(22px, 200px, 48px, 0);
+        clip: rect(49px, 200px, 30px, 0);
     }
 
     12.5% {
-        clip: rect(23px, 200px, 58px, 0);
+        clip: rect(4px, 200px, 56px, 0);
     }
 
     18.75% {
-        clip: rect(4px, 200px, 62px, 0);
+        clip: rect(25px, 200px, 35px, 0);
     }
 
     25% {
-        clip: rect(30px, 200px, 2px, 0);
+        clip: rect(58px, 200px, 8px, 0);
     }
 
     31.25% {
-        clip: rect(23px, 200px, 64px, 0);
+        clip: rect(50px, 200px, 6px, 0);
     }
 
     37.5% {
-        clip: rect(30px, 200px, 14px, 0);
+        clip: rect(47px, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(33px, 200px, 44px, 0);
+        clip: rect(58px, 200px, 64px, 0);
     }
 
     50% {
-        clip: rect(43px, 200px, 48px, 0);
+        clip: rect(59px, 200px, 50px, 0);
     }
 
     56.25% {
-        clip: rect(29px, 200px, 52px, 0);
+        clip: rect(14px, 200px, 30px, 0);
     }
 
     62.5% {
-        clip: rect(9px, 200px, 43px, 0);
+        clip: rect(64px, 200px, 16px, 0);
     }
 
     68.75% {
-        clip: rect(43px, 200px, 43px, 0);
+        clip: rect(1px, 200px, 24px, 0);
     }
 
     75% {
-        clip: rect(54px, 200px, 32px, 0);
+        clip: rect(21px, 200px, 22px, 0);
     }
 
     81.25% {
-        clip: rect(31px, 200px, 14px, 0);
+        clip: rect(22px, 200px, 35px, 0);
     }
 
     87.5% {
-        clip: rect(3px, 200px, 56px, 0);
+        clip: rect(1px, 200px, 35px, 0);
     }
 
     93.75% {
-        clip: rect(35px, 200px, 12px, 0);
+        clip: rect(17px, 200px, 9px, 0);
     }
 
     100% {
-        clip: rect(46px, 200px, 52px, 0);
+        clip: rect(48px, 200px, 40px, 0);
     }
 }
 /*____________________________________________________________
@@ -1957,4 +1959,98 @@ ____________________________________________________________*/
     line-height: calc(65px - (3.5px * 2));
     color: #000;
     background: #fff;
+}
+
+/*____________________________________________________________
+## @import angleMoveBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Angle Move Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Angle Move Button
+____________________________________________________________*/
+.angleMoveBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    border: 1px solid #000;
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.angleMoveBtn:hover ._start {
+    opacity: 0;
+}
+
+.angleMoveBtn:hover ._end {
+    opacity: 1;
+}
+
+.angleMoveBtn:hover ._top_left {
+    top: 38px;
+    left: 173px;
+}
+
+.angleMoveBtn:hover ._top_right {
+    top: 38px;
+    right: 173px;
+}
+
+.angleMoveBtn:hover ._bottom_left {
+    bottom: 38px;
+    left: 173px;
+}
+
+.angleMoveBtn:hover ._bottom_right {
+    bottom: 38px;
+    right: 173px;
+}
+
+.angleMoveBtn__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24.0740740741px;
+    color: #292c2c;
+    transition-delay: calc(0.7s / 3);
+}
+
+.angleMoveBtn__text._end {
+    opacity: 0;
+}
+
+.angleMoveBtn__angle {
+    position: absolute;
+    width: 65px;
+    height: 27px;
+    opacity: 0.75;
+    transition: top 0.7s, right 0.7s, bottom 0.7s, left 0.7s;
+}
+
+.angleMoveBtn__angle._top_left {
+    top: calc(-200px / 100);
+    left: calc(-200px / 5);
+    background-color: #57D1C9;
+}
+
+.angleMoveBtn__angle._top_right {
+    top: calc(-200px / 100);
+    right: calc(-200px / 5);
+    background-color: #ED5485;
+}
+
+.angleMoveBtn__angle._bottom_left {
+    bottom: calc(-200px / 100);
+    left: calc(-200px / 5);
+    background-color: #FF7260;
+}
+
+.angleMoveBtn__angle._bottom_right {
+    bottom: calc(-200px / 100);
+    right: calc(-200px / 5);
+    background-color: #ffde5a;
 }

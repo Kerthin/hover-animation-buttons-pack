@@ -1,0 +1,84 @@
+/*____________________________________________________________
+# Angle Move Button Variables
+____________________________________________________________*/
+$angleMoveBtnWidth: 200px;
+$angleMoveBtnHeight: ($angleMoveBtnWidth / 100) * 32.5;
+
+$angleMoveBtnBorer: $angleMoveBtnWidth * .005;
+
+$angleMoveBtnAngleHeight: ($angleMoveBtnWidth / 100) * 13.5;
+$angleMoveBtnAngleHeight_hvrVMove: $angleMoveBtnHeight - $angleMoveBtnAngleHeight;
+$angleMoveBtnAngleHeight_hvrHMove: ($angleMoveBtnWidth + $angleMoveBtnAngleHeight_hvrVMove) - $angleMoveBtnHeight;
+
+$angleMoveBtnFontSize: $angleMoveBtnHeight / 2.7;
+
+$angleMoveBtnSpeed: .7s;
+
+/*____________________________________________________________
+# Angle Move Button
+____________________________________________________________*/
+.angleMoveBtn {
+  position: relative;
+  margin: 20px;
+  width: $angleMoveBtnWidth;
+  height: $angleMoveBtnHeight;
+  border: $angleMoveBtnBorer solid #000;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    ._start {
+      opacity: 0;
+    }
+    ._end {
+      opacity: 1;
+    }
+    
+    @mixin angleMovePosition($VSide, $HSide) {
+      ._#{$VSide}_#{$HSide} {
+        #{$VSide}: $angleMoveBtnAngleHeight_hvrVMove;
+        #{$HSide}: $angleMoveBtnAngleHeight_hvrHMove;
+      }
+    }
+
+    @include angleMovePosition(top, left);
+    @include angleMovePosition(top, right);
+    @include angleMovePosition(bottom, left);
+    @include angleMovePosition(bottom, right);
+  }
+}
+.angleMoveBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $angleMoveBtnFontSize;
+  color: #292c2c;
+  transition-delay: calc(#{$angleMoveBtnSpeed} / 3);
+  
+  &._end {
+    opacity: 0;
+  }
+}
+
+.angleMoveBtn__angle {
+  position: absolute;
+  width: $angleMoveBtnHeight;
+  height: $angleMoveBtnAngleHeight;
+  opacity: .75;
+  transition: top $angleMoveBtnSpeed, right $angleMoveBtnSpeed, bottom $angleMoveBtnSpeed, left $angleMoveBtnSpeed;
+  
+  @mixin angleStaticPosition($VSide, $HSide, $angleColor) {
+    &._#{$VSide}_#{$HSide} {
+      #{$VSide}: calc(-#{$angleMoveBtnWidth} / 100);
+      #{$HSide}: calc(-#{$angleMoveBtnWidth} / 5);
+      background-color: $angleColor;
+    }
+  }
+  
+  @include angleStaticPosition(top, left, #57D1C9);
+  @include angleStaticPosition(top, right, #ED5485);
+  @include angleStaticPosition(bottom, left, #FF7260);
+  @include angleStaticPosition(bottom, right, #ffde5a);
+}

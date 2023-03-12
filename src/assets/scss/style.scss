@@ -14,6 +14,8 @@
     ## @import circleBtn.scss
     ## @import gradientBtn.scss
     ## @import borderFillBtn.scss
+    ## @import gradientBorderBtn.scss
+    ## @import angleMoveBtn.scss
 
 ____________________________________________________________*/
 
@@ -89,3 +91,8 @@ ____________________________________________________________*/
 ## @import gradientBorderBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/gradientBorderBtn.scss';
+
+/*____________________________________________________________
+## @import angleMoveBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/angleMoveBtn.scss';
