@@ -1,0 +1,23 @@
+section.presentWrap
+  h1.presentWrap__title Split Gradient Buttons
+  p.presentWrap__link Diagonal Wavy Pattern by: 
+    a(href="https://codepen.io/t_afif/pen/vYrrjoE") Temani Afif
+  p.presentWrap__link Yin Yang Pattern by: 
+    a(href="https://projects.verou.me/css3patterns/#yin-yang") Unknown
+  p.presentWrap__link Chimneys Field Tessellated Pattern by: 
+    a(href="https://codepen.io/josetxu/pen/vYrboEE") Josetxu
+  p.presentWrap__link 3D Blocks Tessellated Pattern by: 
+    a(href="https://codepen.io/josetxu/pen/OJmzpLP") Josetxu
+  .presentWrap__buttonsBlock
+
+    mixin splitGradientBtnsMix(modName, textName)
+      button.splitGradientBtn(class=`${modName}`)
+        .leftSplit
+          .leftSplit__top
+          .leftSplit__bottom
+        .rightSplit
+          .rightSplit__top
+          .rightSplit__bottom
+        span.splitGradientBtn__text #{textName}
+    +splitGradientBtnsMix('_fashion', 'Hover')
+    +splitGradientBtnsMix('_geometric', 'Hover')

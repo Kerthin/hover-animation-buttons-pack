@@ -16,6 +16,8 @@
     ## @import borderFillBtn.scss
     ## @import gradientBorderBtn.scss
     ## @import angleMoveBtn.scss
+    ## @import raysBtn.scss
+    ## @import splitGradientBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -676,71 +678,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(60px, 200px, 19px, 0);
+        clip: rect(2px, 200px, 22px, 0);
     }
 
     6.25% {
-        clip: rect(25px, 200px, 15px, 0);
+        clip: rect(22px, 200px, 64px, 0);
     }
 
     12.5% {
-        clip: rect(56px, 200px, 42px, 0);
+        clip: rect(9px, 200px, 27px, 0);
     }
 
     18.75% {
-        clip: rect(10px, 200px, 28px, 0);
+        clip: rect(28px, 200px, 59px, 0);
     }
 
     25% {
-        clip: rect(59px, 200px, 18px, 0);
+        clip: rect(23px, 200px, 4px, 0);
     }
 
     31.25% {
-        clip: rect(2px, 200px, 44px, 0);
+        clip: rect(51px, 200px, 50px, 0);
     }
 
     37.5% {
-        clip: rect(28px, 200px, 1px, 0);
+        clip: rect(17px, 200px, 24px, 0);
     }
 
     43.75% {
-        clip: rect(63px, 200px, 32px, 0);
+        clip: rect(62px, 200px, 49px, 0);
     }
 
     50% {
-        clip: rect(7px, 200px, 44px, 0);
+        clip: rect(31px, 200px, 38px, 0);
     }
 
     56.25% {
-        clip: rect(31px, 200px, 21px, 0);
+        clip: rect(35px, 200px, 48px, 0);
     }
 
     62.5% {
-        clip: rect(63px, 200px, 32px, 0);
+        clip: rect(40px, 200px, 18px, 0);
     }
 
     68.75% {
-        clip: rect(29px, 200px, 55px, 0);
+        clip: rect(59px, 200px, 22px, 0);
     }
 
     75% {
-        clip: rect(27px, 200px, 41px, 0);
+        clip: rect(51px, 200px, 21px, 0);
     }
 
     81.25% {
-        clip: rect(19px, 200px, 48px, 0);
+        clip: rect(63px, 200px, 45px, 0);
     }
 
     87.5% {
-        clip: rect(21px, 200px, 10px, 0);
+        clip: rect(33px, 200px, 25px, 0);
     }
 
     93.75% {
-        clip: rect(30px, 200px, 63px, 0);
+        clip: rect(47px, 200px, 54px, 0);
     }
 
     100% {
-        clip: rect(61px, 200px, 62px, 0);
+        clip: rect(2px, 200px, 52px, 0);
     }
 }
 /*____________________________________________________________
@@ -2175,4 +2177,119 @@ ____________________________________________________________*/
     100% {
         transform: rotate(360deg);
     }
+}
+/*____________________________________________________________
+## @import splitGradientBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Split Gradient Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Split Gradient Button
+____________________________________________________________*/
+.splitGradientBtn {
+    position: relative;
+    margin: 20px;
+    width: 240px;
+    height: 80.016px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.splitGradientBtn._fashion .leftSplit__top,
+.splitGradientBtn._fashion .rightSplit__bottom {
+    background: radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54, 78, 39, 0) 12%, rgba(54, 78, 39, 0)) 15px 0, radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210, 202, 171, 0) 12%, rgba(210, 202, 171, 0)) 15px 0, radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54, 78, 39, 0) 12%, rgba(54, 78, 39, 0)) 0 15px, radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210, 202, 171, 0) 12%, rgba(210, 202, 171, 0)) 0 15px, radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210, 202, 171, 0) 17%), radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54, 78, 39, 0) 17%), radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210, 202, 171, 0) 17%) 15px 15px, radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54, 78, 39, 0) 17%) 15px 15px;
+    background-color: #63773F;
+    background-size: 30px 30px;
+}
+
+.splitGradientBtn._fashion .leftSplit__bottom,
+.splitGradientBtn._fashion .rightSplit__top {
+ /* control the size */
+    --c1: #F8B195;
+    --c2: #355C7D;
+    --_g: var(--c2) 6% 14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+        var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+    background: radial-gradient(100% 100% at 100% 0, var(--c1) 4%, var(--_g), rgba(0, 0, 0, 0.5333333333) 96%, rgba(0, 0, 0, 0)), radial-gradient(100% 100% at 0 100%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5333333333) 4%, var(--_g), var(--c1) 96%) var(--c1);
+    background-size: 30px 30px;
+}
+
+.splitGradientBtn._geometric .leftSplit__top,
+.splitGradientBtn._geometric .rightSplit__bottom {
+    --u: 3.60072px;
+    --c1: #fbf9fe;
+    --c2: #02b6e7;
+    --c3: #00699b;
+    --gp: 50%/ calc(var(--u) * 16.9) calc(var(--u) * 12.8);
+    height: 80.016px;
+    background: conic-gradient(from 122deg at 50% 85.15%, var(--c2) 0 58deg, var(--c3) 0 116deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), conic-gradient(from 122deg at 50% 72.5%, var(--c1) 0 116deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), conic-gradient(from 58deg at 82.85% 50%, var(--c3) 0 64deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), conic-gradient(from 58deg at 66.87% 50%, var(--c1) 0 64deg, var(--c2) 0 130deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), conic-gradient(from 238deg at 17.15% 50%, var(--c2) 0 64deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), conic-gradient(from 172deg at 33.13% 50%, var(--c3) 0 66deg, var(--c1) 0 130deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), linear-gradient(98deg, var(--c3) 0 15%, rgba(255, 255, 255, 0) calc(15% + 1px) 100%) var(--gp), linear-gradient(-98deg, var(--c2) 0 15%, rgba(255, 255, 255, 0) calc(15% + 1px) 100%) var(--gp), conic-gradient(from -58deg at 50.25% 14.85%, var(--c3) 0 58deg, var(--c2) 0 116deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), conic-gradient(from -58deg at 50% 28.125%, var(--c1) 0 116deg, rgba(255, 255, 255, 0) 0 100%) var(--gp), linear-gradient(90deg, var(--c2) 0 50%, var(--c3) 0 100%) var(--gp);
+}
+
+.splitGradientBtn._geometric .leftSplit__bottom,
+.splitGradientBtn._geometric .rightSplit__top {
+    --u: 3.340668px;
+ /* change block size */
+    --hue: hue-rotate(0deg);
+ /* change color hue*/
+    --c1: #92472f;
+    --c2: #d2562f;
+    --c3: #ffbc58;
+    --cs: #6b2e1b;
+    --gp: 50% / calc(var(--u) * 12) calc(var(--u) * 12.8);
+    height: 80.016px;
+    filter: var(--hue);
+    background: repeating-conic-gradient(from 61.93deg at 75% 36.5%, var(--c1) 0%, var(--c1) 2%, var(--cs) 16%, rgba(255, 255, 255, 0) 0% 100%) var(--gp), repeating-conic-gradient(from 118.07deg at 75% 87.5%, var(--c3) 0% 34.5%, rgba(255, 255, 255, 0) 0% 100%) var(--gp), repeating-conic-gradient(from 118.07deg at 50% 75%, rgba(255, 255, 255, 0) 2%, var(--cs) 17.15%, rgba(255, 255, 255, 0) 0% 100%) var(--gp), repeating-conic-gradient(from 61.93deg at 50% 50%, var(--c3) 0% 15.59%, var(--c2) 0% 32.79%, rgba(255, 255, 255, 0) 0% 100%) var(--gp), repeating-conic-gradient(from -118.07deg at 25% 12.5%, var(--c2) 0% 32.79%, var(--c1) 0% 50%, rgba(255, 255, 255, 0) 0% 100%) var(--gp), repeating-conic-gradient(from -61.93deg at 25% 87.5%, rgba(255, 255, 255, 0) 0 67.25%, var(--c2) 0% 100%) var(--gp), repeating-conic-gradient(from -61.93deg at 50% 75%, rgba(255, 255, 255, 0) 0% 66.5%, var(--c1) 0% 84.25%, var(--c3) 0% 100%) var(--gp), repeating-conic-gradient(from -61.93deg at 25% 37.5%, var(--c3) 0% 34.5%, var(--c1) 0% 67.25%, var(--c2) 0% 100%) var(--gp);
+}
+
+.splitGradientBtn:hover .leftSplit {
+    top: -100%;
+}
+
+.splitGradientBtn:hover .rightSplit {
+    bottom: -100%;
+}
+
+.splitGradientBtn:hover .splitGradientBtn__text {
+    letter-spacing: calc(32.0064px / 6.4);
+}
+
+.leftSplit,
+.rightSplit {
+    position: absolute;
+    width: 50%;
+    height: 200%;
+}
+
+.leftSplit {
+    top: 0;
+    transition: top 0.4s;
+}
+
+.rightSplit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: bottom 0.4s;
+}
+
+.leftSplit__top,
+.leftSplit__bottom,
+.rightSplit__top,
+.rightSplit__bottom {
+    width: 100%;
+    height: 50%;
+}
+
+.splitGradientBtn__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Righteous";
+    font-size: 32.0064px;
+    text-transform: uppercase;
+    letter-spacing: calc(32.0064px / 10.666);
+    color: #faebd7;
+    transition: letter-spacing 0.4s;
 }

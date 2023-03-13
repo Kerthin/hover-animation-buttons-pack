@@ -1,0 +1,193 @@
+/*____________________________________________________________
+# Split Gradient Button Variables
+____________________________________________________________*/
+$splitGradientBtnWidth: 240px;
+$splitGradientBtnHeight: ($splitGradientBtnWidth / 100) * 33.34;
+
+$splitGradientBtnGradientSize_fashion: ($splitGradientBtnWidth / 100) * 12.5;
+$splitGradientBtnGradientSize_fashion_half: $splitGradientBtnGradientSize_fashion / 2;
+
+$splitGradientBtnGradientSize_geometric_first: ($splitGradientBtnHeight / 100) * 4.5;
+$splitGradientBtnGradientSize_geometric_second: ($splitGradientBtnHeight / 100) * 4.175;
+
+$splitGradientBtnFontSize: $splitGradientBtnHeight / 2.5;
+
+$splitGradientBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Split Gradient Button
+____________________________________________________________*/
+.splitGradientBtn {
+	position: relative;
+	margin: 20px;
+	width: $splitGradientBtnWidth;
+	height: $splitGradientBtnHeight;
+	overflow: hidden;
+	cursor: pointer;
+	background-color: transparent;
+  
+  &._fashion {
+    .leftSplit__top,
+    .rightSplit__bottom {
+      background: radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) $splitGradientBtnGradientSize_fashion_half 0,
+                  radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) $splitGradientBtnGradientSize_fashion_half 0,
+                  radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 0 $splitGradientBtnGradientSize_fashion_half,
+                  radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 0 $splitGradientBtnGradientSize_fashion_half,
+                  radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%),
+                  radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%),
+                  radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%) $splitGradientBtnGradientSize_fashion_half $splitGradientBtnGradientSize_fashion_half,
+                  radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%) $splitGradientBtnGradientSize_fashion_half $splitGradientBtnGradientSize_fashion_half;
+      background-color: #63773F;
+      background-size: $splitGradientBtnGradientSize_fashion $splitGradientBtnGradientSize_fashion;
+    }
+
+    .leftSplit__bottom,
+    .rightSplit__top { /* control the size */
+      --c1: #F8B195;
+      --c2: #355C7D;
+
+      --_g:	var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+            var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+
+      background: radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g),#0008 96%,#0000),
+                  radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%) var(--c1);
+      background-size: $splitGradientBtnGradientSize_fashion $splitGradientBtnGradientSize_fashion;
+    }
+  }
+  
+  &._geometric {
+    .leftSplit__top,
+    .rightSplit__bottom {
+      --u: #{$splitGradientBtnGradientSize_geometric_first};
+      --c1: #fbf9fe;
+      --c2: #02b6e7;
+      --c3: #00699b;
+      --gp: 50%/ calc(var(--u) * 16.9) calc(var(--u) * 12.8);
+      height: $splitGradientBtnHeight;
+      background: conic-gradient(from 122deg at 50% 85.15%, var(--c2) 0 58deg, var(--c3) 0 116deg, #fff0 0 100%) var(--gp),
+                  conic-gradient(from 122deg at 50% 72.5%, var(--c1) 0 116deg, #fff0 0 100%) var(--gp),
+                  conic-gradient(from 58deg at 82.85% 50%, var(--c3) 0 64deg, #fff0 0 100%) var(--gp),
+                  conic-gradient(from 58deg at 66.87% 50%, var(--c1) 0 64deg, var(--c2) 0 130deg, #fff0 0 100%) var(--gp),
+                  conic-gradient(from 238deg at 17.15% 50%, var(--c2) 0 64deg, #fff0 0 100%) var(--gp),
+                  conic-gradient(from 172deg at 33.13% 50%, var(--c3) 0 66deg, var(--c1) 0 130deg, #fff0 0 100%) var(--gp),
+
+                  linear-gradient(98deg, var(--c3) 0 15%, #fff0 calc(15% + 1px) 100%) var(--gp),
+                  linear-gradient(-98deg, var(--c2) 0 15%, #fff0 calc(15% + 1px) 100%) var(--gp),
+
+                  conic-gradient(from -58deg at 50.25% 14.85%, var(--c3) 0 58deg, var(--c2) 0 116deg, #fff0 0 100%) var(--gp),
+                  conic-gradient(from -58deg at 50% 28.125%, var(--c1) 0 116deg, #fff0 0 100%) var(--gp),
+
+                  linear-gradient(90deg, var(--c2) 0 50%, var(--c3) 0 100%) var(--gp);
+    }
+
+    .leftSplit__bottom,
+    .rightSplit__top {
+      --u: #{$splitGradientBtnGradientSize_geometric_second}; /* change block size */
+      --hue: hue-rotate(0deg); /* change color hue*/
+      --c1: #92472f;
+      --c2: #d2562f;
+      --c3: #ffbc58;
+      --cs: #6b2e1b;
+      --gp: 50% / calc(var(--u) * 12) calc(var(--u) * 12.8);
+      height: $splitGradientBtnHeight;
+      filter: var(--hue);
+      background: repeating-conic-gradient(
+                    from 61.93deg at 75% 36.5%,
+                    var(--c1) 0%,
+                    var(--c1) 2%,
+                    var(--cs) 16%,
+                    #fff0 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from 118.07deg at 75% 87.5%,
+                    var(--c3) 0% 34.5%,
+                    #fff0 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from 118.07deg at 50% 75%,
+                    #fff0 2%,
+                    var(--cs) 17.15%,
+                    #fff0 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from 61.93deg at 50% 50%,
+                    var(--c3) 0% 15.59%,
+                    var(--c2) 0% 32.79%,
+                    #fff0 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from -118.07deg at 25% 12.5%,
+                    var(--c2) 0% 32.79%,
+                    var(--c1) 0% 50%,
+                    #fff0 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from -61.93deg at 25% 87.5%,
+                    #fff0 0 67.25%,
+                    var(--c2) 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from -61.93deg at 50% 75%,
+                    #fff0 0% 66.5%,
+                    var(--c1) 0% 84.25%,
+                    var(--c3) 0% 100%
+                  ) var(--gp),
+                  repeating-conic-gradient(
+                    from -61.93deg at 25% 37.5%,
+                    var(--c3) 0% 34.5%,
+                    var(--c1) 0% 67.25%,
+                    var(--c2) 0% 100%
+                  ) var(--gp);
+    }
+  }
+  
+  &:hover {
+    .leftSplit {
+      top: -100%;
+    }
+    .rightSplit {
+      bottom: -100%;
+    }
+    .splitGradientBtn__text {
+      letter-spacing: calc(#{$splitGradientBtnFontSize} / 6.4);
+    }
+  }
+}
+
+.leftSplit,
+.rightSplit {
+	position: absolute;
+	width: 50%;
+	height: 200%;
+}
+.leftSplit {
+	top: 0;
+	transition: top $splitGradientBtnSpeed;
+}
+.rightSplit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transition: bottom $splitGradientBtnSpeed;
+}
+
+.leftSplit__top,
+.leftSplit__bottom,
+.rightSplit__top,
+.rightSplit__bottom {
+	width: 100%;
+	height: 50%;
+}
+
+.splitGradientBtn__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Righteous';
+	font-size: $splitGradientBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$splitGradientBtnFontSize} / 10.666);
+	color: #faebd7;
+	transition: letter-spacing $splitGradientBtnSpeed;
+}

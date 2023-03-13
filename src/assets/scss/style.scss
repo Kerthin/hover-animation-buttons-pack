@@ -16,6 +16,8 @@
     ## @import borderFillBtn.scss
     ## @import gradientBorderBtn.scss
     ## @import angleMoveBtn.scss
+    ## @import raysBtn.scss
+    ## @import splitGradientBtn.scss
 
 ____________________________________________________________*/
 
@@ -101,3 +103,8 @@ ____________________________________________________________*/
 ## @import raysBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/raysBtn.scss';
+
+/*____________________________________________________________
+## @import splitGradientBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/splitGradientBtn.scss';
