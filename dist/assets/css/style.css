@@ -676,71 +676,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(49px, 200px, 46px, 0);
+        clip: rect(60px, 200px, 19px, 0);
     }
 
     6.25% {
-        clip: rect(49px, 200px, 30px, 0);
+        clip: rect(25px, 200px, 15px, 0);
     }
 
     12.5% {
-        clip: rect(4px, 200px, 56px, 0);
+        clip: rect(56px, 200px, 42px, 0);
     }
 
     18.75% {
-        clip: rect(25px, 200px, 35px, 0);
+        clip: rect(10px, 200px, 28px, 0);
     }
 
     25% {
-        clip: rect(58px, 200px, 8px, 0);
+        clip: rect(59px, 200px, 18px, 0);
     }
 
     31.25% {
-        clip: rect(50px, 200px, 6px, 0);
+        clip: rect(2px, 200px, 44px, 0);
     }
 
     37.5% {
-        clip: rect(47px, 200px, 38px, 0);
+        clip: rect(28px, 200px, 1px, 0);
     }
 
     43.75% {
-        clip: rect(58px, 200px, 64px, 0);
+        clip: rect(63px, 200px, 32px, 0);
     }
 
     50% {
-        clip: rect(59px, 200px, 50px, 0);
+        clip: rect(7px, 200px, 44px, 0);
     }
 
     56.25% {
-        clip: rect(14px, 200px, 30px, 0);
+        clip: rect(31px, 200px, 21px, 0);
     }
 
     62.5% {
-        clip: rect(64px, 200px, 16px, 0);
+        clip: rect(63px, 200px, 32px, 0);
     }
 
     68.75% {
-        clip: rect(1px, 200px, 24px, 0);
+        clip: rect(29px, 200px, 55px, 0);
     }
 
     75% {
-        clip: rect(21px, 200px, 22px, 0);
+        clip: rect(27px, 200px, 41px, 0);
     }
 
     81.25% {
-        clip: rect(22px, 200px, 35px, 0);
+        clip: rect(19px, 200px, 48px, 0);
     }
 
     87.5% {
-        clip: rect(1px, 200px, 35px, 0);
+        clip: rect(21px, 200px, 10px, 0);
     }
 
     93.75% {
-        clip: rect(17px, 200px, 9px, 0);
+        clip: rect(30px, 200px, 63px, 0);
     }
 
     100% {
-        clip: rect(48px, 200px, 40px, 0);
+        clip: rect(61px, 200px, 62px, 0);
     }
 }
 /*____________________________________________________________
@@ -2053,4 +2053,126 @@ ____________________________________________________________*/
     bottom: calc(-200px / 100);
     right: calc(-200px / 5);
     background-color: #ffde5a;
+}
+
+/*____________________________________________________________
+## @import raysBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Rays Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Rays Button
+____________________________________________________________*/
+.raysBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.raysBtn:hover .raysWrap {
+    animation-play-state: running;
+}
+
+.raysButton__text {
+    position: absolute;
+    top: calc(50% - 3px);
+    left: calc(50% - 5px);
+    transform: translate(-50%, -50%);
+    font-family: "Niconne";
+    font-size: 36.1111111111px;
+    color: #F4CE68;
+    text-shadow: 0.8px 0.8px 0px #eb452b, 1.6px 1.6px 0px #efa032, 2.4px 2.4px 0px #46b59b, 3.2px 3.2px 0px #017e7f, 4px 4px 0px #052939;
+    transition: all 0.7s;
+}
+
+.raysWrap {
+    position: absolute;
+    left: -1em;
+    right: -1em;
+    top: -1em;
+    bottom: -1em;
+    margin: auto;
+    padding: 0;
+    width: 0;
+    height: 0;
+    animation: raysRotate 8s infinite linear;
+    animation-play-state: paused;
+}
+
+.raysWrap__ray,
+.raysWrap__ray:before,
+.raysWrap__ray:after {
+    position: absolute;
+    border: 0 solid transparent;
+    border-width: 0.65em 10em;
+    width: 0;
+    height: 0;
+}
+
+.raysWrap__ray {
+    left: -10em;
+    top: calc(50% - 0.65em);
+}
+
+.raysWrap__ray:nth-child(1) {
+    transform: rotate(calc(15deg * (1 - 1)));
+    border-color: transparent #EE8A08;
+}
+
+.raysWrap__ray:nth-child(1):before, .raysWrap__ray:nth-child(1):after {
+    border-color: transparent #EE8A08;
+}
+
+.raysWrap__ray:nth-child(2) {
+    transform: rotate(calc(15deg * (2 - 1)));
+    border-color: transparent #F45E04;
+}
+
+.raysWrap__ray:nth-child(2):before, .raysWrap__ray:nth-child(2):after {
+    border-color: transparent #F45E04;
+}
+
+.raysWrap__ray:nth-child(3) {
+    transform: rotate(calc(15deg * (3 - 1)));
+    border-color: transparent #F33F15;
+}
+
+.raysWrap__ray:nth-child(3):before, .raysWrap__ray:nth-child(3):after {
+    border-color: transparent #F33F15;
+}
+
+.raysWrap__ray:nth-child(4) {
+    transform: rotate(calc(15deg * (4 - 1)));
+    border-color: transparent #7B8F64;
+}
+
+.raysWrap__ray:nth-child(4):before, .raysWrap__ray:nth-child(4):after {
+    border-color: transparent #7B8F64;
+}
+
+.raysWrap__ray:before,
+.raysWrap__ray:after {
+    content: "";
+    left: -10em;
+    top: -0.65em;
+}
+
+.raysWrap__ray:before {
+    transform: rotate(60deg);
+}
+
+.raysWrap__ray:after {
+    transform: rotate(-60deg);
+}
+
+@keyframes raysRotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }

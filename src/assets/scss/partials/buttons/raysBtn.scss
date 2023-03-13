@@ -1,0 +1,129 @@
+/*____________________________________________________________
+# Rays Button Variables
+____________________________________________________________*/
+$raysBtnBorderColorArray: (#EE8A08, #F45E04, #F33F15, #7B8F64);
+
+$raysBtnWidth: 200px;
+$raysBtnHeight: ($raysBtnWidth / 100) * 32.5;
+
+$raysBtnBorderRadius: $raysBtnWidth / 50;
+
+$raysBtnFontSize: $raysBtnHeight / 1.8;
+$raysBtnTextShadowSize: .8px;
+$raysBtnTextShadow_1: $raysBtnFontSize / ($raysBtnFontSize / ($raysBtnTextShadowSize * 1));
+$raysBtnTextShadow_2: $raysBtnFontSize / ($raysBtnFontSize / ($raysBtnTextShadowSize * 2));
+$raysBtnTextShadow_3: $raysBtnFontSize / ($raysBtnFontSize / ($raysBtnTextShadowSize * 3));
+$raysBtnTextShadow_4: $raysBtnFontSize / ($raysBtnFontSize / ($raysBtnTextShadowSize * 4));
+$raysBtnTextShadow_5: $raysBtnFontSize / ($raysBtnFontSize / ($raysBtnTextShadowSize * 5));
+
+$raysBtnRayWidth: $raysBtnHeight / 6.25;
+$raysBtnRayHeight: $raysBtnWidth / 1.25;
+
+$raysBtnItemDegree: 360deg / (6 * length($raysBtnBorderColorArray));
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+/// Convert value to em.
+@function em($size, $base-font-size:16px) {
+    @return strip-unit($size) / strip-unit($base-font-size) * 1em;
+}
+
+/*____________________________________________________________
+# Rays Button
+____________________________________________________________*/
+.raysBtn {
+  position: relative;
+  margin: 20px;
+  width: $raysBtnWidth;
+  height: $raysBtnHeight;
+  border-radius: $raysBtnBorderRadius;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .raysWrap {
+      animation-play-state: running;
+    }
+  }
+}
+
+.raysButton__text {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: calc(50% - 5px);
+  transform: translate(-50%, -50%);
+  font-family: 'Niconne';
+  font-size: $raysBtnFontSize;
+  color: #F4CE68;
+  text-shadow:  $raysBtnTextShadow_1 $raysBtnTextShadow_1 0px #eb452b,
+                $raysBtnTextShadow_2 $raysBtnTextShadow_2 0px #efa032,
+                $raysBtnTextShadow_3 $raysBtnTextShadow_3 0px #46b59b,
+                $raysBtnTextShadow_4 $raysBtnTextShadow_4 0px #017e7f,
+                $raysBtnTextShadow_5 $raysBtnTextShadow_5 0px #052939;
+  transition: all .7s;
+}
+
+.raysWrap {
+  position: absolute;
+  left: -1em;
+  right: -1em;
+  top: -1em;
+  bottom: -1em;
+  margin: auto;
+  padding: 0;
+  width: 0;
+  height: 0;
+  animation: raysRotate 8s infinite linear;
+  animation-play-state: paused;
+}
+.raysWrap__ray,
+.raysWrap__ray:before,
+.raysWrap__ray:after {
+  position: absolute;
+  border: 0 solid transparent;
+  border-width: em($raysBtnRayWidth) em($raysBtnRayHeight);
+  // border-color: transparent #EE8A08;
+  width: 0;
+  height: 0;
+}
+.raysWrap__ray {
+  left: -#{em($raysBtnRayHeight)};
+  top: calc(50% - #{em($raysBtnRayWidth)});
+
+  @for $i from 1 through length($raysBtnBorderColorArray) {
+    &:nth-child(#{$i}){
+      transform: rotate(calc(#{$raysBtnItemDegree} * (#{$i} - 1)));
+      border-color: transparent nth($raysBtnBorderColorArray, $i);
+
+      &:before,
+      &:after {
+        border-color: transparent nth($raysBtnBorderColorArray, $i);
+      }
+    }
+  }
+}
+.raysWrap__ray:before,
+.raysWrap__ray:after {
+  content: "";
+  left: -#{em($raysBtnRayHeight)};
+  top: -#{em($raysBtnRayWidth)};
+}
+
+.raysWrap__ray:before {
+  transform: rotate(60deg);
+}
+.raysWrap__ray:after {
+  transform: rotate(-60deg);
+}
+
+@keyframes raysRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

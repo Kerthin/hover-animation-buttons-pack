@@ -1,0 +1,12 @@
+section.presentWrap
+  h1.presentWrap__title Rays Button
+  p.presentWrap__link Basis by: 
+    a(href="https://codepen.io/yoksel/pen/AMNwWE") Yoksel
+  .presentWrap__buttonsBlock
+
+    button.raysBtn
+      .raysWrap
+        - var rayItemNumber = 1;
+        while rayItemNumber <= 4
+          .raysWrap__ray(id=`_${rayItemNumber++}`)
+      span.raysButton__text Hover
