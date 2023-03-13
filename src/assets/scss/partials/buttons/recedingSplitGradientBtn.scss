@@ -1,0 +1,274 @@
+/*____________________________________________________________
+# Receding Split Gradient Button Variables
+____________________________________________________________*/
+$recedingSplitGradientBtnWidth: 240px;
+$recedingSplitGradientBtnHeight: ($recedingSplitGradientBtnWidth / 100) * 33.34;
+
+$recedingSplitGradientBtnGradientSize_waves: ($recedingSplitGradientBtnWidth / 100) * 12.5;
+$recedingSplitGradientBtnGradientSize_circles: $recedingSplitGradientBtnWidth / 60;
+
+$recedingSplitGradientBtnGradientSize_buttons: $recedingSplitGradientBtnWidth / 30;
+$recedingSplitGradientBtnGradientSize_roses: $recedingSplitGradientBtnWidth / 6;
+
+$recedingSplitGradientBtnFontSize: $recedingSplitGradientBtnHeight / 2.5;
+
+$recedingSplitGradientBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Receding Split Gradient Button
+____________________________________________________________*/
+.recedingSplitGradientBtn {
+	position: relative;
+	margin: 20px;
+	width: $recedingSplitGradientBtnWidth;
+	height: $recedingSplitGradientBtnHeight;
+	overflow: hidden;
+	cursor: pointer;
+	background-color: #faebd7;
+  
+  &._waves {
+    .recedingLeftSplit__top,
+    .recedingRightSplit__bottom {
+      --s: #{$recedingSplitGradientBtnGradientSize_waves}; /* control the size */
+			--c1: #AB3E5B;
+			--c2: #FFBE40;
+
+			--_g: #0000 25%,#0008 47%,var(--c1)  53% 147%,var(--c2) 153% 247%,
+						var(--c1) 253% 347%,var(--c2) 353% 447%,var(--c1) 453% 547%,#0008 553%,#0000 575%;
+			--_s: calc(25%/3) calc(25%/4) at 50%; 
+			background: radial-gradient(var(--_s) 100%,var(--_g)),
+									radial-gradient(var(--_s) 100%,var(--_g)) calc(var(--s)/2) calc(3*var(--s)/4),
+									radial-gradient(var(--_s) 0   ,var(--_g)) calc(var(--s)/2) 0,
+									radial-gradient(var(--_s) 0   ,var(--_g)) 0                calc(3*var(--s)/4),
+									repeating-linear-gradient(90deg,#ACCEC0 calc(25%/-6) calc(25%/6),#61A6AB 0 calc(25%/2));
+			background-size: var(--s) calc(3*var(--s)/2)
+    }
+
+    .recedingLeftSplit__bottom,
+    .recedingRightSplit__top {
+      --u: #{$recedingSplitGradientBtnGradientSize_circles};
+			--c1: #000000;
+			--c2: #fd8d00;
+			--corners: 
+			var(--c2) 0 3.5%, 
+			var(--c1) calc(3.5% + 1px) 7%, 
+			var(--c2) calc(7% + 1px) 10.5%, 
+			var(--c1) calc(10.5% + 1px) 14%,
+			var(--c2) calc(14% + 1px) 17.5%, 
+			var(--c1) calc(17.5% + 1px) 21%,
+			var(--c2) calc(21% + 1px) 24.5%, 
+			var(--c1) calc(24.5% + 1px) 28%,
+			var(--c2) calc(28% + 1px) 30.5%, 
+			var(--c1) calc(30.5% + 1px) 34%,
+			#fff0 calc(34% + 1px) 100%;
+		--central: 
+			var(--c2) 0 6%, 
+			var(--c1) calc(6% + 1px) 12%, 
+			var(--c2) calc(12% + 1px) 19%, 
+			var(--c1) calc(19% + 1px) 26%,
+			var(--c2) calc(26% + 1px) 33%, 
+			var(--c1) calc(33% + 1px) 40%,
+			var(--c2) calc(40% + 1px) 47%, 
+			var(--c1) calc(47% + 1px) 54%,
+			var(--c2) calc(54% + 1px) 61%, 
+			var(--c1) calc(61% + 1px) 68%,
+			#fff0 calc(68% + 1px) 100%;
+			--gp: 50%/calc(var(--u) * 10) calc(var(--u) * 10);
+			height: $recedingSplitGradientBtnHeight;	
+			background: radial-gradient(circle at 0% 0%, var(--corners)) var(--gp),
+									radial-gradient(circle at 100% 100%, var(--corners)) var(--gp),
+									radial-gradient(circle at 50% 50%, var(--central)) var(--gp),
+									radial-gradient(circle at 0% 100%, var(--corners)) var(--gp),
+									radial-gradient(circle at 100% 0%, var(--corners)) var(--gp),
+									var(--c2);
+    }
+  }
+  
+  &._buttons {
+    .recedingLeftSplit__top,
+    .recedingRightSplit__bottom {
+      --u:  #{$recedingSplitGradientBtnGradientSize_buttons};
+			--c1: #f13c3c;
+			--c2: #c72f2f;
+			--c3: #607d8b;
+			--c4: #43687a;
+			--bg: #460000;
+			--circle1: var(--c3) 0% 15%, var(--c4) 16% 20%, var(--c3) 21% 21%, #fff0 22% 100%;
+			--circle2: var(--c1) 0% 11%, var(--c2) 12% 16%, var(--c1) 16.5% 17%, #fff0 17.5% 100%;				
+			--circle3: var(--c3) 0% 4%, var(--c4) 5% 8%, var(--c3) 8.5% 9.25%, #fff0 9.75% 100%;
+			--circle4: var(--c1) 0% 4%, var(--c2) 5% 8%, var(--c1) 8.5% 9.25%, #fff0 9.75% 100%;
+			--black-dot: var(--bg) 0% calc(var(--u) * 0.2), #0002 calc(var(--u) * 0.3) calc(var(--u) * 0.45), #fff0 4% 100%;
+			--black-dot-small: var(--bg) 0% calc(var(--u) * 0.05), #0002 calc(var(--u) * 0.1) calc(var(--u) * 0.15), #fff0 2% 100%;
+			--gp: 50%/calc(var(--u) * 10) calc(var(--u) * 10);
+			height: $recedingSplitGradientBtnHeight;
+			background: /* mini holes */	
+									radial-gradient(circle at 73.5% 23.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 76.5% 23.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 73.5% 26.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 76.5% 26.5%, var(--black-dot-small)) var(--gp),  
+									radial-gradient(circle at 23.5% 73.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 26.5% 73.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 23.5% 76.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 26.5% 76.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 73.5% 73.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 76.5% 73.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 73.5% 76.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 76.5% 76.5%, var(--black-dot-small)) var(--gp),  
+									radial-gradient(circle at 23.5% 23.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 26.5% 23.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 23.5% 26.5%, var(--black-dot-small)) var(--gp),
+									radial-gradient(circle at 26.5% 26.5%, var(--black-dot-small)) var(--gp),  	
+									/* mini holes */
+
+									/* mini buttons */
+									radial-gradient(circle at 25% 25%, var(--circle3)) var(--gp),
+									radial-gradient(circle at 25% 75%, var(--circle4)) var(--gp),
+									radial-gradient(circle at 75% 25%, var(--circle4)) var(--gp),
+									radial-gradient(circle at 75% 75%, var(--circle3)) var(--gp),
+									/* mini buttons */
+	
+									/* blue holes */
+									radial-gradient(circle at 4.5% 45.5%, var(--black-dot)) var(--gp),	
+									radial-gradient(circle at 4.5% 54.5%, var(--black-dot)) var(--gp),	
+									radial-gradient(circle at 95.5% 45.5%, var(--black-dot)) var(--gp),	
+									radial-gradient(circle at 95.5% 54.5%, var(--black-dot)) var(--gp),	
+									radial-gradient(circle at 50% 93.5%, var(--black-dot)) var(--gp),	
+									radial-gradient(circle at 50% 6.5%, var(--black-dot)) var(--gp),	
+									radial-gradient(circle at 56.5% 0%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 56.5% 100%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 43.5% 0%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 43.5% 100%, var(--black-dot)) var(--gp),
+									/* blue holes */
+
+									/* red holes */
+									radial-gradient(circle at 5% 95%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 95% 5%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 95% 95%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 5% 5%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 50% 56.5%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 43.5% 50%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 50% 43.5%, var(--black-dot)) var(--gp),
+									radial-gradient(circle at 56.5% 50%, var(--black-dot)) var(--gp),
+									/* red holes */
+
+									/* blue buttons */
+									radial-gradient(circle at 50% 0%, var(--circle1)) var(--gp),
+									radial-gradient(circle at 50% 100%, var(--circle1)) var(--gp),
+									radial-gradient(circle at 0% 50%, var(--circle1)) var(--gp),
+									radial-gradient(circle at 100% 50%, var(--circle1)) var(--gp),
+									/* blue buttons */
+
+									/* red buttons */
+									radial-gradient(circle at 0% 100%, var(--circle2)) var(--gp),
+									radial-gradient(circle at 0% 0%, var(--circle2)) var(--gp),
+									radial-gradient(circle at 100% 100%, var(--circle2)) var(--gp),
+									radial-gradient(circle at 100% 0%, var(--circle2)) var(--gp),
+									radial-gradient(circle at 50% 50%, var(--c1) 0% 23%, var(--c2) 24% 32%, var(--c1) 33% 34%, #fff0 35% 100%) var(--gp),
+									/* red buttons */
+
+									var(--bg);
+    }
+
+    .recedingLeftSplit__bottom,
+    .recedingRightSplit__top {
+      // $d: 3em;
+      $d: $recedingSplitGradientBtnGradientSize_roses;
+			$o: .5*$d;
+			// $l: .375em;
+      $l: $recedingSplitGradientBtnGradientSize_roses / 10;
+			$y: .2*$d;
+			--l: #ef2d56, #ed7d3a, #ef2d56 25%, transparent 0%;
+			--g0: 
+			radial-gradient(50% 50% at 50% 100%, 
+				transparent calc(100% - #{$l} + -1px), 
+				#8cd867 calc(100% - #{$l}), #2fbf71 100%, 
+				transparent calc(100% + 1px));
+			--g1: conic-gradient(from -45deg at 50% #{$y}, var(--l));
+			--g2: conic-gradient(from 135deg at 50% #{$d - $y}, var(--l));
+			--p1: #{$o $l + $y};
+			--p2: #{0 $o + $l + $y};
+			background: var(--g2) var(--p2), 
+									var(--g1) var(--p2), 
+									var(--g2) var(--p1), 
+									var(--g1) var(--p1), 
+									var(--g0), 
+									var(--g0) $o $o #363537;
+			background-size: $d $d
+    }
+  }
+  
+  &:hover {
+	  .recedingGlobalWrap {
+			transform: scale(.7);
+			transition-delay: 0s;
+	  }
+		.recedingLocalWrap {
+			transform: scale(1.43);
+      transition-delay: calc(#{$recedingSplitGradientBtnSpeed} * 2);
+		}
+	  .recedingLeftSplit {
+		  top: -100%;
+	  }
+	  .recedingRightSplit {
+		  bottom: -100%;
+	  }
+	  .recedingSplitGradientBtn__text {
+		  letter-spacing: calc(#{$recedingSplitGradientBtnFontSize} / 4);
+			transition-delay: calc(#{$recedingSplitGradientBtnSpeed} * 2);
+	  }
+  }
+}
+
+.recedingGlobalWrap,
+.recedingLocalWrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform $recedingSplitGradientBtnSpeed;
+}
+.recedingGlobalWrap {
+	transition-delay: calc(#{$recedingSplitGradientBtnSpeed} * 2);
+}
+.recedingLocalWrap {
+	overflow: hidden;
+}
+
+.recedingLeftSplit,
+.recedingRightSplit {
+	position: absolute;
+	width: 50%;
+	height: 200%;
+}
+.recedingLeftSplit {
+	top: 0;
+	transition: top $recedingSplitGradientBtnSpeed;
+	transition-delay: $recedingSplitGradientBtnSpeed;
+}
+.recedingRightSplit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transition: bottom $recedingSplitGradientBtnSpeed;
+	transition-delay: $recedingSplitGradientBtnSpeed;
+}
+
+.recedingLeftSplit__top,
+.recedingLeftSplit__bottom,
+.recedingRightSplit__top,
+.recedingRightSplit__bottom {
+	width: 100%;
+	height: 50%;
+}
+
+.recedingSplitGradientBtn__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Righteous';
+	font-size: $recedingSplitGradientBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$recedingSplitGradientBtnFontSize} / 10.666);
+	color: #faebd7;
+	transition: letter-spacing $recedingSplitGradientBtnSpeed;
+}

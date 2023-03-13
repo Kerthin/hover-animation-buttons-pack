@@ -1,0 +1,25 @@
+section.presentWrap
+  h1.presentWrap__title Receding Split Gradient Buttons
+  p.presentWrap__link Horizontal Wavy Pattern by: 
+    a(href="https://codepen.io/t_afif/pen/abKjapL") Temani Afif
+  p.presentWrap__link Overlapping Ringed Circles Tessellated Pattern by: 
+    a(href="https://codepen.io/josetxu/pen/eYGXNaY") Josetxu
+  p.presentWrap__link Buttons Tessellated Pattern by: 
+    a(href="https://codepen.io/josetxu/pen/vYepZJv") Josetxu
+  p.presentWrap__link Roses Pattern by: 
+    a(href="https://codepen.io/thebabydino/pen/zYaayWW") Ana Tudor
+  .presentWrap__buttonsBlock
+
+    mixin recedingSplitGradientBtnsMix(modName, textName)
+      button.recedingSplitGradientBtn(class=`${modName}`)
+        .recedingGlobalWrap
+          .recedingLocalWrap
+            .recedingLeftSplit
+              .recedingLeftSplit__top
+              .recedingLeftSplit__bottom
+            .recedingRightSplit
+              .recedingRightSplit__top
+              .recedingRightSplit__bottom
+        span.recedingSplitGradientBtn__text #{textName}
+    +recedingSplitGradientBtnsMix('_waves', 'Hover')
+    +recedingSplitGradientBtnsMix('_buttons', 'Hover')
