@@ -225,6 +225,7 @@ ____________________________________________________________*/
 	width: 100%;
 	height: 100%;
 	transition: transform $recedingSplitGradientBtnSpeed;
+	will-change: transform;
 }
 .recedingGlobalWrap {
 	transition-delay: calc(#{$recedingSplitGradientBtnSpeed} * 2);
@@ -243,6 +244,7 @@ ____________________________________________________________*/
 	top: 0;
 	transition: top $recedingSplitGradientBtnSpeed;
 	transition-delay: $recedingSplitGradientBtnSpeed;
+	will-change: top;
 }
 .recedingRightSplit {
 	position: absolute;
@@ -250,6 +252,7 @@ ____________________________________________________________*/
 	right: 0;
 	transition: bottom $recedingSplitGradientBtnSpeed;
 	transition-delay: $recedingSplitGradientBtnSpeed;
+	will-change: bottom;
 }
 
 .recedingLeftSplit__top,

@@ -17,6 +17,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -51,6 +52,12 @@ table {
 button {
     border: 0;
     padding: 0;
+}
+
+button:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 ::-webkit-scrollbar {
