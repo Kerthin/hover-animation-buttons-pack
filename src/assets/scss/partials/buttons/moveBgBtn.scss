@@ -1,0 +1,79 @@
+/*____________________________________________________________
+# Move Bg Button Variables
+____________________________________________________________*/
+$moveBgBtnWidth: 240px;
+$moveBgBtnHeight: ($moveBgBtnWidth / 100) * 33.34;
+
+$moveBgBtnFontSize: $moveBgBtnHeight / 2.5;
+
+$moveBgBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Move Bg Button
+____________________________________________________________*/
+.moveBgBtn {
+	position: relative;
+	margin: 20px;
+	width: $moveBgBtnWidth;
+	height: $moveBgBtnHeight;
+	overflow: hidden;
+	cursor: pointer;
+	background-color: #faebd7;
+	
+	&:hover {
+		.moveBgWrap {
+			left: -100%;
+		}
+		.moveBgWrap__leftBg {
+			transform: scale(.7);
+			transition-delay: 0s;
+		}
+		.moveBgWrap__rightBg {
+			transform: scale(1);
+			transition-delay: calc(#{$moveBgBtnSpeed} * 2);
+		}
+		.moveBgButton__text {
+		  letter-spacing: calc(#{$moveBgBtnFontSize} / 4);
+			transition-delay: calc(#{$moveBgBtnSpeed} * 2);
+	  }
+	}
+}
+.moveBgWrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	transition: left $moveBgBtnSpeed;
+	transition-delay: $moveBgBtnSpeed;
+}
+.moveBgWrap__leftBg,
+.moveBgWrap__rightBg {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	transition: transform $moveBgBtnSpeed;
+}
+.moveBgWrap__leftBg {
+	left: 0;
+	background-color: #57D1C9;
+  transition-delay: calc(#{$moveBgBtnSpeed} * 2);
+}
+.moveBgWrap__rightBg {
+	right: 0;
+	background-color: #ED5485;
+	transform: scale(.7);
+	transition-delay: 0s;
+}
+.moveBgButton__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Righteous';
+	font-size: $moveBgBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$moveBgBtnFontSize} / 10.666);
+	color: #FFFBCB;
+	transition: letter-spacing $moveBgBtnSpeed;
+}

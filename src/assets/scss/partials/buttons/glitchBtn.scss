@@ -2,9 +2,9 @@
 # Glitch Button Variables
 ____________________________________________________________*/
 $glitchBtnWidth: 200px;
-$glitchBtnHeight: ($glitchBtnWidth / 100) * 32.5;
+$glitchBtnHeight: calc($glitchBtnWidth / 100) * 32.5;
 
-$glitchBtnFontSize: $glitchBtnHeight / 3.14;
+$glitchBtnFontSize: calc($glitchBtnHeight / 3.14);
 
 $glitchAnimationSteps: 16;
 
@@ -59,8 +59,10 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect{
     @for $i from 0 through $glitchAnimationSteps{
-        #{percentage($i*(1/$glitchAnimationSteps))}{
-            clip: rect(random($glitchBtnHeight) + px, $glitchBtnWidth, random($glitchBtnHeight) + px, 0);
+        #{percentage($i*calc(1/$glitchAnimationSteps))}{
+            clip: rect(math.random(math.div($glitchBtnHeight, 1px)), $glitchBtnWidth, math.random(math.div($glitchBtnHeight, 1px)) + px, 0);
         }
     }
 }
+// math.random(math.div($limit, 1px))
+// clip: rect(math.random(math.div($glitchBtnHeight, 1px)) + px, $glitchBtnWidth, random($glitchBtnHeight) + px, 0);

@@ -679,71 +679,71 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @keyframes glitch-effect {
     0% {
-        clip: rect(15px, 200px, 53px, 0);
+        clip: rect(26, 200px, 34px, 0);
     }
 
     6.25% {
-        clip: rect(63px, 200px, 35px, 0);
+        clip: rect(2, 200px, 54px, 0);
     }
 
     12.5% {
-        clip: rect(27px, 200px, 65px, 0);
+        clip: rect(16, 200px, 13px, 0);
     }
 
     18.75% {
-        clip: rect(55px, 200px, 11px, 0);
+        clip: rect(39, 200px, 17px, 0);
     }
 
     25% {
-        clip: rect(59px, 200px, 4px, 0);
+        clip: rect(40, 200px, 42px, 0);
     }
 
     31.25% {
-        clip: rect(57px, 200px, 17px, 0);
+        clip: rect(64, 200px, 58px, 0);
     }
 
     37.5% {
-        clip: rect(9px, 200px, 57px, 0);
+        clip: rect(24, 200px, 62px, 0);
     }
 
     43.75% {
-        clip: rect(65px, 200px, 38px, 0);
+        clip: rect(1, 200px, 47px, 0);
     }
 
     50% {
-        clip: rect(56px, 200px, 44px, 0);
+        clip: rect(50, 200px, 65px, 0);
     }
 
     56.25% {
-        clip: rect(42px, 200px, 27px, 0);
+        clip: rect(53, 200px, 30px, 0);
     }
 
     62.5% {
-        clip: rect(56px, 200px, 35px, 0);
+        clip: rect(1, 200px, 18px, 0);
     }
 
     68.75% {
-        clip: rect(52px, 200px, 43px, 0);
+        clip: rect(33, 200px, 1px, 0);
     }
 
     75% {
-        clip: rect(39px, 200px, 9px, 0);
+        clip: rect(39, 200px, 18px, 0);
     }
 
     81.25% {
-        clip: rect(37px, 200px, 14px, 0);
+        clip: rect(25, 200px, 35px, 0);
     }
 
     87.5% {
-        clip: rect(14px, 200px, 30px, 0);
+        clip: rect(49, 200px, 58px, 0);
     }
 
     93.75% {
-        clip: rect(59px, 200px, 2px, 0);
+        clip: rect(22, 200px, 19px, 0);
     }
 
     100% {
-        clip: rect(1px, 200px, 54px, 0);
+        clip: rect(8, 200px, 41px, 0);
     }
 }
 /*____________________________________________________________
@@ -2471,5 +2471,87 @@ ____________________________________________________________*/
     text-transform: uppercase;
     letter-spacing: calc(32.0064px / 10.666);
     color: #faebd7;
+    transition: letter-spacing 0.4s;
+}
+
+/*____________________________________________________________
+## @import moveBgBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Move Bg Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Move Bg Button
+____________________________________________________________*/
+.moveBgBtn {
+    position: relative;
+    margin: 20px;
+    width: 240px;
+    height: 80.016px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #faebd7;
+}
+
+.moveBgBtn:hover .moveBgWrap {
+    left: -100%;
+}
+
+.moveBgBtn:hover .moveBgWrap__leftBg {
+    transform: scale(0.7);
+    transition-delay: 0s;
+}
+
+.moveBgBtn:hover .moveBgWrap__rightBg {
+    transform: scale(1);
+    transition-delay: calc(0.4s * 2);
+}
+
+.moveBgBtn:hover .moveBgButton__text {
+    letter-spacing: calc(32.0064px / 4);
+    transition-delay: calc(0.4s * 2);
+}
+
+.moveBgWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    transition: left 0.4s;
+    transition-delay: 0.4s;
+}
+
+.moveBgWrap__leftBg,
+.moveBgWrap__rightBg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: transform 0.4s;
+}
+
+.moveBgWrap__leftBg {
+    left: 0;
+    background-color: #57D1C9;
+    transition-delay: calc(0.4s * 2);
+}
+
+.moveBgWrap__rightBg {
+    right: 0;
+    background-color: #ED5485;
+    transform: scale(0.7);
+    transition-delay: 0s;
+}
+
+.moveBgButton__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Righteous";
+    font-size: 32.0064px;
+    text-transform: uppercase;
+    letter-spacing: calc(32.0064px / 10.666);
+    color: #FFFBCB;
     transition: letter-spacing 0.4s;
 }

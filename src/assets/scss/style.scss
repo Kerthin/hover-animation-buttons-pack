@@ -21,6 +21,7 @@
     ## @import recedingSplitGradientBtn.scss
 
 ____________________________________________________________*/
+@use 'sass:math';
 
 /*____________________________________________________________
 # @import container.scss
@@ -114,3 +115,8 @@ ____________________________________________________________*/
 ## @import recedingSplitGradientBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/recedingSplitGradientBtn.scss';
+
+/*____________________________________________________________
+## @import moveBgBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/moveBgBtn.scss';

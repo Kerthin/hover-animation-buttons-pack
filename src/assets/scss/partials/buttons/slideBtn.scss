@@ -2,10 +2,10 @@
 # Slide Button Variables
 ____________________________________________________________*/
 $slideBtnWidth: 160px;
-$slideBtnHeight: ($slideBtnWidth / 100) * 32.5;
+$slideBtnHeight: calc($slideBtnWidth / 100) * 32.5;
 
-$slideInnerWidth: ($slideBtnWidth / 100) * 95;
-$slideInnerHeight: ($slideInnerWidth / 100) * 29;
+$slideInnerWidth: calc($slideBtnWidth / 100) * 95;
+$slideInnerHeight: calc($slideInnerWidth / 100) * 29;
 
 $slideInnerWidthMargin: $slideBtnWidth - $slideInnerWidth;
 $slideInnerHeightMargin: $slideBtnHeight - $slideInnerHeight;
