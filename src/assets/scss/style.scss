@@ -21,6 +21,7 @@
     ## @import recedingSplitGradientBtn.scss
     ## @import moveBgBtn.scss
     ## @import shrinkingBorderBtn.scss
+    ## @import moveBorderBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -127,3 +128,8 @@ ____________________________________________________________*/
 ## @import shrinkingBorderBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/shrinkingBorderBtn.scss';
+
+/*____________________________________________________________
+## @import moveBorderBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/moveBorderBtn.scss';

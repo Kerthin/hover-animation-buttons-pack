@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Move Border Buttons
+  .presentWrap__buttonsBlock
+
+    mixin moveBorderBtnsMix(modName, startName, endName)
+      button.moveBorderBtn(class=`${modName}`)
+        .moveBorderBtn__textWrap #{startName}
+          span.moveBorderBtn__textHide #{endName}
+        .moveBorderBtn__border
+    +moveBorderBtnsMix('_leftMove', 'Hover', 'Button')
+    +moveBorderBtnsMix('_topMove', 'Hover', 'Button')
+    +moveBorderBtnsMix('_rightMove', 'Hover', 'Button')
+    +moveBorderBtnsMix('_bottomtMove', 'Hover', 'Button')

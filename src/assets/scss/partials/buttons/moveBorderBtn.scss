@@ -1,0 +1,174 @@
+/*____________________________________________________________
+# Move Border Button Variables
+____________________________________________________________*/
+$moveBorderBtnWidth: 240px;
+$moveBorderBtnHeight: calc($moveBorderBtnWidth / 100) * 33.34;
+
+$moveBorderBtnBorderSize: calc($moveBorderBtnHeight / 16);
+$moveBorderBtnBorderMargin: calc($moveBorderBtnBorderSize * 2);
+
+$moveBorderBtnFontSize: calc($moveBorderBtnHeight / 2.5);
+
+$moveBorderBtnSpeed_vertical: .4s;
+$moveBorderBtnSpeed_horizontal: .8s;
+
+/*____________________________________________________________
+# Move Border Button
+____________________________________________________________*/
+.moveBorderBtn {
+	position: relative;
+	margin: 20px;
+	width: $moveBorderBtnWidth;
+	height: $moveBorderBtnHeight;
+	overflow: hidden;
+	cursor: pointer;
+	
+	&._leftMove {
+		background-color: #ED5485;
+		
+		.moveBorderBtn__textHide {
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ED5485;
+      transition: width calc(#{$moveBorderBtnSpeed_horizontal} / 2);
+      transition-delay: calc(#{$moveBorderBtnSpeed_horizontal} / 8);
+		}
+		.moveBorderBtn__border {
+			top: 50%;
+			left: $moveBorderBtnBorderMargin;
+			transform: translateY(-50%);
+			height: 80%;
+			width: $moveBorderBtnBorderSize;
+			background-color: #FFFBCB;
+			transition: left $moveBorderBtnSpeed_horizontal;
+		}
+		
+		&:hover {
+			.moveBorderBtn__textHide {
+				width: 100%;
+			}
+			.moveBorderBtn__border {
+				left: calc(#{$moveBorderBtnWidth} - (#{$moveBorderBtnBorderSize} + #{$moveBorderBtnBorderMargin}));
+			}
+		}
+	}
+	
+	&._topMove {
+		background-color: #ED5485;
+		
+		.moveBorderBtn__textHide {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			background-color: #ED5485;
+      transition: height calc(#{$moveBorderBtnSpeed_vertical} / 2);
+      transition-delay: calc(#{$moveBorderBtnSpeed_vertical} / 8);
+		}
+		.moveBorderBtn__border {
+			top: $moveBorderBtnBorderMargin;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+			height: $moveBorderBtnBorderSize;
+			background-color: #FFFBCB;
+			transition: top $moveBorderBtnSpeed_vertical;
+		}
+		
+		&:hover {
+			.moveBorderBtn__textHide {
+					height: 100%;
+			}
+			.moveBorderBtn__border {
+				top: calc(#{$moveBorderBtnHeight} - (#{$moveBorderBtnBorderSize} + #{$moveBorderBtnBorderMargin}));
+			}
+		}
+	}
+	
+	&._rightMove {
+		background-color: #FF7260;
+		
+		.moveBorderBtn__textHide {
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 100%;
+			background-color: #FF7260;
+			transition: width calc(#{$moveBorderBtnSpeed_horizontal} / 2);
+			transition-delay: calc(#{$moveBorderBtnSpeed_horizontal} / 8);
+		}
+		.moveBorderBtn__border {
+			top: 50%;
+			right: $moveBorderBtnBorderMargin;
+			transform: translateY(-50%);
+			height: 80%;
+			width: $moveBorderBtnBorderSize;
+			background-color: #FFFBCB;
+			transition: right $moveBorderBtnSpeed_horizontal;
+		}
+		
+		&:hover {
+			.moveBorderBtn__textHide {
+					width: 100%;
+			}
+			.moveBorderBtn__border {
+				right: calc(#{$moveBorderBtnWidth} - (#{$moveBorderBtnBorderSize} + #{$moveBorderBtnBorderMargin}));
+			}
+		}
+	}
+	
+	&._bottomtMove {
+		background-color: #FF7260;
+		
+		.moveBorderBtn__textHide {
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			background-color: #FF7260;
+      transition: height calc(#{$moveBorderBtnSpeed_vertical} - (#{$moveBorderBtnSpeed_vertical} / 8));
+      transition-delay: calc(#{$moveBorderBtnSpeed_vertical} / 8);
+		}
+		.moveBorderBtn__border {
+			bottom: $moveBorderBtnBorderMargin;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+			height: $moveBorderBtnBorderSize;
+			background-color: #FFFBCB;
+			transition: bottom $moveBorderBtnSpeed_vertical;
+		}
+		
+		&:hover {
+			.moveBorderBtn__textHide {
+				height: 100%;
+			}
+			.moveBorderBtn__border {
+				bottom: calc(#{$moveBorderBtnHeight} - (#{$moveBorderBtnBorderSize} + #{$moveBorderBtnBorderMargin}));
+			}
+		}
+	}
+}
+
+.moveBorderBtn__textWrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc((#{$moveBorderBtnWidth} / 100) * 60.42);
+	font-family: 'Righteous';
+	font-size: $moveBorderBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$moveBorderBtnFontSize} / 10.666);
+	color: #FFFBCB;
+	overflow: hidden;
+}
+.moveBorderBtn__textHide {
+	position: absolute;
+	overflow: hidden;
+}
+.moveBorderBtn__border {
+	position: absolute;
+}

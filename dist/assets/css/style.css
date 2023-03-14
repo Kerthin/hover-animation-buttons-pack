@@ -21,6 +21,7 @@
     ## @import recedingSplitGradientBtn.scss
     ## @import moveBgBtn.scss
     ## @import shrinkingBorderBtn.scss
+    ## @import moveBorderBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -728,141 +729,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(65, 200px, 10px, 0);
+        clip: rect(40, 200px, 65px, 0);
     }
 
     6.25% {
-        clip: rect(28, 200px, 55px, 0);
+        clip: rect(13, 200px, 3px, 0);
     }
 
     12.5% {
-        clip: rect(22, 200px, 57px, 0);
+        clip: rect(32, 200px, 40px, 0);
     }
 
     18.75% {
-        clip: rect(26, 200px, 56px, 0);
+        clip: rect(44, 200px, 10px, 0);
     }
 
     25% {
-        clip: rect(12, 200px, 16px, 0);
+        clip: rect(2, 200px, 2px, 0);
     }
 
     31.25% {
-        clip: rect(27, 200px, 24px, 0);
+        clip: rect(54, 200px, 41px, 0);
     }
 
     37.5% {
-        clip: rect(18, 200px, 47px, 0);
+        clip: rect(33, 200px, 13px, 0);
     }
 
     43.75% {
-        clip: rect(16, 200px, 60px, 0);
+        clip: rect(42, 200px, 34px, 0);
     }
 
     50% {
-        clip: rect(31, 200px, 34px, 0);
+        clip: rect(24, 200px, 8px, 0);
     }
 
     56.25% {
-        clip: rect(20, 200px, 14px, 0);
+        clip: rect(35, 200px, 34px, 0);
     }
 
     62.5% {
-        clip: rect(34, 200px, 3px, 0);
+        clip: rect(44, 200px, 42px, 0);
     }
 
     68.75% {
-        clip: rect(20, 200px, 30px, 0);
+        clip: rect(41, 200px, 10px, 0);
     }
 
     75% {
-        clip: rect(23, 200px, 28px, 0);
+        clip: rect(32, 200px, 24px, 0);
     }
 
     81.25% {
-        clip: rect(63, 200px, 61px, 0);
+        clip: rect(55, 200px, 6px, 0);
     }
 
     87.5% {
-        clip: rect(31, 200px, 15px, 0);
+        clip: rect(25, 200px, 62px, 0);
     }
 
     93.75% {
-        clip: rect(58, 200px, 27px, 0);
+        clip: rect(46, 200px, 19px, 0);
     }
 
     100% {
-        clip: rect(56, 200px, 39px, 0);
+        clip: rect(48, 200px, 22px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(65, 200px, 10px, 0);
+        clip: rect(40, 200px, 65px, 0);
     }
 
     6.25% {
-        clip: rect(28, 200px, 55px, 0);
+        clip: rect(13, 200px, 3px, 0);
     }
 
     12.5% {
-        clip: rect(22, 200px, 57px, 0);
+        clip: rect(32, 200px, 40px, 0);
     }
 
     18.75% {
-        clip: rect(26, 200px, 56px, 0);
+        clip: rect(44, 200px, 10px, 0);
     }
 
     25% {
-        clip: rect(12, 200px, 16px, 0);
+        clip: rect(2, 200px, 2px, 0);
     }
 
     31.25% {
-        clip: rect(27, 200px, 24px, 0);
+        clip: rect(54, 200px, 41px, 0);
     }
 
     37.5% {
-        clip: rect(18, 200px, 47px, 0);
+        clip: rect(33, 200px, 13px, 0);
     }
 
     43.75% {
-        clip: rect(16, 200px, 60px, 0);
+        clip: rect(42, 200px, 34px, 0);
     }
 
     50% {
-        clip: rect(31, 200px, 34px, 0);
+        clip: rect(24, 200px, 8px, 0);
     }
 
     56.25% {
-        clip: rect(20, 200px, 14px, 0);
+        clip: rect(35, 200px, 34px, 0);
     }
 
     62.5% {
-        clip: rect(34, 200px, 3px, 0);
+        clip: rect(44, 200px, 42px, 0);
     }
 
     68.75% {
-        clip: rect(20, 200px, 30px, 0);
+        clip: rect(41, 200px, 10px, 0);
     }
 
     75% {
-        clip: rect(23, 200px, 28px, 0);
+        clip: rect(32, 200px, 24px, 0);
     }
 
     81.25% {
-        clip: rect(63, 200px, 61px, 0);
+        clip: rect(55, 200px, 6px, 0);
     }
 
     87.5% {
-        clip: rect(31, 200px, 15px, 0);
+        clip: rect(25, 200px, 62px, 0);
     }
 
     93.75% {
-        clip: rect(58, 200px, 27px, 0);
+        clip: rect(46, 200px, 19px, 0);
     }
 
     100% {
-        clip: rect(56, 200px, 39px, 0);
+        clip: rect(48, 200px, 22px, 0);
     }
 }
 /*____________________________________________________________
@@ -3316,5 +3317,208 @@ ____________________________________________________________*/
 }
 
 .shrinkingBorderBtn__border {
+    position: absolute;
+}
+
+/*____________________________________________________________
+## @import moveBorderBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Move Border Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Move Border Button
+____________________________________________________________*/
+.moveBorderBtn {
+    position: relative;
+    margin: 20px;
+    width: 240px;
+    height: 80.016px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.moveBorderBtn._leftMove {
+    background-color: #ED5485;
+}
+
+.moveBorderBtn._leftMove .moveBorderBtn__textHide {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ED5485;
+    -webkit-transition: width calc(0.8s / 2);
+    -o-transition: width calc(0.8s / 2);
+    transition: width calc(0.8s / 2);
+    -webkit-transition-delay: calc(0.8s / 8);
+    -o-transition-delay: calc(0.8s / 8);
+    transition-delay: calc(0.8s / 8);
+}
+
+.moveBorderBtn._leftMove .moveBorderBtn__border {
+    top: 50%;
+    left: 10.002px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 80%;
+    width: 5.001px;
+    background-color: #FFFBCB;
+    -webkit-transition: left 0.8s;
+    -o-transition: left 0.8s;
+    transition: left 0.8s;
+}
+
+.moveBorderBtn._leftMove:hover .moveBorderBtn__textHide {
+    width: 100%;
+}
+
+.moveBorderBtn._leftMove:hover .moveBorderBtn__border {
+    left: calc(240px - (5.001px + 10.002px));
+}
+
+.moveBorderBtn._topMove {
+    background-color: #ED5485;
+}
+
+.moveBorderBtn._topMove .moveBorderBtn__textHide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ED5485;
+    -webkit-transition: height calc(0.4s / 2);
+    -o-transition: height calc(0.4s / 2);
+    transition: height calc(0.4s / 2);
+    -webkit-transition-delay: calc(0.4s / 8);
+    -o-transition-delay: calc(0.4s / 8);
+    transition-delay: calc(0.4s / 8);
+}
+
+.moveBorderBtn._topMove .moveBorderBtn__border {
+    top: 10.002px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5.001px;
+    background-color: #FFFBCB;
+    -webkit-transition: top 0.4s;
+    -o-transition: top 0.4s;
+    transition: top 0.4s;
+}
+
+.moveBorderBtn._topMove:hover .moveBorderBtn__textHide {
+    height: 100%;
+}
+
+.moveBorderBtn._topMove:hover .moveBorderBtn__border {
+    top: calc(80.016px - (5.001px + 10.002px));
+}
+
+.moveBorderBtn._rightMove {
+    background-color: #FF7260;
+}
+
+.moveBorderBtn._rightMove .moveBorderBtn__textHide {
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FF7260;
+    -webkit-transition: width calc(0.8s / 2);
+    -o-transition: width calc(0.8s / 2);
+    transition: width calc(0.8s / 2);
+    -webkit-transition-delay: calc(0.8s / 8);
+    -o-transition-delay: calc(0.8s / 8);
+    transition-delay: calc(0.8s / 8);
+}
+
+.moveBorderBtn._rightMove .moveBorderBtn__border {
+    top: 50%;
+    right: 10.002px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 80%;
+    width: 5.001px;
+    background-color: #FFFBCB;
+    -webkit-transition: right 0.8s;
+    -o-transition: right 0.8s;
+    transition: right 0.8s;
+}
+
+.moveBorderBtn._rightMove:hover .moveBorderBtn__textHide {
+    width: 100%;
+}
+
+.moveBorderBtn._rightMove:hover .moveBorderBtn__border {
+    right: calc(240px - (5.001px + 10.002px));
+}
+
+.moveBorderBtn._bottomtMove {
+    background-color: #FF7260;
+}
+
+.moveBorderBtn._bottomtMove .moveBorderBtn__textHide {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #FF7260;
+    -webkit-transition: height calc(0.4s - (0.4s / 8));
+    -o-transition: height calc(0.4s - (0.4s / 8));
+    transition: height calc(0.4s - (0.4s / 8));
+    -webkit-transition-delay: calc(0.4s / 8);
+    -o-transition-delay: calc(0.4s / 8);
+    transition-delay: calc(0.4s / 8);
+}
+
+.moveBorderBtn._bottomtMove .moveBorderBtn__border {
+    bottom: 10.002px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5.001px;
+    background-color: #FFFBCB;
+    -webkit-transition: bottom 0.4s;
+    -o-transition: bottom 0.4s;
+    transition: bottom 0.4s;
+}
+
+.moveBorderBtn._bottomtMove:hover .moveBorderBtn__textHide {
+    height: 100%;
+}
+
+.moveBorderBtn._bottomtMove:hover .moveBorderBtn__border {
+    bottom: calc(80.016px - (5.001px + 10.002px));
+}
+
+.moveBorderBtn__textWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: calc((240px / 100) * 60.42);
+    font-family: "Righteous";
+    font-size: 32.0064px;
+    text-transform: uppercase;
+    letter-spacing: calc(32.0064px / 10.666);
+    color: #FFFBCB;
+    overflow: hidden;
+}
+
+.moveBorderBtn__textHide {
+    position: absolute;
+    overflow: hidden;
+}
+
+.moveBorderBtn__border {
     position: absolute;
 }
