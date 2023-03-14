@@ -2,7 +2,7 @@
 # Circle Button Variables
 ____________________________________________________________*/
 $circleBtnSize: 80px;
-$circleBtnInnerSize: ($circleBtnSize / 100) * 35;
+$circleBtnInnerSize: calc($circleBtnSize / 100) * 35;
 
 $circleBtnBorder: $circleBtnSize / 40;
 
@@ -53,8 +53,9 @@ ____________________________________________________________*/
 }
 
 .circleBtn__text {
-	font-family: Galeria;
+	font-family: 'Roboto Slab';
 	font-size: 30px;
+	font-weight: 900;
 	fill: #292c2c;
 }
 .circleBtn__inner {

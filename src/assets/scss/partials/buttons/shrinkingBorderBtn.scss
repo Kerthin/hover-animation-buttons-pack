@@ -1,0 +1,145 @@
+/*____________________________________________________________
+# Shrinking Border Button Variables
+____________________________________________________________*/
+$shrinkingBorderBtnWidth: 240px;
+$shrinkingBorderBtnHeight: calc($shrinkingBorderBtnWidth / 100) * 33.34;
+
+$shrinkingBorderBtnBorderSize: calc($shrinkingBorderBtnHeight / 16);
+$shrinkingBorderBtnBorderMargin: calc($shrinkingBorderBtnBorderSize * 2);
+
+$shrinkingBorderBtnFontSize: calc($shrinkingBorderBtnHeight / 2.5);
+
+$shrinkingBorderBtnSpeed_vertical: .4s;
+$shrinkingBorderBtnSpeed_horizontal: .8s;
+
+/*____________________________________________________________
+# Shrinking Border Button
+____________________________________________________________*/
+.shrinkingBorderBtn {
+	position: relative;
+	margin: 20px;
+	width: $shrinkingBorderBtnWidth;
+	height: $shrinkingBorderBtnHeight;
+	overflow: hidden;
+	cursor: pointer;
+	background-color: #57D1C9;
+	
+	&._verticalShrink {
+		
+		.shrinkingBorderBtn__text {
+      height: calc(#{$shrinkingBorderBtnHeight} / 2);
+      transition: height calc(#{$shrinkingBorderBtnSpeed_vertical} / 4);
+      transition-delay: calc(#{$shrinkingBorderBtnSpeed_vertical} / 4);
+			
+			&:nth-child(2) {
+				height: 0;
+			}
+		}
+		
+		.shrinkingBorderBtn__border {
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80%;
+			height: $shrinkingBorderBtnBorderSize;
+			transition: top $shrinkingBorderBtnSpeed_vertical, bottom $shrinkingBorderBtnSpeed_vertical;
+
+			&:nth-child(3) {
+				top: $shrinkingBorderBtnBorderMargin;
+				background-color: #ED5485;
+			}
+
+			&:nth-child(4) {
+				bottom: $shrinkingBorderBtnBorderMargin;
+				background-color: #FFE869;
+			}
+		}
+		
+		&:hover {
+			.shrinkingBorderBtn__text {
+				height: 0;
+
+				&:nth-child(2) {
+					height: calc(#{$shrinkingBorderBtnHeight} / 2);
+				}
+			}
+			
+			.shrinkingBorderBtn__border {
+				&:nth-child(3) {
+          top: calc(#{$shrinkingBorderBtnHeight} - (#{$shrinkingBorderBtnBorderSize} + #{$shrinkingBorderBtnBorderMargin}));
+				}
+				&:nth-child(4) {
+          bottom: calc(#{$shrinkingBorderBtnHeight} - (#{$shrinkingBorderBtnBorderSize} + #{$shrinkingBorderBtnBorderMargin}));
+				}
+			}
+		}
+	}
+	
+	&._horizontalShrink {
+		
+		.shrinkingBorderBtn__text {
+			width: calc((#{$shrinkingBorderBtnWidth} / 100) * 60.42);
+      transition: width calc(#{$shrinkingBorderBtnSpeed_horizontal} / 2.666);
+      transition-delay: calc(#{$shrinkingBorderBtnSpeed_horizontal} / 4);
+			
+			&:nth-child(2) {
+				width: 0;
+        transition-delay: calc(#{$shrinkingBorderBtnSpeed_horizontal} / 8);
+			}
+		}
+		
+		.shrinkingBorderBtn__border {
+			top: 50%;
+			transform: translateY(-50%);
+			height: 80%;
+			width: $shrinkingBorderBtnBorderSize;
+			transition: left $shrinkingBorderBtnSpeed_horizontal, right $shrinkingBorderBtnSpeed_horizontal;
+
+			&:nth-child(3) {
+				left: $shrinkingBorderBtnBorderMargin;
+				background-color: #ED5485;
+			}
+
+			&:nth-child(4) {
+				right: $shrinkingBorderBtnBorderMargin;
+				background-color: #FFE869;
+			}
+		}
+		
+		&:hover {
+			.shrinkingBorderBtn__text {
+				width: 0;
+        transition-delay: calc(#{$shrinkingBorderBtnSpeed_horizontal} / 8);
+
+				&:nth-child(2) {
+					width: calc((#{$shrinkingBorderBtnWidth} / 100) * 60.42);
+          transition-delay: calc(#{$shrinkingBorderBtnSpeed_horizontal} / 4);
+				}
+			}
+			
+			.shrinkingBorderBtn__border {
+				&:nth-child(3) {
+					left: calc(#{$shrinkingBorderBtnWidth} - (#{$shrinkingBorderBtnBorderSize} + #{$shrinkingBorderBtnBorderMargin}));
+				}
+				&:nth-child(4) {
+					right: calc(#{$shrinkingBorderBtnWidth} - (#{$shrinkingBorderBtnBorderSize} + #{$shrinkingBorderBtnBorderMargin}));
+				}
+			}
+		}
+	}
+}
+
+.shrinkingBorderBtn__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Righteous';
+	font-size: $shrinkingBorderBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$shrinkingBorderBtnFontSize} / 10.666);
+	color: #FFFBCB;
+	overflow: hidden;
+}
+.shrinkingBorderBtn__border {
+	position: absolute;
+}

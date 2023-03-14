@@ -1,0 +1,12 @@
+section.presentWrap
+  h1.presentWrap__title Shrinking Border Buttons
+  .presentWrap__buttonsBlock
+
+    mixin shrinkingBorderBtnsMix(modName, startName, endName)
+      button.shrinkingBorderBtn(class=`${modName}`)
+        .shrinkingBorderBtn__text #{startName}
+        .shrinkingBorderBtn__text #{endName}
+        .shrinkingBorderBtn__border
+        .shrinkingBorderBtn__border
+    +shrinkingBorderBtnsMix('_verticalShrink', 'Hover', 'Button')
+    +shrinkingBorderBtnsMix('_horizontalShrink', 'Hover', 'Button')

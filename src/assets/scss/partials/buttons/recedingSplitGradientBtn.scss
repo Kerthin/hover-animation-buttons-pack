@@ -2,15 +2,15 @@
 # Receding Split Gradient Button Variables
 ____________________________________________________________*/
 $recedingSplitGradientBtnWidth: 240px;
-$recedingSplitGradientBtnHeight: ($recedingSplitGradientBtnWidth / 100) * 33.34;
+$recedingSplitGradientBtnHeight: calc($recedingSplitGradientBtnWidth / 100) * 33.34;
 
-$recedingSplitGradientBtnGradientSize_waves: ($recedingSplitGradientBtnWidth / 100) * 12.5;
-$recedingSplitGradientBtnGradientSize_circles: $recedingSplitGradientBtnWidth / 60;
+$recedingSplitGradientBtnGradientSize_waves: calc($recedingSplitGradientBtnWidth / 100) * 12.5;
+$recedingSplitGradientBtnGradientSize_circles: calc($recedingSplitGradientBtnWidth / 60);
 
-$recedingSplitGradientBtnGradientSize_buttons: $recedingSplitGradientBtnWidth / 30;
-$recedingSplitGradientBtnGradientSize_roses: $recedingSplitGradientBtnWidth / 6;
+$recedingSplitGradientBtnGradientSize_buttons: calc($recedingSplitGradientBtnWidth / 30);
+$recedingSplitGradientBtnGradientSize_roses: calc($recedingSplitGradientBtnWidth / 6);
 
-$recedingSplitGradientBtnFontSize: $recedingSplitGradientBtnHeight / 2.5;
+$recedingSplitGradientBtnFontSize: calc($recedingSplitGradientBtnHeight / 2.5);
 
 $recedingSplitGradientBtnSpeed: .4s;
 

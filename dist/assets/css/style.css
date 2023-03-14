@@ -19,6 +19,8 @@
     ## @import raysBtn.scss
     ## @import splitGradientBtn.scss
     ## @import recedingSplitGradientBtn.scss
+    ## @import moveBgBtn.scss
+    ## @import shrinkingBorderBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -726,141 +728,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(1, 200px, 54px, 0);
+        clip: rect(65, 200px, 10px, 0);
     }
 
     6.25% {
-        clip: rect(19, 200px, 31px, 0);
+        clip: rect(28, 200px, 55px, 0);
     }
 
     12.5% {
-        clip: rect(10, 200px, 43px, 0);
+        clip: rect(22, 200px, 57px, 0);
     }
 
     18.75% {
-        clip: rect(45, 200px, 23px, 0);
+        clip: rect(26, 200px, 56px, 0);
     }
 
     25% {
-        clip: rect(48, 200px, 39px, 0);
+        clip: rect(12, 200px, 16px, 0);
     }
 
     31.25% {
-        clip: rect(55, 200px, 64px, 0);
+        clip: rect(27, 200px, 24px, 0);
     }
 
     37.5% {
-        clip: rect(64, 200px, 22px, 0);
+        clip: rect(18, 200px, 47px, 0);
     }
 
     43.75% {
-        clip: rect(23, 200px, 33px, 0);
+        clip: rect(16, 200px, 60px, 0);
     }
 
     50% {
-        clip: rect(21, 200px, 20px, 0);
+        clip: rect(31, 200px, 34px, 0);
     }
 
     56.25% {
-        clip: rect(21, 200px, 8px, 0);
+        clip: rect(20, 200px, 14px, 0);
     }
 
     62.5% {
-        clip: rect(50, 200px, 6px, 0);
+        clip: rect(34, 200px, 3px, 0);
     }
 
     68.75% {
-        clip: rect(28, 200px, 33px, 0);
+        clip: rect(20, 200px, 30px, 0);
     }
 
     75% {
-        clip: rect(1, 200px, 23px, 0);
+        clip: rect(23, 200px, 28px, 0);
     }
 
     81.25% {
-        clip: rect(5, 200px, 51px, 0);
+        clip: rect(63, 200px, 61px, 0);
     }
 
     87.5% {
-        clip: rect(51, 200px, 7px, 0);
+        clip: rect(31, 200px, 15px, 0);
     }
 
     93.75% {
-        clip: rect(35, 200px, 15px, 0);
+        clip: rect(58, 200px, 27px, 0);
     }
 
     100% {
-        clip: rect(19, 200px, 61px, 0);
+        clip: rect(56, 200px, 39px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(1, 200px, 54px, 0);
+        clip: rect(65, 200px, 10px, 0);
     }
 
     6.25% {
-        clip: rect(19, 200px, 31px, 0);
+        clip: rect(28, 200px, 55px, 0);
     }
 
     12.5% {
-        clip: rect(10, 200px, 43px, 0);
+        clip: rect(22, 200px, 57px, 0);
     }
 
     18.75% {
-        clip: rect(45, 200px, 23px, 0);
+        clip: rect(26, 200px, 56px, 0);
     }
 
     25% {
-        clip: rect(48, 200px, 39px, 0);
+        clip: rect(12, 200px, 16px, 0);
     }
 
     31.25% {
-        clip: rect(55, 200px, 64px, 0);
+        clip: rect(27, 200px, 24px, 0);
     }
 
     37.5% {
-        clip: rect(64, 200px, 22px, 0);
+        clip: rect(18, 200px, 47px, 0);
     }
 
     43.75% {
-        clip: rect(23, 200px, 33px, 0);
+        clip: rect(16, 200px, 60px, 0);
     }
 
     50% {
-        clip: rect(21, 200px, 20px, 0);
+        clip: rect(31, 200px, 34px, 0);
     }
 
     56.25% {
-        clip: rect(21, 200px, 8px, 0);
+        clip: rect(20, 200px, 14px, 0);
     }
 
     62.5% {
-        clip: rect(50, 200px, 6px, 0);
+        clip: rect(34, 200px, 3px, 0);
     }
 
     68.75% {
-        clip: rect(28, 200px, 33px, 0);
+        clip: rect(20, 200px, 30px, 0);
     }
 
     75% {
-        clip: rect(1, 200px, 23px, 0);
+        clip: rect(23, 200px, 28px, 0);
     }
 
     81.25% {
-        clip: rect(5, 200px, 51px, 0);
+        clip: rect(63, 200px, 61px, 0);
     }
 
     87.5% {
-        clip: rect(51, 200px, 7px, 0);
+        clip: rect(31, 200px, 15px, 0);
     }
 
     93.75% {
-        clip: rect(35, 200px, 15px, 0);
+        clip: rect(58, 200px, 27px, 0);
     }
 
     100% {
-        clip: rect(19, 200px, 61px, 0);
+        clip: rect(56, 200px, 39px, 0);
     }
 }
 /*____________________________________________________________
@@ -1816,12 +1818,10 @@ ____________________________________________________________*/
 
 .rainbowBtn._radius {
     border-radius: calc(65px / 2);
-    -webkit-border-radius: calc(65px / 2);
 }
 
 .rainbowBtn._radius .rainbowBtn__item:after {
     border-radius: calc(30px / 2);
-    -webkit-border-radius: calc(30px / 2);
 }
 
 .rainbowBtn:hover .rainbowBtn__item::after {
@@ -2291,8 +2291,9 @@ ____________________________________________________________*/
 }
 
 .circleBtn__text {
-    font-family: Galeria;
+    font-family: "Roboto Slab";
     font-size: 30px;
+    font-weight: 900;
     fill: #292c2c;
 }
 
@@ -3165,4 +3166,155 @@ ____________________________________________________________*/
     -webkit-transition: letter-spacing 0.4s;
     -o-transition: letter-spacing 0.4s;
     transition: letter-spacing 0.4s;
+}
+
+/*____________________________________________________________
+## @import shrinkingBorderBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Shrinking Border Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Shrinking Border Button
+____________________________________________________________*/
+.shrinkingBorderBtn {
+    position: relative;
+    margin: 20px;
+    width: 240px;
+    height: 80.016px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #57D1C9;
+}
+
+.shrinkingBorderBtn._verticalShrink .shrinkingBorderBtn__text {
+    height: calc(80.016px / 2);
+    -webkit-transition: height calc(0.4s / 4);
+    -o-transition: height calc(0.4s / 4);
+    transition: height calc(0.4s / 4);
+    -webkit-transition-delay: calc(0.4s / 4);
+    -o-transition-delay: calc(0.4s / 4);
+    transition-delay: calc(0.4s / 4);
+}
+
+.shrinkingBorderBtn._verticalShrink .shrinkingBorderBtn__text:nth-child(2) {
+    height: 0;
+}
+
+.shrinkingBorderBtn._verticalShrink .shrinkingBorderBtn__border {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5.001px;
+    -webkit-transition: top 0.4s, bottom 0.4s;
+    -o-transition: top 0.4s, bottom 0.4s;
+    transition: top 0.4s, bottom 0.4s;
+}
+
+.shrinkingBorderBtn._verticalShrink .shrinkingBorderBtn__border:nth-child(3) {
+    top: 10.002px;
+    background-color: #ED5485;
+}
+
+.shrinkingBorderBtn._verticalShrink .shrinkingBorderBtn__border:nth-child(4) {
+    bottom: 10.002px;
+    background-color: #FFE869;
+}
+
+.shrinkingBorderBtn._verticalShrink:hover .shrinkingBorderBtn__text {
+    height: 0;
+}
+
+.shrinkingBorderBtn._verticalShrink:hover .shrinkingBorderBtn__text:nth-child(2) {
+    height: calc(80.016px / 2);
+}
+
+.shrinkingBorderBtn._verticalShrink:hover .shrinkingBorderBtn__border:nth-child(3) {
+    top: calc(80.016px - (5.001px + 10.002px));
+}
+
+.shrinkingBorderBtn._verticalShrink:hover .shrinkingBorderBtn__border:nth-child(4) {
+    bottom: calc(80.016px - (5.001px + 10.002px));
+}
+
+.shrinkingBorderBtn._horizontalShrink .shrinkingBorderBtn__text {
+    width: calc((240px / 100) * 60.42);
+    -webkit-transition: width calc(0.8s / 2.666);
+    -o-transition: width calc(0.8s / 2.666);
+    transition: width calc(0.8s / 2.666);
+    -webkit-transition-delay: calc(0.8s / 4);
+    -o-transition-delay: calc(0.8s / 4);
+    transition-delay: calc(0.8s / 4);
+}
+
+.shrinkingBorderBtn._horizontalShrink .shrinkingBorderBtn__text:nth-child(2) {
+    width: 0;
+    -webkit-transition-delay: calc(0.8s / 8);
+    -o-transition-delay: calc(0.8s / 8);
+    transition-delay: calc(0.8s / 8);
+}
+
+.shrinkingBorderBtn._horizontalShrink .shrinkingBorderBtn__border {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 80%;
+    width: 5.001px;
+    -webkit-transition: left 0.8s, right 0.8s;
+    -o-transition: left 0.8s, right 0.8s;
+    transition: left 0.8s, right 0.8s;
+}
+
+.shrinkingBorderBtn._horizontalShrink .shrinkingBorderBtn__border:nth-child(3) {
+    left: 10.002px;
+    background-color: #ED5485;
+}
+
+.shrinkingBorderBtn._horizontalShrink .shrinkingBorderBtn__border:nth-child(4) {
+    right: 10.002px;
+    background-color: #FFE869;
+}
+
+.shrinkingBorderBtn._horizontalShrink:hover .shrinkingBorderBtn__text {
+    width: 0;
+    -webkit-transition-delay: calc(0.8s / 8);
+    -o-transition-delay: calc(0.8s / 8);
+    transition-delay: calc(0.8s / 8);
+}
+
+.shrinkingBorderBtn._horizontalShrink:hover .shrinkingBorderBtn__text:nth-child(2) {
+    width: calc((240px / 100) * 60.42);
+    -webkit-transition-delay: calc(0.8s / 4);
+    -o-transition-delay: calc(0.8s / 4);
+    transition-delay: calc(0.8s / 4);
+}
+
+.shrinkingBorderBtn._horizontalShrink:hover .shrinkingBorderBtn__border:nth-child(3) {
+    left: calc(240px - (5.001px + 10.002px));
+}
+
+.shrinkingBorderBtn._horizontalShrink:hover .shrinkingBorderBtn__border:nth-child(4) {
+    right: calc(240px - (5.001px + 10.002px));
+}
+
+.shrinkingBorderBtn__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Righteous";
+    font-size: 32.0064px;
+    text-transform: uppercase;
+    letter-spacing: calc(32.0064px / 10.666);
+    color: #FFFBCB;
+    overflow: hidden;
+}
+
+.shrinkingBorderBtn__border {
+    position: absolute;
 }

@@ -53,13 +53,11 @@ ____________________________________________________________*/
   
   &._radius {
     border-radius: calc(#{$rainbowBtnHeight} / 2);
-    -webkit-border-radius: calc(#{$rainbowBtnHeight} / 2);
     
     .rainbowBtn__item {
       
       &:after {
         border-radius: calc(#{$rainbowBtnItemWidth} / 2);
-        -webkit-border-radius: calc(#{$rainbowBtnItemWidth} / 2);
       }
     }
   }
