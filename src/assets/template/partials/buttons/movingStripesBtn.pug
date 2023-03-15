@@ -1,0 +1,14 @@
+section.presentWrap
+  h1.presentWrap__title Moving Stripes Buttons
+  p.presentWrap__link 3D Cropped Golden Cubes Pattern by: 
+    a(href="https://codepen.io/josetxu/pen/YzveWyd") Josetxu
+  .presentWrap__buttonsBlock
+
+    mixin movingStripesBtnMix(modName, startName, endName)
+      button.movingStripesBtn(class=`${modName}`)
+        span.movingStripesBtn__startText #{startName}
+        .movingStripesBtn__stripe
+        .movingStripesBtn__stripe
+        span.movingStripesBtn__endText #{endName}
+    +movingStripesBtnMix('_linearBg', 'Hover', 'Button')
+    +movingStripesBtnMix('_cubeBg', 'Hover', 'Button')

@@ -1,0 +1,108 @@
+/*____________________________________________________________
+# Slide Button Variables
+____________________________________________________________*/
+$movingStripesBtnWidth: 240px;
+$movingStripesBtnHeight: ($movingStripesBtnWidth / 100) * 33.34;
+
+$movingStripesBtnSize_linear: $movingStripesBtnWidth / 24;
+$movingStripesBtnSize_linear_repeating: $movingStripesBtnWidth / 12;
+
+$movingStripesBtnSize_cube: ($movingStripesBtnWidth / 100) * .967;
+
+$movingStripesBtnFontSize: $movingStripesBtnHeight / 2.5;
+
+$movingStripesBtnSpeed: .5s;
+
+/*____________________________________________________________
+# Slide Button
+____________________________________________________________*/
+.movingStripesBtn {
+	position: relative;
+	margin: 20px;
+	width: $movingStripesBtnWidth;
+	height: $movingStripesBtnHeight;
+	background-color: #FFF5C3;
+	overflow: hidden;
+	cursor: pointer;
+	
+	&._linearBg {
+		.movingStripesBtn__stripe {
+			background: repeating-linear-gradient(120deg, #FF7260, #FF7260 $movingStripesBtnSize_linear, #9BD7D5 $movingStripesBtnSize_linear, #9BD7D5 $movingStripesBtnSize_linear_repeating);
+		}
+	}
+	&._cubeBg {
+		.movingStripesBtn__stripe {
+      --u:  #{$movingStripesBtnSize_cube};
+			--c1: #fbd163;
+			--c2: #e4a228;
+			--c3: #d68f2b;
+			--c4: #4c302f;
+			--gp: 50%/ calc(var(--u) * 10) calc(var(--u) * 17.2);
+			--bp: calc(var(--u) * -5) calc(var(--u) * -8.6);
+			--bg: 
+				conic-gradient(from 0deg at 76.75% 18.25%, var(--c4) 0 60deg, var(--c3) 0 120deg,  var(--c1) 0 120deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -120deg at 23.5% 18.25%, var(--c3) 0 60deg,  var(--c1) 0 120deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -32deg at 50% 25%, var(--c2) 0 64deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from 0deg at 77% 33.25%, var(--c1) 0 120deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -120deg at 23% 33.25%, var(--c4) 0 120deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -60deg at 50% 42%, var(--c1) 0 60deg, var(--c4) 0 120deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -60deg at 73% 50%, var(--c3) 0 150deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -90deg at 27% 50%, var(--c3) 0 150deg, #fff0 0 360deg) var(--gp),
+				conic-gradient(from -90deg at 50% 50%, var(--c4) 0 90deg, var(--c1) 0 180deg, #fff0 0 360deg) var(--gp)
+				;
+			background: var(--bg), var(--bg);
+			background-position: var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp),	0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+		}
+	}
+	
+	&:hover {
+		.movingStripesBtn__stripe {
+			&:nth-child(2) {
+				left: 0;
+			}
+			&:nth-child(3) {
+				right: 0;
+			}
+		}
+		
+		.movingStripesBtn__endText {
+			opacity: 1;
+      transition-delay: calc(#{$movingStripesBtnSpeed} / 2.5);
+		}
+	}
+}
+.movingStripesBtn__startText,
+.movingStripesBtn__endText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Righteous';
+	font-size: $movingStripesBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$movingStripesBtnFontSize} / 10.666);
+}
+.movingStripesBtn__startText {
+	color: #505050;
+}
+.movingStripesBtn__endText {
+	color: #FFF5C3;
+	opacity: 0;
+  transition: opacity calc(#{$movingStripesBtnSpeed} / 1.666);
+	transition-delay: calc((#{$movingStripesBtnSpeed} / 1.666) / 3);
+}
+.movingStripesBtn__stripe {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	transition: left $movingStripesBtnSpeed, right $movingStripesBtnSpeed;
+	
+	&:nth-child(2) {
+		top: 0;
+		left: -100%;
+	}
+	&:nth-child(3) {
+		bottom: 0;
+		right: -100%;
+	}
+}

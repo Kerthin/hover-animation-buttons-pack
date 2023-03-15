@@ -22,6 +22,7 @@
     ## @import moveBgBtn.scss
     ## @import shrinkingBorderBtn.scss
     ## @import moveBorderBtn.scss
+    ## @import movingStripesBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -133,3 +134,8 @@ ____________________________________________________________*/
 ## @import moveBorderBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/moveBorderBtn.scss';
+
+/*____________________________________________________________
+## @import movingStripesBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/movingStripesBtn.scss';

@@ -22,6 +22,7 @@
     ## @import moveBgBtn.scss
     ## @import shrinkingBorderBtn.scss
     ## @import moveBorderBtn.scss
+    ## @import movingStripesBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -729,141 +730,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(40, 200px, 65px, 0);
+        clip: rect(14, 200px, 26px, 0);
     }
 
     6.25% {
-        clip: rect(13, 200px, 3px, 0);
+        clip: rect(57, 200px, 28px, 0);
     }
 
     12.5% {
-        clip: rect(32, 200px, 40px, 0);
+        clip: rect(51, 200px, 28px, 0);
     }
 
     18.75% {
-        clip: rect(44, 200px, 10px, 0);
+        clip: rect(43, 200px, 21px, 0);
     }
 
     25% {
-        clip: rect(2, 200px, 2px, 0);
+        clip: rect(13, 200px, 28px, 0);
     }
 
     31.25% {
-        clip: rect(54, 200px, 41px, 0);
+        clip: rect(37, 200px, 39px, 0);
     }
 
     37.5% {
-        clip: rect(33, 200px, 13px, 0);
+        clip: rect(52, 200px, 39px, 0);
     }
 
     43.75% {
-        clip: rect(42, 200px, 34px, 0);
+        clip: rect(44, 200px, 36px, 0);
     }
 
     50% {
-        clip: rect(24, 200px, 8px, 0);
+        clip: rect(45, 200px, 15px, 0);
     }
 
     56.25% {
-        clip: rect(35, 200px, 34px, 0);
+        clip: rect(22, 200px, 42px, 0);
     }
 
     62.5% {
-        clip: rect(44, 200px, 42px, 0);
+        clip: rect(34, 200px, 13px, 0);
     }
 
     68.75% {
-        clip: rect(41, 200px, 10px, 0);
+        clip: rect(40, 200px, 58px, 0);
     }
 
     75% {
-        clip: rect(32, 200px, 24px, 0);
+        clip: rect(38, 200px, 7px, 0);
     }
 
     81.25% {
-        clip: rect(55, 200px, 6px, 0);
+        clip: rect(48, 200px, 1px, 0);
     }
 
     87.5% {
-        clip: rect(25, 200px, 62px, 0);
+        clip: rect(40, 200px, 36px, 0);
     }
 
     93.75% {
-        clip: rect(46, 200px, 19px, 0);
+        clip: rect(57, 200px, 55px, 0);
     }
 
     100% {
-        clip: rect(48, 200px, 22px, 0);
+        clip: rect(37, 200px, 42px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(40, 200px, 65px, 0);
+        clip: rect(14, 200px, 26px, 0);
     }
 
     6.25% {
-        clip: rect(13, 200px, 3px, 0);
+        clip: rect(57, 200px, 28px, 0);
     }
 
     12.5% {
-        clip: rect(32, 200px, 40px, 0);
+        clip: rect(51, 200px, 28px, 0);
     }
 
     18.75% {
-        clip: rect(44, 200px, 10px, 0);
+        clip: rect(43, 200px, 21px, 0);
     }
 
     25% {
-        clip: rect(2, 200px, 2px, 0);
+        clip: rect(13, 200px, 28px, 0);
     }
 
     31.25% {
-        clip: rect(54, 200px, 41px, 0);
+        clip: rect(37, 200px, 39px, 0);
     }
 
     37.5% {
-        clip: rect(33, 200px, 13px, 0);
+        clip: rect(52, 200px, 39px, 0);
     }
 
     43.75% {
-        clip: rect(42, 200px, 34px, 0);
+        clip: rect(44, 200px, 36px, 0);
     }
 
     50% {
-        clip: rect(24, 200px, 8px, 0);
+        clip: rect(45, 200px, 15px, 0);
     }
 
     56.25% {
-        clip: rect(35, 200px, 34px, 0);
+        clip: rect(22, 200px, 42px, 0);
     }
 
     62.5% {
-        clip: rect(44, 200px, 42px, 0);
+        clip: rect(34, 200px, 13px, 0);
     }
 
     68.75% {
-        clip: rect(41, 200px, 10px, 0);
+        clip: rect(40, 200px, 58px, 0);
     }
 
     75% {
-        clip: rect(32, 200px, 24px, 0);
+        clip: rect(38, 200px, 7px, 0);
     }
 
     81.25% {
-        clip: rect(55, 200px, 6px, 0);
+        clip: rect(48, 200px, 1px, 0);
     }
 
     87.5% {
-        clip: rect(25, 200px, 62px, 0);
+        clip: rect(40, 200px, 36px, 0);
     }
 
     93.75% {
-        clip: rect(46, 200px, 19px, 0);
+        clip: rect(57, 200px, 55px, 0);
     }
 
     100% {
-        clip: rect(48, 200px, 22px, 0);
+        clip: rect(37, 200px, 42px, 0);
     }
 }
 /*____________________________________________________________
@@ -3521,4 +3522,112 @@ ____________________________________________________________*/
 
 .moveBorderBtn__border {
     position: absolute;
+}
+
+/*____________________________________________________________
+## @import movingStripesBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Slide Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Slide Button
+____________________________________________________________*/
+.movingStripesBtn {
+    position: relative;
+    margin: 20px;
+    width: 240px;
+    height: 80.016px;
+    background-color: #FFF5C3;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.movingStripesBtn._linearBg .movingStripesBtn__stripe {
+    background: -o-repeating-linear-gradient(330deg, #FF7260, #FF7260 10px, #9BD7D5 10px, #9BD7D5 20px);
+    background: repeating-linear-gradient(120deg, #FF7260, #FF7260 10px, #9BD7D5 10px, #9BD7D5 20px);
+}
+
+.movingStripesBtn._cubeBg .movingStripesBtn__stripe {
+    --u: 2.3208px;
+    --c1: #fbd163;
+    --c2: #e4a228;
+    --c3: #d68f2b;
+    --c4: #4c302f;
+    --gp: 50%/ calc(var(--u) * 10) calc(var(--u) * 17.2);
+    --bp: calc(var(--u) * -5) calc(var(--u) * -8.6);
+    --bg: conic-gradient(from 0deg at 76.75% 18.25%, var(--c4) 0 60deg, var(--c3) 0 120deg, var(--c1) 0 120deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -120deg at 23.5% 18.25%, var(--c3) 0 60deg, var(--c1) 0 120deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -32deg at 50% 25%, var(--c2) 0 64deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from 0deg at 77% 33.25%, var(--c1) 0 120deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -120deg at 23% 33.25%, var(--c4) 0 120deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -60deg at 50% 42%, var(--c1) 0 60deg, var(--c4) 0 120deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -60deg at 73% 50%, var(--c3) 0 150deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -90deg at 27% 50%, var(--c3) 0 150deg, #fff0 0 360deg) var(--gp),
+  	conic-gradient(from -90deg at 50% 50%, var(--c4) 0 90deg, var(--c1) 0 180deg, #fff0 0 360deg) var(--gp);
+    background: var(--bg), var(--bg);
+    background-position: var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+}
+
+.movingStripesBtn:hover .movingStripesBtn__stripe:nth-child(2) {
+    left: 0;
+}
+
+.movingStripesBtn:hover .movingStripesBtn__stripe:nth-child(3) {
+    right: 0;
+}
+
+.movingStripesBtn:hover .movingStripesBtn__endText {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.5s / 2.5);
+    -o-transition-delay: calc(0.5s / 2.5);
+    transition-delay: calc(0.5s / 2.5);
+}
+
+.movingStripesBtn__startText,
+.movingStripesBtn__endText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Righteous";
+    font-size: 32.0064px;
+    text-transform: uppercase;
+    letter-spacing: calc(32.0064px / 10.666);
+}
+
+.movingStripesBtn__startText {
+    color: #505050;
+}
+
+.movingStripesBtn__endText {
+    color: #FFF5C3;
+    opacity: 0;
+    -webkit-transition: opacity calc(0.5s / 1.666);
+    -o-transition: opacity calc(0.5s / 1.666);
+    transition: opacity calc(0.5s / 1.666);
+    -webkit-transition-delay: calc((0.5s / 1.666) / 3);
+    -o-transition-delay: calc((0.5s / 1.666) / 3);
+    transition-delay: calc((0.5s / 1.666) / 3);
+}
+
+.movingStripesBtn__stripe {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    -webkit-transition: left 0.5s, right 0.5s;
+    -o-transition: left 0.5s, right 0.5s;
+    transition: left 0.5s, right 0.5s;
+}
+
+.movingStripesBtn__stripe:nth-child(2) {
+    top: 0;
+    left: -100%;
+}
+
+.movingStripesBtn__stripe:nth-child(3) {
+    bottom: 0;
+    right: -100%;
 }
