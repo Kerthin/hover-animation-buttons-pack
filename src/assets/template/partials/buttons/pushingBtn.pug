@@ -1,0 +1,19 @@
+section.presentWrap
+  h1.presentWrap__title Pushing Button
+  .presentWrap__buttonsBlock
+
+    button.pushingBtn
+      span.pushingBtn__hideText Button
+      .pushingBtn__side
+        - var pushingBtnRightChilds = 1;
+        while pushingBtnRightChilds <= 6
+          .pushingBtn__sideChild(id=`__${pushingBtnRightChilds++}`)
+      .pushingBtn__side
+        - var pushingBtnLeftChilds = 1;
+        while pushingBtnLeftChilds <= 6
+          .pushingBtn__sideChild(id=`__${pushingBtnLeftChilds++}`)
+      .pushingBtn__pushingBlock
+      .pushingBtn__pushingBlock
+      .pushingBtn__visibleWrap
+        .pushingBtn__darkBlock
+        span.pushingBtn__darkText Hover

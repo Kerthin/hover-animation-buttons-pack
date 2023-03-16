@@ -24,6 +24,10 @@
     ## @import moveBorderBtn.scss
     ## @import movingStripesBtn.scss
     ## @import typingBtn.scss
+    ## @import opacityFlipBtn.scss
+    ## @import flipBtn.scss
+    ## @import coridorBtn.scss
+    ## @import pushingBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -160,3 +164,8 @@ ____________________________________________________________*/
 ## @import coridorBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/coridorBtn.scss';
+
+/*____________________________________________________________
+## @import pushingBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/pushingBtn.scss';

@@ -24,6 +24,10 @@
     ## @import moveBorderBtn.scss
     ## @import movingStripesBtn.scss
     ## @import typingBtn.scss
+    ## @import opacityFlipBtn.scss
+    ## @import flipBtn.scss
+    ## @import coridorBtn.scss
+    ## @import pushingBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -731,141 +735,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(38, 200px, 34px, 0);
+        clip: rect(8, 200px, 14px, 0);
     }
 
     6.25% {
-        clip: rect(38, 200px, 48px, 0);
+        clip: rect(47, 200px, 25px, 0);
     }
 
     12.5% {
-        clip: rect(15, 200px, 50px, 0);
+        clip: rect(14, 200px, 23px, 0);
     }
 
     18.75% {
-        clip: rect(53, 200px, 56px, 0);
+        clip: rect(56, 200px, 61px, 0);
     }
 
     25% {
-        clip: rect(44, 200px, 31px, 0);
+        clip: rect(2, 200px, 32px, 0);
     }
 
     31.25% {
-        clip: rect(36, 200px, 7px, 0);
+        clip: rect(48, 200px, 49px, 0);
     }
 
     37.5% {
-        clip: rect(39, 200px, 35px, 0);
+        clip: rect(34, 200px, 13px, 0);
     }
 
     43.75% {
-        clip: rect(63, 200px, 48px, 0);
+        clip: rect(43, 200px, 2px, 0);
     }
 
     50% {
-        clip: rect(2, 200px, 36px, 0);
+        clip: rect(16, 200px, 38px, 0);
     }
 
     56.25% {
-        clip: rect(14, 200px, 52px, 0);
+        clip: rect(57, 200px, 46px, 0);
     }
 
     62.5% {
-        clip: rect(65, 200px, 2px, 0);
+        clip: rect(19, 200px, 25px, 0);
     }
 
     68.75% {
-        clip: rect(64, 200px, 50px, 0);
+        clip: rect(26, 200px, 51px, 0);
     }
 
     75% {
-        clip: rect(33, 200px, 13px, 0);
+        clip: rect(31, 200px, 48px, 0);
     }
 
     81.25% {
-        clip: rect(12, 200px, 41px, 0);
+        clip: rect(45, 200px, 58px, 0);
     }
 
     87.5% {
-        clip: rect(19, 200px, 18px, 0);
+        clip: rect(43, 200px, 4px, 0);
     }
 
     93.75% {
-        clip: rect(33, 200px, 22px, 0);
+        clip: rect(12, 200px, 11px, 0);
     }
 
     100% {
-        clip: rect(35, 200px, 46px, 0);
+        clip: rect(41, 200px, 50px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(38, 200px, 34px, 0);
+        clip: rect(8, 200px, 14px, 0);
     }
 
     6.25% {
-        clip: rect(38, 200px, 48px, 0);
+        clip: rect(47, 200px, 25px, 0);
     }
 
     12.5% {
-        clip: rect(15, 200px, 50px, 0);
+        clip: rect(14, 200px, 23px, 0);
     }
 
     18.75% {
-        clip: rect(53, 200px, 56px, 0);
+        clip: rect(56, 200px, 61px, 0);
     }
 
     25% {
-        clip: rect(44, 200px, 31px, 0);
+        clip: rect(2, 200px, 32px, 0);
     }
 
     31.25% {
-        clip: rect(36, 200px, 7px, 0);
+        clip: rect(48, 200px, 49px, 0);
     }
 
     37.5% {
-        clip: rect(39, 200px, 35px, 0);
+        clip: rect(34, 200px, 13px, 0);
     }
 
     43.75% {
-        clip: rect(63, 200px, 48px, 0);
+        clip: rect(43, 200px, 2px, 0);
     }
 
     50% {
-        clip: rect(2, 200px, 36px, 0);
+        clip: rect(16, 200px, 38px, 0);
     }
 
     56.25% {
-        clip: rect(14, 200px, 52px, 0);
+        clip: rect(57, 200px, 46px, 0);
     }
 
     62.5% {
-        clip: rect(65, 200px, 2px, 0);
+        clip: rect(19, 200px, 25px, 0);
     }
 
     68.75% {
-        clip: rect(64, 200px, 50px, 0);
+        clip: rect(26, 200px, 51px, 0);
     }
 
     75% {
-        clip: rect(33, 200px, 13px, 0);
+        clip: rect(31, 200px, 48px, 0);
     }
 
     81.25% {
-        clip: rect(12, 200px, 41px, 0);
+        clip: rect(45, 200px, 58px, 0);
     }
 
     87.5% {
-        clip: rect(19, 200px, 18px, 0);
+        clip: rect(43, 200px, 4px, 0);
     }
 
     93.75% {
-        clip: rect(33, 200px, 22px, 0);
+        clip: rect(12, 200px, 11px, 0);
     }
 
     100% {
-        clip: rect(35, 200px, 46px, 0);
+        clip: rect(41, 200px, 50px, 0);
     }
 }
 /*____________________________________________________________
@@ -4206,4 +4210,245 @@ ____________________________________________________________*/
     -webkit-transition: font-size 0.4s, letter-spacing 0.4s;
     -o-transition: font-size 0.4s, letter-spacing 0.4s;
     transition: font-size 0.4s, letter-spacing 0.4s;
+}
+
+/*____________________________________________________________
+## @import pushingBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Pushing Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Pushing Button
+____________________________________________________________*/
+.pushingBtn {
+    position: relative;
+    margin: 20px;
+    width: 180px;
+    height: 60px;
+    background-color: #e66065;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pushingBtn:hover .pushingBtn__side:nth-child(2) {
+    left: calc(-50% - 10px);
+    -webkit-transition-delay: 0.9s;
+    -o-transition-delay: 0.9s;
+    transition-delay: 0.9s;
+}
+
+.pushingBtn:hover .pushingBtn__side:nth-child(3) {
+    right: calc(-50% - 10px);
+    -webkit-transition-delay: 1.4s;
+    -o-transition-delay: 1.4s;
+    transition-delay: 1.4s;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild {
+    background-color: #b980d1;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild:nth-child(1) {
+    -webkit-transition-delay: 0.35s;
+    -o-transition-delay: 0.35s;
+    transition-delay: 0.35s;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild:nth-child(2) {
+    -webkit-transition-delay: 0.55s;
+    -o-transition-delay: 0.55s;
+    transition-delay: 0.55s;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild:nth-child(3) {
+    -webkit-transition-delay: 0.45s;
+    -o-transition-delay: 0.45s;
+    transition-delay: 0.45s;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild:nth-child(4) {
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild:nth-child(5) {
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.pushingBtn:hover .pushingBtn__sideChild:nth-child(6) {
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.pushingBtn:hover .pushingBtn__pushingBlock:nth-child(4) {
+    left: 180px;
+    -webkit-transition-delay: 1.3s;
+    -o-transition-delay: 1.3s;
+    transition-delay: 1.3s;
+}
+
+.pushingBtn:hover .pushingBtn__pushingBlock:nth-child(5) {
+    right: 180px;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+}
+
+.pushingBtn:hover .pushingBtn__visibleWrap {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.pushingBtn__hideText,
+.pushingBtn__darkText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: calc(24px / 8);
+    color: #FFFBCB;
+}
+
+.pushingBtn__side {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    -webkit-transition: left 0.5s, right 0.5s;
+    -o-transition: left 0.5s, right 0.5s;
+    transition: left 0.5s, right 0.5s;
+}
+
+.pushingBtn__side:nth-child(2) {
+    left: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.pushingBtn__side:nth-child(2) .pushingBtn__sideChild {
+    float: right;
+}
+
+.pushingBtn__side:nth-child(3) {
+    right: 0;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.pushingBtn__side:nth-child(3) .pushingBtn__sideChild {
+    float: left;
+}
+
+.pushingBtn__sideChild {
+    position: realtive;
+    width: calc(60px / 2);
+    height: calc(60px / 2);
+    border: 0.5px solid #fff;
+    -webkit-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+}
+
+.pushingBtn__sideChild:nth-child(1) {
+    background-color: #9BD7D5;
+    -webkit-transition-delay: 0.95s;
+    -o-transition-delay: 0.95s;
+    transition-delay: 0.95s;
+}
+
+.pushingBtn__sideChild:nth-child(2) {
+    background-color: #FF7260;
+    -webkit-transition-delay: 1.15s;
+    -o-transition-delay: 1.15s;
+    transition-delay: 1.15s;
+}
+
+.pushingBtn__sideChild:nth-child(3) {
+    background-color: #FFE869;
+    -webkit-transition-delay: 1.05s;
+    -o-transition-delay: 1.05s;
+    transition-delay: 1.05s;
+}
+
+.pushingBtn__sideChild:nth-child(4) {
+    background-color: #505050;
+    -webkit-transition-delay: 1.2s;
+    -o-transition-delay: 1.2s;
+    transition-delay: 1.2s;
+}
+
+.pushingBtn__sideChild:nth-child(5) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.pushingBtn__sideChild:nth-child(6) {
+    background-color: #c50d66;
+    -webkit-transition-delay: 1.1s;
+    -o-transition-delay: 1.1s;
+    transition-delay: 1.1s;
+}
+
+.pushingBtn__pushingBlock {
+    position: absolute;
+    top: 10px;
+    width: 10px;
+    height: 40px;
+    background-color: #fff;
+    -webkit-transition: left 0.5s, right 0.5s;
+    -o-transition: left 0.5s, right 0.5s;
+    transition: left 0.5s, right 0.5s;
+}
+
+.pushingBtn__pushingBlock:nth-child(4) {
+    left: -10px;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.pushingBtn__pushingBlock:nth-child(5) {
+    right: -10px;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.pushingBtn__visibleWrap,
+.pushingBtn__darkBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pushingBtn__visibleWrap {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transition-delay: 1.4s;
+    -o-transition-delay: 1.4s;
+    transition-delay: 1.4s;
+}
+
+.pushingBtn__darkBlock {
+    background-color: #000;
+    opacity: 0.3;
 }
