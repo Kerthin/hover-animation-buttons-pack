@@ -731,141 +731,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(42, 200px, 4px, 0);
+        clip: rect(38, 200px, 34px, 0);
     }
 
     6.25% {
-        clip: rect(10, 200px, 25px, 0);
+        clip: rect(38, 200px, 48px, 0);
     }
 
     12.5% {
-        clip: rect(9, 200px, 53px, 0);
+        clip: rect(15, 200px, 50px, 0);
     }
 
     18.75% {
-        clip: rect(62, 200px, 1px, 0);
+        clip: rect(53, 200px, 56px, 0);
     }
 
     25% {
-        clip: rect(19, 200px, 17px, 0);
+        clip: rect(44, 200px, 31px, 0);
     }
 
     31.25% {
-        clip: rect(55, 200px, 11px, 0);
+        clip: rect(36, 200px, 7px, 0);
     }
 
     37.5% {
-        clip: rect(26, 200px, 31px, 0);
+        clip: rect(39, 200px, 35px, 0);
     }
 
     43.75% {
-        clip: rect(48, 200px, 10px, 0);
+        clip: rect(63, 200px, 48px, 0);
     }
 
     50% {
-        clip: rect(19, 200px, 10px, 0);
+        clip: rect(2, 200px, 36px, 0);
     }
 
     56.25% {
-        clip: rect(40, 200px, 2px, 0);
+        clip: rect(14, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(8, 200px, 48px, 0);
+        clip: rect(65, 200px, 2px, 0);
     }
 
     68.75% {
-        clip: rect(14, 200px, 53px, 0);
+        clip: rect(64, 200px, 50px, 0);
     }
 
     75% {
-        clip: rect(61, 200px, 55px, 0);
+        clip: rect(33, 200px, 13px, 0);
     }
 
     81.25% {
-        clip: rect(32, 200px, 31px, 0);
+        clip: rect(12, 200px, 41px, 0);
     }
 
     87.5% {
-        clip: rect(50, 200px, 34px, 0);
+        clip: rect(19, 200px, 18px, 0);
     }
 
     93.75% {
-        clip: rect(21, 200px, 10px, 0);
+        clip: rect(33, 200px, 22px, 0);
     }
 
     100% {
-        clip: rect(16, 200px, 7px, 0);
+        clip: rect(35, 200px, 46px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(42, 200px, 4px, 0);
+        clip: rect(38, 200px, 34px, 0);
     }
 
     6.25% {
-        clip: rect(10, 200px, 25px, 0);
+        clip: rect(38, 200px, 48px, 0);
     }
 
     12.5% {
-        clip: rect(9, 200px, 53px, 0);
+        clip: rect(15, 200px, 50px, 0);
     }
 
     18.75% {
-        clip: rect(62, 200px, 1px, 0);
+        clip: rect(53, 200px, 56px, 0);
     }
 
     25% {
-        clip: rect(19, 200px, 17px, 0);
+        clip: rect(44, 200px, 31px, 0);
     }
 
     31.25% {
-        clip: rect(55, 200px, 11px, 0);
+        clip: rect(36, 200px, 7px, 0);
     }
 
     37.5% {
-        clip: rect(26, 200px, 31px, 0);
+        clip: rect(39, 200px, 35px, 0);
     }
 
     43.75% {
-        clip: rect(48, 200px, 10px, 0);
+        clip: rect(63, 200px, 48px, 0);
     }
 
     50% {
-        clip: rect(19, 200px, 10px, 0);
+        clip: rect(2, 200px, 36px, 0);
     }
 
     56.25% {
-        clip: rect(40, 200px, 2px, 0);
+        clip: rect(14, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(8, 200px, 48px, 0);
+        clip: rect(65, 200px, 2px, 0);
     }
 
     68.75% {
-        clip: rect(14, 200px, 53px, 0);
+        clip: rect(64, 200px, 50px, 0);
     }
 
     75% {
-        clip: rect(61, 200px, 55px, 0);
+        clip: rect(33, 200px, 13px, 0);
     }
 
     81.25% {
-        clip: rect(32, 200px, 31px, 0);
+        clip: rect(12, 200px, 41px, 0);
     }
 
     87.5% {
-        clip: rect(50, 200px, 34px, 0);
+        clip: rect(19, 200px, 18px, 0);
     }
 
     93.75% {
-        clip: rect(21, 200px, 10px, 0);
+        clip: rect(33, 200px, 22px, 0);
     }
 
     100% {
-        clip: rect(16, 200px, 7px, 0);
+        clip: rect(35, 200px, 46px, 0);
     }
 }
 /*____________________________________________________________
@@ -4010,4 +4010,200 @@ ____________________________________________________________*/
     background-color: #57D1C9;
     -webkit-transform: rotateX(90deg) translateZ(calc(200px / 8));
     transform: rotateX(90deg) translateZ(calc(200px / 8));
+}
+
+/*____________________________________________________________
+## @import coridorBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Coridor Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Coridor Button
+____________________________________________________________*/
+.coridorBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.coridorBtn._out {
+    background-color: #bf2126;
+}
+
+.coridorBtn._out:before, .coridorBtn._out:after {
+    z-index: -1;
+}
+
+.coridorBtn._out:before {
+    background-color: #e66065;
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.coridorBtn._out:after {
+    background-color: #de373d;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.coridorBtn._out .coridorBtn__innnerWrap {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.coridorBtn._out .coridorBtn__innerName {
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.coridorBtn._out:hover:before {
+    width: calc(100% + (15.0011539349px * 2));
+    height: calc(100% + (15.0011539349px * 2));
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.coridorBtn._out:hover:after {
+    width: calc(100% + 15.0011539349px);
+    height: calc(100% + 15.0011539349px);
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.coridorBtn._out:hover .coridorBtn__innnerWrap {
+    width: calc(100% - 15.0011539349px);
+    height: calc(100% - 15.0011539349px);
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.coridorBtn._out:hover .coridorBtn__innerName {
+    font-size: calc(23.8970588235px / 1.333);
+    letter-spacing: calc(23.8970588235px / 4);
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.coridorBtn._inner {
+    background-color: #e66065;
+}
+
+.coridorBtn._inner:before, .coridorBtn._inner:after {
+    z-index: 0;
+}
+
+.coridorBtn._inner:before {
+    background-color: #de373d;
+    -webkit-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+.coridorBtn._inner:after {
+    background-color: #bf2126;
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.coridorBtn._inner .coridorBtn__innnerWrap {
+    z-index: 2;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.coridorBtn._inner .coridorBtn__innerName {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.coridorBtn._inner:hover:before {
+    width: calc(100% - 15.0011539349px);
+    height: calc(100% - 15.0011539349px);
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.coridorBtn._inner:hover:after {
+    width: calc(100% - (15.0011539349px * 2));
+    height: calc(100% - (15.0011539349px * 2));
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.coridorBtn._inner:hover .coridorBtn__innnerWrap {
+    width: calc(100% - (15.0011539349px * 3));
+    height: calc(100% - (15.0011539349px * 3));
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.coridorBtn._inner:hover .coridorBtn__innerName {
+    font-size: calc(23.8970588235px / 1.333);
+    letter-spacing: calc(23.8970588235px / 4);
+    -webkit-transition-delay: 0.05s;
+    -o-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+.coridorBtn:before, .coridorBtn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: width 0.4s, height 0.4s;
+    -o-transition: width 0.4s, height 0.4s;
+    transition: width 0.4s, height 0.4s;
+}
+
+.coridorBtn__innnerWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: #94191d;
+    -webkit-transition: width 0.4s, height 0.4s;
+    -o-transition: width 0.4s, height 0.4s;
+    transition: width 0.4s, height 0.4s;
+}
+
+.coridorBtn__innerName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 23.8970588235px;
+    text-transform: uppercase;
+    letter-spacing: calc(23.8970588235px / 8);
+    color: #FFFBCB;
+    -webkit-transition: font-size 0.4s, letter-spacing 0.4s;
+    -o-transition: font-size 0.4s, letter-spacing 0.4s;
+    transition: font-size 0.4s, letter-spacing 0.4s;
 }

@@ -1,0 +1,151 @@
+/*____________________________________________________________
+# Coridor Button Variables
+____________________________________________________________*/
+$coridorBtnWidth: 200px;
+$coridorBtnHeight: ($coridorBtnWidth / 100) * 32.5;
+
+$coridorBtnBorder: $coridorBtnHeight / 4.333;
+
+$coridorBtnFontSize: $coridorBtnHeight / 2.72;
+
+$coridorBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Coridor Button
+____________________________________________________________*/
+.coridorBtn {
+  position: relative;
+  margin: 20px;
+  width: $flipBtnWidth;
+  height: $flipBtnHeight;
+  cursor: pointer;
+  
+  &._out {
+    background-color: #bf2126;
+    
+    &:before,
+    &:after {
+      z-index: -1;
+    }
+    &:before {
+      background-color: #e66065;
+      transition-delay: .1s;
+    }
+    &:after {
+      background-color: #de373d;
+      transition-delay: .2s;
+    }
+    .coridorBtn__innnerWrap {
+      transition-delay: .3s;
+    }
+    .coridorBtn__innerName {
+      transition-delay: .4s;
+    }
+    
+    &:hover {
+    
+      &:before {
+        width: calc(100% + (#{$coridorBtnBorder} * 2));
+        height: calc(100% + (#{$coridorBtnBorder} * 2));
+        transition-delay: .2s;
+      }
+      &:after {
+        width: calc(100% + #{$coridorBtnBorder});
+        height: calc(100% + #{$coridorBtnBorder});
+        transition-delay: .1s;
+      }
+
+      .coridorBtn__innnerWrap {
+        width: calc(100% - #{$coridorBtnBorder});
+        height: calc(100% - #{$coridorBtnBorder});
+        transition-delay: .1s;
+      }
+      .coridorBtn__innerName {
+        font-size: calc(#{$coridorBtnFontSize} / 1.333);
+        letter-spacing: calc(#{$coridorBtnFontSize} / 4);
+        transition-delay: .2s;
+      }
+    }
+  }
+  
+  &._inner {
+    background-color: #e66065;
+    
+    &:before,
+    &:after {
+      z-index: 0;
+    }
+    &:before {
+      background-color: #de373d;
+      transition-delay: .05s;
+    }
+    &:after {
+      background-color: #bf2126;
+      transition-delay: .1s;
+    }
+    .coridorBtn__innnerWrap {
+      z-index: 2;
+      transition-delay: .2s;
+    }
+    .coridorBtn__innerName {
+      transition-delay: .3s;
+    }
+    
+    &:hover {
+    
+      &:before {
+        width: calc(100% - #{$coridorBtnBorder});
+        height: calc(100% - #{$coridorBtnBorder});
+        transition-delay: .3s;
+      }
+      &:after {
+        width: calc(100% - (#{$coridorBtnBorder} * 2));
+        height: calc(100% - (#{$coridorBtnBorder} * 2));
+        transition-delay: .2s;
+      }
+      .coridorBtn__innnerWrap {
+        width: calc(100% - (#{$coridorBtnBorder} * 3));
+        height: calc(100% - (#{$coridorBtnBorder} * 3));
+        transition-delay: .1s;
+      }
+      .coridorBtn__innerName {
+        font-size: calc(#{$coridorBtnFontSize} / 1.333);
+        letter-spacing: calc(#{$coridorBtnFontSize} / 4);
+        transition-delay: .05s;
+      }
+    }
+  }
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    transition: width $coridorBtnSpeed, height $coridorBtnSpeed;
+  }
+}
+.coridorBtn__innnerWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: #94191d;
+  transition: width $coridorBtnSpeed, height $coridorBtnSpeed;
+}
+.coridorBtn__innerName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $coridorBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$coridorBtnFontSize} / 8);
+  color: #FFFBCB;
+  transition: font-size $coridorBtnSpeed, letter-spacing $coridorBtnSpeed;
+}
