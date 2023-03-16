@@ -1,0 +1,110 @@
+/*____________________________________________________________
+# Typing Button Variables
+____________________________________________________________*/
+$typingBtnText: ('B', 'U', 'T', 'T', 'O', 'N');
+
+$typingBtnWidth: 240px;
+$typingBtnHeight: calc($typingBtnWidth / 100) * 33.34;
+
+$typingBtnFontSize: $typingBtnWidth / calc(length($typingBtnText) + (length($typingBtnText) / 1.5));
+
+$typingBtnSpeed: .3s;
+
+$typingBtnLetterDelay: .15s;
+
+/*____________________________________________________________
+# Typing Button
+____________________________________________________________*/
+.typingBtn {
+	position: relative;
+	margin: 20px;
+	width: $typingBtnWidth;
+	height: $typingBtnHeight;
+	background-color: #FFF5C3;
+	overflow: hidden;
+	cursor: pointer;
+	
+	&:hover {
+		.typingBtn__startText {
+			opacity: 0;
+			transition-delay: 0s;
+		}
+		.typingBtn__letter {
+      opacity: 1;
+      
+      &:after {
+        opacity: 0;
+      }
+      
+      @for $i from 1 through length($typingBtnText) {
+        &:nth-child(#{$i}){
+          transition-delay: calc(#{$i} * #{$typingBtnLetterDelay});
+
+          &:after {
+            transition-delay: calc((#{$i} + 1) * #{$typingBtnLetterDelay});
+          }
+        }
+      }
+		}
+	}
+}
+.typingBtn__startText,
+.typingBtn__endText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Righteous';
+	font-size: $typingBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$typingBtnFontSize} / 8);
+  color: #505050;
+}
+.typingBtn__startText {
+	opacity: 1;
+  transition: opacity calc(#{$typingBtnSpeed} / 3);
+	transition-delay: calc((#{length($typingBtnText)} + 1) * #{$typingBtnLetterDelay});
+}
+.typingBtn__letter {
+	position: relative;
+	opacity: 0;
+	transition: opacity $typingBtnSpeed;
+	
+	&:after {
+		content: '';
+		position: absolute;
+    right: calc(#{$typingBtnFontSize} / -6);
+    width: calc(#{$typingBtnFontSize} / 24);
+		height: 100%;
+		background-color: #505050;
+		opacity: 1;
+	}
+	
+	&:last-child {
+		&:after {
+			animation: flashingWand .7s infinite linear;
+		}
+	}
+  
+  @for $i from 1 through length($typingBtnText) {
+    &:nth-child(#{$i}){
+      transition-delay: calc((-#{$typingBtnLetterDelay} * #{$i}) + ((#{length($typingBtnText)} + 1) * #{$typingBtnLetterDelay}));
+
+      &:after {
+        transition-delay: calc((-#{$typingBtnLetterDelay} * #{$i}) + (#{length($typingBtnText)} * #{$typingBtnLetterDelay}));
+      }
+    }
+  }
+}
+
+@keyframes flashingWand {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1;
+	}
+}
