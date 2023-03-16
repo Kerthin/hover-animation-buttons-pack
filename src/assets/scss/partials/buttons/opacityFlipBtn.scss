@@ -1,0 +1,61 @@
+/*____________________________________________________________
+# Opacity Flip Button Variables
+____________________________________________________________*/
+$opacityFlipBtnWidth: 200px;
+$opacityFlipBtnHeight: ($opacityFlipBtnWidth / 100) * 32.5;
+
+$opacityFlipBtnFontSize: $opacityFlipBtnHeight / 2.72;
+
+$opacityFlipBtnSpeed: .35s;
+
+/*____________________________________________________________
+# Opacity Flip Button
+____________________________________________________________*/
+.opacityFlipBtn {
+  position: relative;
+  margin: 20px;
+  width: $opacityFlipBtnWidth;
+  height: $opacityFlipBtnHeight;
+  font-family: 'Righteous';
+	font-size: $opacityFlipBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$opacityFlipBtnFontSize} / 8);
+  color: #FFFBCB;
+  background-color: red;
+  cursor: pointer;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: $opacityFlipBtnHeight;
+    transition: opacity $opacityFlipBtnSpeed, transform $opacityFlipBtnSpeed;
+  }
+  
+  &:before {
+    content: attr(startName);
+    opacity: 1;
+    background-color: #ED5485;
+    transform: translateY(0) rotateX(0);
+  }
+  &:after {
+    content: attr(endName);
+    opacity: 0;
+    background-color: #57D1C9;
+    transform: translateY(-50%) rotateX(90deg);
+  }
+  
+  &:hover {
+    &:before {
+      opacity: 0;
+      transform: translateY(50%) rotateX(90deg);
+    }
+    &:after {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+  }
+}
