@@ -731,141 +731,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 18px, 0);
+        clip: rect(42, 200px, 4px, 0);
     }
 
     6.25% {
-        clip: rect(39, 200px, 10px, 0);
+        clip: rect(10, 200px, 25px, 0);
     }
 
     12.5% {
-        clip: rect(27, 200px, 27px, 0);
+        clip: rect(9, 200px, 53px, 0);
     }
 
     18.75% {
-        clip: rect(44, 200px, 7px, 0);
+        clip: rect(62, 200px, 1px, 0);
     }
 
     25% {
-        clip: rect(53, 200px, 39px, 0);
+        clip: rect(19, 200px, 17px, 0);
     }
 
     31.25% {
-        clip: rect(18, 200px, 64px, 0);
+        clip: rect(55, 200px, 11px, 0);
     }
 
     37.5% {
-        clip: rect(28, 200px, 51px, 0);
+        clip: rect(26, 200px, 31px, 0);
     }
 
     43.75% {
-        clip: rect(8, 200px, 42px, 0);
+        clip: rect(48, 200px, 10px, 0);
     }
 
     50% {
-        clip: rect(14, 200px, 22px, 0);
+        clip: rect(19, 200px, 10px, 0);
     }
 
     56.25% {
-        clip: rect(15, 200px, 61px, 0);
+        clip: rect(40, 200px, 2px, 0);
     }
 
     62.5% {
-        clip: rect(53, 200px, 63px, 0);
+        clip: rect(8, 200px, 48px, 0);
     }
 
     68.75% {
-        clip: rect(34, 200px, 30px, 0);
+        clip: rect(14, 200px, 53px, 0);
     }
 
     75% {
-        clip: rect(35, 200px, 14px, 0);
+        clip: rect(61, 200px, 55px, 0);
     }
 
     81.25% {
-        clip: rect(22, 200px, 6px, 0);
+        clip: rect(32, 200px, 31px, 0);
     }
 
     87.5% {
-        clip: rect(8, 200px, 41px, 0);
+        clip: rect(50, 200px, 34px, 0);
     }
 
     93.75% {
-        clip: rect(11, 200px, 30px, 0);
+        clip: rect(21, 200px, 10px, 0);
     }
 
     100% {
-        clip: rect(58, 200px, 62px, 0);
+        clip: rect(16, 200px, 7px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 18px, 0);
+        clip: rect(42, 200px, 4px, 0);
     }
 
     6.25% {
-        clip: rect(39, 200px, 10px, 0);
+        clip: rect(10, 200px, 25px, 0);
     }
 
     12.5% {
-        clip: rect(27, 200px, 27px, 0);
+        clip: rect(9, 200px, 53px, 0);
     }
 
     18.75% {
-        clip: rect(44, 200px, 7px, 0);
+        clip: rect(62, 200px, 1px, 0);
     }
 
     25% {
-        clip: rect(53, 200px, 39px, 0);
+        clip: rect(19, 200px, 17px, 0);
     }
 
     31.25% {
-        clip: rect(18, 200px, 64px, 0);
+        clip: rect(55, 200px, 11px, 0);
     }
 
     37.5% {
-        clip: rect(28, 200px, 51px, 0);
+        clip: rect(26, 200px, 31px, 0);
     }
 
     43.75% {
-        clip: rect(8, 200px, 42px, 0);
+        clip: rect(48, 200px, 10px, 0);
     }
 
     50% {
-        clip: rect(14, 200px, 22px, 0);
+        clip: rect(19, 200px, 10px, 0);
     }
 
     56.25% {
-        clip: rect(15, 200px, 61px, 0);
+        clip: rect(40, 200px, 2px, 0);
     }
 
     62.5% {
-        clip: rect(53, 200px, 63px, 0);
+        clip: rect(8, 200px, 48px, 0);
     }
 
     68.75% {
-        clip: rect(34, 200px, 30px, 0);
+        clip: rect(14, 200px, 53px, 0);
     }
 
     75% {
-        clip: rect(35, 200px, 14px, 0);
+        clip: rect(61, 200px, 55px, 0);
     }
 
     81.25% {
-        clip: rect(22, 200px, 6px, 0);
+        clip: rect(32, 200px, 31px, 0);
     }
 
     87.5% {
-        clip: rect(8, 200px, 41px, 0);
+        clip: rect(50, 200px, 34px, 0);
     }
 
     93.75% {
-        clip: rect(11, 200px, 30px, 0);
+        clip: rect(21, 200px, 10px, 0);
     }
 
     100% {
-        clip: rect(58, 200px, 62px, 0);
+        clip: rect(16, 200px, 7px, 0);
     }
 }
 /*____________________________________________________________
@@ -3949,4 +3949,65 @@ ____________________________________________________________*/
     opacity: 1;
     -webkit-transform: translateY(0) rotateX(0);
     transform: translateY(0) rotateX(0);
+}
+
+/*____________________________________________________________
+## @import flipBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Flip Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Flip Button
+____________________________________________________________*/
+.flipBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.flipBtn:hover .flipBtn__start {
+    -webkit-transform: rotateX(-90deg) translateZ(25px);
+    transform: rotateX(-90deg) translateZ(25px);
+}
+
+.flipBtn:hover .flipBtn__end {
+    -webkit-transform: rotateX(0deg) translateZ(25px);
+    transform: rotateX(0deg) translateZ(25px);
+}
+
+.flipBtn__start,
+.flipBtn__end {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Righteous";
+    font-size: 23.8970588235px;
+    text-transform: uppercase;
+    letter-spacing: calc(23.8970588235px / 8);
+    color: #FFFBCB;
+    border: calc(200px / 200) solid #313131;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.flipBtn__start {
+    background-color: #57D1C9;
+    -webkit-transform: rotateX(0deg) translateZ(calc(200px / 8));
+    transform: rotateX(0deg) translateZ(calc(200px / 8));
+}
+
+.flipBtn__end {
+    background-color: #57D1C9;
+    -webkit-transform: rotateX(90deg) translateZ(calc(200px / 8));
+    transform: rotateX(90deg) translateZ(calc(200px / 8));
 }

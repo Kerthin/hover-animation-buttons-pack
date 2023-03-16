@@ -1,0 +1,57 @@
+/*____________________________________________________________
+# Flip Button Variables
+____________________________________________________________*/
+$flipBtnWidth: 200px;
+$flipBtnHeight: ($flipBtnWidth / 100) * 32.5;
+
+$flipBtnFontSize: $flipBtnHeight / 2.72;
+
+$flipBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Flip Button
+____________________________________________________________*/
+.flipBtn {
+  position: relative;
+  margin: 20px;
+  width: $flipBtnWidth;
+	height: $flipBtnHeight;
+  background: transparent;
+  cursor: pointer;
+  
+  &:hover {
+    .flipBtn__start {
+        transform: rotateX(-90deg) translateZ(25px);
+    }
+    .flipBtn__end {
+        transform: rotateX(0deg) translateZ(25px);
+    }
+  }
+}
+
+.flipBtn__start, 
+.flipBtn__end {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $flipBtnHeight;
+  font-family: 'Righteous';
+  font-size: $flipBtnFontSize;
+  text-transform: uppercase;
+  letter-spacing: calc(#{$flipBtnFontSize} / 8);
+  color: #FFFBCB;
+  border: calc(#{$flipBtnWidth} / 200) solid #313131;
+  transition: transform $flipBtnSpeed;
+}
+
+.flipBtn__start {
+    background-color: #57D1C9;
+  transform: rotateX(0deg) translateZ(calc(#{$flipBtnWidth} / 8));
+}
+
+.flipBtn__end {
+  background-color: #57D1C9;
+  transform: rotateX(90deg) translateZ(calc(#{$flipBtnWidth} / 8));
+}
