@@ -29,6 +29,7 @@
     ## @import coridorBtn.scss
     ## @import pushingBtn.scss
     ## @import sliceBtn.scss
+    ## @import flickBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -175,3 +176,8 @@ ____________________________________________________________*/
 ## @import sliceBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/sliceBtn.scss';
+
+/*____________________________________________________________
+## @import flickBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/flickBtn.scss';

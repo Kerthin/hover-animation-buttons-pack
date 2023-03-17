@@ -29,6 +29,7 @@
     ## @import coridorBtn.scss
     ## @import pushingBtn.scss
     ## @import sliceBtn.scss
+    ## @import flickBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -736,141 +737,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(44, 200px, 64px, 0);
+        clip: rect(13, 200px, 22px, 0);
     }
 
     6.25% {
-        clip: rect(21, 200px, 50px, 0);
+        clip: rect(34, 200px, 35px, 0);
     }
 
     12.5% {
-        clip: rect(43, 200px, 5px, 0);
+        clip: rect(18, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(24, 200px, 32px, 0);
+        clip: rect(16, 200px, 10px, 0);
     }
 
     25% {
-        clip: rect(11, 200px, 21px, 0);
+        clip: rect(26, 200px, 45px, 0);
     }
 
     31.25% {
-        clip: rect(7, 200px, 20px, 0);
+        clip: rect(13, 200px, 7px, 0);
     }
 
     37.5% {
-        clip: rect(22, 200px, 11px, 0);
+        clip: rect(10, 200px, 15px, 0);
     }
 
     43.75% {
-        clip: rect(60, 200px, 19px, 0);
+        clip: rect(50, 200px, 22px, 0);
     }
 
     50% {
-        clip: rect(28, 200px, 2px, 0);
+        clip: rect(62, 200px, 59px, 0);
     }
 
     56.25% {
-        clip: rect(27, 200px, 52px, 0);
+        clip: rect(31, 200px, 23px, 0);
     }
 
     62.5% {
-        clip: rect(39, 200px, 15px, 0);
+        clip: rect(64, 200px, 20px, 0);
     }
 
     68.75% {
-        clip: rect(53, 200px, 22px, 0);
+        clip: rect(47, 200px, 38px, 0);
     }
 
     75% {
-        clip: rect(33, 200px, 46px, 0);
+        clip: rect(26, 200px, 6px, 0);
     }
 
     81.25% {
-        clip: rect(26, 200px, 63px, 0);
+        clip: rect(61, 200px, 44px, 0);
     }
 
     87.5% {
-        clip: rect(53, 200px, 18px, 0);
+        clip: rect(45, 200px, 2px, 0);
     }
 
     93.75% {
-        clip: rect(10, 200px, 20px, 0);
+        clip: rect(5, 200px, 42px, 0);
     }
 
     100% {
-        clip: rect(2, 200px, 43px, 0);
+        clip: rect(36, 200px, 25px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(44, 200px, 64px, 0);
+        clip: rect(13, 200px, 22px, 0);
     }
 
     6.25% {
-        clip: rect(21, 200px, 50px, 0);
+        clip: rect(34, 200px, 35px, 0);
     }
 
     12.5% {
-        clip: rect(43, 200px, 5px, 0);
+        clip: rect(18, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(24, 200px, 32px, 0);
+        clip: rect(16, 200px, 10px, 0);
     }
 
     25% {
-        clip: rect(11, 200px, 21px, 0);
+        clip: rect(26, 200px, 45px, 0);
     }
 
     31.25% {
-        clip: rect(7, 200px, 20px, 0);
+        clip: rect(13, 200px, 7px, 0);
     }
 
     37.5% {
-        clip: rect(22, 200px, 11px, 0);
+        clip: rect(10, 200px, 15px, 0);
     }
 
     43.75% {
-        clip: rect(60, 200px, 19px, 0);
+        clip: rect(50, 200px, 22px, 0);
     }
 
     50% {
-        clip: rect(28, 200px, 2px, 0);
+        clip: rect(62, 200px, 59px, 0);
     }
 
     56.25% {
-        clip: rect(27, 200px, 52px, 0);
+        clip: rect(31, 200px, 23px, 0);
     }
 
     62.5% {
-        clip: rect(39, 200px, 15px, 0);
+        clip: rect(64, 200px, 20px, 0);
     }
 
     68.75% {
-        clip: rect(53, 200px, 22px, 0);
+        clip: rect(47, 200px, 38px, 0);
     }
 
     75% {
-        clip: rect(33, 200px, 46px, 0);
+        clip: rect(26, 200px, 6px, 0);
     }
 
     81.25% {
-        clip: rect(26, 200px, 63px, 0);
+        clip: rect(61, 200px, 44px, 0);
     }
 
     87.5% {
-        clip: rect(53, 200px, 18px, 0);
+        clip: rect(45, 200px, 2px, 0);
     }
 
     93.75% {
-        clip: rect(10, 200px, 20px, 0);
+        clip: rect(5, 200px, 42px, 0);
     }
 
     100% {
-        clip: rect(2, 200px, 43px, 0);
+        clip: rect(36, 200px, 25px, 0);
     }
 }
 /*____________________________________________________________
@@ -1320,7 +1321,8 @@ ____________________________________________________________*/
         -webkit-transform: rotate(-1deg);
         transform: rotate(-1deg);
     }
-} /*____________________________________________________________
+}
+/*____________________________________________________________
 ## @import arrowBtn.scss
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -4561,4 +4563,138 @@ ____________________________________________________________*/
     -webkit-transition-delay: 0.4s;
     -o-transition-delay: 0.4s;
     transition-delay: 0.4s;
+}
+
+/*____________________________________________________________
+## @import flickBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Flick Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Flick Button
+____________________________________________________________*/
+.flickBtn {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    margin: 20px;
+    line-height: 60px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: calc(24px / 8);
+    color: #FFF5C3;
+    background-color: #57D1C9;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.flickBtn:before {
+    content: "Pseudo";
+    background-color: #ED5485;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.flickBtn:after {
+    content: "With";
+    background-color: #F7B32D;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: calc(0.2s * .5);
+    -o-transition-delay: calc(0.2s * .5);
+    transition-delay: calc(0.2s * .5);
+}
+
+.flickBtn:hover:before {
+    opacity: 0;
+    -webkit-transition-delay: calc(0.2s * 5);
+    -o-transition-delay: calc(0.2s * 5);
+    transition-delay: calc(0.2s * 5);
+}
+
+.flickBtn:hover:after {
+    opacity: 0;
+    -webkit-transition-delay: calc(0.2s * 3.75);
+    -o-transition-delay: calc(0.2s * 3.75);
+    transition-delay: calc(0.2s * 3.75);
+}
+
+.flickBtn:hover .flickBtn__inner {
+    opacity: 0;
+    -webkit-transition-delay: calc(0.2s * 2.5);
+    -o-transition-delay: calc(0.2s * 2.5);
+    transition-delay: calc(0.2s * 2.5);
+}
+
+.flickBtn:hover .flickBtn__inner:before {
+    opacity: 0;
+    -webkit-transition-delay: calc(0.2s * 1.25);
+    -o-transition-delay: calc(0.2s * 1.25);
+    transition-delay: calc(0.2s * 1.25);
+}
+
+.flickBtn:hover .flickBtn__inner:after {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.flickBtn__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FF7260;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    z-index: 1;
+}
+
+.flickBtn__inner:before {
+    content: "Animation";
+    background-color: #9BD7D5;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: calc(0.2s * 1.5);
+    -o-transition-delay: calc(0.2s * 1.5);
+    transition-delay: calc(0.2s * 1.5);
+}
+
+.flickBtn__inner:after {
+    content: "Hover";
+    background-color: #505050;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: calc(0.2s * 2);
+    -o-transition-delay: calc(0.2s * 2);
+    transition-delay: calc(0.2s * 2);
+}
+
+.flickBtn:before, .flickBtn:after,
+.flickBtn__inner:before,
+.flickBtn__inner:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

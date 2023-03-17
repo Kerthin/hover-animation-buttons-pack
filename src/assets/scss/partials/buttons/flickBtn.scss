@@ -1,0 +1,104 @@
+/*____________________________________________________________
+# Flick Button Variables
+____________________________________________________________*/
+$flickBtnWidth: 180px;
+$flickBtnHeight: calc($flickBtnWidth / 3);
+
+$flickBtnFontSize: calc($flickBtnHeight / 2.5);
+
+$flickBtnSpeed: .2s;
+
+/*____________________________________________________________
+# Flick Button
+____________________________________________________________*/
+.flickBtn {
+  position: relative;
+  width: $flickBtnWidth;
+  height: $flickBtnHeight;
+  margin: 20px;
+  line-height: $flickBtnHeight;
+  font-size: $flickBtnFontSize;
+  text-transform: uppercase;
+  letter-spacing: calc(#{$flickBtnFontSize} / 8);
+  color: #FFF5C3;
+  background-color: #57D1C9;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:before {
+    content: 'Pseudo';
+    background-color: #ED5485;
+    opacity: 1;
+    transition: opacity $flickBtnSpeed;
+    transition-delay: 0s;
+  }
+  &:after {
+    content: 'With';
+    background-color: #F7B32D;
+    opacity: 1;
+    transition: opacity $flickBtnSpeed;
+    transition-delay: calc(#{$flickBtnSpeed} * .5);
+  }
+  
+  &:hover {
+    &:before {
+      opacity: 0;
+      transition-delay: calc(#{$flickBtnSpeed} * 5);
+    }
+    &:after {
+      opacity: 0;
+      transition-delay: calc(#{$flickBtnSpeed} * 3.75);
+    }
+    .flickBtn__inner {
+      opacity: 0;
+      transition-delay: calc(#{$flickBtnSpeed} * 2.5);
+      
+      &:before {
+        opacity: 0;
+        transition-delay: calc(#{$flickBtnSpeed} * 1.25);
+      }
+      &:after {
+        opacity: 0;
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+.flickBtn__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FF7260;
+  opacity: 1;
+  transition: opacity $flickBtnSpeed;
+  transition-delay: $flickBtnSpeed;
+  z-index: 1;
+  
+  &:before {
+    content: 'Animation';
+    background-color: #9BD7D5;
+    opacity: 1;
+    transition: opacity $flickBtnSpeed;
+    transition-delay: calc(#{$flickBtnSpeed} * 1.5);
+  }
+  &:after {
+    content: 'Hover';
+    background-color: #505050;
+    opacity: 1;
+    transition: opacity $flickBtnSpeed;
+    transition-delay: calc(#{$flickBtnSpeed} * 2);
+  }
+}
+.flickBtn,
+.flickBtn__inner {
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
