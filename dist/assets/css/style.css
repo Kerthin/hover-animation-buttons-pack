@@ -28,6 +28,7 @@
     ## @import flipBtn.scss
     ## @import coridorBtn.scss
     ## @import pushingBtn.scss
+    ## @import sliceBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -735,141 +736,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(8, 200px, 14px, 0);
+        clip: rect(44, 200px, 64px, 0);
     }
 
     6.25% {
-        clip: rect(47, 200px, 25px, 0);
+        clip: rect(21, 200px, 50px, 0);
     }
 
     12.5% {
-        clip: rect(14, 200px, 23px, 0);
+        clip: rect(43, 200px, 5px, 0);
     }
 
     18.75% {
-        clip: rect(56, 200px, 61px, 0);
+        clip: rect(24, 200px, 32px, 0);
     }
 
     25% {
-        clip: rect(2, 200px, 32px, 0);
+        clip: rect(11, 200px, 21px, 0);
     }
 
     31.25% {
-        clip: rect(48, 200px, 49px, 0);
+        clip: rect(7, 200px, 20px, 0);
     }
 
     37.5% {
-        clip: rect(34, 200px, 13px, 0);
+        clip: rect(22, 200px, 11px, 0);
     }
 
     43.75% {
-        clip: rect(43, 200px, 2px, 0);
+        clip: rect(60, 200px, 19px, 0);
     }
 
     50% {
-        clip: rect(16, 200px, 38px, 0);
+        clip: rect(28, 200px, 2px, 0);
     }
 
     56.25% {
-        clip: rect(57, 200px, 46px, 0);
+        clip: rect(27, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(19, 200px, 25px, 0);
+        clip: rect(39, 200px, 15px, 0);
     }
 
     68.75% {
-        clip: rect(26, 200px, 51px, 0);
+        clip: rect(53, 200px, 22px, 0);
     }
 
     75% {
-        clip: rect(31, 200px, 48px, 0);
+        clip: rect(33, 200px, 46px, 0);
     }
 
     81.25% {
-        clip: rect(45, 200px, 58px, 0);
+        clip: rect(26, 200px, 63px, 0);
     }
 
     87.5% {
-        clip: rect(43, 200px, 4px, 0);
+        clip: rect(53, 200px, 18px, 0);
     }
 
     93.75% {
-        clip: rect(12, 200px, 11px, 0);
+        clip: rect(10, 200px, 20px, 0);
     }
 
     100% {
-        clip: rect(41, 200px, 50px, 0);
+        clip: rect(2, 200px, 43px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(8, 200px, 14px, 0);
+        clip: rect(44, 200px, 64px, 0);
     }
 
     6.25% {
-        clip: rect(47, 200px, 25px, 0);
+        clip: rect(21, 200px, 50px, 0);
     }
 
     12.5% {
-        clip: rect(14, 200px, 23px, 0);
+        clip: rect(43, 200px, 5px, 0);
     }
 
     18.75% {
-        clip: rect(56, 200px, 61px, 0);
+        clip: rect(24, 200px, 32px, 0);
     }
 
     25% {
-        clip: rect(2, 200px, 32px, 0);
+        clip: rect(11, 200px, 21px, 0);
     }
 
     31.25% {
-        clip: rect(48, 200px, 49px, 0);
+        clip: rect(7, 200px, 20px, 0);
     }
 
     37.5% {
-        clip: rect(34, 200px, 13px, 0);
+        clip: rect(22, 200px, 11px, 0);
     }
 
     43.75% {
-        clip: rect(43, 200px, 2px, 0);
+        clip: rect(60, 200px, 19px, 0);
     }
 
     50% {
-        clip: rect(16, 200px, 38px, 0);
+        clip: rect(28, 200px, 2px, 0);
     }
 
     56.25% {
-        clip: rect(57, 200px, 46px, 0);
+        clip: rect(27, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(19, 200px, 25px, 0);
+        clip: rect(39, 200px, 15px, 0);
     }
 
     68.75% {
-        clip: rect(26, 200px, 51px, 0);
+        clip: rect(53, 200px, 22px, 0);
     }
 
     75% {
-        clip: rect(31, 200px, 48px, 0);
+        clip: rect(33, 200px, 46px, 0);
     }
 
     81.25% {
-        clip: rect(45, 200px, 58px, 0);
+        clip: rect(26, 200px, 63px, 0);
     }
 
     87.5% {
-        clip: rect(43, 200px, 4px, 0);
+        clip: rect(53, 200px, 18px, 0);
     }
 
     93.75% {
-        clip: rect(12, 200px, 11px, 0);
+        clip: rect(10, 200px, 20px, 0);
     }
 
     100% {
-        clip: rect(41, 200px, 50px, 0);
+        clip: rect(2, 200px, 43px, 0);
     }
 }
 /*____________________________________________________________
@@ -1319,8 +1320,7 @@ ____________________________________________________________*/
         -webkit-transform: rotate(-1deg);
         transform: rotate(-1deg);
     }
-}
-/*____________________________________________________________
+} /*____________________________________________________________
 ## @import arrowBtn.scss
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -4451,4 +4451,114 @@ ____________________________________________________________*/
 .pushingBtn__darkBlock {
     background-color: #000;
     opacity: 0.3;
+}
+
+/*____________________________________________________________
+## @import sliceBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Slice Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Slice Buttons
+____________________________________________________________*/
+.sliceBtn {
+    position: relative;
+    margin: 20px;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: calc(24px / 8);
+    color: #FFF5C3;
+    background-color: #FF7260;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sliceBtn:before, .sliceBtn:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sliceBtn:before {
+    content: "Animation";
+    background-color: #9BD7D5;
+}
+
+.sliceBtn:after {
+    content: "Button";
+    background-color: #505050;
+}
+
+.sliceBtn._horizontal:before, .sliceBtn._horizontal:after {
+    top: 0;
+    -webkit-transition: left 0.4s, right 0.4s;
+    -o-transition: left 0.4s, right 0.4s;
+    transition: left 0.4s, right 0.4s;
+}
+
+.sliceBtn._horizontal:before {
+    left: -100%;
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sliceBtn._horizontal:after {
+    right: -100%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sliceBtn._horizontal:hover:before {
+    left: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sliceBtn._horizontal:hover:after {
+    right: 0;
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sliceBtn._vertical:before, .sliceBtn._vertical:after {
+    left: 0;
+    -webkit-transition: top 0.4s, bottom 0.4s;
+    -o-transition: top 0.4s, bottom 0.4s;
+    transition: top 0.4s, bottom 0.4s;
+}
+
+.sliceBtn._vertical:before {
+    top: -100%;
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sliceBtn._vertical:after {
+    bottom: -100%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sliceBtn._vertical:hover:before {
+    top: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sliceBtn._vertical:hover:after {
+    bottom: 0;
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }

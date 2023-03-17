@@ -28,6 +28,7 @@
     ## @import flipBtn.scss
     ## @import coridorBtn.scss
     ## @import pushingBtn.scss
+    ## @import sliceBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -169,3 +170,8 @@ ____________________________________________________________*/
 ## @import pushingBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/pushingBtn.scss';
+
+/*____________________________________________________________
+## @import sliceBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/sliceBtn.scss';

@@ -1,0 +1,96 @@
+/*____________________________________________________________
+# Slice Buttons Variables
+____________________________________________________________*/
+$sliceBtnWidth: 180px;
+$sliceBtnHeight: calc($sliceBtnWidth / 3);
+
+$sliceBtnFontSize: calc($sliceBtnHeight / 2.5);
+
+$sliceBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Slice Buttons
+____________________________________________________________*/
+.sliceBtn {
+  position: relative;
+  margin: 20px;
+  width: $sliceBtnWidth;
+  height: $sliceBtnHeight;
+  line-height: $sliceBtnHeight;
+  font-size: $sliceBtnFontSize;
+  text-transform: uppercase;
+  letter-spacing: calc(#{$sliceBtnFontSize} / 8);
+  color: #FFF5C3;
+  background-color: #FF7260;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &:before {
+    content: 'Animation';
+    background-color: #9BD7D5;
+  }
+  &:after {
+    content: 'Button';
+    background-color: #505050;
+  }
+  
+  &._horizontal {
+    &:before,
+    &:after {
+      top: 0;
+      transition: left $sliceBtnSpeed, right $sliceBtnSpeed;
+    }
+    &:before {
+      left: -100%;
+      transition-delay: $sliceBtnSpeed;
+    }
+    &:after {
+      right: -100%;
+      transition-delay: 0s;
+    }
+    
+    &:hover {
+      &:before {
+        left: 0;
+        transition-delay: 0s;
+      }
+      &:after {
+        right: 0;
+        transition-delay: $sliceBtnSpeed;
+      }
+    }
+  }
+  
+  &._vertical {
+    &:before,
+    &:after {
+      left: 0;
+      transition: top $sliceBtnSpeed, bottom $sliceBtnSpeed;
+    }
+    &:before {
+      top: -100%;
+      transition-delay: $sliceBtnSpeed;
+    }
+    &:after {
+      bottom: -100%;
+      transition-delay: 0s;
+    }
+    
+    &:hover {
+      &:before {
+        top: 0;
+        transition-delay: 0s;
+      }
+      &:after {
+        bottom: 0;
+        transition-delay: $sliceBtnSpeed;
+      }
+    }
+  }
+}
