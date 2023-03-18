@@ -31,6 +31,7 @@
     ## @import sliceBtn.scss
     ## @import flickBtn.scss
     ## @import railsBtn.scss
+    ## @import dotsBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -738,141 +739,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(54, 200px, 20px, 0);
+        clip: rect(46, 200px, 49px, 0);
     }
 
     6.25% {
-        clip: rect(7, 200px, 32px, 0);
+        clip: rect(22, 200px, 65px, 0);
     }
 
     12.5% {
-        clip: rect(41, 200px, 18px, 0);
+        clip: rect(49, 200px, 42px, 0);
     }
 
     18.75% {
-        clip: rect(59, 200px, 8px, 0);
+        clip: rect(41, 200px, 23px, 0);
     }
 
     25% {
-        clip: rect(50, 200px, 54px, 0);
+        clip: rect(51, 200px, 54px, 0);
     }
 
     31.25% {
-        clip: rect(5, 200px, 27px, 0);
+        clip: rect(43, 200px, 29px, 0);
     }
 
     37.5% {
-        clip: rect(50, 200px, 58px, 0);
+        clip: rect(56, 200px, 19px, 0);
     }
 
     43.75% {
-        clip: rect(46, 200px, 32px, 0);
+        clip: rect(23, 200px, 26px, 0);
     }
 
     50% {
-        clip: rect(20, 200px, 6px, 0);
+        clip: rect(57, 200px, 46px, 0);
     }
 
     56.25% {
-        clip: rect(2, 200px, 64px, 0);
+        clip: rect(49, 200px, 23px, 0);
     }
 
     62.5% {
-        clip: rect(17, 200px, 64px, 0);
+        clip: rect(43, 200px, 5px, 0);
     }
 
     68.75% {
-        clip: rect(39, 200px, 50px, 0);
+        clip: rect(25, 200px, 25px, 0);
     }
 
     75% {
-        clip: rect(49, 200px, 30px, 0);
+        clip: rect(62, 200px, 54px, 0);
     }
 
     81.25% {
-        clip: rect(54, 200px, 50px, 0);
+        clip: rect(8, 200px, 42px, 0);
     }
 
     87.5% {
-        clip: rect(10, 200px, 44px, 0);
+        clip: rect(9, 200px, 37px, 0);
     }
 
     93.75% {
-        clip: rect(51, 200px, 50px, 0);
+        clip: rect(28, 200px, 65px, 0);
     }
 
     100% {
-        clip: rect(24, 200px, 8px, 0);
+        clip: rect(55, 200px, 65px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(54, 200px, 20px, 0);
+        clip: rect(46, 200px, 49px, 0);
     }
 
     6.25% {
-        clip: rect(7, 200px, 32px, 0);
+        clip: rect(22, 200px, 65px, 0);
     }
 
     12.5% {
-        clip: rect(41, 200px, 18px, 0);
+        clip: rect(49, 200px, 42px, 0);
     }
 
     18.75% {
-        clip: rect(59, 200px, 8px, 0);
+        clip: rect(41, 200px, 23px, 0);
     }
 
     25% {
-        clip: rect(50, 200px, 54px, 0);
+        clip: rect(51, 200px, 54px, 0);
     }
 
     31.25% {
-        clip: rect(5, 200px, 27px, 0);
+        clip: rect(43, 200px, 29px, 0);
     }
 
     37.5% {
-        clip: rect(50, 200px, 58px, 0);
+        clip: rect(56, 200px, 19px, 0);
     }
 
     43.75% {
-        clip: rect(46, 200px, 32px, 0);
+        clip: rect(23, 200px, 26px, 0);
     }
 
     50% {
-        clip: rect(20, 200px, 6px, 0);
+        clip: rect(57, 200px, 46px, 0);
     }
 
     56.25% {
-        clip: rect(2, 200px, 64px, 0);
+        clip: rect(49, 200px, 23px, 0);
     }
 
     62.5% {
-        clip: rect(17, 200px, 64px, 0);
+        clip: rect(43, 200px, 5px, 0);
     }
 
     68.75% {
-        clip: rect(39, 200px, 50px, 0);
+        clip: rect(25, 200px, 25px, 0);
     }
 
     75% {
-        clip: rect(49, 200px, 30px, 0);
+        clip: rect(62, 200px, 54px, 0);
     }
 
     81.25% {
-        clip: rect(54, 200px, 50px, 0);
+        clip: rect(8, 200px, 42px, 0);
     }
 
     87.5% {
-        clip: rect(10, 200px, 44px, 0);
+        clip: rect(9, 200px, 37px, 0);
     }
 
     93.75% {
-        clip: rect(51, 200px, 50px, 0);
+        clip: rect(28, 200px, 65px, 0);
     }
 
     100% {
-        clip: rect(24, 200px, 8px, 0);
+        clip: rect(55, 200px, 65px, 0);
     }
 }
 /*____________________________________________________________
@@ -4919,4 +4920,305 @@ ____________________________________________________________*/
     -webkit-transition-delay: 0s;
     -o-transition-delay: 0s;
     transition-delay: 0s;
+}
+
+/*____________________________________________________________
+## @import dotsBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Dots Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Dots Button Color Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Dots Button
+____________________________________________________________*/
+.dotsBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 90.0090009001px;
+    border: 1.500150015px solid #292c2c;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #f5f4e8;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.dotsBtn:hover {
+    background-color: #facf6f;
+    -webkit-transition-delay: calc(13 * 0.07s);
+    -o-transition-delay: calc(13 * 0.07s);
+    transition-delay: calc(13 * 0.07s);
+}
+
+.dotsBtn:hover .dotsBtn__rect {
+    -webkit-transition-delay: calc(13 * 0.07s);
+    -o-transition-delay: calc(13 * 0.07s);
+    transition-delay: calc(13 * 0.07s);
+}
+
+.dotsBtn:hover .dotsBtn__rect:nth-child(1) {
+    top: calc(90.0090009001px / 2);
+}
+
+.dotsBtn:hover .dotsBtn__rect:nth-child(2) {
+    bottom: calc(90.0090009001px / 2);
+}
+
+.dotsBtn:hover .dotsBtn__inner {
+    background-color: #f5f4e8;
+    -webkit-transition-delay: calc(13 * 0.07s);
+    -o-transition-delay: calc(13 * 0.07s);
+    transition-delay: calc(13 * 0.07s);
+}
+
+.dotsBtn:hover .dotsBtn__dotsLine .dotsBtn__dot {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.dotsBtn:hover .dotsBtn__dotsLine:nth-child(1) .dotsBtn__dot {
+    top: calc(-10px * 2);
+}
+
+.dotsBtn:hover .dotsBtn__dotsLine:nth-child(2) .dotsBtn__dot {
+    top: calc(-10px * 2);
+}
+
+.dotsBtn:hover .dotsBtn__dotsLine:nth-child(3) .dotsBtn__dot {
+    bottom: calc(-10px * 2);
+}
+
+.dotsBtn:hover .dotsBtn__dotsLine:nth-child(4) .dotsBtn__dot {
+    bottom: calc(-10px * 2);
+}
+
+.dotsBtn:hover .dotsBtn__innerText,
+.dotsBtn:hover .dotsBtn__innerEndText {
+    -webkit-transition-delay: calc(13 * 0.07s);
+    -o-transition-delay: calc(13 * 0.07s);
+    transition-delay: calc(13 * 0.07s);
+}
+
+.dotsBtn:hover .dotsBtn__innerText {
+    opacity: 0;
+}
+
+.dotsBtn:hover .dotsBtn__innerEndText {
+    opacity: 1;
+}
+
+.dotsBtn__rect {
+    position: absolute;
+    width: calc(90.0090009001px / 3);
+    height: calc(90.0090009001px / 1.5);
+    border: 1.500150015px solid #292c2c;
+    -webkit-transition: top 0.3s, bottom 0.3s;
+    -o-transition: top 0.3s, bottom 0.3s;
+    transition: top 0.3s, bottom 0.3s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.dotsBtn__rect:nth-child(1) {
+    top: calc(-90.0090009001px / 6);
+    left: calc(-200px / 28.57);
+    background-color: #57D1C9;
+}
+
+.dotsBtn__rect:nth-child(2) {
+    bottom: calc(-90.0090009001px / 6);
+    right: calc(-200px / 28.57);
+    background-color: #ED5485;
+}
+
+.dotsBtn__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: calc((10px * 13) + (1.500150015px * 2));
+    height: calc((10px * 4) + (1.500150015px * 2));
+    border: 1.500150015px solid #292c2c;
+    cursor: pointer;
+    background-color: #facf6f;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.dotsBtn__dotsLine {
+    width: 100%;
+    height: 10px;
+}
+
+.dotsBtn__dotsLine:nth-child(1) .dotsBtn__dot {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dotsBtn__dotsLine:nth-child(2) .dotsBtn__dot {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dotsBtn__dotsLine:nth-child(3) .dotsBtn__dot {
+    bottom: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.dotsBtn__dotsLine:nth-child(4) .dotsBtn__dot {
+    bottom: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.dotsBtn__dotCell {
+    position: relative;
+    float: left;
+    width: 10px;
+    height: 100%;
+}
+
+.dotsBtn__dotCell:nth-child(1) .dotsBtn__dot {
+    -webkit-transition-delay: calc(1 * 0.07s);
+    -o-transition-delay: calc(1 * 0.07s);
+    transition-delay: calc(1 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(2) .dotsBtn__dot {
+    -webkit-transition-delay: calc(2 * 0.07s);
+    -o-transition-delay: calc(2 * 0.07s);
+    transition-delay: calc(2 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(3) .dotsBtn__dot {
+    -webkit-transition-delay: calc(3 * 0.07s);
+    -o-transition-delay: calc(3 * 0.07s);
+    transition-delay: calc(3 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(4) .dotsBtn__dot {
+    -webkit-transition-delay: calc(4 * 0.07s);
+    -o-transition-delay: calc(4 * 0.07s);
+    transition-delay: calc(4 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(5) .dotsBtn__dot {
+    -webkit-transition-delay: calc(5 * 0.07s);
+    -o-transition-delay: calc(5 * 0.07s);
+    transition-delay: calc(5 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(6) .dotsBtn__dot {
+    -webkit-transition-delay: calc(6 * 0.07s);
+    -o-transition-delay: calc(6 * 0.07s);
+    transition-delay: calc(6 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(7) .dotsBtn__dot {
+    -webkit-transition-delay: calc(7 * 0.07s);
+    -o-transition-delay: calc(7 * 0.07s);
+    transition-delay: calc(7 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(8) .dotsBtn__dot {
+    -webkit-transition-delay: calc(8 * 0.07s);
+    -o-transition-delay: calc(8 * 0.07s);
+    transition-delay: calc(8 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(9) .dotsBtn__dot {
+    -webkit-transition-delay: calc(9 * 0.07s);
+    -o-transition-delay: calc(9 * 0.07s);
+    transition-delay: calc(9 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(10) .dotsBtn__dot {
+    -webkit-transition-delay: calc(10 * 0.07s);
+    -o-transition-delay: calc(10 * 0.07s);
+    transition-delay: calc(10 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(11) .dotsBtn__dot {
+    -webkit-transition-delay: calc(11 * 0.07s);
+    -o-transition-delay: calc(11 * 0.07s);
+    transition-delay: calc(11 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(12) .dotsBtn__dot {
+    -webkit-transition-delay: calc(12 * 0.07s);
+    -o-transition-delay: calc(12 * 0.07s);
+    transition-delay: calc(12 * 0.07s);
+}
+
+.dotsBtn__dotCell:nth-child(13) .dotsBtn__dot {
+    -webkit-transition-delay: calc(13 * 0.07s);
+    -o-transition-delay: calc(13 * 0.07s);
+    transition-delay: calc(13 * 0.07s);
+}
+
+.dotsBtn__dot {
+    position: absolute;
+    left: 50%;
+    width: calc(10px / 2);
+    height: calc(10px / 2);
+    border-radius: calc(10px / 2);
+    background-color: #000;
+    -webkit-transition: top 0.3s, bottom 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, bottom 0.3s, -webkit-transform 0.3s;
+    -o-transition: top 0.3s, bottom 0.3s, transform 0.3s;
+    transition: top 0.3s, bottom 0.3s, transform 0.3s;
+    transition: top 0.3s, bottom 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.dotsBtn__innerText,
+.dotsBtn__innerEndText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Roboto Slab";
+    font-size: 32.00320032px;
+    font-weight: 900;
+    text-shadow: 2.00020002px 2.00020002px 2.00020002px #000;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.dotsBtn__innerText {
+    color: #f5f4e8;
+    opacity: 1;
+}
+
+.dotsBtn__innerEndText {
+    color: #facf6f;
+    opacity: 0;
 }

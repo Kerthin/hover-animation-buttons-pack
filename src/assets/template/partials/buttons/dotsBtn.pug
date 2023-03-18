@@ -1,0 +1,17 @@
+section.presentWrap
+  h1.presentWrap__title Dots Button
+  .presentWrap__buttonsBlock
+
+    button.dotsBtn
+      .dotsBtn__rect
+      .dotsBtn__rect
+      .dotsBtn__inner
+        - var dotsBtnDotsLine = 1;
+        while dotsBtnDotsLine <= 4
+          .dotsBtn__dotsLine(id=`_${dotsBtnDotsLine++}`)
+            - var dotsBtnDotCell = 1;
+            while dotsBtnDotCell <= 13
+              .dotsBtn__dotCell(id=`_${dotsBtnDotCell++}`)
+                .dotsBtn__dot
+        span.dotsBtn__innerText Hover
+        span.dotsBtn__innerEndText Button

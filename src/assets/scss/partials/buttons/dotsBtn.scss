@@ -1,0 +1,191 @@
+/*____________________________________________________________
+# Dots Button Variables
+____________________________________________________________*/
+$dotsBtnWidth: 200px;
+$dotsBtnHeight: calc($dotsBtnWidth / 2.222);
+
+$dotsBtnDotsLine: 4; // Only an even number
+$dotsBtnDotCell: 13;
+
+$dotsBtnDotsLine_half: calc($dotsBtnDotsLine / 2);
+$dotsBtnDotsLine_half_bottomStart: calc($dotsBtnDotsLine_half + 1);
+
+$dotsBtnDotCellSize: calc($dotsBtnWidth / 20); // Increase the divider if you increase the number of $dotsBtnDotsLine
+
+$dotsBtnBorder: calc($dotsBtnHeight / 60);
+
+$dotsBtnFontSize: calc($dotsBtnHeight / 2.8125);
+$dotsBtnTextShadow: calc($dotsBtnFontSize / 16);
+
+$dotsBtnSpeed: .3s;
+$dotsBtnSpeedDelay: .07s;
+
+/*____________________________________________________________
+# Dots Button Color Variables
+____________________________________________________________*/
+$palette-primary: #facf6f;
+$palette-secondary: #f5f4e8;
+
+$palette-border: #292c2c;
+
+/*____________________________________________________________
+# Dots Button
+____________________________________________________________*/
+.dotsBtn {
+  position: relative;
+  margin: 20px;
+  width: $dotsBtnWidth;
+  height: $dotsBtnHeight;
+  border: $dotsBtnBorder solid $palette-border;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $palette-secondary;
+  transition: background-color $dotsBtnSpeed;
+  transition-delay: $dotsBtnSpeed;
+  
+  &:hover {
+    background-color: $palette-primary;
+    transition-delay: calc(#{$dotsBtnDotCell} * #{$dotsBtnSpeedDelay});
+    
+    .dotsBtn__rect {
+      transition-delay: calc(#{$dotsBtnDotCell} * #{$dotsBtnSpeedDelay});
+
+      &:nth-child(1) {
+        top: calc(#{$dotsBtnHeight} / 2);
+      }
+      &:nth-child(2) {
+        bottom: calc(#{$dotsBtnHeight} / 2);
+      }
+    }
+    
+    .dotsBtn__inner {
+      background-color: $palette-secondary;
+      transition-delay: calc(#{$dotsBtnDotCell} * #{$dotsBtnSpeedDelay});
+    }
+    .dotsBtn__dotsLine {
+      .dotsBtn__dot {
+        transform: translate(-50%, 0);
+      }
+
+      @for $i from 1 through $dotsBtnDotsLine_half {
+        &:nth-child(#{$i}) {
+          .dotsBtn__dot {
+            top: calc(-#{$dotsBtnDotCellSize} * #{$dotsBtnDotsLine_half});
+          }
+        }
+      }
+      @for $i from $dotsBtnDotsLine_half_bottomStart through $dotsBtnDotsLine {
+        &:nth-child(#{$i}) {
+          .dotsBtn__dot {
+            bottom: calc(-#{$dotsBtnDotCellSize} * #{$dotsBtnDotsLine_half});
+          }
+        }
+      }
+    }
+    .dotsBtn__innerText,
+    .dotsBtn__innerEndText {
+      transition-delay: calc(#{$dotsBtnDotCell} * #{$dotsBtnSpeedDelay});
+    }
+    .dotsBtn__innerText {
+      opacity: 0;
+    }
+    .dotsBtn__innerEndText {
+      opacity: 1;
+    }
+  }
+}
+.dotsBtn__rect {
+  position: absolute;
+  width: calc(#{$dotsBtnHeight} / 3);
+  height: calc(#{$dotsBtnHeight} / 1.5);
+  border: $dotsBtnBorder solid $palette-border;
+  transition: top $dotsBtnSpeed, bottom $dotsBtnSpeed;
+  transition-delay: 0s;
+  
+  &:nth-child(1) {
+    top: calc(-#{$dotsBtnHeight} / 6);
+    left: calc(-#{$dotsBtnWidth} / 28.57);
+    background-color: #57D1C9;
+  }
+  &:nth-child(2) {
+    bottom: calc(-#{$dotsBtnHeight} / 6);
+    right: calc(-#{$dotsBtnWidth} / 28.57);
+    background-color: #ED5485;
+  }
+}
+.dotsBtn__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc((#{$dotsBtnDotCellSize} * #{$dotsBtnDotCell}) + (#{$dotsBtnBorder} * 2));
+  height: calc((#{$dotsBtnDotCellSize} * #{$dotsBtnDotsLine}) + (#{$dotsBtnBorder} * 2));
+  border: $dotsBtnBorder solid $palette-border;
+  cursor: pointer;
+  background-color: $palette-primary;
+  transition: background-color $dotsBtnSpeed;
+  transition-delay: $dotsBtnSpeed;
+}
+.dotsBtn__dotsLine {
+  width: 100%;
+  height: $dotsBtnDotCellSize;
+
+  @for $i from 1 through $dotsBtnDotsLine_half {
+    &:nth-child(#{$i}) {
+      .dotsBtn__dot {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  @for $i from $dotsBtnDotsLine_half_bottomStart through $dotsBtnDotsLine {
+    &:nth-child(#{$i}) {
+      .dotsBtn__dot {
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
+.dotsBtn__dotCell {
+  position: relative;
+  float: left;
+  width: $dotsBtnDotCellSize;
+  height: 100%;
+  
+  @for $i from 1 through $dotsBtnDotCell {
+    &:nth-child(#{$i}) {
+      .dotsBtn__dot{transition-delay: calc(#{$i} * #{$dotsBtnSpeedDelay});}
+    }
+  }
+}
+.dotsBtn__dot {
+  position: absolute;
+  left: 50%;
+  width: calc(#{$dotsBtnDotCellSize} / 2);
+  height: calc(#{$dotsBtnDotCellSize} / 2);
+  border-radius: calc(#{$dotsBtnDotCellSize} / 2);
+  background-color: #000;
+  transition: top $dotsBtnSpeed, bottom $dotsBtnSpeed, transform $dotsBtnSpeed;
+}
+.dotsBtn__innerText,
+.dotsBtn__innerEndText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto Slab';
+  font-size: $dotsBtnFontSize;
+  font-weight: 900;
+  text-shadow: $dotsBtnTextShadow $dotsBtnTextShadow $dotsBtnTextShadow #000;
+  transition: opacity $dotsBtnSpeed;
+  transition-delay: $dotsBtnSpeed;
+}
+.dotsBtn__innerText {
+  color: $palette-secondary;
+  opacity: 1;
+}
+.dotsBtn__innerEndText {
+  color: $palette-primary;
+  opacity: 0;
+}

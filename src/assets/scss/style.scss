@@ -31,6 +31,7 @@
     ## @import sliceBtn.scss
     ## @import flickBtn.scss
     ## @import railsBtn.scss
+    ## @import dotsBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -187,3 +188,8 @@ ____________________________________________________________*/
 ## @import railsBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/railsBtn.scss';
+
+/*____________________________________________________________
+## @import dotsBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/dotsBtn.scss';
