@@ -1,0 +1,163 @@
+/*____________________________________________________________
+# Rails Button Variables
+____________________________________________________________*/
+$railsBtnBgColorArray: (#f07810,
+                        #eec60a,
+                        #d52b15,
+                        #9BD7D5,
+                        #FFF5C3,
+                        #FF7260,
+                        #505050);
+
+$railsBtnWidth: 200px;
+$railsBtnHeight: $railsBtnWidth / 3.333;
+
+$railsBtnVievItemsNumber: 5;
+$railsBtnItemSize: $railsBtnWidth / $railsBtnVievItemsNumber;
+
+$railsBtnFontSize: $railsBtnHeight / 2.5;
+
+$railsBtnSpeed: .5s;
+$railsBtnSpeed_secondary: $railsBtnSpeed / 1.666;
+
+/*____________________________________________________________
+# Rails Button
+____________________________________________________________*/
+.railsBtn {
+  position: relative;
+  width: $railsBtnWidth;
+  height: $railsBtnHeight;
+  margin: 20px;
+  line-height: $railsBtnHeight;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .railsBtn__rail {
+      transition-delay: $railsBtnSpeed_secondary;
+      
+      &:nth-child(1) {
+        left: calc(-#{$railsBtnItemSize} * 2);
+      }
+      &:nth-child(2) {
+        left: 0;
+      }
+      &:nth-child(3) {
+        left: calc(-#{$railsBtnItemSize} * 2);
+      }
+    }
+    .railsBtn__innerWrap {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition-delay: $railsBtnSpeed_secondary;
+    }
+    .railsBtn__inner {
+      width: $railsBtnWidth;
+      height: $railsBtnHeight;
+      transition-delay: calc(#{$railsBtnSpeed} + #{$railsBtnSpeed_secondary});
+    }
+    .railsBtn__innerText {
+      font-size: $railsBtnFontSize;
+      opacity: 1;
+      transition-delay: calc(#{$railsBtnSpeed} + #{$railsBtnSpeed_secondary});
+    }
+    .railsBtn__visibleWrap {
+      opacity: 0;
+      transition-delay: 0s;
+    }
+  }
+}
+
+.railsBtn__rail {
+  position: absolute;
+  width: calc(100% + (#{$railsBtnItemSize} * 2));
+  height: calc(#{$railsBtnHeight} / 3);
+  transition: left $railsBtnSpeed;
+  transition-delay: $railsBtnSpeed;
+  
+  &:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  &:nth-child(2) {
+    top: calc(#{$railsBtnHeight} / 3);
+    left: calc(-#{$railsBtnItemSize} * 2);
+  }
+  &:nth-child(3) {
+    top: calc(#{$railsBtnHeight} / 1.5);
+    left: -$railsBtnItemSize;
+  }
+}
+
+.railsBtn__railItem {
+  position: relative;
+  float: left;
+  width: $railsBtnItemSize;
+  height: 100%;
+  border: calc(#{$railsBtnItemSize} / 40) solid #fff;
+  
+  @for $i from 1 through length($railsBtnBgColorArray) {
+    &:nth-child(#{$i}) {
+      background-color: nth($railsBtnBgColorArray, $i);
+    }
+  }
+}
+.railsBtn__innerWrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: $railsBtnItemSize;
+  height: calc(#{$railsBtnHeight} / 3);
+  transition: left $railsBtnSpeed, transform $railsBtnSpeed;
+  transition-delay: $railsBtnSpeed;
+}
+.railsBtn__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $railsBtnItemSize;
+  height: calc(#{$railsBtnHeight} / 3);
+  border: calc(#{$railsBtnItemSize} / 40) solid #fff;
+  background-color: #d52b15;
+  transition: width $railsBtnSpeed, height $railsBtnSpeed;
+}
+
+.railsBtn__visibleWrap,
+.railsBtn__darkBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.railsBtn__visibleWrap {
+  opacity: 1;
+  transition: opacity $railsBtnSpeed_secondary;
+  transition-delay: calc(#{$railsBtnSpeed} + (#{$railsBtnSpeed_secondary} * 2));
+}
+.railsBtn__darkBlock {
+  background-color: #000;
+  opacity: .3;
+}
+.railsBtn__darkText,
+.railsBtn__innerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $railsBtnFontSize;
+	text-transform: uppercase;
+  letter-spacing: calc(#{$railsBtnFontSize} / 8);
+  color: #FFFBCB;
+}
+.railsBtn__darkText {
+  font-size: $railsBtnFontSize;
+}
+.railsBtn__innerText {
+  font-size: calc(#{$railsBtnFontSize} / 6);
+  opacity: 0;
+  transition: font-size $railsBtnSpeed, opacity $railsBtnSpeed;
+  transition-delay: 0s;
+}

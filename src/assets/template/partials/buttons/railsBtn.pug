@@ -1,0 +1,17 @@
+section.presentWrap
+  h1.presentWrap__title Rails Buttons
+  .presentWrap__buttonsBlock
+
+    button.railsBtn
+      - var railsBtnRailNumber = 1;
+      while railsBtnRailNumber <= 3
+        .railsBtn__rail(id=`__${railsBtnRailNumber++}`)
+          - var railsBtnItemNumber = 1;
+          while railsBtnItemNumber <= 7
+            .railsBtn__railItem(id=`__${railsBtnItemNumber++}`)
+      .railsBtn__innerWrap
+        .railsBtn__inner
+          span.railsBtn__innerText Button
+      .railsBtn__visibleWrap
+        .railsBtn__darkBlock
+        span.railsBtn__darkText Hover
