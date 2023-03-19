@@ -33,6 +33,7 @@
     ## @import railsBtn.scss
     ## @import dotsBtn.scss
     ## @import circleDownBtn.scss
+    ## @import circlesDownBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -199,3 +200,8 @@ ____________________________________________________________*/
 ## @import circleDownBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/circleDownBtn.scss';
+
+/*____________________________________________________________
+## @import circlesDownBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/circlesDownBtn.scss';

@@ -1,0 +1,105 @@
+/*____________________________________________________________
+# Circles Down Buttons Variables
+____________________________________________________________*/
+$circlesDownBtnWidth: 200px;
+$circlesDownBtnHeight: ($circlesDownBtnWidth / 100) * 32.5;
+
+$circlesDownBtnBorder: $circlesDownBtnHeight / 43.33;
+
+$circlesDownBtnFontSize: $circlesDownBtnHeight / 2.03125;
+
+$circlesDownBtnSpeed: .4s;
+
+$palette-primary: #F7B32D;
+
+/*____________________________________________________________
+# Circles Down Buttons
+____________________________________________________________*/
+.circlesDownBtn {
+  position: relative;
+  margin: 20px;
+  width: $circlesDownBtnWidth;
+  height: $circlesDownBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $circlesDownBtnFontSize;
+  font-weight: 900;
+  border: $circlesDownBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $palette-primary;
+  
+  .circlesDownBtn__layer,
+  &:before,
+  &:after {
+    position: absolute;
+    top: -150%;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    line-height: calc(#{$circleDownBtnHeight} * 2);
+    color: $palette-primary;
+    border-bottom-left-radius: calc(#{$circleDownBtnWidth} / 2);
+    border-bottom-right-radius: calc(#{$circleDownBtnWidth} / 2);
+    transition: top $circleDownBtnSpeed, border-bottom-left-radius calc(#{$circleDownBtnSpeed} * 1.5), border-bottom-right-radius calc(#{$circleDownBtnSpeed} * 1.5);
+    z-index: 1;
+  }
+  &:before {
+    content: '';
+    background-color: #f07810;
+    transition-delay: $circlesDownBtnSpeed;
+  }
+  .circlesDownBtn__layer {
+    content: '';
+    background-color: #DE3C3C;
+    transition-delay: calc(#{$circlesDownBtnSpeed} / 2);
+  }
+  &:after {
+    content: attr(end-name);
+    background-color: #c50d66;
+    transition-delay: 0s;
+  }
+  
+  &._opacityText {
+    &:after {
+      content: '';
+    }
+  }
+  
+  &:hover {
+    .circlesDownBtn__layer,
+    &:before,
+    &:after {
+      top: -50%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:before {
+      transition-delay: 0s;
+    }
+    &:after {
+      transition-delay: $circlesDownBtnSpeed;
+    }
+    
+    .circlesDownBtn__text {
+      &._hide {
+        opacity: 1;
+        transition-delay: calc(#{$circleDownBtnSpeed} * 1.5);
+      }
+    }
+  }
+}
+
+.circlesDownBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  &._hide {
+    color: $palette-primary;
+    opacity: 0;
+    transition: opacity calc(#{$circleDownBtnSpeed} / 1.333);
+    transition-delay: 0s;
+    z-index: 2;
+  }
+}
