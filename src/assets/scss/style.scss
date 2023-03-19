@@ -32,6 +32,7 @@
     ## @import flickBtn.scss
     ## @import railsBtn.scss
     ## @import dotsBtn.scss
+    ## @import circleDownBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -193,3 +194,8 @@ ____________________________________________________________*/
 ## @import dotsBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/dotsBtn.scss';
+
+/*____________________________________________________________
+## @import circleDownBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/circleDownBtn.scss';

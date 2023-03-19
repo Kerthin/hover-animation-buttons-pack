@@ -32,6 +32,7 @@
     ## @import flickBtn.scss
     ## @import railsBtn.scss
     ## @import dotsBtn.scss
+    ## @import circleDownBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -739,141 +740,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(46, 200px, 49px, 0);
+        clip: rect(50, 200px, 37px, 0);
     }
 
     6.25% {
-        clip: rect(22, 200px, 65px, 0);
+        clip: rect(7, 200px, 44px, 0);
     }
 
     12.5% {
-        clip: rect(49, 200px, 42px, 0);
+        clip: rect(49, 200px, 20px, 0);
     }
 
     18.75% {
-        clip: rect(41, 200px, 23px, 0);
+        clip: rect(51, 200px, 64px, 0);
     }
 
     25% {
-        clip: rect(51, 200px, 54px, 0);
+        clip: rect(22, 200px, 20px, 0);
     }
 
     31.25% {
-        clip: rect(43, 200px, 29px, 0);
+        clip: rect(26, 200px, 53px, 0);
     }
 
     37.5% {
-        clip: rect(56, 200px, 19px, 0);
+        clip: rect(57, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(23, 200px, 26px, 0);
+        clip: rect(33, 200px, 29px, 0);
     }
 
     50% {
-        clip: rect(57, 200px, 46px, 0);
+        clip: rect(18, 200px, 17px, 0);
     }
 
     56.25% {
-        clip: rect(49, 200px, 23px, 0);
+        clip: rect(55, 200px, 1px, 0);
     }
 
     62.5% {
-        clip: rect(43, 200px, 5px, 0);
+        clip: rect(11, 200px, 52px, 0);
     }
 
     68.75% {
-        clip: rect(25, 200px, 25px, 0);
+        clip: rect(49, 200px, 13px, 0);
     }
 
     75% {
-        clip: rect(62, 200px, 54px, 0);
+        clip: rect(17, 200px, 52px, 0);
     }
 
     81.25% {
-        clip: rect(8, 200px, 42px, 0);
+        clip: rect(12, 200px, 7px, 0);
     }
 
     87.5% {
-        clip: rect(9, 200px, 37px, 0);
+        clip: rect(58, 200px, 29px, 0);
     }
 
     93.75% {
-        clip: rect(28, 200px, 65px, 0);
+        clip: rect(12, 200px, 25px, 0);
     }
 
     100% {
-        clip: rect(55, 200px, 65px, 0);
+        clip: rect(11, 200px, 52px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(46, 200px, 49px, 0);
+        clip: rect(50, 200px, 37px, 0);
     }
 
     6.25% {
-        clip: rect(22, 200px, 65px, 0);
+        clip: rect(7, 200px, 44px, 0);
     }
 
     12.5% {
-        clip: rect(49, 200px, 42px, 0);
+        clip: rect(49, 200px, 20px, 0);
     }
 
     18.75% {
-        clip: rect(41, 200px, 23px, 0);
+        clip: rect(51, 200px, 64px, 0);
     }
 
     25% {
-        clip: rect(51, 200px, 54px, 0);
+        clip: rect(22, 200px, 20px, 0);
     }
 
     31.25% {
-        clip: rect(43, 200px, 29px, 0);
+        clip: rect(26, 200px, 53px, 0);
     }
 
     37.5% {
-        clip: rect(56, 200px, 19px, 0);
+        clip: rect(57, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(23, 200px, 26px, 0);
+        clip: rect(33, 200px, 29px, 0);
     }
 
     50% {
-        clip: rect(57, 200px, 46px, 0);
+        clip: rect(18, 200px, 17px, 0);
     }
 
     56.25% {
-        clip: rect(49, 200px, 23px, 0);
+        clip: rect(55, 200px, 1px, 0);
     }
 
     62.5% {
-        clip: rect(43, 200px, 5px, 0);
+        clip: rect(11, 200px, 52px, 0);
     }
 
     68.75% {
-        clip: rect(25, 200px, 25px, 0);
+        clip: rect(49, 200px, 13px, 0);
     }
 
     75% {
-        clip: rect(62, 200px, 54px, 0);
+        clip: rect(17, 200px, 52px, 0);
     }
 
     81.25% {
-        clip: rect(8, 200px, 42px, 0);
+        clip: rect(12, 200px, 7px, 0);
     }
 
     87.5% {
-        clip: rect(9, 200px, 37px, 0);
+        clip: rect(58, 200px, 29px, 0);
     }
 
     93.75% {
-        clip: rect(28, 200px, 65px, 0);
+        clip: rect(12, 200px, 25px, 0);
     }
 
     100% {
-        clip: rect(55, 200px, 65px, 0);
+        clip: rect(11, 200px, 52px, 0);
     }
 }
 /*____________________________________________________________
@@ -5221,4 +5222,82 @@ ____________________________________________________________*/
 .dotsBtn__innerEndText {
     color: #facf6f;
     opacity: 0;
+}
+
+/*____________________________________________________________
+## @import circleDownBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Down Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Down Button
+____________________________________________________________*/
+.circleDownBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    border: 1.5001153935px solid #292c2c;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #F7B32D;
+}
+
+.circleDownBtn:after {
+    content: attr(end-name);
+    position: absolute;
+    top: -150%;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    line-height: calc(65px * 2);
+    color: #F7B32D;
+    border-bottom-left-radius: calc(200px / 2);
+    border-bottom-right-radius: calc(200px / 2);
+    background-color: #DE3C3C;
+    -webkit-transition: top 0.4s, border-bottom-left-radius calc(0.4s * 1.5), border-bottom-right-radius calc(0.4s * 1.5);
+    -o-transition: top 0.4s, border-bottom-left-radius calc(0.4s * 1.5), border-bottom-right-radius calc(0.4s * 1.5);
+    transition: top 0.4s, border-bottom-left-radius calc(0.4s * 1.5), border-bottom-right-radius calc(0.4s * 1.5);
+}
+
+.circleDownBtn._opacityText:after {
+    content: "";
+}
+
+.circleDownBtn:hover:after {
+    top: -50%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.circleDownBtn:hover .circleDownBtn__text._hide {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.4s / 2);
+    -o-transition-delay: calc(0.4s / 2);
+    transition-delay: calc(0.4s / 2);
+}
+
+.circleDownBtn__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.circleDownBtn__text._hide {
+    color: #F7B32D;
+    opacity: 0;
+    -webkit-transition: opacity calc(0.4s / 1.333);
+    -o-transition: opacity calc(0.4s / 1.333);
+    transition: opacity calc(0.4s / 1.333);
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    z-index: 1;
 }

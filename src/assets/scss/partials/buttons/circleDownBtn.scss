@@ -1,0 +1,77 @@
+/*____________________________________________________________
+# Circle Down Button Variables
+____________________________________________________________*/
+$circleDownBtnWidth: 200px;
+$circleDownBtnHeight: calc($circleDownBtnWidth / 100) * 32.5;
+
+$circleDownBtnBorder: calc($circleDownBtnHeight / 43.33);
+
+$circleDownBtnFontSize: calc($circleDownBtnHeight / 2.03125);
+
+$circleDownBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Circle Down Button
+____________________________________________________________*/
+.circleDownBtn {
+  position: relative;
+  margin: 20px;
+  width: $circleDownBtnWidth;
+  height: $circleDownBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $circleDownBtnFontSize;
+  font-weight: 900;
+  border: $circleDownBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #F7B32D;
+  
+  &:after {
+    content: attr(end-name);
+    position: absolute;
+    top: -150%;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    line-height: calc(#{$circleDownBtnHeight} * 2);
+    color: #F7B32D;
+    border-bottom-left-radius: calc(#{$circleDownBtnWidth} / 2);
+    border-bottom-right-radius: calc(#{$circleDownBtnWidth} / 2);
+    background-color: #DE3C3C;
+    transition: top $circleDownBtnSpeed, border-bottom-left-radius calc(#{$circleDownBtnSpeed} * 1.5), border-bottom-right-radius calc(#{$circleDownBtnSpeed} * 1.5);
+  }
+  
+  &._opacityText {
+    &:after {
+      content: '';
+    }
+  }
+  
+  &:hover {
+    &:after {
+      top: -50%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .circleDownBtn__text {
+      &._hide {
+        opacity: 1;
+        transition-delay: calc(#{$circleDownBtnSpeed} / 2);
+      }
+    }
+  }
+}
+.circleDownBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  &._hide {
+    color: #F7B32D;
+    opacity: 0;
+    transition: opacity calc(#{$circleDownBtnSpeed} / 1.333);
+    transition-delay: 0s;
+    z-index: 1;
+  }
+}
