@@ -35,6 +35,7 @@
     ## @import circleDownBtn.scss
     ## @import circlesDownBtn.scss
     ## @import pseudoSideBtn.scss
+    ## @import bubblesBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -742,144 +743,143 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(36, 200px, 2px, 0);
+        clip: rect(55, 200px, 57px, 0);
     }
 
     6.25% {
-        clip: rect(36, 200px, 58px, 0);
+        clip: rect(33, 200px, 11px, 0);
     }
 
     12.5% {
-        clip: rect(3, 200px, 32px, 0);
+        clip: rect(52, 200px, 33px, 0);
     }
 
     18.75% {
-        clip: rect(24, 200px, 15px, 0);
+        clip: rect(55, 200px, 13px, 0);
     }
 
     25% {
-        clip: rect(4, 200px, 26px, 0);
+        clip: rect(22, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(28, 200px, 46px, 0);
+        clip: rect(23, 200px, 20px, 0);
     }
 
     37.5% {
-        clip: rect(63, 200px, 17px, 0);
+        clip: rect(5, 200px, 33px, 0);
     }
 
     43.75% {
-        clip: rect(30, 200px, 39px, 0);
+        clip: rect(10, 200px, 65px, 0);
     }
 
     50% {
-        clip: rect(34, 200px, 25px, 0);
+        clip: rect(3, 200px, 58px, 0);
     }
 
     56.25% {
-        clip: rect(55, 200px, 10px, 0);
+        clip: rect(51, 200px, 25px, 0);
     }
 
     62.5% {
-        clip: rect(20, 200px, 50px, 0);
+        clip: rect(25, 200px, 39px, 0);
     }
 
     68.75% {
-        clip: rect(65, 200px, 43px, 0);
+        clip: rect(47, 200px, 8px, 0);
     }
 
     75% {
-        clip: rect(35, 200px, 14px, 0);
+        clip: rect(57, 200px, 12px, 0);
     }
 
     81.25% {
-        clip: rect(13, 200px, 12px, 0);
+        clip: rect(22, 200px, 17px, 0);
     }
 
     87.5% {
-        clip: rect(10, 200px, 23px, 0);
+        clip: rect(24, 200px, 15px, 0);
     }
 
     93.75% {
-        clip: rect(30, 200px, 11px, 0);
+        clip: rect(23, 200px, 5px, 0);
     }
 
     100% {
-        clip: rect(45, 200px, 3px, 0);
+        clip: rect(33, 200px, 2px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(36, 200px, 2px, 0);
+        clip: rect(55, 200px, 57px, 0);
     }
 
     6.25% {
-        clip: rect(36, 200px, 58px, 0);
+        clip: rect(33, 200px, 11px, 0);
     }
 
     12.5% {
-        clip: rect(3, 200px, 32px, 0);
+        clip: rect(52, 200px, 33px, 0);
     }
 
     18.75% {
-        clip: rect(24, 200px, 15px, 0);
+        clip: rect(55, 200px, 13px, 0);
     }
 
     25% {
-        clip: rect(4, 200px, 26px, 0);
+        clip: rect(22, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(28, 200px, 46px, 0);
+        clip: rect(23, 200px, 20px, 0);
     }
 
     37.5% {
-        clip: rect(63, 200px, 17px, 0);
+        clip: rect(5, 200px, 33px, 0);
     }
 
     43.75% {
-        clip: rect(30, 200px, 39px, 0);
+        clip: rect(10, 200px, 65px, 0);
     }
 
     50% {
-        clip: rect(34, 200px, 25px, 0);
+        clip: rect(3, 200px, 58px, 0);
     }
 
     56.25% {
-        clip: rect(55, 200px, 10px, 0);
+        clip: rect(51, 200px, 25px, 0);
     }
 
     62.5% {
-        clip: rect(20, 200px, 50px, 0);
+        clip: rect(25, 200px, 39px, 0);
     }
 
     68.75% {
-        clip: rect(65, 200px, 43px, 0);
+        clip: rect(47, 200px, 8px, 0);
     }
 
     75% {
-        clip: rect(35, 200px, 14px, 0);
+        clip: rect(57, 200px, 12px, 0);
     }
 
     81.25% {
-        clip: rect(13, 200px, 12px, 0);
+        clip: rect(22, 200px, 17px, 0);
     }
 
     87.5% {
-        clip: rect(10, 200px, 23px, 0);
+        clip: rect(24, 200px, 15px, 0);
     }
 
     93.75% {
-        clip: rect(30, 200px, 11px, 0);
+        clip: rect(23, 200px, 5px, 0);
     }
 
     100% {
-        clip: rect(45, 200px, 3px, 0);
+        clip: rect(33, 200px, 2px, 0);
     }
-}
-/*____________________________________________________________
+} /*____________________________________________________________
 ## @import neomorphicBtn.scss
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -3331,7 +3331,9 @@ ____________________________________________________________*/
 
 .shrinkingBorderBtn__border {
     position: absolute;
-} /*____________________________________________________________
+}
+
+/*____________________________________________________________
 ## @import moveBorderBtn.scss
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -4456,7 +4458,9 @@ ____________________________________________________________*/
 .pushingBtn__darkBlock {
     background-color: #000;
     opacity: 0.3;
-} /*____________________________________________________________
+}
+
+/*____________________________________________________________
 ## @import sliceBtn.scss
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -5527,4 +5531,117 @@ ____________________________________________________________*/
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
+}
+/*____________________________________________________________
+## @import bubblesBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Bubbles Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Bubbles Button
+____________________________________________________________*/
+.bubblesBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    border: 1.5001153935px solid #292c2c;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #FFF5C3;
+    -webkit-transition: color calc(0.3s / 1.5);
+    -o-transition: color calc(0.3s / 1.5);
+    transition: color calc(0.3s / 1.5);
+    -webkit-transition-delay: calc(0.3s / .75);
+    -o-transition-delay: calc(0.3s / .75);
+    transition-delay: calc(0.3s / .75);
+}
+
+.bubblesBtn .bubblesBtn__moveBubble, .bubblesBtn:before, .bubblesBtn:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: 0, 0;
+    -o-transition: 0, 0;
+    transition: 0, 0;
+    width: calc(65px / 6.5);
+    height: calc(65px / 6.5);
+    border-radius: calc(65px / 6.5);
+    -webkit-transition: top 0.3s, left 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, left 0.3s, -webkit-transform 0.3s;
+    -o-transition: top 0.3s, left 0.3s, transform 0.3s;
+    transition: top 0.3s, left 0.3s, transform 0.3s;
+    transition: top 0.3s, left 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.bubblesBtn .bubblesBtn__moveBubble {
+    top: calc(65px / 3.611);
+    left: calc(200px / 10);
+    background-color: #DE3C3C;
+}
+
+.bubblesBtn:before {
+    top: calc(65px / 1.354);
+    left: calc(200px / 4.444);
+    background-color: #F7B32D;
+}
+
+.bubblesBtn:after {
+    top: calc(65px / 2.166);
+    left: calc(200px / 1.25);
+    background-color: #c50d66;
+}
+
+.bubblesBtn:hover {
+    color: #FFF5C3;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.bubblesBtn:hover .bubblesBtn__moveBubble, .bubblesBtn:hover:before, .bubblesBtn:hover:after {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition-delay: calc(0.3s / 3);
+    -o-transition-delay: calc(0.3s / 3);
+    transition-delay: calc(0.3s / 3);
+}
+
+.bubblesBtn:hover .bubblesBtn__mainBubble {
+    width: calc(200px + (200px / 20));
+    height: calc(200px + (200px / 20));
+    -webkit-transition-delay: calc(0.3s / .857);
+    -o-transition-delay: calc(0.3s / .857);
+    transition-delay: calc(0.3s / .857);
+}
+
+.bubblesBtn__mainBubble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    line-height: calc(200px + (200px / 20));
+    border-radius: 200px;
+    background-color: #c50d66;
+    overflow: hidden;
+    -webkit-transition: width 0.3s, height 0.3s;
+    -o-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
+    -webkit-transition-delay: calc(0.3s / 3);
+    -o-transition-delay: calc(0.3s / 3);
+    transition-delay: calc(0.3s / 3);
+    z-index: 1;
 }

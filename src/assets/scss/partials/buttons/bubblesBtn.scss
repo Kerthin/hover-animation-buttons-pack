@@ -1,0 +1,94 @@
+/*____________________________________________________________
+# Bubbles Button Variables
+____________________________________________________________*/
+$bubblesBtnWidth: 200px;
+$bubblesBtnHeight: calc($bubblesBtnWidth / 100) * 32.5;
+
+$bubblesBtnBorder: calc($bubblesBtnHeight / 43.33);
+
+$bubblesBtnFontSize: calc($bubblesBtnHeight / 2.03125);
+
+$bubblesBtnSpeed: .3s;
+
+$palette-primary: #FFF5C3;
+
+/*____________________________________________________________
+# Bubbles Button
+____________________________________________________________*/
+.bubblesBtn {
+  position: relative;
+  margin: 20px;
+  width: $bubblesBtnWidth;
+  height: $bubblesBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $bubblesBtnFontSize;
+  font-weight: 900;
+  border: $bubblesBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $palette-primary;
+  transition: color calc(#{$bubblesBtnSpeed} / 1.5);
+  transition-delay: calc(#{$bubblesBtnSpeed} / .75);
+  
+  .bubblesBtn__moveBubble,
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    transition: (0, 0);
+    width: calc(#{$pseudoSideBtnHeight} / 6.5);
+    height: calc(#{$pseudoSideBtnHeight} / 6.5);
+    border-radius: calc(#{$pseudoSideBtnHeight} / 6.5);
+    transition: top $bubblesBtnSpeed, left $bubblesBtnSpeed, transform $bubblesBtnSpeed;
+    transition-delay: $bubblesBtnSpeed;
+  }
+  .bubblesBtn__moveBubble {
+    top: calc(#{$pseudoSideBtnHeight} / 3.611);
+    left: calc(#{$pseudoSideBtnWidth} / 10);
+    background-color: #DE3C3C;
+  }
+  &:before {
+    top: calc(#{$pseudoSideBtnHeight} / 1.354);
+    left: calc(#{$pseudoSideBtnWidth} / 4.444);
+    background-color: #F7B32D;
+  }
+  &:after {
+    top: calc(#{$pseudoSideBtnHeight} / 2.166);
+    left: calc(#{$pseudoSideBtnWidth} / 1.25);
+    background-color: #c50d66;
+  }
+  
+  &:hover {
+    color: $palette-primary;
+    transition-delay: 0s;
+    
+    .bubblesBtn__moveBubble,
+    &:before,
+    &:after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition-delay: calc(#{$bubblesBtnSpeed} / 3);
+    }
+    .bubblesBtn__mainBubble {
+      width: calc(#{$pseudoSideBtnWidth} + (#{$pseudoSideBtnWidth} / 20));
+      height: calc(#{$pseudoSideBtnWidth} + (#{$pseudoSideBtnWidth} / 20));
+      transition-delay: calc(#{$bubblesBtnSpeed} / .857);
+    }
+  }
+}
+.bubblesBtn__mainBubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  line-height: calc(#{$pseudoSideBtnWidth} + (#{$pseudoSideBtnWidth} / 20));
+  border-radius: $pseudoSideBtnWidth;
+  background-color: #c50d66;
+  overflow: hidden;
+  transition: width $bubblesBtnSpeed, height $bubblesBtnSpeed;
+  transition-delay: calc(#{$bubblesBtnSpeed} / 3);
+  z-index: 1;
+}

@@ -2,11 +2,11 @@
 # Pseudo Side Button Variables
 ____________________________________________________________*/
 $pseudoSideBtnWidth: 200px;
-$pseudoSideBtnHeight: ($pseudoSideBtnWidth / 100) * 32.5;
+$pseudoSideBtnHeight: calc($pseudoSideBtnWidth / 100) * 32.5;
 
-$pseudoSideBtnBorder: $pseudoSideBtnHeight / 43.33;
+$pseudoSideBtnBorder: calc($pseudoSideBtnHeight / 43.33);
 
-$pseudoSideBtnFontSize: $pseudoSideBtnHeight / 2.03125;
+$pseudoSideBtnFontSize: calc($pseudoSideBtnHeight / 2.03125);
 
 $pseudoSideBtnSpeed: .3s;
 
