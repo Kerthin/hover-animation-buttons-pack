@@ -1,0 +1,90 @@
+/*____________________________________________________________
+# Pseudo Side Button Variables
+____________________________________________________________*/
+$pseudoSideBtnWidth: 200px;
+$pseudoSideBtnHeight: ($pseudoSideBtnWidth / 100) * 32.5;
+
+$pseudoSideBtnBorder: $pseudoSideBtnHeight / 43.33;
+
+$pseudoSideBtnFontSize: $pseudoSideBtnHeight / 2.03125;
+
+$pseudoSideBtnSpeed: .3s;
+
+$palette-primary: #FFF5C3;
+
+/*____________________________________________________________
+# Pseudo Side Button
+____________________________________________________________*/
+.pseudoSideBtn {
+  position: relative;
+  margin: 20px;
+  width: $pseudoSideBtnWidth;
+  height: $pseudoSideBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $pseudoSideBtnFontSize;
+  font-weight: 900;
+  border: $pseudoSideBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $palette-primary;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(#{$pseudoSideBtnHeight} / 6.5);
+    height: calc(#{$pseudoSideBtnHeight} / 6.5);
+    border-radius: calc(#{$pseudoSideBtnHeight} / 6.5);
+    opacity: .85;
+    transition: width $pseudoSideBtnSpeed, height $pseudoSideBtnSpeed, border-radius $pseudoSideBtnSpeed;
+    animation: levitation 4s linear infinite;
+  }
+  &:before {
+    bottom: calc(#{$pseudoSideBtnHeight} / 6.5);
+    left: calc(#{$pseudoSideBtnHeight} / 6.5);
+    background-color: #FF7260;
+  }
+  &:after {
+    top: calc(#{$pseudoSideBtnHeight} / 6.5);
+    right: calc(#{$pseudoSideBtnHeight} / 6.5);
+    background-color: #9BD7D5;
+    animation-delay: 2s;
+  }
+  
+  &:hover {
+    &:before,
+    &:after {
+      width: calc(#{$pseudoSideBtnWidth} / 1.333);
+      height: calc(#{$pseudoSideBtnHeight} / 1.857);
+      border-radius: 0;
+    }
+    .pseudoSideBtn__endText {
+      opacity: 1;
+      transition-delay: calc(#{$pseudoSideBtnSpeed} / 1.5);
+    }
+  }
+}
+
+.pseudoSideBtn__endText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $palette-primary;
+  opacity: 0;
+  transition: opacity $pseudoSideBtnSpeed;
+  transition-delay: 0s;
+  z-index: 2;
+}
+
+@keyframes levitation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(calc((#{$pseudoSideBtnHeight} / 6.5) / 2));
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

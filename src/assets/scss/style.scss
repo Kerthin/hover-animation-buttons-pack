@@ -34,6 +34,7 @@
     ## @import dotsBtn.scss
     ## @import circleDownBtn.scss
     ## @import circlesDownBtn.scss
+    ## @import pseudoSideBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -205,3 +206,8 @@ ____________________________________________________________*/
 ## @import circlesDownBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/circlesDownBtn.scss';
+
+/*____________________________________________________________
+## @import pseudoSideBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/pseudoSideBtn.scss';

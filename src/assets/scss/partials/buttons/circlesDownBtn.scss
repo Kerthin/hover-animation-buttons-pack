@@ -2,11 +2,11 @@
 # Circles Down Buttons Variables
 ____________________________________________________________*/
 $circlesDownBtnWidth: 200px;
-$circlesDownBtnHeight: ($circlesDownBtnWidth / 100) * 32.5;
+$circlesDownBtnHeight: calc($circlesDownBtnWidth / 100) * 32.5;
 
-$circlesDownBtnBorder: $circlesDownBtnHeight / 43.33;
+$circlesDownBtnBorder: calc($circlesDownBtnHeight / 43.33);
 
-$circlesDownBtnFontSize: $circlesDownBtnHeight / 2.03125;
+$circlesDownBtnFontSize: calc($circlesDownBtnHeight / 2.03125);
 
 $circlesDownBtnSpeed: .4s;
 
