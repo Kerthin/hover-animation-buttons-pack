@@ -1,0 +1,120 @@
+/*____________________________________________________________
+# Square Angle Steps Button Variables
+____________________________________________________________*/
+$squareAngleStepsBtnWidth: 200px;
+$squareAngleStepsBtnHeight: calc($squareAngleStepsBtnWidth / 100) * 32.5;
+
+$squareAngleStepsBtnBorder: calc($squareAngleStepsBtnHeight / 43.33);
+
+$squareAngleStepsBtnSquareSize: calc($squareAngleStepsBtnWidth / 10);
+
+$squareAngleStepsBtnFontSize: calc($squareAngleStepsBtnHeight / 2.32);
+
+$squareAngleStepsBtnSpeed: 1s;
+
+/*____________________________________________________________
+# Square Angle Steps Button
+____________________________________________________________*/
+.squareAngleStepsBtn {
+  position: relative;
+  margin: 20px;
+  width: $squareAngleStepsBtnWidth;
+  height: $squareAngleStepsBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $squareAngleStepsBtnFontSize;
+  font-weight: 900;
+  border: $squareAngleStepsBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #FFFBCB;
+  transition: color calc(#{$squareAngleStepsBtnSpeed} / 5);
+  transition-delay: calc(#{$squareAngleStepsBtnSpeed} / 5);
+
+  &:hover {
+    color: #FFFBCB;
+    
+    .squareAngleStepsBtn__line {
+      transition-delay: .85s;
+      
+      &:nth-child(1) {
+        top: calc(#{$squareAngleStepsBtnHeight} - #{$squareAngleStepsBtnSquareSize});
+        
+        .squareAngleStepsBtn__squareWrap {
+          right: calc(#{$squareAngleStepsBtnWidth} - #{$squareAngleStepsBtnSquareSize});
+          transition-delay: 0s;
+          
+          .squareAngleStepsBtn__square {
+            transform: rotate(1080deg);
+          }
+        }
+      }
+      &:nth-child(2) {
+        bottom: calc(#{$squareAngleStepsBtnHeight} - #{$squareAngleStepsBtnSquareSize});
+        
+        .squareAngleStepsBtn__squareWrap {
+          left: calc(#{$squareAngleStepsBtnWidth} - #{$squareAngleStepsBtnSquareSize});
+          transition-delay: 0s;
+          
+          .squareAngleStepsBtn__square {
+            transform: rotate(1080deg);
+          }
+        }
+      }
+    }
+
+    .squareAngleStepsBtn__text {
+      opacity: 1;
+    }
+  }
+}
+.squareAngleStepsBtn__line {
+  position: absolute;
+  width: 100%;
+  height: $squareAngleStepsBtnSquareSize;
+  transition: top calc(#{$squareAngleStepsBtnSpeed} / 3.333), bottom calc(#{$squareAngleStepsBtnSpeed} / 3.333);
+  transition-delay: 0s;
+  
+  &:nth-child(1),
+  &:nth-child(2) {
+    .squareAngleStepsBtn__squareWrap,
+    .squareAngleStepsBtn__square {
+      position: absolute;
+      width: $squareAngleStepsBtnSquareSize;
+      height: $squareAngleStepsBtnSquareSize;
+    }
+    .squareAngleStepsBtn__squareWrap {
+      transition: left $squareAngleStepsBtnSpeed, right $squareAngleStepsBtnSpeed;
+      transition-delay: calc(#{$squareAngleStepsBtnSpeed} / 5);
+    }
+    .squareAngleStepsBtn__square {
+      background-color: #c50d66;
+      transition: transform calc(#{$squareAngleStepsBtnSpeed} / .833);
+    }
+  }
+  &:nth-child(1) {
+    top: 0;
+    
+    .squareAngleStepsBtn__squareWrap {
+      top: 0;
+      right: 0;
+    }
+  }
+  &:nth-child(2) {
+    bottom: 0;
+    
+    .squareAngleStepsBtn__squareWrap {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.squareAngleStepsBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  opacity: 0;
+  transition: opacity calc(#{$squareAngleStepsBtnSpeed} / 5);
+  transition-delay: calc(#{$squareAngleStepsBtnSpeed} / 5);
+}
