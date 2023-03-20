@@ -1,0 +1,116 @@
+/*____________________________________________________________
+# Circle Bubbles Button Variables
+____________________________________________________________*/
+$circleBubblesBtnWidth: 200px;
+$circleBubblesBtnHeight: calc($circleBubblesBtnWidth / 100) * 32.5;
+
+$circleBubblesBtnBorder: calc($circleBubblesBtnHeight / 43.33);
+
+$circleBubblesBtnFontSize: calc($circleBubblesBtnHeight / 2.03125);
+
+$circleBubblesBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Circle Bubbles Button
+____________________________________________________________*/
+.circleBubblesBtn {
+  position: relative;
+  margin: 20px;
+  width: $circleBubblesBtnWidth;
+  height: $circleBubblesBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $circleBubblesBtnFontSize;
+  font-weight: 900;
+  border: $circleBubblesBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #FFF5C3;
+  transition: color calc(#{$circleBubblesBtnSpeed} / 1.5);
+  transition-delay: calc(#{$circleBubblesBtnSpeed} / .75);
+  
+  .circleBubblesBtn__moveCircle {
+    position: absolute;
+    border-radius: $circleBubblesBtnHeight;
+    transition: transform $circleBubblesBtnSpeed;
+    transition-delay: $circleBubblesBtnSpeed;
+    
+    &:nth-child(1) {
+      top: calc(#{$circleBubblesBtnHeight} / 65);
+      left: calc(#{$circleBubblesBtnWidth} / 5);
+      width: calc(#{$circleBubblesBtnWidth} / 3.333);
+      height: calc(#{$circleBubblesBtnWidth} / 3.333);
+      transform: rotate(-110deg);
+      
+      &:after {
+        background-color: #ff5108;
+      }
+    }
+    &:nth-child(2) {
+      top: calc(#{$circleBubblesBtnHeight} / -6.5);
+      left: calc(#{$circleBubblesBtnWidth} / 2.469);
+      width: calc(#{$circleBubblesBtnWidth} / 5);
+      height: calc(#{$circleBubblesBtnWidth} / 5);
+      transform: rotate(78deg);
+      
+      &:after {
+        background-color: #57D1C9;
+      }
+    }
+    &:nth-child(3) {
+      top: calc(#{$circleBubblesBtnHeight} / 65);
+      left: calc(#{$circleBubblesBtnWidth} / 1.96);
+      width: calc(#{$circleBubblesBtnWidth} / 3.333);
+      height: calc(#{$circleBubblesBtnWidth} / 3.333);
+      transform: rotate(90deg);
+      
+      &:after {
+        background-color: #C00000;
+      }
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(#{$circleBubblesBtnHeight} / -65);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(#{$circleBubblesBtnHeight} / 6.5);
+      height: calc(#{$circleBubblesBtnHeight} / 6.5);
+      border-radius: calc(#{$circleBubblesBtnHeight} / 6.5);
+      background-color: #DE3C3C;
+    }
+  }
+  
+  &:hover {
+    color: #FFF5C3;
+    transition-delay: 0s;
+    
+    .circleBubblesBtn__moveCircle {
+      transition-delay: calc(#{$circleBubblesBtnSpeed} / 3);
+      
+      &:nth-child(1) {transform: rotate(90deg);}
+      &:nth-child(2) {transform: rotate(180deg);}
+      &:nth-child(3) {transform: rotate(270deg);}
+    }
+    .circleBubblesBtn__mainBubble {
+      width: calc(#{$circleBubblesBtnWidth} + (#{$circleBubblesBtnWidth} / 20));
+      height: calc(#{$circleBubblesBtnWidth} + (#{$circleBubblesBtnWidth} / 20));
+      transition-delay: calc(#{$circleBubblesBtnSpeed} / .857);
+    }
+  }
+}
+.circleBubblesBtn__mainBubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  line-height: calc(#{$circleBubblesBtnWidth} + (#{$circleBubblesBtnWidth} / 20));
+  border-radius: $circleBubblesBtnWidth;
+  background-color: #c12127;
+  overflow: hidden;
+  transition: width $circleBubblesBtnSpeed, height $circleBubblesBtnSpeed;
+  transition-delay: calc(#{$circleBubblesBtnSpeed} / 3);
+  z-index: 1;
+}

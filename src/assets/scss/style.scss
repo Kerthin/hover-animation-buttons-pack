@@ -36,6 +36,7 @@
     ## @import circlesDownBtn.scss
     ## @import pseudoSideBtn.scss
     ## @import bubblesBtn.scss
+    ## @import circleBubblesBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -217,3 +218,8 @@ ____________________________________________________________*/
 ## @import bubblesBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/bubblesBtn.scss';
+
+/*____________________________________________________________
+## @import circleBubblesBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/circleBubblesBtn.scss';
