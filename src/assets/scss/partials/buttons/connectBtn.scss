@@ -1,0 +1,157 @@
+/*____________________________________________________________
+# Connect Button Variables
+____________________________________________________________*/
+$connectBtnWidth: 200px;
+$connectBtnHeight: calc($connectBtnWidth / 100) * 32.5;
+
+$connectBtnBorder: calc($connectBtnHeight / 43.33);
+
+$connectBtnWireSize: calc($connectBtnHeight / 4.333);
+
+$connectBtnFontSize: calc($connectBtnHeight / 2.32);
+
+$connectBtnSpeed: .2s;
+
+$palette-primary: #facf6f;
+$palette-secondary: #f5f4e8;
+
+$palette-wire-left: #57D1C9;
+$palette-wire-right: #ED5485;
+
+/*____________________________________________________________
+# Connect Button
+____________________________________________________________*/
+.connectBtn {
+  position: relative;
+  margin: 20px;
+  width: $connectBtnWidth;
+  height: $connectBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $connectBtnFontSize;
+  font-weight: 900;
+  border: $connectBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $palette-primary;
+  transition-delay: 0s;
+  
+  &:hover {
+    background-color: $palette-secondary;
+    transition-delay: $connectBtnSpeed;
+    
+    .connectBtn__wire {
+      &:nth-child(1) {left: calc((#{$connectBtnWireSize} * 2) - #{$connectBtnBorder});}
+      &:nth-child(2) {right: calc((#{$connectBtnWireSize} * 2) - #{$connectBtnBorder});}
+    }
+    .connectBtn__toggleBlock {
+      transition-delay: $connectBtnSpeed;
+      
+      &:nth-child(3) {top: calc(#{$connectBtnHeight} / 10);}
+      &:nth-child(4) {bottom: calc(#{$connectBtnHeight} / 10);}
+    }
+    .connectBtn__innerWrap {
+      background-color: $palette-primary;
+      transition-delay: $connectBtnSpeed;
+    }
+    .connectBtn__InnerText {
+      transition-delay: $connectBtnSpeed;
+      
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      &:nth-child(2) {
+        opacity: 1;
+      }
+    }
+  }
+}
+.connectBtn__wire {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $connectBtnWireSize;
+  height: $connectBtnWireSize;
+  border: $connectBtnBorder solid #505050;
+  transition: left $connectBtnSpeed, right $connectBtnSpeed;
+  
+  &:nth-child(1) {
+    left: $connectBtnWireSize;
+    background-color: $palette-wire-left;
+    
+    &:before {
+      left: calc((#{$connectBtnWireSize} * -2) - #{$connectBtnBorder});
+    }
+    &:after {
+      right: calc((#{$connectBtnWireSize} / -3) - #{$connectBtnBorder});
+    }
+  }
+  &:nth-child(2) {
+    right: $connectBtnWireSize;
+    background-color: $palette-wire-right;
+    
+    &:before {
+      right: calc((#{$connectBtnWireSize} * -2) - #{$connectBtnBorder});
+    }
+    &:after {
+      left: calc((#{$connectBtnWireSize} / -3) - #{$connectBtnBorder});
+    }
+  }
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #505050;
+  }
+  &:before {
+    width: calc(#{$connectBtnWireSize} * 2);
+    height: calc(#{$connectBtnWireSize} / 5);
+  }
+  &:after {
+    width: calc(#{$connectBtnWireSize} / 3);
+    height: calc(#{$connectBtnWireSize} / 3.75);
+  }
+}
+.connectBtn__toggleBlock {
+  position: absolute;
+  width: calc(#{$connectBtnWidth} / 10);
+  height: calc(#{$connectBtnHeight} / 6.5);
+  border: $connectBtnBorder solid #292c2c;
+  transition: top calc(#{$connectBtnSpeed} / 2), bottom calc(#{$connectBtnSpeed} / 2);
+  transition-delay: 0s;
+  
+  &:nth-child(3) {
+    top: calc((#{$connectBtnHeight} / 5) + #{$connectBtnBorder});
+    right: calc(#{$connectBtnWidth} / 3.333);
+    background-color: $palette-wire-right;
+  }
+  &:nth-child(4) {
+    bottom: calc((#{$connectBtnHeight} / 5) + #{$connectBtnBorder});
+    left: calc(#{$connectBtnWidth} / 3.333);
+    background-color: $palette-wire-left;
+  }
+}
+.connectBtn__innerWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(#{$connectBtnWidth} / 1.818);
+  height: calc(#{$connectBtnHeight} / 2);
+  border: $connectBtnBorder solid #292c2c;
+  background-color: $palette-secondary;
+}
+.connectBtn__InnerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-delay: 0s;
+  
+  &:nth-child(2) {
+    color: $palette-secondary;
+    opacity: 0;
+  }
+}

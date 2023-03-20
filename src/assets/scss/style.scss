@@ -38,6 +38,8 @@
     ## @import bubblesBtn.scss
     ## @import circleBubblesBtn.scss
     ## @import squareStepsBtn.scss
+    ## @import squareAngleStepsBtn.scss
+    ## @import connectBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -234,3 +236,8 @@ ____________________________________________________________*/
 ## @import squareAngleStepsBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/squareAngleStepsBtn.scss';
+
+/*____________________________________________________________
+## @import connectBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/connectBtn.scss';
