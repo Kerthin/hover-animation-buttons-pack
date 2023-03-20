@@ -747,141 +747,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(5, 200px, 65px, 0);
+        clip: rect(49, 200px, 28px, 0);
     }
 
     6.25% {
-        clip: rect(8, 200px, 6px, 0);
+        clip: rect(54, 200px, 44px, 0);
     }
 
     12.5% {
-        clip: rect(54, 200px, 3px, 0);
+        clip: rect(23, 200px, 18px, 0);
     }
 
     18.75% {
-        clip: rect(2, 200px, 29px, 0);
+        clip: rect(62, 200px, 32px, 0);
     }
 
     25% {
-        clip: rect(42, 200px, 11px, 0);
+        clip: rect(59, 200px, 42px, 0);
     }
 
     31.25% {
-        clip: rect(22, 200px, 51px, 0);
+        clip: rect(10, 200px, 20px, 0);
     }
 
     37.5% {
-        clip: rect(9, 200px, 2px, 0);
+        clip: rect(15, 200px, 25px, 0);
     }
 
     43.75% {
-        clip: rect(48, 200px, 64px, 0);
+        clip: rect(4, 200px, 26px, 0);
     }
 
     50% {
-        clip: rect(60, 200px, 29px, 0);
+        clip: rect(62, 200px, 14px, 0);
     }
 
     56.25% {
-        clip: rect(49, 200px, 13px, 0);
+        clip: rect(20, 200px, 19px, 0);
     }
 
     62.5% {
-        clip: rect(61, 200px, 12px, 0);
+        clip: rect(8, 200px, 42px, 0);
     }
 
     68.75% {
-        clip: rect(42, 200px, 26px, 0);
+        clip: rect(2, 200px, 14px, 0);
     }
 
     75% {
-        clip: rect(55, 200px, 10px, 0);
+        clip: rect(35, 200px, 61px, 0);
     }
 
     81.25% {
-        clip: rect(59, 200px, 46px, 0);
+        clip: rect(40, 200px, 45px, 0);
     }
 
     87.5% {
-        clip: rect(48, 200px, 25px, 0);
+        clip: rect(12, 200px, 21px, 0);
     }
 
     93.75% {
-        clip: rect(40, 200px, 9px, 0);
+        clip: rect(19, 200px, 62px, 0);
     }
 
     100% {
-        clip: rect(28, 200px, 34px, 0);
+        clip: rect(49, 200px, 34px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(5, 200px, 65px, 0);
+        clip: rect(49, 200px, 28px, 0);
     }
 
     6.25% {
-        clip: rect(8, 200px, 6px, 0);
+        clip: rect(54, 200px, 44px, 0);
     }
 
     12.5% {
-        clip: rect(54, 200px, 3px, 0);
+        clip: rect(23, 200px, 18px, 0);
     }
 
     18.75% {
-        clip: rect(2, 200px, 29px, 0);
+        clip: rect(62, 200px, 32px, 0);
     }
 
     25% {
-        clip: rect(42, 200px, 11px, 0);
+        clip: rect(59, 200px, 42px, 0);
     }
 
     31.25% {
-        clip: rect(22, 200px, 51px, 0);
+        clip: rect(10, 200px, 20px, 0);
     }
 
     37.5% {
-        clip: rect(9, 200px, 2px, 0);
+        clip: rect(15, 200px, 25px, 0);
     }
 
     43.75% {
-        clip: rect(48, 200px, 64px, 0);
+        clip: rect(4, 200px, 26px, 0);
     }
 
     50% {
-        clip: rect(60, 200px, 29px, 0);
+        clip: rect(62, 200px, 14px, 0);
     }
 
     56.25% {
-        clip: rect(49, 200px, 13px, 0);
+        clip: rect(20, 200px, 19px, 0);
     }
 
     62.5% {
-        clip: rect(61, 200px, 12px, 0);
+        clip: rect(8, 200px, 42px, 0);
     }
 
     68.75% {
-        clip: rect(42, 200px, 26px, 0);
+        clip: rect(2, 200px, 14px, 0);
     }
 
     75% {
-        clip: rect(55, 200px, 10px, 0);
+        clip: rect(35, 200px, 61px, 0);
     }
 
     81.25% {
-        clip: rect(59, 200px, 46px, 0);
+        clip: rect(40, 200px, 45px, 0);
     }
 
     87.5% {
-        clip: rect(48, 200px, 25px, 0);
+        clip: rect(12, 200px, 21px, 0);
     }
 
     93.75% {
-        clip: rect(40, 200px, 9px, 0);
+        clip: rect(19, 200px, 62px, 0);
     }
 
     100% {
-        clip: rect(28, 200px, 34px, 0);
+        clip: rect(49, 200px, 34px, 0);
     }
 }
 /*____________________________________________________________
@@ -6240,4 +6240,132 @@ ____________________________________________________________*/
 .connectBtn__InnerText:nth-child(2) {
     color: #f5f4e8;
     opacity: 0;
+}
+
+/*____________________________________________________________
+## @import circleMarginMovingBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Margin Moving Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Margin Moving Button
+____________________________________________________________*/
+.circleMarginMovingBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 28.0172413793px;
+    font-weight: 900;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    text-transform: uppercase;
+}
+
+.circleMarginMovingBtn:hover .circleMarginMovingBtn__endtBlock {
+    opacity: 1;
+}
+
+.circleMarginMovingBtn:hover .circleMarginMovingBtn__circleWrap {
+    opacity: 1;
+}
+
+.circleMarginMovingBtn:hover .circleMarginMovingBtn__circle {
+    -webkit-animation: circleMarginMovingAnimation 2.2s infinite;
+    animation: circleMarginMovingAnimation 2.2s infinite;
+}
+
+.circleMarginMovingBtn__startBlock,
+.circleMarginMovingBtn__endtBlock {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    background-color: #a10015;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.circleMarginMovingBtn__endtBlock {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: auto;
+    opacity: 0;
+}
+
+.circleMarginMovingBtn__endText,
+.circleMarginMovingBtn__endLetter {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.circleMarginMovingBtn__circleWrap {
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    opacity: 0;
+}
+
+.circleMarginMovingBtn__circle {
+    position: relative;
+    margin: 0 auto;
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    border: calc(200px * .005) solid #efeee9;
+}
+
+@-webkit-keyframes circleMarginMovingAnimation {
+    0% {
+        margin: 0 25%;
+    }
+
+    25% {
+        margin: 50% 25%;
+    }
+
+    50% {
+        margin: 25% 0;
+    }
+
+    75% {
+        margin: 25% 50%;
+    }
+
+    100% {
+        margin: 0 25%;
+    }
+}
+
+@keyframes circleMarginMovingAnimation {
+    0% {
+        margin: 0 25%;
+    }
+
+    25% {
+        margin: 50% 25%;
+    }
+
+    50% {
+        margin: 25% 0;
+    }
+
+    75% {
+        margin: 25% 50%;
+    }
+
+    100% {
+        margin: 0 25%;
+    }
 }
