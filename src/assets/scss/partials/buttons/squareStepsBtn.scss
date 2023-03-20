@@ -1,0 +1,76 @@
+/*____________________________________________________________
+# Square Steps Button Variables
+____________________________________________________________*/
+$squareStepsBtnWidth: 200px;
+$squareStepsBtnHeight: calc($squareStepsBtnWidth / 100) * 32.5;
+
+$squareStepsBtnBorder: calc($squareStepsBtnHeight / 43.33);
+
+$squareStepsBtnSquareSize: calc($squareStepsBtnWidth / 10);
+
+$squareStepsBtnFontSize: calc($squareStepsBtnHeight / 2.32);
+
+$squareStepsBtnSpeed: 1s;
+
+/*____________________________________________________________
+# Square Steps Button
+____________________________________________________________*/
+.squareStepsBtn {
+  position: relative;
+  margin: 20px;
+  width: $squareStepsBtnWidth;
+  height: $squareStepsBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $squareStepsBtnFontSize;
+  font-weight: 900;
+  border: $squareStepsBtnBorder solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #FFFBCB;
+  transition: color calc(#{$squareStepsBtnSpeed} / 5);
+  transition-delay: calc(#{$squareStepsBtnSpeed} / 5);
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: $squareStepsBtnSquareSize;
+    height: $squareStepsBtnSquareSize;
+    background-color: #ED5485;
+    transition: left $squareStepsBtnSpeed, right $squareStepsBtnSpeed, transform $squareStepsBtnSpeed;
+  }
+  &:before {
+    top: 0;
+    right: 0;
+  }
+  &:after {
+    bottom: 0;
+    left: 0;
+  }
+  
+  &:hover {
+    color: #FFFBCB;
+    
+    &:before {
+      right: calc(#{$squareStepsBtnWidth} - #{$squareStepsBtnSquareSize});
+      transform: rotate(900deg);
+    }
+    &:after {
+      left: calc(#{$squareStepsBtnWidth} - #{$squareStepsBtnSquareSize});
+      transform: rotate(900deg);
+    }
+    .squareStepsBtn__text {
+      opacity: 1;
+    }
+  }
+}
+.squareStepsBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  opacity: 0;
+  transition: opacity calc(#{$squareStepsBtnSpeed} / 5);
+  transition-delay: calc(#{$squareStepsBtnSpeed} / 5);
+}
