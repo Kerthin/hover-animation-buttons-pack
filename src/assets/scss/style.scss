@@ -40,6 +40,8 @@
     ## @import squareStepsBtn.scss
     ## @import squareAngleStepsBtn.scss
     ## @import connectBtn.scss
+    ## @import circleMarginMovingBtn.scss
+    ## @import rhombBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -246,3 +248,8 @@ ____________________________________________________________*/
 ## @import circleMarginMovingBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/circleMarginMovingBtn.scss';
+
+/*____________________________________________________________
+## @import rhombBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/rhombBtn.scss';
