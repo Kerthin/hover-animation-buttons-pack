@@ -1,0 +1,14 @@
+section.presentWrap
+  h1.presentWrap__title Envelope Buttons
+  .presentWrap__buttonsBlock
+
+    mixin envelopeBtnMix(modName)
+      button.envelopeBtn(class=`_${modName}`)
+        .envelopeBtn__angle
+        .envelopeBtn__angle
+        .envelopeBtn__angle
+        .envelopeBtn__angle
+        .envelopeBtn__text._start Hover
+        .envelopeBtn__text._end Button
+    +envelopeBtnMix('color')
+    +envelopeBtnMix('open')

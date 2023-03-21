@@ -1,0 +1,201 @@
+/*____________________________________________________________
+# Envelope Buttons Variables
+____________________________________________________________*/
+$envelopeBtnWidth: 200px;
+$envelopeBtnHeight: calc($envelopeBtnWidth / 100) * 32.5;
+
+$envelopeBtnFontSize: calc($envelopeBtnHeight / 2.03125);
+$envelopeBtnTextShadow: calc($envelopeBtnFontSize / 16);
+
+$envelopeBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Envelope Buttons
+____________________________________________________________*/
+.envelopeBtn {
+  position: relative;
+  margin: 20px;
+  width: $envelopeBtnWidth;
+  height: $envelopeBtnHeight;
+  background-color: #f3e5ab;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._color {
+    .envelopeBtn__angle {
+      &:nth-child(1) {
+        transition-delay: calc(#{$envelopeBtnSpeed} / .4615);
+        &:after {transition-delay: calc(#{$envelopeBtnSpeed} / .75);}
+      }
+      &:nth-child(2) {
+        transition-delay: calc(#{$envelopeBtnSpeed} / .4);
+        &:after {transition-delay: $envelopeBtnSpeed;}
+      }
+      &:nth-child(3) {
+        transition-delay: calc(#{$envelopeBtnSpeed} / .3529);
+        &:after {transition-delay: calc(#{$envelopeBtnSpeed} / 1.5);}
+      }
+      &:nth-child(4) {
+        transition-delay: calc(#{$envelopeBtnSpeed} / .315789);
+        &:after {transition-delay: calc(#{$envelopeBtnSpeed} / 3);}
+      }
+    }
+    .envelopeBtn__text {
+      &._end {z-index: 3;}
+    }
+    &:hover {
+      .envelopeBtn__angle {
+        &:nth-child(1) {
+          top: 0;
+          transition-delay: calc(#{$envelopeBtnSpeed} / 3);
+          &:after {
+            border-top: calc(#{$envelopeBtnHeight} / 2) solid #ff69b4;
+            transition-delay: calc(#{$envelopeBtnSpeed} / .4615);}
+        }
+        &:nth-child(2) {
+          right: 0;
+          transition-delay: calc(#{$envelopeBtnSpeed} / 1.5);
+          &:after {
+            border-right: calc(#{$envelopeBtnWidth} / 2) solid #ff69b4;
+            transition-delay: calc(#{$envelopeBtnSpeed} / .4);}
+        }
+        &:nth-child(3) {
+          bottom: 0;
+          transition-delay: $envelopeBtnSpeed;
+          &:after {
+            border-bottom: calc(#{$envelopeBtnHeight} / 2) solid #ff69b4;
+            transition-delay: calc(#{$envelopeBtnSpeed} / .3529);}
+        }
+        &:nth-child(4) {
+          left: 0;
+          transition-delay: calc(#{$envelopeBtnSpeed} / .75);
+          &:after {
+            border-left: calc(#{$envelopeBtnWidth} / 2) solid #ff69b4;
+            transition-delay: calc(#{$envelopeBtnSpeed} / .315789);}
+        }
+      }
+      .envelopeBtn__text {
+
+        &._end {opacity: 1; transition-delay: calc(#{$envelopeBtnSpeed} / .4);}
+      }
+    }
+  }
+  
+  &._open {
+    .envelopeBtn__angle {
+      &:nth-child(1) {transition-delay: calc(#{$envelopeBtnSpeed} / .272727);
+        &:after {transition-delay: calc(#{$envelopeBtnSpeed} / .75);}
+      }
+      &:nth-child(2) {transition-delay: calc(#{$envelopeBtnSpeed} / .3);
+        &:after {transition-delay: $envelopeBtnSpeed;}
+      }
+      &:nth-child(3) {transition-delay: calc(#{$envelopeBtnSpeed} / .333);
+        &:after {transition-delay: calc(#{$envelopeBtnSpeed} / 1.5);}
+      }
+      &:nth-child(4) {transition-delay: calc(#{$envelopeBtnSpeed} / .375);
+        &:after {transition-delay: calc(#{$envelopeBtnSpeed} / 3);}
+      }
+    }
+    .envelopeBtn__text {
+      &._start {transition-delay: calc(#{$envelopeBtnSpeed} / .42857);}
+      &._end {transition-delay: calc(#{$envelopeBtnSpeed} / .42857);}
+    }
+    &:hover {
+      .envelopeBtn__angle {
+        &:nth-child(1) {top: 0; transition-delay: calc(#{$envelopeBtnSpeed} / 3); 
+          &:after {bottom: 0; transition-delay: calc(#{$envelopeBtnSpeed} / .272727);}
+        }
+        &:nth-child(2) {right: 0; transition-delay: calc(#{$envelopeBtnSpeed} / 1.5);
+          &:after {left: 0; transition-delay: calc(#{$envelopeBtnSpeed} / .3);}
+        }
+        &:nth-child(3) {bottom: 0; transition-delay: $envelopeBtnSpeed;
+          &:after {top: 0; transition-delay: calc(#{$envelopeBtnSpeed} / .333);}
+        }
+        &:nth-child(4) {left: 0; transition-delay: calc(#{$envelopeBtnSpeed} / .75);
+          &:after {right: 0; transition-delay: calc(#{$envelopeBtnSpeed} / .375);}
+        }
+      }
+      .envelopeBtn__text {
+        &._start {opacity: 0;}
+        &._end {opacity: 1; background-color: #ff69b4;}
+      }
+    }
+  }
+}
+.envelopeBtn__angle {
+  position: absolute;
+  transition: top $envelopeBtnSpeed, bottom $envelopeBtnSpeed, left $envelopeBtnSpeed, right $envelopeBtnSpeed;
+  
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    transition: border-color calc(#{$envelopeBtnSpeed} / 1.5), top calc(#{$envelopeBtnSpeed} / 1.2), bottom calc(#{$envelopeBtnSpeed} / 1.2), left calc(#{$envelopeBtnSpeed} / 1.2), right calc(#{$envelopeBtnSpeed} / 1.2);
+    transition-delay: calc(#{$envelopeBtnSpeed} / .42857);
+    z-index: 2;
+  }
+  
+  &:nth-child(1) {
+    top: -50%;
+    width: 100%;
+    
+    &:after {
+      border-left: calc(#{$envelopeBtnWidth} / 2) solid transparent;
+      border-right: calc(#{$envelopeBtnWidth} / 2) solid transparent;
+      border-top: calc(#{$envelopeBtnHeight} / 2) solid #F2385A;
+      bottom: calc(#{$envelopeBtnHeight} / -2);
+    }
+  }
+  &:nth-child(2) {
+    top: 0;
+    right: -50%;
+    height: 100%;
+    
+    &:after {
+      border-top: calc(#{$envelopeBtnHeight} / 2) solid transparent;
+      border-bottom: calc(#{$envelopeBtnHeight} / 2) solid transparent;
+      border-right: calc(#{$envelopeBtnWidth} / 2) solid #F5A503;
+      left: calc(#{$envelopeBtnWidth} / -2);
+    }
+  }
+  &:nth-child(3) {
+    bottom: -50%;
+    width: 100%;
+    
+    &:after {
+      border-left: calc(#{$envelopeBtnWidth} / 2) solid transparent;
+      border-right: calc(#{$envelopeBtnWidth} / 2) solid transparent;
+      border-bottom: calc(#{$envelopeBtnHeight} / 2) solid #4AD9D9;
+      top: calc(#{$envelopeBtnHeight} / -2);
+    }
+  }
+  &:nth-child(4) {
+    top: 0;
+    left: -50%;
+    height: 100%;
+    
+    &:after {
+      border-top: calc(#{$envelopeBtnHeight} / 2) solid transparent;
+      border-bottom: calc(#{$envelopeBtnHeight} / 2) solid transparent;
+      border-left: calc(#{$envelopeBtnWidth} / 2) solid #36B1BF;
+      right: calc(#{$envelopeBtnWidth} / -2);
+    }
+  }
+}
+
+.envelopeBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $envelopeBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $envelopeBtnFontSize;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: $envelopeBtnTextShadow $envelopeBtnTextShadow $envelopeBtnTextShadow #000;
+  transition: opacity calc(#{$envelopeBtnSpeed} / 1.5), background-color calc(#{$envelopeBtnSpeed} / 1.5);
+  
+  &._start {color: #ff69b4;}
+  &._end {color: #FFF5C3; opacity: 0;}
+}
