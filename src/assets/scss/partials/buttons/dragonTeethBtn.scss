@@ -13,10 +13,10 @@ $dragonTeethColor: (#F2385A,
 $dragonToothNumber: 6;
 
 $dragonTeethBtnWidth: 200px;
-$dragonTeethBtnHeight: ($dragonTeethBtnWidth / 100) * 32.5;
+$dragonTeethBtnHeight: calc($dragonTeethBtnWidth / 100) * 32.5;
 
-$dragonTeethBtnFontSize: $dragonTeethBtnHeight / 2.03125;
-$dragonTeethBtnTextShadow: $dragonTeethBtnFontSize / 16;
+$dragonTeethBtnFontSize: calc($dragonTeethBtnHeight / 2.03125);
+$dragonTeethBtnTextShadow: calc($dragonTeethBtnFontSize / 16);
 
 $dragonTeethBtnSpeed: .3s;
 $dragonTeethBtnDelay: .07s;

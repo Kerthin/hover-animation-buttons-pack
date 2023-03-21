@@ -44,6 +44,7 @@
     ## @import rhombBtn.scss
     ## @import rotateTunnelBtn.scss
     ## @import dragonTeethBtn.scss
+    ## @import sliceShadowBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -265,3 +266,8 @@ ____________________________________________________________*/
 ## @import dragonTeethBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/dragonTeethBtn.scss';
+
+/*____________________________________________________________
+## @import sliceShadowBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/sliceShadowBtn.scss';

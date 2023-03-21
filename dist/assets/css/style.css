@@ -44,6 +44,7 @@
     ## @import rhombBtn.scss
     ## @import rotateTunnelBtn.scss
     ## @import dragonTeethBtn.scss
+    ## @import sliceShadowBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -751,141 +752,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(56, 200px, 6px, 0);
+        clip: rect(63, 200px, 8px, 0);
     }
 
     6.25% {
-        clip: rect(23, 200px, 32px, 0);
+        clip: rect(15, 200px, 64px, 0);
     }
 
     12.5% {
-        clip: rect(33, 200px, 39px, 0);
+        clip: rect(49, 200px, 5px, 0);
     }
 
     18.75% {
-        clip: rect(47, 200px, 54px, 0);
+        clip: rect(53, 200px, 26px, 0);
     }
 
     25% {
-        clip: rect(61, 200px, 22px, 0);
+        clip: rect(20, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(23, 200px, 19px, 0);
+        clip: rect(20, 200px, 62px, 0);
     }
 
     37.5% {
-        clip: rect(64, 200px, 10px, 0);
+        clip: rect(44, 200px, 17px, 0);
     }
 
     43.75% {
-        clip: rect(10, 200px, 24px, 0);
+        clip: rect(23, 200px, 55px, 0);
     }
 
     50% {
-        clip: rect(60, 200px, 34px, 0);
+        clip: rect(44, 200px, 20px, 0);
     }
 
     56.25% {
-        clip: rect(26, 200px, 15px, 0);
+        clip: rect(5, 200px, 3px, 0);
     }
 
     62.5% {
-        clip: rect(58, 200px, 11px, 0);
+        clip: rect(39, 200px, 31px, 0);
     }
 
     68.75% {
-        clip: rect(35, 200px, 58px, 0);
+        clip: rect(60, 200px, 23px, 0);
     }
 
     75% {
-        clip: rect(34, 200px, 14px, 0);
+        clip: rect(31, 200px, 56px, 0);
     }
 
     81.25% {
-        clip: rect(20, 200px, 55px, 0);
+        clip: rect(63, 200px, 29px, 0);
     }
 
     87.5% {
-        clip: rect(40, 200px, 5px, 0);
+        clip: rect(30, 200px, 2px, 0);
     }
 
     93.75% {
-        clip: rect(45, 200px, 46px, 0);
+        clip: rect(16, 200px, 4px, 0);
     }
 
     100% {
-        clip: rect(47, 200px, 45px, 0);
+        clip: rect(37, 200px, 10px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(56, 200px, 6px, 0);
+        clip: rect(63, 200px, 8px, 0);
     }
 
     6.25% {
-        clip: rect(23, 200px, 32px, 0);
+        clip: rect(15, 200px, 64px, 0);
     }
 
     12.5% {
-        clip: rect(33, 200px, 39px, 0);
+        clip: rect(49, 200px, 5px, 0);
     }
 
     18.75% {
-        clip: rect(47, 200px, 54px, 0);
+        clip: rect(53, 200px, 26px, 0);
     }
 
     25% {
-        clip: rect(61, 200px, 22px, 0);
+        clip: rect(20, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(23, 200px, 19px, 0);
+        clip: rect(20, 200px, 62px, 0);
     }
 
     37.5% {
-        clip: rect(64, 200px, 10px, 0);
+        clip: rect(44, 200px, 17px, 0);
     }
 
     43.75% {
-        clip: rect(10, 200px, 24px, 0);
+        clip: rect(23, 200px, 55px, 0);
     }
 
     50% {
-        clip: rect(60, 200px, 34px, 0);
+        clip: rect(44, 200px, 20px, 0);
     }
 
     56.25% {
-        clip: rect(26, 200px, 15px, 0);
+        clip: rect(5, 200px, 3px, 0);
     }
 
     62.5% {
-        clip: rect(58, 200px, 11px, 0);
+        clip: rect(39, 200px, 31px, 0);
     }
 
     68.75% {
-        clip: rect(35, 200px, 58px, 0);
+        clip: rect(60, 200px, 23px, 0);
     }
 
     75% {
-        clip: rect(34, 200px, 14px, 0);
+        clip: rect(31, 200px, 56px, 0);
     }
 
     81.25% {
-        clip: rect(20, 200px, 55px, 0);
+        clip: rect(63, 200px, 29px, 0);
     }
 
     87.5% {
-        clip: rect(40, 200px, 5px, 0);
+        clip: rect(30, 200px, 2px, 0);
     }
 
     93.75% {
-        clip: rect(45, 200px, 46px, 0);
+        clip: rect(16, 200px, 4px, 0);
     }
 
     100% {
-        clip: rect(47, 200px, 45px, 0);
+        clip: rect(37, 200px, 10px, 0);
     }
 }
 /*____________________________________________________________
@@ -6955,6 +6956,225 @@ ____________________________________________________________*/
 }
 
 .dragonTeethBtn__text._end {
+    opacity: 0;
+    z-index: 3;
+}
+
+/*____________________________________________________________
+## @import sliceShadowBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Slice Shadow Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Slice Shadow Button
+____________________________________________________________*/
+.sliceShadowBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #add8e6;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    text-transform: uppercase;
+}
+
+.sliceShadowBtn:before, .sliceShadowBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: left 0.3s, right 0.3s, -webkit-box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, -webkit-box-shadow calc(0.3s / 1.5);
+    -o-transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5), -webkit-box-shadow calc(0.3s / 1.5);
+    z-index: 1;
+}
+
+.sliceShadowBtn:before {
+    background-color: #F2385A;
+    -webkit-transition-delay: calc(0.3s / .6);
+    -o-transition-delay: calc(0.3s / .6);
+    transition-delay: calc(0.3s / .6);
+}
+
+.sliceShadowBtn:after {
+    background-color: #F5A503;
+    -webkit-transition-delay: calc(0.3s / .75);
+    -o-transition-delay: calc(0.3s / .75);
+    transition-delay: calc(0.3s / .75);
+}
+
+.sliceShadowBtn._lr:before, .sliceShadowBtn._lr:after {
+    left: -100%;
+}
+
+.sliceShadowBtn._lr .sliceShadowBtn__sliceWrap {
+    left: -100%;
+}
+
+.sliceShadowBtn._lr .sliceShadowBtn__sliceWrap:before, .sliceShadowBtn._lr .sliceShadowBtn__sliceWrap:after {
+    left: -60%;
+}
+
+.sliceShadowBtn._lr:hover:before {
+    left: 0%;
+}
+
+.sliceShadowBtn._lr:hover:after {
+    left: -20%;
+}
+
+.sliceShadowBtn._lr:hover .sliceShadowBtn__sliceWrap {
+    left: -40%;
+}
+
+.sliceShadowBtn._lr:hover .sliceShadowBtn__sliceWrap:before {
+    left: -20%;
+}
+
+.sliceShadowBtn._lr:hover .sliceShadowBtn__sliceWrap:after {
+    left: -40%;
+}
+
+.sliceShadowBtn._rl:before, .sliceShadowBtn._rl:after {
+    right: -100%;
+}
+
+.sliceShadowBtn._rl .sliceShadowBtn__sliceWrap {
+    right: -100%;
+}
+
+.sliceShadowBtn._rl .sliceShadowBtn__sliceWrap:before, .sliceShadowBtn._rl .sliceShadowBtn__sliceWrap:after {
+    right: -60%;
+}
+
+.sliceShadowBtn._rl:hover:before {
+    right: 0%;
+}
+
+.sliceShadowBtn._rl:hover:after {
+    right: -20%;
+}
+
+.sliceShadowBtn._rl:hover .sliceShadowBtn__sliceWrap {
+    right: -40%;
+}
+
+.sliceShadowBtn._rl:hover .sliceShadowBtn__sliceWrap:before {
+    right: -20%;
+}
+
+.sliceShadowBtn._rl:hover .sliceShadowBtn__sliceWrap:after {
+    right: -40%;
+}
+
+.sliceShadowBtn:hover:before {
+    -webkit-transition-delay: calc(0.3s / 3);
+    -o-transition-delay: calc(0.3s / 3);
+    transition-delay: calc(0.3s / 3);
+}
+
+.sliceShadowBtn:hover:after {
+    -webkit-transition-delay: calc(0.3s / 1.5);
+    -o-transition-delay: calc(0.3s / 1.5);
+    transition-delay: calc(0.3s / 1.5);
+}
+
+.sliceShadowBtn:hover .sliceShadowBtn__sliceWrap:before {
+    -webkit-transition-delay: calc(0.3s / .75);
+    -o-transition-delay: calc(0.3s / .75);
+    transition-delay: calc(0.3s / .75);
+}
+
+.sliceShadowBtn:hover .sliceShadowBtn__sliceWrap:after {
+    -webkit-transition-delay: calc(0.3s / .6);
+    -o-transition-delay: calc(0.3s / .6);
+    transition-delay: calc(0.3s / .6);
+}
+
+.sliceShadowBtn:hover:after,
+.sliceShadowBtn:hover .sliceShadowBtn__sliceWrap,
+.sliceShadowBtn:hover .sliceShadowBtn__sliceWrap:before,
+.sliceShadowBtn:hover .sliceShadowBtn__sliceWrap:after {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.sliceShadowBtn:hover .sliceShadowBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.3s / .6);
+    -o-transition-delay: calc(0.3s / .6);
+    transition-delay: calc(0.3s / .6);
+}
+
+.sliceShadowBtn__sliceWrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF5C3;
+    -webkit-transition: left 0.3s, right 0.3s, -webkit-box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, -webkit-box-shadow calc(0.3s / 1.5);
+    -o-transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5), -webkit-box-shadow calc(0.3s / 1.5);
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    z-index: 2;
+}
+
+.sliceShadowBtn__sliceWrap:before, .sliceShadowBtn__sliceWrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: left 0.3s, right 0.3s, -webkit-box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, -webkit-box-shadow calc(0.3s / 1.5);
+    -o-transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5);
+    transition: left 0.3s, right 0.3s, box-shadow calc(0.3s / 1.5), -webkit-box-shadow calc(0.3s / 1.5);
+}
+
+.sliceShadowBtn__sliceWrap:before {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: calc(0.3s / 1.5);
+    -o-transition-delay: calc(0.3s / 1.5);
+    transition-delay: calc(0.3s / 1.5);
+}
+
+.sliceShadowBtn__sliceWrap:after {
+    background-color: #36B1BF;
+    -webkit-transition-delay: calc(0.3s / 3);
+    -o-transition-delay: calc(0.3s / 3);
+    transition-delay: calc(0.3s / 3);
+}
+
+.sliceShadowBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity calc(0.3s / 1.5);
+    -o-transition: opacity calc(0.3s / 1.5);
+    transition: opacity calc(0.3s / 1.5);
+}
+
+.sliceShadowBtn__text._end {
     opacity: 0;
     z-index: 3;
 }

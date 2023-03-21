@@ -1,0 +1,150 @@
+/*____________________________________________________________
+# Slice Shadow Button Variables
+____________________________________________________________*/
+$sliceShadowBtnWidth: 200px;
+$sliceShadowBtnHeight: calc($sliceShadowBtnWidth / 100) * 32.5;
+
+$sliceShadowBtnFontSize: calc($sliceShadowBtnHeight / 2.03125);
+$sliceShadowBtnTextShadow: calc($sliceShadowBtnFontSize / 16);
+
+$sliceShadowBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Slice Shadow Button
+____________________________________________________________*/
+.sliceShadowBtn {
+  position: relative;
+  margin: 20px;
+  width: $sliceShadowBtnWidth;
+  height: $sliceShadowBtnHeight;
+  background-color: #add8e6;
+  overflow: hidden;
+  cursor: pointer;
+  transition-delay: 0s;
+  text-transform: uppercase;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: left $sliceShadowBtnSpeed, right $sliceShadowBtnSpeed, box-shadow calc(#{$sliceShadowBtnSpeed} / 1.5);
+    z-index: 1;
+    
+  }
+  &:before {background-color: #F2385A; transition-delay: calc(#{$sliceShadowBtnSpeed} / .6);}
+  &:after {background-color: #F5A503; transition-delay: calc(#{$sliceShadowBtnSpeed} / .75);}
+  
+  &._lr {
+    &:before,
+    &:after {
+      left: -100%;
+    }
+    .sliceShadowBtn__sliceWrap {
+      left: -100%;
+
+      &:before,
+      &:after {
+        left: -60%;
+      }
+    }
+    
+    &:hover {
+      &:before {left: 0%;}
+      &:after {left: -20%;}
+
+      .sliceShadowBtn__sliceWrap {
+        left: -40%;
+
+        &:before {left: -20%;}
+        &:after {left: -40%;}
+      }
+    }
+  }
+  &._rl {
+    &:before,
+    &:after {
+      right: -100%;
+    }
+    .sliceShadowBtn__sliceWrap {
+      right: -100%;
+
+      &:before,
+      &:after {
+        right: -60%;
+      }
+    }
+    
+    &:hover {
+      &:before {right: 0%;}
+      &:after {right: -20%;}
+
+      .sliceShadowBtn__sliceWrap {
+        right: -40%;
+
+        &:before {right: -20%;}
+        &:after {right: -40%;}
+      }
+    }
+  }
+  
+  &:hover {
+    &:before {transition-delay: calc(#{$sliceShadowBtnSpeed} / 3);}
+    &:after {transition-delay: calc(#{$sliceShadowBtnSpeed} / 1.5);}
+    
+    .sliceShadowBtn__sliceWrap {
+      &:before {transition-delay: calc(#{$sliceShadowBtnSpeed} / .75);}
+      &:after {transition-delay: calc(#{$sliceShadowBtnSpeed} / .6);}
+    }
+    
+    &:after,
+    .sliceShadowBtn__sliceWrap,
+    .sliceShadowBtn__sliceWrap:before,
+    .sliceShadowBtn__sliceWrap:after {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    
+    .sliceShadowBtn__text {
+      &._end {opacity: 1; transition-delay: calc(#{$sliceShadowBtnSpeed} / .6);}
+    }
+  }
+}
+.sliceShadowBtn__sliceWrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF5C3;
+  transition: left $sliceShadowBtnSpeed, right $sliceShadowBtnSpeed, box-shadow calc(#{$sliceShadowBtnSpeed} / 1.5);
+  transition-delay: $sliceShadowBtnSpeed;
+  z-index: 2;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: left $sliceShadowBtnSpeed, right $sliceShadowBtnSpeed, box-shadow calc(#{$sliceShadowBtnSpeed} / 1.5);
+  }
+  &:before {background-color: #4AD9D9; transition-delay: calc(#{$sliceShadowBtnSpeed} / 1.5);}
+  &:after {background-color: #36B1BF; transition-delay: calc(#{$sliceShadowBtnSpeed} / 3);}
+}
+.sliceShadowBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $sliceShadowBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $sliceShadowBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $sliceShadowBtnTextShadow $sliceShadowBtnTextShadow $sliceShadowBtnTextShadow #000;
+  transition: opacity calc(#{$sliceShadowBtnSpeed} / 1.5);
+
+  &._end {opacity: 0; z-index: 3;}
+}
