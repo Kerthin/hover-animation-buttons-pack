@@ -1,0 +1,23 @@
+section.presentWrap
+  h1.presentWrap__title Dragon Teeth Button
+  .presentWrap__buttonsBlock
+
+    button.dragonTeethBtn
+      - var dragonTeethLine = 1
+      while dragonTeethLine <= 9
+        .dragonTeethBtn__line(id=`_${dragonTeethLine++}`)
+          - var dragonTooth = 1;
+          while dragonTooth <= 6
+            span.dragonTeethBtn__tooth(id=`_${dragonTooth++}`)
+      .dragonTeethBtn__text._start Hover
+      .dragonTeethBtn__text._end Button
+
+    button.dragonTeethBtn._returnDelay
+      - var dragonTeethLine = 1
+      while dragonTeethLine <= 9
+        .dragonTeethBtn__line(id=`_${dragonTeethLine++}`)
+          - var dragonTooth = 1;
+          while dragonTooth <= 6
+            span.dragonTeethBtn__tooth(id=`_${dragonTooth++}`)
+      .dragonTeethBtn__text._start Hover
+      .dragonTeethBtn__text._end Button

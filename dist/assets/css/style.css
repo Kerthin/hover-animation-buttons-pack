@@ -43,6 +43,7 @@
     ## @import circleMarginMovingBtn.scss
     ## @import rhombBtn.scss
     ## @import rotateTunnelBtn.scss
+    ## @import dragonTeethBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -750,141 +751,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(60, 200px, 15px, 0);
+        clip: rect(56, 200px, 6px, 0);
     }
 
     6.25% {
-        clip: rect(36, 200px, 11px, 0);
+        clip: rect(23, 200px, 32px, 0);
     }
 
     12.5% {
-        clip: rect(46, 200px, 16px, 0);
+        clip: rect(33, 200px, 39px, 0);
     }
 
     18.75% {
-        clip: rect(42, 200px, 15px, 0);
+        clip: rect(47, 200px, 54px, 0);
     }
 
     25% {
-        clip: rect(23, 200px, 40px, 0);
+        clip: rect(61, 200px, 22px, 0);
     }
 
     31.25% {
-        clip: rect(30, 200px, 2px, 0);
+        clip: rect(23, 200px, 19px, 0);
     }
 
     37.5% {
-        clip: rect(29, 200px, 65px, 0);
+        clip: rect(64, 200px, 10px, 0);
     }
 
     43.75% {
-        clip: rect(19, 200px, 34px, 0);
+        clip: rect(10, 200px, 24px, 0);
     }
 
     50% {
-        clip: rect(21, 200px, 16px, 0);
+        clip: rect(60, 200px, 34px, 0);
     }
 
     56.25% {
-        clip: rect(62, 200px, 15px, 0);
+        clip: rect(26, 200px, 15px, 0);
     }
 
     62.5% {
-        clip: rect(9, 200px, 22px, 0);
+        clip: rect(58, 200px, 11px, 0);
     }
 
     68.75% {
-        clip: rect(35, 200px, 49px, 0);
+        clip: rect(35, 200px, 58px, 0);
     }
 
     75% {
-        clip: rect(63, 200px, 35px, 0);
+        clip: rect(34, 200px, 14px, 0);
     }
 
     81.25% {
-        clip: rect(57, 200px, 4px, 0);
+        clip: rect(20, 200px, 55px, 0);
     }
 
     87.5% {
-        clip: rect(36, 200px, 3px, 0);
+        clip: rect(40, 200px, 5px, 0);
     }
 
     93.75% {
-        clip: rect(63, 200px, 18px, 0);
+        clip: rect(45, 200px, 46px, 0);
     }
 
     100% {
-        clip: rect(60, 200px, 40px, 0);
+        clip: rect(47, 200px, 45px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(60, 200px, 15px, 0);
+        clip: rect(56, 200px, 6px, 0);
     }
 
     6.25% {
-        clip: rect(36, 200px, 11px, 0);
+        clip: rect(23, 200px, 32px, 0);
     }
 
     12.5% {
-        clip: rect(46, 200px, 16px, 0);
+        clip: rect(33, 200px, 39px, 0);
     }
 
     18.75% {
-        clip: rect(42, 200px, 15px, 0);
+        clip: rect(47, 200px, 54px, 0);
     }
 
     25% {
-        clip: rect(23, 200px, 40px, 0);
+        clip: rect(61, 200px, 22px, 0);
     }
 
     31.25% {
-        clip: rect(30, 200px, 2px, 0);
+        clip: rect(23, 200px, 19px, 0);
     }
 
     37.5% {
-        clip: rect(29, 200px, 65px, 0);
+        clip: rect(64, 200px, 10px, 0);
     }
 
     43.75% {
-        clip: rect(19, 200px, 34px, 0);
+        clip: rect(10, 200px, 24px, 0);
     }
 
     50% {
-        clip: rect(21, 200px, 16px, 0);
+        clip: rect(60, 200px, 34px, 0);
     }
 
     56.25% {
-        clip: rect(62, 200px, 15px, 0);
+        clip: rect(26, 200px, 15px, 0);
     }
 
     62.5% {
-        clip: rect(9, 200px, 22px, 0);
+        clip: rect(58, 200px, 11px, 0);
     }
 
     68.75% {
-        clip: rect(35, 200px, 49px, 0);
+        clip: rect(35, 200px, 58px, 0);
     }
 
     75% {
-        clip: rect(63, 200px, 35px, 0);
+        clip: rect(34, 200px, 14px, 0);
     }
 
     81.25% {
-        clip: rect(57, 200px, 4px, 0);
+        clip: rect(20, 200px, 55px, 0);
     }
 
     87.5% {
-        clip: rect(36, 200px, 3px, 0);
+        clip: rect(40, 200px, 5px, 0);
     }
 
     93.75% {
-        clip: rect(63, 200px, 18px, 0);
+        clip: rect(45, 200px, 46px, 0);
     }
 
     100% {
-        clip: rect(60, 200px, 40px, 0);
+        clip: rect(47, 200px, 45px, 0);
     }
 }
 /*____________________________________________________________
@@ -6723,4 +6724,237 @@ ____________________________________________________________*/
     -webkit-transition-delay: 0s;
     -o-transition-delay: 0s;
     transition-delay: 0s;
+}
+
+/*____________________________________________________________
+## @import dragonTeethBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Dragon Teeth Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Dragon Teeth Button
+____________________________________________________________*/
+.dragonTeethBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #ffc0cb;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    text-transform: uppercase;
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(1) {
+    bottom: calc((65px - (65px / 9)) - (1 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(2) {
+    bottom: calc((65px - (65px / 9)) - (2 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(3) {
+    bottom: calc((65px - (65px / 9)) - (3 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(4) {
+    bottom: calc((65px - (65px / 9)) - (4 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(5) {
+    bottom: calc((65px - (65px / 9)) - (5 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(6) {
+    bottom: calc((65px - (65px / 9)) - (6 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(7) {
+    bottom: calc((65px - (65px / 9)) - (7 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(8) {
+    bottom: calc((65px - (65px / 9)) - (8 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__line:nth-child(9) {
+    bottom: calc((65px - (65px / 9)) - (9 * (65px / 6.5)));
+}
+
+.dragonTeethBtn:hover .dragonTeethBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(9 * 0.07s);
+    -o-transition-delay: calc(9 * 0.07s);
+    transition-delay: calc(9 * 0.07s);
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(1) {
+    -webkit-transition-delay: calc((-0.07s * 1) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 1) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 1) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(2) {
+    -webkit-transition-delay: calc((-0.07s * 2) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 2) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 2) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(3) {
+    -webkit-transition-delay: calc((-0.07s * 3) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 3) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 3) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(4) {
+    -webkit-transition-delay: calc((-0.07s * 4) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 4) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 4) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(5) {
+    -webkit-transition-delay: calc((-0.07s * 5) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 5) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 5) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(6) {
+    -webkit-transition-delay: calc((-0.07s * 6) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 6) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 6) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(7) {
+    -webkit-transition-delay: calc((-0.07s * 7) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 7) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 7) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(8) {
+    -webkit-transition-delay: calc((-0.07s * 8) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 8) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 8) + (0.07s * 10));
+}
+
+.dragonTeethBtn._returnDelay:hover .dragonTeethBtn__line:nth-child(9) {
+    -webkit-transition-delay: calc((-0.07s * 9) + (0.07s * 10));
+    -o-transition-delay: calc((-0.07s * 9) + (0.07s * 10));
+    transition-delay: calc((-0.07s * 9) + (0.07s * 10));
+}
+
+.dragonTeethBtn__line {
+    bottom: calc(65px / -1.969696);
+    position: absolute;
+    width: 100%;
+    height: calc(65px / 3.8235);
+    -webkit-transition: bottom 0.3s;
+    -o-transition: bottom 0.3s;
+    transition: bottom 0.3s;
+    z-index: 2;
+}
+
+.dragonTeethBtn__line:nth-child(1) {
+    background-color: #F2385A;
+    -webkit-transition-delay: 0.07s;
+    -o-transition-delay: 0.07s;
+    transition-delay: 0.07s;
+}
+
+.dragonTeethBtn__line:nth-child(2) {
+    background-color: #F5A503;
+    -webkit-transition-delay: 0.14s;
+    -o-transition-delay: 0.14s;
+    transition-delay: 0.14s;
+}
+
+.dragonTeethBtn__line:nth-child(3) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: 0.21s;
+    -o-transition-delay: 0.21s;
+    transition-delay: 0.21s;
+}
+
+.dragonTeethBtn__line:nth-child(4) {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: 0.28s;
+    -o-transition-delay: 0.28s;
+    transition-delay: 0.28s;
+}
+
+.dragonTeethBtn__line:nth-child(5) {
+    background-color: #36B1BF;
+    -webkit-transition-delay: 0.35s;
+    -o-transition-delay: 0.35s;
+    transition-delay: 0.35s;
+}
+
+.dragonTeethBtn__line:nth-child(6) {
+    background-color: #F2385A;
+    -webkit-transition-delay: 0.42s;
+    -o-transition-delay: 0.42s;
+    transition-delay: 0.42s;
+}
+
+.dragonTeethBtn__line:nth-child(7) {
+    background-color: #F5A503;
+    -webkit-transition-delay: 0.49s;
+    -o-transition-delay: 0.49s;
+    transition-delay: 0.49s;
+}
+
+.dragonTeethBtn__line:nth-child(8) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: 0.56s;
+    -o-transition-delay: 0.56s;
+    transition-delay: 0.56s;
+}
+
+.dragonTeethBtn__line:nth-child(9) {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: 0.63s;
+    -o-transition-delay: 0.63s;
+    transition-delay: 0.63s;
+}
+
+.dragonTeethBtn__tooth {
+    position: relative;
+    float: left;
+    margin-top: calc(65px / -5.6719);
+    margin-left: calc(200px / 40);
+    margin-right: calc(200px / 40);
+    width: calc((200px / 6) - (200px / 40) * 2);
+    height: calc((200px / 6) - (200px / 40) * 2);
+    background-color: inherit;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.dragonTeethBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity calc(0.3s / 1.5);
+    -o-transition: opacity calc(0.3s / 1.5);
+    transition: opacity calc(0.3s / 1.5);
+}
+
+.dragonTeethBtn__text._start {
+    z-index: 1;
+}
+
+.dragonTeethBtn__text._end {
+    opacity: 0;
+    z-index: 3;
 }
