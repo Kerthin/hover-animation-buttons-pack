@@ -42,6 +42,7 @@
     ## @import connectBtn.scss
     ## @import circleMarginMovingBtn.scss
     ## @import rhombBtn.scss
+    ## @import rotateTunnelBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -749,141 +750,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(6, 200px, 21px, 0);
+        clip: rect(60, 200px, 15px, 0);
     }
 
     6.25% {
-        clip: rect(16, 200px, 13px, 0);
+        clip: rect(36, 200px, 11px, 0);
     }
 
     12.5% {
-        clip: rect(49, 200px, 56px, 0);
+        clip: rect(46, 200px, 16px, 0);
     }
 
     18.75% {
-        clip: rect(3, 200px, 38px, 0);
+        clip: rect(42, 200px, 15px, 0);
     }
 
     25% {
-        clip: rect(18, 200px, 33px, 0);
+        clip: rect(23, 200px, 40px, 0);
     }
 
     31.25% {
-        clip: rect(32, 200px, 46px, 0);
+        clip: rect(30, 200px, 2px, 0);
     }
 
     37.5% {
-        clip: rect(49, 200px, 61px, 0);
+        clip: rect(29, 200px, 65px, 0);
     }
 
     43.75% {
-        clip: rect(40, 200px, 2px, 0);
+        clip: rect(19, 200px, 34px, 0);
     }
 
     50% {
-        clip: rect(10, 200px, 11px, 0);
+        clip: rect(21, 200px, 16px, 0);
     }
 
     56.25% {
-        clip: rect(28, 200px, 14px, 0);
+        clip: rect(62, 200px, 15px, 0);
     }
 
     62.5% {
-        clip: rect(60, 200px, 19px, 0);
+        clip: rect(9, 200px, 22px, 0);
     }
 
     68.75% {
-        clip: rect(59, 200px, 16px, 0);
+        clip: rect(35, 200px, 49px, 0);
     }
 
     75% {
-        clip: rect(56, 200px, 20px, 0);
+        clip: rect(63, 200px, 35px, 0);
     }
 
     81.25% {
-        clip: rect(38, 200px, 36px, 0);
+        clip: rect(57, 200px, 4px, 0);
     }
 
     87.5% {
-        clip: rect(52, 200px, 37px, 0);
+        clip: rect(36, 200px, 3px, 0);
     }
 
     93.75% {
-        clip: rect(24, 200px, 42px, 0);
+        clip: rect(63, 200px, 18px, 0);
     }
 
     100% {
-        clip: rect(7, 200px, 49px, 0);
+        clip: rect(60, 200px, 40px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(6, 200px, 21px, 0);
+        clip: rect(60, 200px, 15px, 0);
     }
 
     6.25% {
-        clip: rect(16, 200px, 13px, 0);
+        clip: rect(36, 200px, 11px, 0);
     }
 
     12.5% {
-        clip: rect(49, 200px, 56px, 0);
+        clip: rect(46, 200px, 16px, 0);
     }
 
     18.75% {
-        clip: rect(3, 200px, 38px, 0);
+        clip: rect(42, 200px, 15px, 0);
     }
 
     25% {
-        clip: rect(18, 200px, 33px, 0);
+        clip: rect(23, 200px, 40px, 0);
     }
 
     31.25% {
-        clip: rect(32, 200px, 46px, 0);
+        clip: rect(30, 200px, 2px, 0);
     }
 
     37.5% {
-        clip: rect(49, 200px, 61px, 0);
+        clip: rect(29, 200px, 65px, 0);
     }
 
     43.75% {
-        clip: rect(40, 200px, 2px, 0);
+        clip: rect(19, 200px, 34px, 0);
     }
 
     50% {
-        clip: rect(10, 200px, 11px, 0);
+        clip: rect(21, 200px, 16px, 0);
     }
 
     56.25% {
-        clip: rect(28, 200px, 14px, 0);
+        clip: rect(62, 200px, 15px, 0);
     }
 
     62.5% {
-        clip: rect(60, 200px, 19px, 0);
+        clip: rect(9, 200px, 22px, 0);
     }
 
     68.75% {
-        clip: rect(59, 200px, 16px, 0);
+        clip: rect(35, 200px, 49px, 0);
     }
 
     75% {
-        clip: rect(56, 200px, 20px, 0);
+        clip: rect(63, 200px, 35px, 0);
     }
 
     81.25% {
-        clip: rect(38, 200px, 36px, 0);
+        clip: rect(57, 200px, 4px, 0);
     }
 
     87.5% {
-        clip: rect(52, 200px, 37px, 0);
+        clip: rect(36, 200px, 3px, 0);
     }
 
     93.75% {
-        clip: rect(24, 200px, 42px, 0);
+        clip: rect(63, 200px, 18px, 0);
     }
 
     100% {
-        clip: rect(7, 200px, 49px, 0);
+        clip: rect(60, 200px, 40px, 0);
     }
 }
 /*____________________________________________________________
@@ -6618,6 +6619,106 @@ ____________________________________________________________*/
 }
 
 .rhombBtn__text._end {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+/*____________________________________________________________
+## @import rotateTunnelBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Rotate Tunnel Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Rotate Tunnel Button
+____________________________________________________________*/
+.rotateTunnelBtn {
+    position: relative;
+    margin: 20px;
+    width: 195px;
+    height: 65px;
+    background-color: #C00000;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    text-transform: uppercase;
+}
+
+.rotateTunnelBtn:hover .rotateTunnelBtn__tunnel .rotateTunnelBtn__tunnel {
+    top: 14.5%;
+    left: 14.5%;
+    width: 70.77%;
+    height: 70.77%;
+    border-width: 1.0335px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.rotateTunnelBtn:hover .rotateTunnelBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.rotateTunnelBtn:hover .rotateTunnelBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.2s * 2);
+    -o-transition-delay: calc(0.2s * 2);
+    transition-delay: calc(0.2s * 2);
+}
+
+.rotateTunnelBtn__tunnel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    border-style: solid;
+    border-color: #eec60a;
+    -webkit-transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s, border-width calc(0.2s / 1.333), -webkit-transform 0.2s;
+    transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s, border-width calc(0.2s / 1.333), -webkit-transform 0.2s;
+    -o-transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s, border-width calc(0.2s / 1.333), transform 0.2s;
+    transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s, border-width calc(0.2s / 1.333), transform 0.2s;
+    transition: top 0.2s, left 0.2s, width 0.2s, height 0.2s, border-width calc(0.2s / 1.333), transform 0.2s, -webkit-transform 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.rotateTunnelBtn__tunnel._main {
+    position: relative;
+    float: left;
+    width: 65px;
+    height: 65px;
+    border-width: 1.0335px;
+}
+
+.rotateTunnelBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    -webkit-transition-delay: calc(0.2s * 2);
+    -o-transition-delay: calc(0.2s * 2);
+    transition-delay: calc(0.2s * 2);
+}
+
+.rotateTunnelBtn__text._end {
     opacity: 0;
     -webkit-transition-delay: 0s;
     -o-transition-delay: 0s;

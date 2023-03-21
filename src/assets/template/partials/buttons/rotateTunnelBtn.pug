@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Rotate Tunnel Button
+  .presentWrap__buttonsBlock
+
+    button.rotateTunnelBtn
+      - var rotateTunnelMainNumber = 1;
+      while rotateTunnelMainNumber <= 3
+        .rotateTunnelBtn__tunnel._main(id=`_${rotateTunnelMainNumber++}`)
+          .rotateTunnelBtn__tunnel
+            .rotateTunnelBtn__tunnel
+              .rotateTunnelBtn__tunnel
+      .rotateTunnelBtn__text._start Hover
+      .rotateTunnelBtn__text._end Button

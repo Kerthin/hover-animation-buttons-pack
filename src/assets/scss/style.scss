@@ -42,6 +42,7 @@
     ## @import connectBtn.scss
     ## @import circleMarginMovingBtn.scss
     ## @import rhombBtn.scss
+    ## @import rotateTunnelBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -253,3 +254,8 @@ ____________________________________________________________*/
 ## @import rhombBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/rhombBtn.scss';
+
+/*____________________________________________________________
+## @import rotateTunnelBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/rotateTunnelBtn.scss';

@@ -1,0 +1,87 @@
+/*____________________________________________________________
+# Rotate Tunnel Button Variables
+____________________________________________________________*/
+$rotateTunnelBtnWidth: 195px;
+$rotateTunnelBtnHeight: calc($rotateTunnelBtnWidth / 3);
+
+$rotateTunnelBtnBorder: calc($rotateTunnelBtnWidth * .0053);
+
+$rotateTunnelBtnFontSize: calc($rotateTunnelBtnHeight / 2.03125);
+
+$rotateTunnelBtnSpeed: .2s;
+
+/*____________________________________________________________
+# Rotate Tunnel Button
+____________________________________________________________*/
+.rotateTunnelBtn {
+  position: relative;
+  margin: 20px;
+  width: $rotateTunnelBtnWidth;
+  height: $rotateTunnelBtnHeight;
+  background-color: #C00000;
+  overflow: hidden;
+  cursor: pointer;
+  transition-delay: 0s;
+  text-transform: uppercase;
+  
+  &:hover {
+    .rotateTunnelBtn__tunnel {
+      .rotateTunnelBtn__tunnel {
+        top: calc(0% + 14.5%);
+        left: calc(0% + 14.5%);
+        width: calc(100% - 29.23%);
+        height: calc(100% - 29.23%);
+        border-width: $rotateTunnelBtnBorder;
+        transform: rotate(45deg);
+      }
+    }
+    .rotateTunnelBtn__text {
+      &._start {
+        opacity: 0;
+        transition-delay: 0s;
+      }
+      &._end {
+        opacity: 1;
+        transition-delay: calc(#{$rotateTunnelBtnSpeed} * 2);
+      }
+    }
+  }
+}
+.rotateTunnelBtn__tunnel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  border-style: solid;
+  border-color: #eec60a;
+  transition: top $rotateTunnelBtnSpeed, left $rotateTunnelBtnSpeed, width $rotateTunnelBtnSpeed, height $rotateTunnelBtnSpeed, border-width calc(#{$rotateTunnelBtnSpeed} / 1.333), transform $rotateTunnelBtnSpeed;
+  transition-delay: $rotateTunnelBtnSpeed;
+  
+  &._main {
+    position: relative;
+    float: left;
+    width: $rotateTunnelBtnHeight;
+    height: $rotateTunnelBtnHeight;
+    border-width: $rotateTunnelBtnBorder;
+  }
+}
+.rotateTunnelBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $rotateTunnelBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $rotateTunnelBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  transition: opacity $rotateTunnelBtnSpeed;
+  transition-delay: calc(#{$rotateTunnelBtnSpeed} * 2);
+  
+  &._end {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+}
