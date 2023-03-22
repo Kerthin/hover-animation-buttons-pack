@@ -1,0 +1,82 @@
+/*____________________________________________________________
+# Corridor Move Button Variables
+____________________________________________________________*/
+$corridorItemsNumber: 3;
+
+$corridorMoveBtnWidth: 200px;
+$corridorMoveBtnHeight: calc($corridorMoveBtnWidth / 100) * 32.5;
+
+$corridorMoveBtnBorder: calc($corridorMoveBtnHeight / 43.33);
+
+$corridorMoveBtnFontSize: calc($corridorMoveBtnHeight / 2.03125);
+$corridorMoveBtnTextShadow: calc($corridorMoveBtnFontSize / 16);
+
+$corridorMoveBtnSpeed: .3s;
+$corridorMoveAnimTime: calc($corridorMoveBtnSpeed / 0.75) * $corridorItemsNumber;
+
+/*____________________________________________________________
+# Corridor Move Button
+____________________________________________________________*/
+.corridorMoveBtn {
+  position: relative;
+  margin: 20px;
+  width: $corridorMoveBtnWidth;
+  height: $corridorMoveBtnHeight;
+  background-color: #C00000;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .corridorMoveBtn__item {
+      animation: corridorMovingAnimation $corridorMoveAnimTime linear infinite;
+      
+      @for $i from 1 through $corridorItemsNumber {
+        &:nth-child(#{$i}) {
+          animation-delay: calc((#{$i} - 1) * (#{$corridorMoveAnimTime} / #{$corridorItemsNumber}));
+        }
+      }
+    }
+    .corridorMoveBtn__text {
+      &._start {font-size: calc(#{$corridorMoveBtnFontSize} / 4); opacity: 0; transition-delay: 0s;}
+      &._end {font-size: $corridorMoveBtnFontSize; opacity: 1; transition-delay: $corridorMoveBtnSpeed;}
+    }
+  }
+}
+.corridorMoveBtn__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  border: $corridorMoveBtnBorder solid #ffd700;
+}
+
+.corridorMoveBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $corridorMoveBtnHeight;
+  text-align: center;
+  font-family: 'Roboto Slab';
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffd700;
+  text-shadow: $corridorMoveBtnTextShadow $corridorMoveBtnTextShadow $corridorMoveBtnTextShadow #000;
+  transition: font-size $corridorMoveBtnSpeed, opacity $corridorMoveBtnSpeed;
+  
+  &._start {font-size: $corridorMoveBtnFontSize; transition-delay: $corridorMoveBtnSpeed;}
+  &._end {font-size: calc(#{$corridorMoveBtnFontSize} / 4); opacity: 0;}
+}
+
+@keyframes corridorMovingAnimation {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}

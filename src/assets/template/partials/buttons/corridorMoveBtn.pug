@@ -1,0 +1,10 @@
+section.presentWrap
+  h1.presentWrap__title Corridor Move Button
+  .presentWrap__buttonsBlock
+
+    button.corridorMoveBtn
+      - var corridorMoveItem = 1;
+      while corridorMoveItem <= 3
+        .corridorMoveBtn__item(id=`_${corridorMoveItem++}`)
+      .corridorMoveBtn__text._start Hover
+      .corridorMoveBtn__text._end Button

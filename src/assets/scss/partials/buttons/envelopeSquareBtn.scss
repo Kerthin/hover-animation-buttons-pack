@@ -1,0 +1,142 @@
+/*____________________________________________________________
+# Envelope Square Buttons Variables
+____________________________________________________________*/
+$envelopeSquareBtnWidth: 200px;
+$envelopeSquareBtnHeight: calc($envelopeSquareBtnWidth / 100) * 32.5;
+
+$envelopeSquareBtnFontSize: calc($envelopeSquareBtnHeight / 2.03125);
+$envelopeSquareBtnTextShadow: calc($envelopeSquareBtnFontSize / 16);
+
+$envelopeSquareBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Envelope Square Buttons
+____________________________________________________________*/
+.envelopeSquareBtn {
+  position: relative;
+  margin: 20px;
+  width: $envelopeSquareBtnWidth;
+  height: $envelopeSquareBtnHeight;
+  background-color: #7ec3b0;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._color {
+    .envelopeSquareBtn__angle {
+      &:nth-child(1) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .4615);
+        &:after {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .75);}
+      }
+      &:nth-child(2) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .4);
+        &:after {transition-delay: $envelopeSquareBtnSpeed;}
+      }
+      &:nth-child(3) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .3529);
+        &:after {transition-delay: calc(#{$envelopeSquareBtnSpeed} / 1.5);}
+      }
+      &:nth-child(4) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .315789);
+        &:after {transition-delay: calc(#{$envelopeSquareBtnSpeed} / 3);}
+      }
+    }
+    .envelopeSquareBtn__text {
+      &._end {z-index: 3;}
+    }
+    
+    &:hover {
+      .envelopeSquareBtn__angle {
+        &:nth-child(1) {top: 0; left: 0; transition-delay: calc(#{$envelopeSquareBtnSpeed} / 3);
+          &:after {background-color: #f38287; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .4615);}
+        }
+        &:nth-child(2) {top: 0; right: 0; transition-delay: calc(#{$envelopeSquareBtnSpeed} / 1.5);
+          &:after {background-color: #f38287; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .4);}
+        }
+        &:nth-child(3) {bottom: 0; right: 0; transition-delay: $envelopeSquareBtnSpeed;
+          &:after {background-color: #f38287; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .3529);}
+        }
+        &:nth-child(4) {bottom: 0; left: 0; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .75);
+          &:after {background-color: #f38287; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .315789);}
+        }
+      }
+      .envelopeSquareBtn__text {
+        &._end {opacity: 1; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .4);}
+      }
+    }
+  }
+  &._open {
+    .envelopeSquareBtn__angle {
+      &:nth-child(1) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .272727);
+        &:after {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .75);}
+      }
+      &:nth-child(2) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .3);
+        &:after {transition-delay: $envelopeSquareBtnSpeed;}
+      }
+      &:nth-child(3) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .333);
+        &:after {transition-delay: calc(#{$envelopeSquareBtnSpeed} / 1.5);}
+      }
+      &:nth-child(4) {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .375);
+        &:after {transition-delay: calc(#{$envelopeSquareBtnSpeed} / 3);}
+      }
+    }
+    .envelopeSquareBtn__text {
+      &._start {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .42857);}
+      &._end {transition-delay: calc(#{$envelopeSquareBtnSpeed} / .42857);}
+    }
+    &:hover {
+      .envelopeSquareBtn__angle {
+        &:nth-child(1) {top: 0; left: 0; transition-delay: calc(#{$envelopeSquareBtnSpeed} / 3);
+          &:after {top: -100%; left: -100%; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .272727);}
+        }
+        &:nth-child(2) {top: 0; right: 0; transition-delay: calc(#{$envelopeSquareBtnSpeed} / 1.5);
+          &:after {top: -100%; right: -100%; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .3);}
+        }
+        &:nth-child(3) {bottom: 0; right: 0; transition-delay: $envelopeSquareBtnSpeed;
+          &:after {bottom: -100%; right: -100%; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .333);}
+        }
+        &:nth-child(4) {bottom: 0; left: 0; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .75);
+          &:after {bottom: -100%; left: -100%; transition-delay: calc(#{$envelopeSquareBtnSpeed} / .375);}
+        }
+      }
+      .envelopeSquareBtn__text {
+        &._start {opacity: 0;}
+        &._end {opacity: 1; background-color: #ff69b4;}
+      }
+    }
+  }
+}
+.envelopeSquareBtn__angle {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transition: top $envelopeSquareBtnSpeed, bottom $envelopeSquareBtnSpeed, left $envelopeSquareBtnSpeed, right $envelopeSquareBtnSpeed;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background-color calc(#{$envelopeBtnSpeed} / 1.5), top calc(#{$envelopeBtnSpeed} / 1.2), bottom calc(#{$envelopeBtnSpeed} / 1.2), left calc(#{$envelopeBtnSpeed} / 1.2), right calc(#{$envelopeBtnSpeed} / 1.2);
+    transition-delay: calc(#{$envelopeSquareBtnSpeed} / .42857);
+    z-index: 2;
+  }
+  
+  &:nth-child(1) {top: -50%; left: -50%; &:after{top: 0; left: 0; background-color: #F2385A;}}
+  &:nth-child(2) {top: -50%; right: -50%; &:after{top: 0; right: 0; background-color: #F5A503;}}
+  &:nth-child(3) {bottom: -50%; right: -50%; &:after{bottom: 0; right: 0; background-color: #4AD9D9;}}
+  &:nth-child(4) {bottom: -50%; left: -50%; &:after{bottom: 0; left: 0; background-color: #36B1BF;}}
+}
+
+.envelopeSquareBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $envelopeSquareBtnHeight;
+  text-align: center;
+  font-family: 'Roboto Slab';
+  font-size: $envelopeSquareBtnFontSize;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: $envelopeSquareBtnTextShadow $envelopeSquareBtnTextShadow $envelopeSquareBtnTextShadow #000;
+  transition: opacity calc(#{$envelopeBtnSpeed} / 1.5), background-color calc(#{$envelopeBtnSpeed} / 1.5);
+  
+  &._start {color: #f38287;}
+  &._end {color: #7ec3b0; opacity: 0;}
+}

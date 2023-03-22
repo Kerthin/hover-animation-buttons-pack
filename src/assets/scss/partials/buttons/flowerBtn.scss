@@ -21,13 +21,13 @@ $petalsColor: (#F2385A,
                #FFF5C3);
 
 $flowerBtnWidth: 200px;
-$flowerBtnHeight: ($flowerBtnWidth / 100) * 32.5;
+$flowerBtnHeight: calc($flowerBtnWidth / 100) * 32.5;
 
-$flowerBtnFontSize: $flowerBtnHeight / 2.03125;
-$flowerBtnTextShadow: $flowerBtnFontSize / 16;
+$flowerBtnFontSize: calc($flowerBtnHeight / 2.03125);
+$flowerBtnTextShadow: calc($flowerBtnFontSize / 16);
 
 $flowerBtnSpeed: .3s;
-$flowerBtnPetalDelay: $flowerBtnSpeed / 6;
+$flowerBtnPetalDelay: calc($flowerBtnSpeed / 6);
 
 /*____________________________________________________________
 # Flower Button
