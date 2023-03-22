@@ -1,0 +1,18 @@
+section.presentWrap
+  h1.presentWrap__title Absorbing Circle Button
+  input.absorbingCircleInput(type='checkbox' name='agreement')
+  | Switch to font-family: 'Roboto Slab'
+  .presentWrap__buttonsBlock
+
+    mixin absorbingCircleBtnMix(modName, startName, endName)
+      button.absorbingCircleBtn(class=`_${modName}`)
+        .absorbingCircleBtn__side._left
+        .absorbingCircleBtn__side._right
+        .absorbingCircleBtn__circleWrap._close
+          .absorbingCircleBtn__circle
+        .absorbingCircleBtn__circleWrap._open
+          .absorbingCircleBtn__circle
+        .absorbingCircleBtn__text._start #{startName}
+        .absorbingCircleBtn__text._end #{endName}
+    +absorbingCircleBtnMix('rl', 'Button', 'Hover')
+    +absorbingCircleBtnMix('lr', 'Hover', 'Button')

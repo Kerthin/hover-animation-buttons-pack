@@ -1,0 +1,197 @@
+.absorbingCircleInput {
+  text-align: center;
+  &:checked {
+    + .presentWrap__buttonsBlock {
+      .absorbingCircleBtn {
+        .absorbingCircleBtn__text {
+          font-family: 'Roboto Slab';
+        }
+      }
+    }
+  }
+}
+
+/*____________________________________________________________
+# Absorbing Circle Button Variables
+____________________________________________________________*/
+$absorbingCircleBtnWidth: 200px;
+$absorbingCircleBtnHeight: calc($absorbingCircleBtnWidth / 100) * 32.5;
+
+$absorbingCircleBtnFontSize: calc($absorbingCircleBtnHeight / 2.03125);
+$absorbingCircleBtnTextShadow: calc($absorbingCircleBtnFontSize / 16);
+
+$absorbingCircleBtnSpeed: .5s;
+
+/*____________________________________________________________
+# Absorbing Circle Button
+____________________________________________________________*/
+.absorbingCircleBtn {
+  position: relative;
+  margin: 20px;
+  width: $absorbingCircleBtnWidth;
+  height: $absorbingCircleBtnHeight;
+  background-color: #7ec3b0;
+  overflow: hidden;
+  cursor: pointer;
+  
+  // (&) Right-Left Style Mod
+  &._rl {
+    .absorbingCircleBtn__side {
+      &._left {background-color: #fff;}
+      &._right {background-color: #7ec3b0;}
+    }
+    .absorbingCircleBtn__circleWrap {
+      &._close {
+        left: 60%;
+      }
+      &._open {
+        right: 50%;
+
+        .absorbingCircleBtn__circle {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+    &:hover {
+      .absorbingCircleBtn__circleWrap {
+        &._close {
+          left: 50%;
+
+          .absorbingCircleBtn__circle {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        &._open {
+          right: 55%;
+        }
+      }
+    }
+  }
+  // (&) Left-Right Style Mod
+  &._lr {
+    .absorbingCircleBtn__side {
+      &._left {background-color: #7ec3b0;}
+      &._right {background-color: #fff;}
+    }
+    .absorbingCircleBtn__circleWrap {
+      &._close {
+        right: 55%;
+      }
+      &._open {
+        left: 50%;
+
+        .absorbingCircleBtn__circle {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+    &:hover {
+      .absorbingCircleBtn__circleWrap {
+        &._close {
+          right: 50%;
+
+          .absorbingCircleBtn__circle {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        &._open {
+          left: 60%;
+        }
+      }
+    }
+  }
+  
+  // (#) General Classic Hover Style (for all buttons)
+  &:hover {
+    .absorbingCircleBtn__circleWrap {
+      &._close {
+        width: calc(#{$absorbingCircleBtnWidth} * 1.5);
+        height: calc(#{$absorbingCircleBtnWidth} * 1.5);
+        transition-delay: 0s;
+      }
+      &._open {
+        width: calc(#{$absorbingCircleBtnWidth} / 10);
+        height: calc(#{$absorbingCircleBtnWidth} / 10);
+        transition-delay: calc(#{$absorbingCircleBtnSpeed} / 1.666);
+
+        .absorbingCircleBtn__circle {
+          border-top-left-radius: 50%;
+          border-bottom-left-radius: 50%;
+          border-top-right-radius: 50%;
+          border-bottom-right-radius: 50%;
+        }
+      }
+    }
+    .absorbingCircleBtn__text {
+      &._start {opacity: 0;}
+      &._end {opacity: 1;}
+    }
+  }
+}
+
+.absorbingCircleBtn__side {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  
+  &._left {top: 0; left: 0;}
+  &._right {top: 0; right: 0;}
+}
+
+.absorbingCircleBtn__circleWrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left calc(#{$absorbingCircleBtnSpeed} / 1.25), right calc(#{$absorbingCircleBtnSpeed} / 1.25), width $absorbingCircleBtnSpeed, height $absorbingCircleBtnSpeed;
+  
+  &._close {
+    width: calc(#{$absorbingCircleBtnWidth} / 10);
+    height: calc(#{$absorbingCircleBtnWidth} / 10);
+    transition-delay: calc(#{$absorbingCircleBtnSpeed} / 1.666);
+    
+    .absorbingCircleBtn__circle {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  &._open {
+    width: calc(#{$absorbingCircleBtnWidth} * 1.5);
+    height: calc(#{$absorbingCircleBtnWidth} * 1.5);
+    
+    .absorbingCircleBtn__circle {
+      background-color: #7ec3b0;
+    }
+  }
+}
+.absorbingCircleBtn__circle {
+  width: 100%;
+  height: 100%;
+  transition: border-top-left-radius $absorbingCircleBtnSpeed, border-bottom-left-radius $absorbingCircleBtnSpeed, border-top-right-radius $absorbingCircleBtnSpeed, border-bottom-right-radius $absorbingCircleBtnSpeed;
+  transition-delay: calc(#{$absorbingCircleBtnSpeed} / 5);
+}
+
+.absorbingCircleBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $absorbingCircleBtnHeight;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: $absorbingCircleBtnFontSize;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f38287;
+  text-shadow: $absorbingCircleBtnTextShadow $absorbingCircleBtnTextShadow $absorbingCircleBtnTextShadow #000;
+  transition: opacity calc(#{$absorbingCircleBtnSpeed} / 2.5), background-color calc(#{$absorbingCircleBtnSpeed} / 2.5);
+  transition-delay: calc(#{$absorbingCircleBtnSpeed} / .679);
+  
+  &._end {opacity: 0;}
+}

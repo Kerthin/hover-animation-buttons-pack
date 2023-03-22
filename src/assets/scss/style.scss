@@ -49,6 +49,7 @@
     ## @import flowerBtn.scss
     ## @import corridorMoveBtn.scss
     ## @import envelopeSquareBtn.scss
+    ## @import absorbingCircleBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -295,3 +296,8 @@ ____________________________________________________________*/
 ## @import envelopeSquareBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/envelopeSquareBtn.scss';
+
+/*____________________________________________________________
+## @import absorbingCircleBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/absorbingCircleBtn.scss';
