@@ -46,6 +46,7 @@
     ## @import dragonTeethBtn.scss
     ## @import sliceShadowBtn.scss
     ## @import envelopeBtn.scss
+    ## @import flowerBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -277,3 +278,8 @@ ____________________________________________________________*/
 ## @import envelopeBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/envelopeBtn.scss';
+
+/*____________________________________________________________
+## @import flowerBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/flowerBtn.scss';

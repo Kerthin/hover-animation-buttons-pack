@@ -46,6 +46,7 @@
     ## @import dragonTeethBtn.scss
     ## @import sliceShadowBtn.scss
     ## @import envelopeBtn.scss
+    ## @import flowerBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -753,141 +754,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 54px, 0);
+        clip: rect(63, 200px, 28px, 0);
     }
 
     6.25% {
-        clip: rect(17, 200px, 15px, 0);
+        clip: rect(54, 200px, 50px, 0);
     }
 
     12.5% {
-        clip: rect(21, 200px, 62px, 0);
+        clip: rect(41, 200px, 48px, 0);
     }
 
     18.75% {
-        clip: rect(38, 200px, 21px, 0);
+        clip: rect(26, 200px, 23px, 0);
     }
 
     25% {
-        clip: rect(44, 200px, 65px, 0);
+        clip: rect(32, 200px, 19px, 0);
     }
 
     31.25% {
-        clip: rect(29, 200px, 58px, 0);
+        clip: rect(42, 200px, 16px, 0);
     }
 
     37.5% {
-        clip: rect(49, 200px, 54px, 0);
+        clip: rect(23, 200px, 58px, 0);
     }
 
     43.75% {
-        clip: rect(13, 200px, 24px, 0);
+        clip: rect(27, 200px, 40px, 0);
     }
 
     50% {
-        clip: rect(23, 200px, 57px, 0);
+        clip: rect(44, 200px, 7px, 0);
     }
 
     56.25% {
-        clip: rect(4, 200px, 60px, 0);
+        clip: rect(35, 200px, 17px, 0);
     }
 
     62.5% {
-        clip: rect(57, 200px, 57px, 0);
+        clip: rect(18, 200px, 23px, 0);
     }
 
     68.75% {
-        clip: rect(49, 200px, 5px, 0);
+        clip: rect(7, 200px, 33px, 0);
     }
 
     75% {
-        clip: rect(45, 200px, 8px, 0);
+        clip: rect(22, 200px, 27px, 0);
     }
 
     81.25% {
-        clip: rect(40, 200px, 58px, 0);
+        clip: rect(29, 200px, 42px, 0);
     }
 
     87.5% {
-        clip: rect(25, 200px, 48px, 0);
+        clip: rect(42, 200px, 15px, 0);
     }
 
     93.75% {
-        clip: rect(26, 200px, 55px, 0);
+        clip: rect(41, 200px, 51px, 0);
     }
 
     100% {
-        clip: rect(59, 200px, 40px, 0);
+        clip: rect(40, 200px, 4px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 54px, 0);
+        clip: rect(63, 200px, 28px, 0);
     }
 
     6.25% {
-        clip: rect(17, 200px, 15px, 0);
+        clip: rect(54, 200px, 50px, 0);
     }
 
     12.5% {
-        clip: rect(21, 200px, 62px, 0);
+        clip: rect(41, 200px, 48px, 0);
     }
 
     18.75% {
-        clip: rect(38, 200px, 21px, 0);
+        clip: rect(26, 200px, 23px, 0);
     }
 
     25% {
-        clip: rect(44, 200px, 65px, 0);
+        clip: rect(32, 200px, 19px, 0);
     }
 
     31.25% {
-        clip: rect(29, 200px, 58px, 0);
+        clip: rect(42, 200px, 16px, 0);
     }
 
     37.5% {
-        clip: rect(49, 200px, 54px, 0);
+        clip: rect(23, 200px, 58px, 0);
     }
 
     43.75% {
-        clip: rect(13, 200px, 24px, 0);
+        clip: rect(27, 200px, 40px, 0);
     }
 
     50% {
-        clip: rect(23, 200px, 57px, 0);
+        clip: rect(44, 200px, 7px, 0);
     }
 
     56.25% {
-        clip: rect(4, 200px, 60px, 0);
+        clip: rect(35, 200px, 17px, 0);
     }
 
     62.5% {
-        clip: rect(57, 200px, 57px, 0);
+        clip: rect(18, 200px, 23px, 0);
     }
 
     68.75% {
-        clip: rect(49, 200px, 5px, 0);
+        clip: rect(7, 200px, 33px, 0);
     }
 
     75% {
-        clip: rect(45, 200px, 8px, 0);
+        clip: rect(22, 200px, 27px, 0);
     }
 
     81.25% {
-        clip: rect(40, 200px, 58px, 0);
+        clip: rect(29, 200px, 42px, 0);
     }
 
     87.5% {
-        clip: rect(25, 200px, 48px, 0);
+        clip: rect(42, 200px, 15px, 0);
     }
 
     93.75% {
-        clip: rect(26, 200px, 55px, 0);
+        clip: rect(41, 200px, 51px, 0);
     }
 
     100% {
-        clip: rect(59, 200px, 40px, 0);
+        clip: rect(40, 200px, 4px, 0);
     }
 }
 /*____________________________________________________________
@@ -7531,5 +7532,375 @@ ____________________________________________________________*/
 
 .envelopeBtn__text._end {
     color: #FFF5C3;
+    opacity: 0;
+}
+
+/*____________________________________________________________
+## @import flowerBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Flower Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Flower Button
+____________________________________________________________*/
+.flowerBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #c8a2c8;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(1) {
+    -webkit-transform: rotate(calc(65deg - (1 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (1 * (360deg / 18))));
+    transform: rotate(calc(65deg - (1 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 1) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 1) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 1) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(2) {
+    -webkit-transform: rotate(calc(65deg - (2 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (2 * (360deg / 18))));
+    transform: rotate(calc(65deg - (2 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 2) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 2) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 2) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(3) {
+    -webkit-transform: rotate(calc(65deg - (3 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (3 * (360deg / 18))));
+    transform: rotate(calc(65deg - (3 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 3) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 3) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 3) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(4) {
+    -webkit-transform: rotate(calc(65deg - (4 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (4 * (360deg / 18))));
+    transform: rotate(calc(65deg - (4 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 4) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 4) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 4) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(5) {
+    -webkit-transform: rotate(calc(65deg - (5 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (5 * (360deg / 18))));
+    transform: rotate(calc(65deg - (5 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 5) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 5) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 5) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(6) {
+    -webkit-transform: rotate(calc(65deg - (6 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (6 * (360deg / 18))));
+    transform: rotate(calc(65deg - (6 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 6) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 6) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 6) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(7) {
+    -webkit-transform: rotate(calc(65deg - (7 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (7 * (360deg / 18))));
+    transform: rotate(calc(65deg - (7 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 7) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 7) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 7) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(8) {
+    -webkit-transform: rotate(calc(65deg - (8 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (8 * (360deg / 18))));
+    transform: rotate(calc(65deg - (8 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 8) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 8) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 8) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(9) {
+    -webkit-transform: rotate(calc(65deg - (9 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (9 * (360deg / 18))));
+    transform: rotate(calc(65deg - (9 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 9) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 9) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 9) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(10) {
+    -webkit-transform: rotate(calc(65deg - (10 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (10 * (360deg / 18))));
+    transform: rotate(calc(65deg - (10 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 10) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 10) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 10) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(11) {
+    -webkit-transform: rotate(calc(65deg - (11 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (11 * (360deg / 18))));
+    transform: rotate(calc(65deg - (11 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 11) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 11) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 11) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(12) {
+    -webkit-transform: rotate(calc(65deg - (12 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (12 * (360deg / 18))));
+    transform: rotate(calc(65deg - (12 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 12) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 12) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 12) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(13) {
+    -webkit-transform: rotate(calc(65deg - (13 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (13 * (360deg / 18))));
+    transform: rotate(calc(65deg - (13 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 13) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 13) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 13) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(14) {
+    -webkit-transform: rotate(calc(65deg - (14 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (14 * (360deg / 18))));
+    transform: rotate(calc(65deg - (14 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 14) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 14) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 14) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(15) {
+    -webkit-transform: rotate(calc(65deg - (15 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (15 * (360deg / 18))));
+    transform: rotate(calc(65deg - (15 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 15) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 15) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 15) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(16) {
+    -webkit-transform: rotate(calc(65deg - (16 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (16 * (360deg / 18))));
+    transform: rotate(calc(65deg - (16 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 16) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 16) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 16) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(17) {
+    -webkit-transform: rotate(calc(65deg - (17 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (17 * (360deg / 18))));
+    transform: rotate(calc(65deg - (17 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 17) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 17) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 17) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__petal:nth-child(18) {
+    -webkit-transform: rotate(calc(65deg - (18 * (360deg / 18))));
+    -ms-transform: rotate(calc(65deg - (18 * (360deg / 18))));
+    transform: rotate(calc(65deg - (18 * (360deg / 18))));
+    -webkit-transition-delay: calc((-0.05s * 18) + ((0.05s * 18) + 0.05s));
+    -o-transition-delay: calc((-0.05s * 18) + ((0.05s * 18) + 0.05s));
+    transition-delay: calc((-0.05s * 18) + ((0.05s * 18) + 0.05s));
+}
+
+.flowerBtn:hover .flowerBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.flowerBtn:hover .flowerBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc((0.05s * 18) + 0.1s);
+    -o-transition-delay: calc((0.05s * 18) + 0.1s);
+    transition-delay: calc((0.05s * 18) + 0.1s);
+}
+
+.flowerBtn__petal {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: calc(200px / 10);
+    height: calc(200px / 10);
+    border-radius: 100% 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.flowerBtn__petal:nth-child(1) {
+    background-color: #F2385A;
+    -webkit-transition-delay: calc(1 * 0.05s);
+    -o-transition-delay: calc(1 * 0.05s);
+    transition-delay: calc(1 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(2) {
+    background-color: #F5A503;
+    -webkit-transition-delay: calc(2 * 0.05s);
+    -o-transition-delay: calc(2 * 0.05s);
+    transition-delay: calc(2 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(3) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: calc(3 * 0.05s);
+    -o-transition-delay: calc(3 * 0.05s);
+    transition-delay: calc(3 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(4) {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: calc(4 * 0.05s);
+    -o-transition-delay: calc(4 * 0.05s);
+    transition-delay: calc(4 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(5) {
+    background-color: #36B1BF;
+    -webkit-transition-delay: calc(5 * 0.05s);
+    -o-transition-delay: calc(5 * 0.05s);
+    transition-delay: calc(5 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(6) {
+    background-color: #F2385A;
+    -webkit-transition-delay: calc(6 * 0.05s);
+    -o-transition-delay: calc(6 * 0.05s);
+    transition-delay: calc(6 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(7) {
+    background-color: #F5A503;
+    -webkit-transition-delay: calc(7 * 0.05s);
+    -o-transition-delay: calc(7 * 0.05s);
+    transition-delay: calc(7 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(8) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: calc(8 * 0.05s);
+    -o-transition-delay: calc(8 * 0.05s);
+    transition-delay: calc(8 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(9) {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: calc(9 * 0.05s);
+    -o-transition-delay: calc(9 * 0.05s);
+    transition-delay: calc(9 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(10) {
+    background-color: #36B1BF;
+    -webkit-transition-delay: calc(10 * 0.05s);
+    -o-transition-delay: calc(10 * 0.05s);
+    transition-delay: calc(10 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(11) {
+    background-color: #F2385A;
+    -webkit-transition-delay: calc(11 * 0.05s);
+    -o-transition-delay: calc(11 * 0.05s);
+    transition-delay: calc(11 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(12) {
+    background-color: #F5A503;
+    -webkit-transition-delay: calc(12 * 0.05s);
+    -o-transition-delay: calc(12 * 0.05s);
+    transition-delay: calc(12 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(13) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: calc(13 * 0.05s);
+    -o-transition-delay: calc(13 * 0.05s);
+    transition-delay: calc(13 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(14) {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: calc(14 * 0.05s);
+    -o-transition-delay: calc(14 * 0.05s);
+    transition-delay: calc(14 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(15) {
+    background-color: #36B1BF;
+    -webkit-transition-delay: calc(15 * 0.05s);
+    -o-transition-delay: calc(15 * 0.05s);
+    transition-delay: calc(15 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(16) {
+    background-color: #F2385A;
+    -webkit-transition-delay: calc(16 * 0.05s);
+    -o-transition-delay: calc(16 * 0.05s);
+    transition-delay: calc(16 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(17) {
+    background-color: #F5A503;
+    -webkit-transition-delay: calc(17 * 0.05s);
+    -o-transition-delay: calc(17 * 0.05s);
+    transition-delay: calc(17 * 0.05s);
+}
+
+.flowerBtn__petal:nth-child(18) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: calc(18 * 0.05s);
+    -o-transition-delay: calc(18 * 0.05s);
+    transition-delay: calc(18 * 0.05s);
+}
+
+.flowerBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity calc(0.05s / 2.5), background-color calc(0.05s / 2.5);
+    -o-transition: opacity calc(0.05s / 2.5), background-color calc(0.05s / 2.5);
+    transition: opacity calc(0.05s / 2.5), background-color calc(0.05s / 2.5);
+}
+
+.flowerBtn__text._start {
+    color: #cb4154;
+    background-color: #c8a2c8;
+    -webkit-transition-delay: calc((0.05s * 18) + 0.3s);
+    -o-transition-delay: calc((0.05s * 18) + 0.3s);
+    transition-delay: calc((0.05s * 18) + 0.3s);
+}
+
+.flowerBtn__text._end {
+    color: #cb4154;
     opacity: 0;
 }

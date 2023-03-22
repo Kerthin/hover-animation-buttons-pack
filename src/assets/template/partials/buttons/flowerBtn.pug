@@ -1,0 +1,10 @@
+section.presentWrap
+  h1.presentWrap__title Flower Button
+  .presentWrap__buttonsBlock
+
+    button.flowerBtn
+      - var numberOfPetals = 1;
+      while numberOfPetals <= 18
+        .flowerBtn__petal(id=`_${numberOfPetals++}`)
+      .flowerBtn__text._start Hover
+      .flowerBtn__text._end Button
