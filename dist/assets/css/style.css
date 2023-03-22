@@ -50,6 +50,7 @@
     ## @import corridorMoveBtn.scss
     ## @import envelopeSquareBtn.scss
     ## @import absorbingCircleBtn.scss
+    ## @import rotatingRhombBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -757,141 +758,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(50, 200px, 14px, 0);
+        clip: rect(63, 200px, 25px, 0);
     }
 
     6.25% {
-        clip: rect(41, 200px, 20px, 0);
+        clip: rect(4, 200px, 15px, 0);
     }
 
     12.5% {
-        clip: rect(55, 200px, 37px, 0);
+        clip: rect(9, 200px, 64px, 0);
     }
 
     18.75% {
-        clip: rect(42, 200px, 55px, 0);
+        clip: rect(8, 200px, 10px, 0);
     }
 
     25% {
-        clip: rect(20, 200px, 35px, 0);
+        clip: rect(41, 200px, 57px, 0);
     }
 
     31.25% {
-        clip: rect(53, 200px, 39px, 0);
+        clip: rect(15, 200px, 18px, 0);
     }
 
     37.5% {
-        clip: rect(34, 200px, 13px, 0);
+        clip: rect(55, 200px, 21px, 0);
     }
 
     43.75% {
-        clip: rect(6, 200px, 46px, 0);
+        clip: rect(5, 200px, 31px, 0);
     }
 
     50% {
-        clip: rect(26, 200px, 56px, 0);
+        clip: rect(5, 200px, 64px, 0);
     }
 
     56.25% {
-        clip: rect(51, 200px, 17px, 0);
+        clip: rect(46, 200px, 30px, 0);
     }
 
     62.5% {
-        clip: rect(20, 200px, 24px, 0);
+        clip: rect(55, 200px, 45px, 0);
     }
 
     68.75% {
-        clip: rect(55, 200px, 28px, 0);
+        clip: rect(18, 200px, 35px, 0);
     }
 
     75% {
-        clip: rect(26, 200px, 1px, 0);
+        clip: rect(27, 200px, 44px, 0);
     }
 
     81.25% {
-        clip: rect(21, 200px, 30px, 0);
+        clip: rect(65, 200px, 46px, 0);
     }
 
     87.5% {
-        clip: rect(62, 200px, 43px, 0);
+        clip: rect(24, 200px, 55px, 0);
     }
 
     93.75% {
-        clip: rect(40, 200px, 50px, 0);
+        clip: rect(37, 200px, 19px, 0);
     }
 
     100% {
-        clip: rect(1, 200px, 17px, 0);
+        clip: rect(54, 200px, 13px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(50, 200px, 14px, 0);
+        clip: rect(63, 200px, 25px, 0);
     }
 
     6.25% {
-        clip: rect(41, 200px, 20px, 0);
+        clip: rect(4, 200px, 15px, 0);
     }
 
     12.5% {
-        clip: rect(55, 200px, 37px, 0);
+        clip: rect(9, 200px, 64px, 0);
     }
 
     18.75% {
-        clip: rect(42, 200px, 55px, 0);
+        clip: rect(8, 200px, 10px, 0);
     }
 
     25% {
-        clip: rect(20, 200px, 35px, 0);
+        clip: rect(41, 200px, 57px, 0);
     }
 
     31.25% {
-        clip: rect(53, 200px, 39px, 0);
+        clip: rect(15, 200px, 18px, 0);
     }
 
     37.5% {
-        clip: rect(34, 200px, 13px, 0);
+        clip: rect(55, 200px, 21px, 0);
     }
 
     43.75% {
-        clip: rect(6, 200px, 46px, 0);
+        clip: rect(5, 200px, 31px, 0);
     }
 
     50% {
-        clip: rect(26, 200px, 56px, 0);
+        clip: rect(5, 200px, 64px, 0);
     }
 
     56.25% {
-        clip: rect(51, 200px, 17px, 0);
+        clip: rect(46, 200px, 30px, 0);
     }
 
     62.5% {
-        clip: rect(20, 200px, 24px, 0);
+        clip: rect(55, 200px, 45px, 0);
     }
 
     68.75% {
-        clip: rect(55, 200px, 28px, 0);
+        clip: rect(18, 200px, 35px, 0);
     }
 
     75% {
-        clip: rect(26, 200px, 1px, 0);
+        clip: rect(27, 200px, 44px, 0);
     }
 
     81.25% {
-        clip: rect(21, 200px, 30px, 0);
+        clip: rect(65, 200px, 46px, 0);
     }
 
     87.5% {
-        clip: rect(62, 200px, 43px, 0);
+        clip: rect(24, 200px, 55px, 0);
     }
 
     93.75% {
-        clip: rect(40, 200px, 50px, 0);
+        clip: rect(37, 200px, 19px, 0);
     }
 
     100% {
-        clip: rect(1, 200px, 17px, 0);
+        clip: rect(54, 200px, 13px, 0);
     }
 }
 /*____________________________________________________________
@@ -8602,5 +8603,231 @@ ____________________________________________________________*/
 }
 
 .absorbingCircleBtn__text._end {
+    opacity: 0;
+}
+
+/*____________________________________________________________
+## @import rotatingRhombBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Rotating Rhomb Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Rotating Rhomb Button
+____________________________________________________________*/
+.rotatingRhombBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #7ec3b0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__rhomb {
+    width: 65px;
+    height: 65px;
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__rhomb:nth-child(1) {
+    -webkit-transition-delay: calc(1 * .1s);
+    -o-transition-delay: calc(1 * .1s);
+    transition-delay: calc(1 * .1s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__rhomb:nth-child(2) {
+    -webkit-transition-delay: calc(2 * .1s);
+    -o-transition-delay: calc(2 * .1s);
+    transition-delay: calc(2 * .1s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__rhomb:nth-child(3) {
+    -webkit-transition-delay: calc(3 * .1s);
+    -o-transition-delay: calc(3 * .1s);
+    transition-delay: calc(3 * .1s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__rhomb:nth-child(4) {
+    -webkit-transition-delay: calc(4 * .1s);
+    -o-transition-delay: calc(4 * .1s);
+    transition-delay: calc(4 * .1s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__rhomb:nth-child(5) {
+    -webkit-transition-delay: calc(5 * .1s);
+    -o-transition-delay: calc(5 * .1s);
+    transition-delay: calc(5 * .1s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__sideRhombsWrap {
+    width: calc(65px / 2.6);
+    height: calc(65px / 2.6);
+    -ms-transform: translate(-50%, -50%) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(-180deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+    -webkit-transition-delay: calc(5 * .1s);
+    -o-transition-delay: calc(5 * .1s);
+    transition-delay: calc(5 * .1s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__sideRhombsWrap:before, .rotatingRhombBtn:hover .rotatingRhombBtn__sideRhombsWrap:after {
+    -webkit-transition-delay: calc((5 * .1s) + 0.2s);
+    -o-transition-delay: calc((5 * .1s) + 0.2s);
+    transition-delay: calc((5 * .1s) + 0.2s);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__sideRhombsWrap:before {
+    left: calc((65px / 2.6) * 3);
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__sideRhombsWrap:after {
+    right: calc((65px / 2.6) * 3);
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.rotatingRhombBtn:hover .rotatingRhombBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc((5s / 10) + 0.3s);
+    -o-transition-delay: calc((5s / 10) + 0.3s);
+    transition-delay: calc((5s / 10) + 0.3s);
+}
+
+.rotatingRhombBtn__rhomb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    width: 0;
+    height: 0;
+    -webkit-transition: width 0.3s, height 0.3s, -webkit-transform 0.3s;
+    transition: width 0.3s, height 0.3s, -webkit-transform 0.3s;
+    -o-transition: width 0.3s, height 0.3s, transform 0.3s;
+    transition: width 0.3s, height 0.3s, transform 0.3s;
+    transition: width 0.3s, height 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.rotatingRhombBtn__rhomb:nth-child(1) {
+    background-color: #36B1BF;
+    -webkit-transition-delay: calc((1 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    -o-transition-delay: calc((1 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    transition-delay: calc((1 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+}
+
+.rotatingRhombBtn__rhomb:nth-child(2) {
+    background-color: #4AD9D9;
+    -webkit-transition-delay: calc((2 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    -o-transition-delay: calc((2 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    transition-delay: calc((2 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+}
+
+.rotatingRhombBtn__rhomb:nth-child(3) {
+    background-color: #F5A503;
+    -webkit-transition-delay: calc((3 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    -o-transition-delay: calc((3 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    transition-delay: calc((3 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+}
+
+.rotatingRhombBtn__rhomb:nth-child(4) {
+    background-color: #F2385A;
+    -webkit-transition-delay: calc((4 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    -o-transition-delay: calc((4 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    transition-delay: calc((4 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+}
+
+.rotatingRhombBtn__rhomb:nth-child(5) {
+    background-color: #FFF5C3;
+    -webkit-transition-delay: calc((5 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    -o-transition-delay: calc((5 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+    transition-delay: calc((5 * -.1s) + (5s / 10) + (0.3s + (0.3s / 1.5)));
+}
+
+.rotatingRhombBtn__sideRhombsWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%) rotate(135deg);
+    transform: translate(-50%, -50%) rotate(135deg);
+    -webkit-transform: translate(-50%, -50%) rotate(135deg);
+    width: 0;
+    height: 0;
+    background-color: purple;
+    -webkit-transition: width 0.3s, height 0.3s, -webkit-transform 0.3s;
+    transition: width 0.3s, height 0.3s, -webkit-transform 0.3s;
+    -o-transition: width 0.3s, height 0.3s, transform 0.3s;
+    transition: width 0.3s, height 0.3s, transform 0.3s;
+    transition: width 0.3s, height 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.rotatingRhombBtn__sideRhombsWrap:before, .rotatingRhombBtn__sideRhombsWrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    -webkit-transition: left 0.3s, right 0.3s, -webkit-transform 0.3s;
+    transition: left 0.3s, right 0.3s, -webkit-transform 0.3s;
+    -o-transition: left 0.3s, right 0.3s, transform 0.3s;
+    transition: left 0.3s, right 0.3s, transform 0.3s;
+    transition: left 0.3s, right 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.rotatingRhombBtn__sideRhombsWrap:before {
+    left: 0;
+}
+
+.rotatingRhombBtn__sideRhombsWrap:after {
+    right: 0;
+}
+
+.rotatingRhombBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    text-align: center;
+    font-family: "Times New Roman";
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #f38287;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity calc(0.3s / 1.5), background-color calc(0.3s / 1.5);
+    -o-transition: opacity calc(0.3s / 1.5), background-color calc(0.3s / 1.5);
+    transition: opacity calc(0.3s / 1.5), background-color calc(0.3s / 1.5);
+}
+
+.rotatingRhombBtn__text._start {
+    -webkit-transition-delay: calc((5s / 10) + (0.3s + (0.3s / 1.5)));
+    -o-transition-delay: calc((5s / 10) + (0.3s + (0.3s / 1.5)));
+    transition-delay: calc((5s / 10) + (0.3s + (0.3s / 1.5)));
+}
+
+.rotatingRhombBtn__text._end {
     opacity: 0;
 }

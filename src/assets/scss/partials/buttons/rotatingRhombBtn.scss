@@ -1,0 +1,124 @@
+/*____________________________________________________________
+# Rotating Rhomb Button Variables
+____________________________________________________________*/
+$rotatingRhombsColor: (#36B1BF,
+                       #4AD9D9,
+                       #F5A503,
+                       #F2385A,
+                       #FFF5C3);
+
+$rotatingRhombBtnWidth: 200px;
+$rotatingRhombBtnHeight: calc($rotatingRhombBtnWidth / 100) * 32.5;
+
+$rotatingRhombBtnFontSize: calc($rotatingRhombBtnHeight / 2.03125);
+$rotatingRhombBtnTextShadow: calc($rotatingRhombBtnFontSize / 16);
+
+$rotatingRhombBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Rotating Rhomb Button
+____________________________________________________________*/
+.rotatingRhombBtn {
+  position: relative;
+  margin: 20px;
+  width: $rotatingRhombBtnWidth;
+  height: $rotatingRhombBtnHeight;
+  background-color: #7ec3b0;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .rotatingRhombBtn__rhomb {
+      width: $rotatingRhombBtnHeight;
+      height: $rotatingRhombBtnHeight;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+
+      @for $i from 1 through length($rotatingRhombsColor) {
+        &:nth-child(#{$i}) {
+          transition-delay: calc(#{$i} * .1s);
+        }
+      }
+    }
+    .rotatingRhombBtn__sideRhombsWrap {
+      width: calc(#{$rotatingRhombBtnHeight} / 2.6);
+      height: calc(#{$rotatingRhombBtnHeight} / 2.6);
+      transform: translate(-50%, -50%) rotate(-180deg);
+      -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+      transition-delay: calc(#{length($rotatingRhombsColor)} * .1s);
+      
+      &:before,
+      &:after {
+        transition-delay: calc((#{length($rotatingRhombsColor)} * .1s) + .2s);
+      }
+      &:before {left: calc((#{$rotatingRhombBtnHeight} / 2.6) * 3); transform: rotate(-135deg);}
+      &:after {right: calc((#{$rotatingRhombBtnHeight} / 2.6) * 3); transform: rotate(135deg);}
+    }
+    .rotatingRhombBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: calc((#{length($rotatingRhombsColor)}s / 10) + #{$rotatingRhombBtnSpeed});}
+    }
+  }
+}
+.rotatingRhombBtn__rhomb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  width: 0;
+  height: 0;
+  transition: width $rotatingRhombBtnSpeed, height $rotatingRhombBtnSpeed, transform $rotatingRhombBtnSpeed;
+
+  @for $i from 1 through length($rotatingRhombsColor) {
+    &:nth-child(#{$i}) {
+      background-color: nth($rotatingRhombsColor, $i);
+      transition-delay: calc((#{$i} * -.1s) + ((#{length($rotatingRhombsColor)}s / 10) + (#{$rotatingRhombBtnSpeed} + (#{$rotatingRhombBtnSpeed} / 1.5))));
+    }
+  }
+}
+.rotatingRhombBtn__sideRhombsWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+  width: 0;
+  height: 0;
+  background-color: purple;
+  transition: width $rotatingRhombBtnSpeed, height $rotatingRhombBtnSpeed, transform $rotatingRhombBtnSpeed;
+  transition-delay: $rotatingRhombBtnSpeed;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    transition: left $rotatingRhombBtnSpeed, right $rotatingRhombBtnSpeed, transform $rotatingRhombBtnSpeed;
+  }
+  &:before {left: 0;}
+  &:after {right: 0;}
+}
+.rotatingRhombBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $rotatingRhombBtnHeight;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: $rotatingRhombBtnFontSize;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f38287;
+  text-shadow: $rotatingRhombBtnTextShadow $rotatingRhombBtnTextShadow $rotatingRhombBtnTextShadow #000;
+  transition: opacity calc(#{$rotatingRhombBtnSpeed} / 1.5), background-color calc(#{$rotatingRhombBtnSpeed} / 1.5);
+  
+  &._start {transition-delay: calc((#{length($rotatingRhombsColor)}s / 10) + (#{$rotatingRhombBtnSpeed} + (#{$rotatingRhombBtnSpeed} / 1.5)));}
+  &._end {opacity: 0;}
+}

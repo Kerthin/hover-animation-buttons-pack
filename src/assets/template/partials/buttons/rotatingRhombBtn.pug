@@ -1,0 +1,11 @@
+section.presentWrap
+  h1.presentWrap__title Rotating Rhomb Button
+  .presentWrap__buttonsBlock
+
+    button.rotatingRhombBtn
+      - var rotatingRhombItem = 1;
+      while rotatingRhombItem <= 5
+        .rotatingRhombBtn__rhomb(id=`_${rotatingRhombItem++}`)
+      .rotatingRhombBtn__sideRhombsWrap
+      .rotatingRhombBtn__text._start Button
+      .rotatingRhombBtn__text._end Hover

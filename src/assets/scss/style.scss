@@ -50,6 +50,7 @@
     ## @import corridorMoveBtn.scss
     ## @import envelopeSquareBtn.scss
     ## @import absorbingCircleBtn.scss
+    ## @import rotatingRhombBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -301,3 +302,8 @@ ____________________________________________________________*/
 ## @import absorbingCircleBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/absorbingCircleBtn.scss';
+
+/*____________________________________________________________
+## @import rotatingRhombBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/rotatingRhombBtn.scss';
