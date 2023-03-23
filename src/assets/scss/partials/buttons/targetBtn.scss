@@ -1,0 +1,125 @@
+/*____________________________________________________________
+# Target Buttons Variables
+____________________________________________________________*/
+$targetsColor: (#FFF5C3,
+                #36B1BF,
+                #4AD9D9,
+                #F5A503,
+                #F2385A);
+
+$targetBtnWidth: 200px;
+$targetBtnHeight: ($targetBtnWidth / 100) * 32.5;
+
+$targetBtnMainCircleSize: $targetBtnWidth / 3.333;
+
+$targetBtnFontSize: $targetBtnHeight / 2.03125;
+$targetBtnTextShadow: $targetBtnFontSize / 16;
+
+$targetBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Target Buttons
+____________________________________________________________*/
+.targetBtn {
+  position: relative;
+  margin: 20px;
+  width: $targetBtnWidth;
+  height: $targetBtnHeight;
+  background-color: #e1023e;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._classic {
+    .targetBtn__circle {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  &._connecting {
+    .targetBtn__circle {
+      transform: translate(0, -50%);
+      
+      &:nth-child(1) {left: 50%; transform: translate(-50%, -50%);}
+      &:nth-child(2) {left: calc(#{$targetBtnWidth} / 6.666);}
+      &:nth-child(3) {left: calc(#{$targetBtnWidth} / 1.666);}
+      &:nth-child(4) {left: calc(#{$targetBtnWidth} / 20);}
+      &:nth-child(5) {left: calc(#{$targetBtnWidth} / 1.333);}
+    }
+    &:hover {
+      .targetBtn__circle {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-delay: calc((#{length($targetsColor)}s / 10) + #{$targetBtnSpeed});
+      }
+    }
+  }
+  &:hover {
+    .targetBtn__circle {
+
+      &:after {
+        width: 100%;
+        height: 100%;
+      }
+
+      @for $i from 1 through length($targetsColor) {
+        &:nth-child(#{$i}) {
+          &:after {transition-delay: calc(#{$i} * (#{$targetBtnSpeed} / 3));}
+        }
+      }
+    }
+
+    .targetBtn__text {
+      &._start {opacity: 0; transition-delay: calc(#{$targetBtnSpeed} / 3);}
+      &._end {opacity: 1; transition-delay: calc((#{length($targetsColor)}s / 10) + (#{$targetBtnSpeed} + (#{$targetBtnSpeed} / 3)));}
+    }
+  }
+}
+.targetBtn__circle {
+  position: absolute;
+  top: 50%;
+  transition: left $targetBtnSpeed, right $targetBtnSpeed, transform $targetBtnSpeed;
+  transition-delay: calc(#{$targetBtnSpeed} / 3);
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: width $targetBtnSpeed, height $targetBtnSpeed;
+  }
+  
+  @for $i from 1 through length($targetsColor) {
+    &:nth-child(#{$i}) {
+      width: calc(#{$targetBtnMainCircleSize} - ((#{$i} - 1) * (#{$targetBtnHeight} / (#{length($targetsColor)} / .769))));
+      height: calc(#{$targetBtnMainCircleSize} - ((#{$i} - 1) * (#{$targetBtnHeight} / (#{length($targetsColor)} / .769))));
+      
+      &:after {
+        background-color: nth($targetsColor, $i);
+        transition-delay: calc((#{$i} * -.1s) + ((#{length($targetsColor)}s / 10) + (#{$targetBtnSpeed} + (#{$targetBtnSpeed} / 3))));
+      }
+    }
+  }
+}
+
+.targetBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $targetBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $targetBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $targetBtnTextShadow $targetBtnTextShadow $targetBtnTextShadow #000;
+  transition: opacity calc(#{$targetBtnSpeed} / 1.5);
+  
+  &._start {transition-delay: calc((#{length($targetsColor)}s / 10) + (#{$targetBtnSpeed} + (#{$targetBtnSpeed} / 3)));}
+  &._end {opacity: 0; transition-delay: calc(#{$targetBtnSpeed} / 3);}
+}

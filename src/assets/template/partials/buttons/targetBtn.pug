@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Target Buttons
+  .presentWrap__buttonsBlock
+
+    mixin targetBtnMix(modName, targetCircleNumber)
+      button.targetBtn(class=`_${modName}`)
+        - var targetCircle = 1;
+        while targetCircle <= `${targetCircleNumber}`
+          .targetBtn__circle(id=`_${targetCircle++}`)
+        .targetBtn__text._start Hover
+        .targetBtn__text._end Button
+    +targetBtnMix('classic', 5)
+    +targetBtnMix('connecting', 5)
