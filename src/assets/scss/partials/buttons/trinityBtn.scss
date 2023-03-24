@@ -1,0 +1,123 @@
+/*____________________________________________________________
+# Trinity Button Variables
+____________________________________________________________*/
+$trinityBtnWidth: 200px;
+$trinityBtnHeight: calc($trinityBtnWidth / 100) * 32.5;
+
+$trinityBtnFontSize: calc($trinityBtnHeight / 2.03125);
+$trinityBtnTextShadow: calc($trinityBtnFontSize / 16);
+
+$trinityBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Trinity Button
+____________________________________________________________*/
+.trinityBtn {
+  position: relative;
+  margin: 20px;
+  width: $trinityBtnWidth;
+  height: $trinityBtnHeight;
+  background-color: #3f1c39;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .trinityBtn__circleWrap {
+      top: 50%;
+      transition-delay: calc(#{$trinityBtnSpeed} / 3);
+    }
+    .trinityBtn__circleMain {
+      width: calc(#{$trinityBtnWidth} + (#{$trinityBtnWidth} / 20));
+      height: calc(#{$trinityBtnWidth} + (#{$trinityBtnWidth} / 20));
+      transition-delay: calc(#{$trinityBtnSpeed} / .75);
+    }
+    .trinityBtn__circle {
+      transform: translate(-50%, -50%) rotate(-180deg);
+      width: calc(#{$trinityBtnWidth} / 5);
+      height: calc(#{$trinityBtnWidth} / 5);
+      transition-delay: calc(#{$trinityBtnSpeed} / .6);
+      
+      &:before
+      &:after {
+        transition-delay: calc(#{$trinityBtnSpeed} / .6);
+      }
+      &:before {left: -85%;}
+      &:after {right: -85%;}
+    }
+    .trinityBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: calc(#{$trinityBtnSpeed} / .5);}
+    }
+  }
+}
+.trinityBtn__circleWrap {
+  position: absolute;
+  top: calc(100% + (#{$trinityBtnWidth} / 20));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(#{$trinityBtnWidth} / 10);
+  height: calc(#{$trinityBtnWidth} / 10);
+  border-radius: 50%;
+  transition: top $trinityBtnSpeed;
+  transition-delay: calc(#{$trinityBtnSpeed} / .6);
+}
+.trinityBtn__circleMain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(#{$trinityBtnWidth} / 10);
+  height: calc(#{$trinityBtnWidth} / 10);
+  border-radius: 50%;
+  background-color: #b4416e;
+  transition: width $trinityBtnSpeed, height $trinityBtnSpeed;
+  transition-delay: calc(#{$trinityBtnSpeed} / 1.5);
+}
+.trinityBtn__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .5;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: width calc(#{$trinityBtnSpeed} / .6), height calc(#{$trinityBtnSpeed} / .6), transform calc(#{$trinityBtnSpeed} / .6);
+  transition-delay: calc(#{$trinityBtnSpeed} / 3);
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .9;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: left calc(#{$trinityBtnSpeed} / .75), right calc(#{$trinityBtnSpeed} / .75);
+    transition-delay: calc(#{$trinityBtnSpeed} / 3);
+  }
+  &:before {left: 0;}
+  &:after {right: 0;}
+}
+
+.trinityBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $trinityBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $trinityBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  transition: opacity calc(#{$trinityBtnSpeed} / 1.5);
+  
+  &._start {transition-delay: calc(#{$trinityBtnSpeed} / .5); text-shadow: $trinityBtnTextShadow $trinityBtnTextShadow $trinityBtnTextShadow #b4416e;}
+  &._end {opacity: 0; transition-delay: 0s; text-shadow: $trinityBtnTextShadow $trinityBtnTextShadow $trinityBtnTextShadow #3f1c39;}
+}
