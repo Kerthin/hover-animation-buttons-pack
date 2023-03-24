@@ -51,6 +51,8 @@
     ## @import envelopeSquareBtn.scss
     ## @import absorbingCircleBtn.scss
     ## @import rotatingRhombBtn.scss
+    ## @import targetBtn.scss
+    ## @import windowBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -312,3 +314,8 @@ ____________________________________________________________*/
 ## @import targetBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/targetBtn.scss';
+
+/*____________________________________________________________
+## @import windowBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/windowBtn.scss';

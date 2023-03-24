@@ -1,0 +1,24 @@
+section.presentWrap
+  h1.presentWrap__title Window Buttons
+  .presentWrap__buttonsBlock
+
+    mixin windowsWrapMix(modName, wrapNumber)
+      button.windowBtn(class=`${modName}`)
+          - var windowsWrapCount = 1;
+          while windowsWrapCount <= `${wrapNumber}`
+            .windowBtn__windowsWrap(id=`_${windowsWrapCount++}`)
+              .windowBtn__windowItem
+              .windowBtn__windowItem
+              .windowBtn__windowItem
+              .windowBtn__windowItem
+          .windowBtn__text._start Hover
+          .windowBtn__text._end Button
+
+    +windowsWrapMix('_full _simple', 1)
+    +windowsWrapMix('_little _simple', 1)
+
+    +windowsWrapMix('_full', 3)
+    +windowsWrapMix('_little', 3)
+
+    +windowsWrapMix('_fullStep', 3)
+    +windowsWrapMix('_littleStep', 3)

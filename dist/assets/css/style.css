@@ -51,6 +51,8 @@
     ## @import envelopeSquareBtn.scss
     ## @import absorbingCircleBtn.scss
     ## @import rotatingRhombBtn.scss
+    ## @import targetBtn.scss
+    ## @import windowBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -758,141 +760,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(3, 200px, 26px, 0);
+        clip: rect(9, 200px, 10px, 0);
     }
 
     6.25% {
-        clip: rect(36, 200px, 24px, 0);
+        clip: rect(8, 200px, 24px, 0);
     }
 
     12.5% {
-        clip: rect(32, 200px, 13px, 0);
+        clip: rect(21, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(51, 200px, 8px, 0);
+        clip: rect(40, 200px, 12px, 0);
     }
 
     25% {
-        clip: rect(56, 200px, 6px, 0);
+        clip: rect(42, 200px, 31px, 0);
     }
 
     31.25% {
-        clip: rect(37, 200px, 51px, 0);
+        clip: rect(17, 200px, 19px, 0);
     }
 
     37.5% {
-        clip: rect(15, 200px, 42px, 0);
+        clip: rect(34, 200px, 28px, 0);
     }
 
     43.75% {
-        clip: rect(38, 200px, 35px, 0);
+        clip: rect(38, 200px, 48px, 0);
     }
 
     50% {
-        clip: rect(38, 200px, 55px, 0);
+        clip: rect(4, 200px, 26px, 0);
     }
 
     56.25% {
-        clip: rect(63, 200px, 10px, 0);
+        clip: rect(62, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(25, 200px, 12px, 0);
+        clip: rect(27, 200px, 49px, 0);
     }
 
     68.75% {
-        clip: rect(40, 200px, 2px, 0);
+        clip: rect(65, 200px, 65px, 0);
     }
 
     75% {
-        clip: rect(63, 200px, 29px, 0);
+        clip: rect(52, 200px, 24px, 0);
     }
 
     81.25% {
-        clip: rect(33, 200px, 41px, 0);
+        clip: rect(29, 200px, 60px, 0);
     }
 
     87.5% {
-        clip: rect(59, 200px, 2px, 0);
+        clip: rect(37, 200px, 21px, 0);
     }
 
     93.75% {
-        clip: rect(9, 200px, 57px, 0);
+        clip: rect(29, 200px, 15px, 0);
     }
 
     100% {
-        clip: rect(42, 200px, 63px, 0);
+        clip: rect(1, 200px, 56px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(3, 200px, 26px, 0);
+        clip: rect(9, 200px, 10px, 0);
     }
 
     6.25% {
-        clip: rect(36, 200px, 24px, 0);
+        clip: rect(8, 200px, 24px, 0);
     }
 
     12.5% {
-        clip: rect(32, 200px, 13px, 0);
+        clip: rect(21, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(51, 200px, 8px, 0);
+        clip: rect(40, 200px, 12px, 0);
     }
 
     25% {
-        clip: rect(56, 200px, 6px, 0);
+        clip: rect(42, 200px, 31px, 0);
     }
 
     31.25% {
-        clip: rect(37, 200px, 51px, 0);
+        clip: rect(17, 200px, 19px, 0);
     }
 
     37.5% {
-        clip: rect(15, 200px, 42px, 0);
+        clip: rect(34, 200px, 28px, 0);
     }
 
     43.75% {
-        clip: rect(38, 200px, 35px, 0);
+        clip: rect(38, 200px, 48px, 0);
     }
 
     50% {
-        clip: rect(38, 200px, 55px, 0);
+        clip: rect(4, 200px, 26px, 0);
     }
 
     56.25% {
-        clip: rect(63, 200px, 10px, 0);
+        clip: rect(62, 200px, 52px, 0);
     }
 
     62.5% {
-        clip: rect(25, 200px, 12px, 0);
+        clip: rect(27, 200px, 49px, 0);
     }
 
     68.75% {
-        clip: rect(40, 200px, 2px, 0);
+        clip: rect(65, 200px, 65px, 0);
     }
 
     75% {
-        clip: rect(63, 200px, 29px, 0);
+        clip: rect(52, 200px, 24px, 0);
     }
 
     81.25% {
-        clip: rect(33, 200px, 41px, 0);
+        clip: rect(29, 200px, 60px, 0);
     }
 
     87.5% {
-        clip: rect(59, 200px, 2px, 0);
+        clip: rect(37, 200px, 21px, 0);
     }
 
     93.75% {
-        clip: rect(9, 200px, 57px, 0);
+        clip: rect(29, 200px, 15px, 0);
     }
 
     100% {
-        clip: rect(42, 200px, 63px, 0);
+        clip: rect(1, 200px, 56px, 0);
     }
 }
 /*____________________________________________________________
@@ -9064,4 +9066,415 @@ ____________________________________________________________*/
     -webkit-transition-delay: calc(0.3s / 3);
     -o-transition-delay: calc(0.3s / 3);
     transition-delay: calc(0.3s / 3);
+}
+
+/*____________________________________________________________
+## @import windowBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Window Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Window Buttons
+____________________________________________________________*/
+.windowBtn {
+    position: relative;
+    margin: 20px 25px;
+    width: 200px;
+    height: 65px;
+    background-color: #e54297;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.windowBtn._simple .windowBtn__windowsWrap {
+    -webkit-transition-delay: calc(0.8s / 8);
+    -o-transition-delay: calc(0.8s / 8);
+    transition-delay: calc(0.8s / 8);
+}
+
+.windowBtn._simple .windowBtn__windowsWrap .windowBtn__windowItem {
+    -webkit-transition-delay: calc(0.8s / 8);
+    -o-transition-delay: calc(0.8s / 8);
+    transition-delay: calc(0.8s / 8);
+}
+
+.windowBtn._simple .windowBtn__text._start {
+    -webkit-transition-delay: calc(0.8s - 0.2s);
+    -o-transition-delay: calc(0.8s - 0.2s);
+    transition-delay: calc(0.8s - 0.2s);
+}
+
+.windowBtn._simple .windowBtn__text._end {
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.windowBtn._simple:hover .windowBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.windowBtn._simple:hover .windowBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.8s - 0.2s);
+    -o-transition-delay: calc(0.8s - 0.2s);
+    transition-delay: calc(0.8s - 0.2s);
+}
+
+.windowBtn._full:hover .windowBtn__windowItem:nth-child(1) {
+    width: 50%;
+    height: 50%;
+}
+
+.windowBtn._full:hover .windowBtn__windowItem:nth-child(2) {
+    width: 50%;
+    height: 50%;
+}
+
+.windowBtn._full:hover .windowBtn__windowItem:nth-child(3) {
+    width: 50%;
+    height: 50%;
+}
+
+.windowBtn._full:hover .windowBtn__windowItem:nth-child(4) {
+    width: 50%;
+    height: 50%;
+}
+
+.windowBtn._little:hover .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% + (((65% / 2) / 4) / 12));
+    height: calc(50% - ((50% / 2) / 12));
+}
+
+.windowBtn._little:hover .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - (((65% / 2) / 4) / 12));
+    height: calc(50% + ((50% / 2) / 12));
+}
+
+.windowBtn._little:hover .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% + (((65% / 2) / 4) / 12));
+    height: calc(50% - ((50% / 2) / 12));
+}
+
+.windowBtn._little:hover .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - (((65% / 2) / 4) / 12));
+    height: calc(50% + ((50% / 2) / 12));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((1 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((2 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._fullStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+    height: calc(50% - ((3 * (65px / 6.5)) - (65px / 6.5)));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% + (65% / 2) / 4 / (12 / 1));
+    height: calc(50% - 25% / (12 / 1));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - (65% / 2) / 4 / (12 / 1));
+    height: calc(50% + 25% / (12 / 1));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% + (65% / 2) / 4 / (12 / 1));
+    height: calc(50% - 25% / (12 / 1));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - (65% / 2) / 4 / (12 / 1));
+    height: calc(50% + 25% / (12 / 1));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% + (65% / 2) / 4 / (12 / 2));
+    height: calc(50% - 25% / (12 / 2));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - (65% / 2) / 4 / (12 / 2));
+    height: calc(50% + 25% / (12 / 2));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% + (65% / 2) / 4 / (12 / 2));
+    height: calc(50% - 25% / (12 / 2));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - (65% / 2) / 4 / (12 / 2));
+    height: calc(50% + 25% / (12 / 2));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(1) {
+    width: calc(50% + (65% / 2) / 4 / (12 / 3));
+    height: calc(50% - 25% / (12 / 3));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - (65% / 2) / 4 / (12 / 3));
+    height: calc(50% + 25% / (12 / 3));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(3) {
+    width: calc(50% + (65% / 2) / 4 / (12 / 3));
+    height: calc(50% - 25% / (12 / 3));
+}
+
+.windowBtn._littleStep:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - (65% / 2) / 4 / (12 / 3));
+    height: calc(50% + 25% / (12 / 3));
+}
+
+.windowBtn:hover .windowBtn__windowsWrap {
+    -webkit-transform: translate(-50%, -50%) rotate(225deg);
+    -ms-transform: translate(-50%, -50%) rotate(225deg);
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.windowBtn:hover .windowBtn__windowsWrap:nth-child(1) {
+    -webkit-transition-delay: calc((0.3000750188s * 1) - 0.2s);
+    -o-transition-delay: calc((0.3000750188s * 1) - 0.2s);
+    transition-delay: calc((0.3000750188s * 1) - 0.2s);
+}
+
+.windowBtn:hover .windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem {
+    -webkit-transition-delay: calc((0.3000750188s * 1) - 0.2s);
+    -o-transition-delay: calc((0.3000750188s * 1) - 0.2s);
+    transition-delay: calc((0.3000750188s * 1) - 0.2s);
+}
+
+.windowBtn:hover .windowBtn__windowsWrap:nth-child(2) {
+    -webkit-transition-delay: calc((0.3000750188s * 2) - 0.2s);
+    -o-transition-delay: calc((0.3000750188s * 2) - 0.2s);
+    transition-delay: calc((0.3000750188s * 2) - 0.2s);
+}
+
+.windowBtn:hover .windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem {
+    -webkit-transition-delay: calc((0.3000750188s * 2) - 0.2s);
+    -o-transition-delay: calc((0.3000750188s * 2) - 0.2s);
+    transition-delay: calc((0.3000750188s * 2) - 0.2s);
+}
+
+.windowBtn:hover .windowBtn__windowsWrap:nth-child(3) {
+    -webkit-transition-delay: calc((0.3000750188s * 3) - 0.2s);
+    -o-transition-delay: calc((0.3000750188s * 3) - 0.2s);
+    transition-delay: calc((0.3000750188s * 3) - 0.2s);
+}
+
+.windowBtn:hover .windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem {
+    -webkit-transition-delay: calc((0.3000750188s * 3) - 0.2s);
+    -o-transition-delay: calc((0.3000750188s * 3) - 0.2s);
+    transition-delay: calc((0.3000750188s * 3) - 0.2s);
+}
+
+.windowBtn:hover .windowBtn__windowItem {
+    -webkit-box-shadow: 0 0px 6px rgba(0, 0, 0, 0.16), 0 0px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.16), 0 0px 6px rgba(0, 0, 0, 0.23);
+}
+
+.windowBtn:hover .windowBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.windowBtn:hover .windowBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: 1.3002250563s;
+    -o-transition-delay: 1.3002250563s;
+    transition-delay: 1.3002250563s;
+}
+
+.windowBtn__windowsWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+    width: 620%;
+    height: 620%;
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    -o-transition: transform 0.8s;
+    transition: transform 0.8s;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+}
+
+.windowBtn__windowsWrap:nth-child(1) {
+    -webkit-transition-delay: calc(-0.3000750188s * 1 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    -o-transition-delay: calc(-0.3000750188s * 1 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    transition-delay: calc(-0.3000750188s * 1 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+}
+
+.windowBtn__windowsWrap:nth-child(1) .windowBtn__windowItem {
+    background-color: #f0cba3;
+    -webkit-transition-delay: calc(-0.3000750188s * 1 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    -o-transition-delay: calc(-0.3000750188s * 1 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    transition-delay: calc(-0.3000750188s * 1 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+}
+
+.windowBtn__windowsWrap:nth-child(2) {
+    -webkit-transition-delay: calc(-0.3000750188s * 2 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    -o-transition-delay: calc(-0.3000750188s * 2 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    transition-delay: calc(-0.3000750188s * 2 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+}
+
+.windowBtn__windowsWrap:nth-child(2) .windowBtn__windowItem {
+    background-color: #a1c3d1;
+    -webkit-transition-delay: calc(-0.3000750188s * 2 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    -o-transition-delay: calc(-0.3000750188s * 2 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    transition-delay: calc(-0.3000750188s * 2 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+}
+
+.windowBtn__windowsWrap:nth-child(3) {
+    -webkit-transition-delay: calc(-0.3000750188s * 3 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    -o-transition-delay: calc(-0.3000750188s * 3 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    transition-delay: calc(-0.3000750188s * 3 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+}
+
+.windowBtn__windowsWrap:nth-child(3) .windowBtn__windowItem {
+    background-color: #ffb48f;
+    -webkit-transition-delay: calc(-0.3000750188s * 3 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    -o-transition-delay: calc(-0.3000750188s * 3 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+    transition-delay: calc(-0.3000750188s * 3 + ((0.3000750188s * 3) + (0.3000750188s / 8)));
+}
+
+.windowBtn__windowItem {
+    position: absolute;
+    -webkit-transition: width 0.8s, height 0.8s, -webkit-box-shadow 0.8s;
+    transition: width 0.8s, height 0.8s, -webkit-box-shadow 0.8s;
+    -o-transition: width 0.8s, height 0.8s, box-shadow 0.8s;
+    transition: width 0.8s, height 0.8s, box-shadow 0.8s;
+    transition: width 0.8s, height 0.8s, box-shadow 0.8s, -webkit-box-shadow 0.8s;
+}
+
+.windowBtn__windowItem:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.windowBtn__windowItem:nth-child(2) {
+    top: 0;
+    right: 0;
+}
+
+.windowBtn__windowItem:nth-child(3) {
+    bottom: 0;
+    right: 0;
+}
+
+.windowBtn__windowItem:nth-child(4) {
+    bottom: 0;
+    left: 0;
+}
+
+.windowBtn__windowItem:nth-child(1) {
+    width: calc(50% + (65% / 2) / 4);
+    height: 25%;
+}
+
+.windowBtn__windowItem:nth-child(2) {
+    width: calc(50% - (65% / 2) / 4);
+    height: 75%;
+}
+
+.windowBtn__windowItem:nth-child(3) {
+    width: calc(50% + (65% / 2) / 4);
+    height: 25%;
+}
+
+.windowBtn__windowItem:nth-child(4) {
+    width: calc(50% - (65% / 2) / 4);
+    height: 75%;
+}
+
+.windowBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.windowBtn__text._start {
+    -webkit-transition-delay: 1.3002250563s;
+    -o-transition-delay: 1.3002250563s;
+    transition-delay: 1.3002250563s;
+}
+
+.windowBtn__text._end {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
 }

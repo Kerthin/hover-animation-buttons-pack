@@ -1,0 +1,258 @@
+/*____________________________________________________________
+# Window Buttons Variables
+____________________________________________________________*/
+$windowsWrapColors: (#f0cba3, #a1c3d1, #ffb48f);
+
+$windowBtnWidth: 200px;
+$windowBtnHeight: calc($windowBtnWidth / 100) * 32.5;
+
+$windowBtnFontSize: calc($windowBtnHeight / 2.03125);
+$windowBtnTextShadow: calc($windowBtnFontSize / 16);
+
+$windowItemsNumber: 4;
+$windowWrap_simple: 1;
+
+$windowItemsNumber_multiple: calc($windowItemsNumber * length($windowsWrapColors));
+
+$squareSize: 65;
+
+$windowBtnSpeed: .8s;
+$windowBtnTextSpeed: calc($windowBtnSpeed / 4);
+$windowBtnDelay: calc($windowBtnSpeed / 2.666);
+$windowBtnDelayDeductible: calc($windowBtnSpeed / 4);
+$windowBtnLastChildDelay: calc($windowBtnDelay * length($windowsWrapColors)) - $windowBtnDelayDeductible;
+$windowBtnStepTextDelay: $windowBtnLastChildDelay + $windowBtnSpeed - $windowBtnTextSpeed;
+
+/*____________________________________________________________
+# Window Buttons
+____________________________________________________________*/
+.windowBtn {
+  position: relative;
+  margin: 20px 25px;
+  width: $windowBtnWidth;
+  height: $windowBtnHeight;
+  background-color: #e54297;
+  overflow: hidden;
+  cursor: pointer;
+  
+  // (&) Simple Style Mod
+  &._simple {
+    .windowBtn__windowsWrap {transition-delay: calc(#{$windowBtnSpeed} / 8);
+      .windowBtn__windowItem {transition-delay: calc(#{$windowBtnSpeed} / 8);}
+    }
+    .windowBtn__text {
+      &._start {transition-delay: calc(#{$windowBtnSpeed} - #{$windowBtnTextSpeed});}
+      &._end {transition-delay: 0s;}
+    }
+    
+    &:hover {
+      .windowBtn__text {
+        &._start {opacity: 0; transition-delay: 0s;}
+        &._end {opacity: 1; transition-delay: calc(#{$windowBtnSpeed} - #{$windowBtnTextSpeed});}
+      }
+    }
+  }
+  
+  // (&) Full Area Style Mod
+  // Button №1 and №3
+  &._full {
+    &:hover {
+      .windowBtn__windowItem {
+        
+        // (@-Iteration) Classic hover effect for the width and height of 'windowItems'
+        @for $i from 1 through $windowItemsNumber {
+          &:nth-child(#{$i}) {width: calc(50%); height: calc(50%);}
+        }
+      }
+    }
+  }
+  
+  // (&) Little Area Style Mod
+  // Button №2 and №4
+  &._little {
+    &:hover {
+      .windowBtn__windowItem {
+        
+        // (@-Iteration) Formula hover effect for partial narrowing of the width and height of 'windowItems'
+        @for $i from 1 through $windowItemsNumber {
+          // (@-If Else) Defining odd elements in nth-child
+          // (!) To denote addition and subtraction operations
+          @if ($i % 2 == 1) {
+            &:nth-child(#{$i}) {
+              width: calc(50% + (((#{$squareSize}% / 2) / 4) / #{$windowItemsNumber_multiple}));
+              height: calc(50% - ((50% / 2) / #{$windowItemsNumber_multiple}));
+            }
+          }
+          // (@-If Else) Else for even elements in nth-child
+          // (!) To denote addition and subtraction operations
+          @else {
+            &:nth-child(#{$i}) {
+              width: calc(50% - (((#{$squareSize}% / 2) / 4) / #{$windowItemsNumber_multiple}));
+              height: calc(50% + ((50% / 2) / #{$windowItemsNumber_multiple}));
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // (&) Full Step Area Style Mod
+  // Button №5
+  &._fullStep {
+    &:hover {
+      .windowBtn__windowsWrap {
+        
+        // (@-Iteration) Creating multiple layer wrappers for child elements of type 'windowItem'
+        // (!) Each wrapper has 4 child elements with 10 pixel margin gradation
+        @for $i from 1 through length($windowsWrapColors) {
+          &:nth-child(#{$i}) {
+            
+            .windowBtn__windowItem {
+              
+              // (@-Iteration) Hover effect for child elements where each element has a padding of 10 more than the previous one
+              // (!) Height and width use current wrapper number (i) not (j). (j) use only for child number. Be careful
+              @for $j from 1 through $windowItemsNumber {
+                &:nth-child(#{$j}) {
+                  width: calc(50% - ((#{$i} * (#{$windowBtnHeight} / 6.5)) - (#{$windowBtnHeight} / 6.5)));
+                  height: calc(50% - ((#{$i} * (#{$windowBtnHeight} / 6.5)) - (#{$windowBtnHeight} / 6.5)));
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // (&) Little Step Area Style Mod
+  // Button №6
+  &._littleStep {
+    &:hover {
+      .windowBtn__windowsWrap {
+        
+        // (@-Iteration) Creating multiple layer wrappers for child elements of type 'windowItem'
+        @for $i from 1 through length($windowsWrapColors) {
+          &:nth-child(#{$i}) {
+            
+            .windowBtn__windowItem {
+              
+              // (@-Iteration) Formula hover effect for partial narrowing of the width and height of 'windowItems'
+              // (!) Each wrapper contains 4 elements. Depending on the wrapper number, the size of 4 child elements changes
+              @for $j from 1 through $windowItemsNumber {
+                // (@-If Else) Defining odd elements in nth-child
+                // (!) To denote addition and subtraction operations
+                @if ($j % 2 == 1) {
+                  &:nth-child(#{$j}) {
+                    width: calc(50% + (((#{$squareSize}% / 2) / 4) / (#{$windowItemsNumber_multiple} / #{$i})));
+                    height: calc(50% - ((50% / 2) / (#{$windowItemsNumber_multiple} / #{$i})));
+                  }
+                }
+                // (@-If Else) Else for even elements in nth-child
+                // (!) To denote addition and subtraction operations
+                @else {
+                  &:nth-child(#{$j}) {
+                    width: calc(50% - (((#{$squareSize}% / 2) / 4) / (#{$windowItemsNumber_multiple} / #{$i})));
+                    height: calc(50% + ((50% / 2) / (#{$windowItemsNumber_multiple} / #{$i})));
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // (#) General Classic Hover Style (for all buttons)
+  &:hover {
+    .windowBtn__windowsWrap {
+      transform: translate(-50%, -50%) rotate(225deg);
+      
+      // (@-Iteration) Creating an animation delay on hover with a sequence of +.3s to each next element. Example: .1, .4, .7
+      @for $i from 1 through length($windowsWrapColors) {
+        &:nth-child(#{$i}) {
+          transition-delay: calc((#{$windowBtnDelay} * #{$i}) - #{$windowBtnDelayDeductible});
+          
+          .windowBtn__windowItem {
+            transition-delay: calc((#{$windowBtnDelay} * #{$i}) - #{$windowBtnDelayDeductible});
+          }
+        }
+      }
+    }
+    .windowBtn__windowItem {
+      box-shadow: 0 0px 6px rgba(0,0,0,0.16), 0 0px 6px rgba(0,0,0,0.23);
+    }
+    .windowBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: $windowBtnStepTextDelay;}
+    }
+  }
+}
+
+.windowBtn__windowsWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 620%;
+  height: 620%;
+  transition: transform $windowBtnSpeed;
+  
+  // (@-Iteration) Create an animation delay on no hover with a sequence of -.3s to each next element from the end. Example: .7, .4, .1
+  @for $i from 1 through length($windowsWrapColors) {
+    &:nth-child(#{$i}) {
+      transition-delay: calc(-#{$windowBtnDelay} * #{$i} + ((#{$windowBtnDelay} * #{length($windowsWrapColors)}) + (#{$windowBtnDelay} / 8)));
+
+      .windowBtn__windowItem {
+        background-color: nth($windowsWrapColors, $i);
+        transition-delay: calc(-#{$windowBtnDelay} * #{$i} + ((#{$windowBtnDelay} * #{length($windowsWrapColors)}) + (#{$windowBtnDelay} / 8)));
+      }
+    }
+  }
+}
+.windowBtn__windowItem {
+  position: absolute;
+  transition: width $windowBtnSpeed, height $windowBtnSpeed, box-shadow $windowBtnSpeed;
+  
+  &:nth-child(1) {top: 0; left: 0;}
+  &:nth-child(2) {top: 0; right: 0;}
+  &:nth-child(3) {bottom: 0; right: 0;}
+  &:nth-child(4) {bottom: 0; left: 0;}
+  
+  // (@-Iteration) Formula to create equidistant child elements, creating an empty square effect
+  @for $i from 1 through $windowItemsNumber {
+    // (@-If Else) Defining odd elements in nth-child
+    // (!) To denote addition and subtraction operations
+    @if ($i % 2 == 1) {
+      &:nth-child(#{$i}) {
+        width: calc(50% + (((#{$squareSize}% / 2) / 4)));
+        height: calc(50% - ((50% / 2)));
+      }
+    }
+    // (@-If Else) Else for even elements in nth-child
+    // (!) To denote addition and subtraction operations
+    @else {
+      &:nth-child(#{$i}) {
+        width: calc(50% - (((#{$squareSize}% / 2) / 4)));
+        height: calc(50% + ((50% / 2)));
+      }
+    }
+  }
+}
+
+.windowBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $windowBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $windowBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $windowBtnTextShadow $windowBtnTextShadow $windowBtnTextShadow #000;
+  transition: opacity $windowBtnTextSpeed;
+  
+  &._start {transition-delay: $windowBtnStepTextDelay;}
+  &._end {opacity: 0; transition-delay: 0s;}
+}
