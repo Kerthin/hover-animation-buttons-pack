@@ -54,6 +54,7 @@
     ## @import targetBtn.scss
     ## @import windowBtn.scss
     ## @import trinityBtn.scss
+    ## @import upperBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -325,3 +326,8 @@ ____________________________________________________________*/
 ## @import trinityBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/trinityBtn.scss';
+
+/*____________________________________________________________
+## @import upperBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/upperBtn.scss';
