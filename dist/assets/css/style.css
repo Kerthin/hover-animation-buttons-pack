@@ -55,6 +55,7 @@
     ## @import windowBtn.scss
     ## @import trinityBtn.scss
     ## @import upperBtn.scss
+    ## @import circlesCenterBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -762,141 +763,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(1, 200px, 36px, 0);
+        clip: rect(15, 200px, 19px, 0);
     }
 
     6.25% {
-        clip: rect(46, 200px, 45px, 0);
+        clip: rect(17, 200px, 28px, 0);
     }
 
     12.5% {
-        clip: rect(22, 200px, 63px, 0);
+        clip: rect(52, 200px, 35px, 0);
     }
 
     18.75% {
-        clip: rect(44, 200px, 26px, 0);
+        clip: rect(59, 200px, 28px, 0);
     }
 
     25% {
-        clip: rect(29, 200px, 41px, 0);
+        clip: rect(42, 200px, 30px, 0);
     }
 
     31.25% {
-        clip: rect(26, 200px, 57px, 0);
+        clip: rect(12, 200px, 34px, 0);
     }
 
     37.5% {
-        clip: rect(58, 200px, 62px, 0);
+        clip: rect(33, 200px, 28px, 0);
     }
 
     43.75% {
-        clip: rect(40, 200px, 30px, 0);
+        clip: rect(36, 200px, 64px, 0);
     }
 
     50% {
-        clip: rect(41, 200px, 48px, 0);
+        clip: rect(7, 200px, 55px, 0);
     }
 
     56.25% {
-        clip: rect(53, 200px, 58px, 0);
+        clip: rect(20, 200px, 63px, 0);
     }
 
     62.5% {
-        clip: rect(26, 200px, 24px, 0);
+        clip: rect(31, 200px, 6px, 0);
     }
 
     68.75% {
-        clip: rect(13, 200px, 6px, 0);
+        clip: rect(17, 200px, 21px, 0);
     }
 
     75% {
-        clip: rect(6, 200px, 46px, 0);
+        clip: rect(53, 200px, 35px, 0);
     }
 
     81.25% {
-        clip: rect(32, 200px, 49px, 0);
+        clip: rect(46, 200px, 41px, 0);
     }
 
     87.5% {
-        clip: rect(5, 200px, 4px, 0);
+        clip: rect(32, 200px, 31px, 0);
     }
 
     93.75% {
-        clip: rect(51, 200px, 37px, 0);
+        clip: rect(38, 200px, 12px, 0);
     }
 
     100% {
-        clip: rect(29, 200px, 27px, 0);
+        clip: rect(49, 200px, 18px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(1, 200px, 36px, 0);
+        clip: rect(15, 200px, 19px, 0);
     }
 
     6.25% {
-        clip: rect(46, 200px, 45px, 0);
+        clip: rect(17, 200px, 28px, 0);
     }
 
     12.5% {
-        clip: rect(22, 200px, 63px, 0);
+        clip: rect(52, 200px, 35px, 0);
     }
 
     18.75% {
-        clip: rect(44, 200px, 26px, 0);
+        clip: rect(59, 200px, 28px, 0);
     }
 
     25% {
-        clip: rect(29, 200px, 41px, 0);
+        clip: rect(42, 200px, 30px, 0);
     }
 
     31.25% {
-        clip: rect(26, 200px, 57px, 0);
+        clip: rect(12, 200px, 34px, 0);
     }
 
     37.5% {
-        clip: rect(58, 200px, 62px, 0);
+        clip: rect(33, 200px, 28px, 0);
     }
 
     43.75% {
-        clip: rect(40, 200px, 30px, 0);
+        clip: rect(36, 200px, 64px, 0);
     }
 
     50% {
-        clip: rect(41, 200px, 48px, 0);
+        clip: rect(7, 200px, 55px, 0);
     }
 
     56.25% {
-        clip: rect(53, 200px, 58px, 0);
+        clip: rect(20, 200px, 63px, 0);
     }
 
     62.5% {
-        clip: rect(26, 200px, 24px, 0);
+        clip: rect(31, 200px, 6px, 0);
     }
 
     68.75% {
-        clip: rect(13, 200px, 6px, 0);
+        clip: rect(17, 200px, 21px, 0);
     }
 
     75% {
-        clip: rect(6, 200px, 46px, 0);
+        clip: rect(53, 200px, 35px, 0);
     }
 
     81.25% {
-        clip: rect(32, 200px, 49px, 0);
+        clip: rect(46, 200px, 41px, 0);
     }
 
     87.5% {
-        clip: rect(5, 200px, 4px, 0);
+        clip: rect(32, 200px, 31px, 0);
     }
 
     93.75% {
-        clip: rect(51, 200px, 37px, 0);
+        clip: rect(38, 200px, 12px, 0);
     }
 
     100% {
-        clip: rect(29, 200px, 27px, 0);
+        clip: rect(49, 200px, 18px, 0);
     }
 }
 /*____________________________________________________________
@@ -9778,4 +9779,121 @@ ____________________________________________________________*/
 .upperBtn__block:after {
     content: "Button";
     text-shadow: 2px 2px 2px #10e7dc;
+}
+
+/*____________________________________________________________
+## @import circlesCenterBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Center Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Circle Center Button
+____________________________________________________________*/
+.circlesCenterBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #cb2d6f;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.circlesCenterBtn:hover .circlesCenterBtn__circle {
+    width: calc(200px + (200px / 20));
+    height: calc(200px + (200px / 20));
+}
+
+.circlesCenterBtn:hover .circlesCenterBtn__circle:nth-child(1) {
+    -webkit-transition-delay: calc((0.2s * 1) - 0.1s);
+    -o-transition-delay: calc((0.2s * 1) - 0.1s);
+    transition-delay: calc((0.2s * 1) - 0.1s);
+}
+
+.circlesCenterBtn:hover .circlesCenterBtn__circle:nth-child(2) {
+    -webkit-transition-delay: calc((0.2s * 2) - 0.1s);
+    -o-transition-delay: calc((0.2s * 2) - 0.1s);
+    transition-delay: calc((0.2s * 2) - 0.1s);
+}
+
+.circlesCenterBtn:hover .circlesCenterBtn__circle:nth-child(3) {
+    -webkit-transition-delay: calc((0.2s * 3) - 0.1s);
+    -o-transition-delay: calc((0.2s * 3) - 0.1s);
+    transition-delay: calc((0.2s * 3) - 0.1s);
+}
+
+.circlesCenterBtn:hover .circlesCenterBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.2s * 3);
+    -o-transition-delay: calc(0.2s * 3);
+    transition-delay: calc(0.2s * 3);
+}
+
+.circlesCenterBtn__circleWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.circlesCenterBtn__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    -webkit-transition: width 0.3s, height 0.3s;
+    -o-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
+}
+
+.circlesCenterBtn__circle:nth-child(1) {
+    background-color: #16ffbd;
+    -webkit-transition-delay: calc(-0.2s * 1 + ((0.2s * 3) + (0.2s / 2)));
+    -o-transition-delay: calc(-0.2s * 1 + ((0.2s * 3) + (0.2s / 2)));
+    transition-delay: calc(-0.2s * 1 + ((0.2s * 3) + (0.2s / 2)));
+}
+
+.circlesCenterBtn__circle:nth-child(2) {
+    background-color: #f070a1;
+    -webkit-transition-delay: calc(-0.2s * 2 + ((0.2s * 3) + (0.2s / 2)));
+    -o-transition-delay: calc(-0.2s * 2 + ((0.2s * 3) + (0.2s / 2)));
+    transition-delay: calc(-0.2s * 2 + ((0.2s * 3) + (0.2s / 2)));
+}
+
+.circlesCenterBtn__circle:nth-child(3) {
+    background-color: #c34271;
+    -webkit-transition-delay: calc(-0.2s * 3 + ((0.2s * 3) + (0.2s / 2)));
+    -o-transition-delay: calc(-0.2s * 3 + ((0.2s * 3) + (0.2s / 2)));
+    transition-delay: calc(-0.2s * 3 + ((0.2s * 3) + (0.2s / 2)));
+}
+
+.circlesCenterBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.circlesCenterBtn__text._end {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
 }

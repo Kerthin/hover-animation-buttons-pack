@@ -1,0 +1,11 @@
+section.presentWrap
+  h1.presentWrap__title Circle Center Button
+  .presentWrap__buttonsBlock
+
+    button.circlesCenterBtn
+      .circlesCenterBtn__text._start Hover
+      .circlesCenterBtn__circleWrap
+        - var circlesCenterCount = 1;
+        while circlesCenterCount <= 3
+          .circlesCenterBtn__circle(id=`_${circlesCenterCount++}`)
+      .circlesCenterBtn__text._end Button
