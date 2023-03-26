@@ -763,141 +763,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 19px, 0);
+        clip: rect(25, 200px, 16px, 0);
     }
 
     6.25% {
-        clip: rect(17, 200px, 28px, 0);
+        clip: rect(2, 200px, 9px, 0);
     }
 
     12.5% {
-        clip: rect(52, 200px, 35px, 0);
+        clip: rect(19, 200px, 60px, 0);
     }
 
     18.75% {
-        clip: rect(59, 200px, 28px, 0);
+        clip: rect(36, 200px, 50px, 0);
     }
 
     25% {
-        clip: rect(42, 200px, 30px, 0);
+        clip: rect(37, 200px, 61px, 0);
     }
 
     31.25% {
-        clip: rect(12, 200px, 34px, 0);
+        clip: rect(44, 200px, 22px, 0);
     }
 
     37.5% {
-        clip: rect(33, 200px, 28px, 0);
+        clip: rect(1, 200px, 6px, 0);
     }
 
     43.75% {
-        clip: rect(36, 200px, 64px, 0);
+        clip: rect(54, 200px, 33px, 0);
     }
 
     50% {
-        clip: rect(7, 200px, 55px, 0);
+        clip: rect(23, 200px, 35px, 0);
     }
 
     56.25% {
-        clip: rect(20, 200px, 63px, 0);
+        clip: rect(53, 200px, 42px, 0);
     }
 
     62.5% {
-        clip: rect(31, 200px, 6px, 0);
+        clip: rect(37, 200px, 23px, 0);
     }
 
     68.75% {
-        clip: rect(17, 200px, 21px, 0);
+        clip: rect(58, 200px, 17px, 0);
     }
 
     75% {
-        clip: rect(53, 200px, 35px, 0);
+        clip: rect(65, 200px, 18px, 0);
     }
 
     81.25% {
-        clip: rect(46, 200px, 41px, 0);
+        clip: rect(6, 200px, 10px, 0);
     }
 
     87.5% {
-        clip: rect(32, 200px, 31px, 0);
+        clip: rect(60, 200px, 22px, 0);
     }
 
     93.75% {
-        clip: rect(38, 200px, 12px, 0);
+        clip: rect(60, 200px, 33px, 0);
     }
 
     100% {
-        clip: rect(49, 200px, 18px, 0);
+        clip: rect(59, 200px, 39px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 19px, 0);
+        clip: rect(25, 200px, 16px, 0);
     }
 
     6.25% {
-        clip: rect(17, 200px, 28px, 0);
+        clip: rect(2, 200px, 9px, 0);
     }
 
     12.5% {
-        clip: rect(52, 200px, 35px, 0);
+        clip: rect(19, 200px, 60px, 0);
     }
 
     18.75% {
-        clip: rect(59, 200px, 28px, 0);
+        clip: rect(36, 200px, 50px, 0);
     }
 
     25% {
-        clip: rect(42, 200px, 30px, 0);
+        clip: rect(37, 200px, 61px, 0);
     }
 
     31.25% {
-        clip: rect(12, 200px, 34px, 0);
+        clip: rect(44, 200px, 22px, 0);
     }
 
     37.5% {
-        clip: rect(33, 200px, 28px, 0);
+        clip: rect(1, 200px, 6px, 0);
     }
 
     43.75% {
-        clip: rect(36, 200px, 64px, 0);
+        clip: rect(54, 200px, 33px, 0);
     }
 
     50% {
-        clip: rect(7, 200px, 55px, 0);
+        clip: rect(23, 200px, 35px, 0);
     }
 
     56.25% {
-        clip: rect(20, 200px, 63px, 0);
+        clip: rect(53, 200px, 42px, 0);
     }
 
     62.5% {
-        clip: rect(31, 200px, 6px, 0);
+        clip: rect(37, 200px, 23px, 0);
     }
 
     68.75% {
-        clip: rect(17, 200px, 21px, 0);
+        clip: rect(58, 200px, 17px, 0);
     }
 
     75% {
-        clip: rect(53, 200px, 35px, 0);
+        clip: rect(65, 200px, 18px, 0);
     }
 
     81.25% {
-        clip: rect(46, 200px, 41px, 0);
+        clip: rect(6, 200px, 10px, 0);
     }
 
     87.5% {
-        clip: rect(32, 200px, 31px, 0);
+        clip: rect(60, 200px, 22px, 0);
     }
 
     93.75% {
-        clip: rect(38, 200px, 12px, 0);
+        clip: rect(60, 200px, 33px, 0);
     }
 
     100% {
-        clip: rect(49, 200px, 18px, 0);
+        clip: rect(59, 200px, 39px, 0);
     }
 }
 /*____________________________________________________________
@@ -9892,6 +9892,106 @@ ____________________________________________________________*/
 }
 
 .circlesCenterBtn__text._end {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+/*____________________________________________________________
+## @import balloonBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Balloon Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Balloon Button
+____________________________________________________________*/
+.balloonBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #c44171;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.balloonBtn:hover .balloonBtn__circleWrap {
+    -webkit-transform: translate(-50%, -50%) rotate(720deg);
+    -ms-transform: translate(-50%, -50%) rotate(720deg);
+    transform: translate(-50%, -50%) rotate(720deg);
+}
+
+.balloonBtn:hover .balloonBtn__circleWrap:after {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: calc(200px + (200px / 20));
+    height: calc(200px + (200px / 20));
+}
+
+.balloonBtn:hover .balloonBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(1s / 1.666);
+    -o-transition-delay: calc(1s / 1.666);
+    transition-delay: calc(1s / 1.666);
+}
+
+.balloonBtn__circleWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+    width: calc(200px / 6.666);
+    height: calc(200px / 6.666);
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+}
+
+.balloonBtn__circleWrap:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -45%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 0;
+    height: 0;
+    background-color: #8fccf3;
+    border-radius: 50%;
+    -webkit-transition: left 1s, width 1s, height 1s, -webkit-transform 1s;
+    transition: left 1s, width 1s, height 1s, -webkit-transform 1s;
+    -o-transition: left 1s, width 1s, height 1s, transform 1s;
+    transition: left 1s, width 1s, height 1s, transform 1s;
+    transition: left 1s, width 1s, height 1s, transform 1s, -webkit-transform 1s;
+}
+
+.balloonBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity calc(1s / 5);
+    -o-transition: opacity calc(1s / 5);
+    transition: opacity calc(1s / 5);
+}
+
+.balloonBtn__text._end {
     opacity: 0;
     -webkit-transition-delay: 0s;
     -o-transition-delay: 0s;
