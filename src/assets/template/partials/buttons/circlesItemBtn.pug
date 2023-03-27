@@ -1,0 +1,10 @@
+section.presentWrap
+  h1.presentWrap__title Circle Item Button
+  .presentWrap__buttonsBlock
+
+    button.circlesItemBtn
+      - var circlesItemsCount = 1;
+      while circlesItemsCount <= 5
+        .circlesItemBtn__item(id=`_${circlesItemsCount++}`)
+      .circlesItemBtn__text._start Hover
+      .circlesItemBtn__text._end Button
