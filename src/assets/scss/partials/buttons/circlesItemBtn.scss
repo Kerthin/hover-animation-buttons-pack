@@ -1,0 +1,134 @@
+/*____________________________________________________________
+# Circle Item Button Variables
+____________________________________________________________*/
+$circlesItemBtnWidth: 200px; // (!) <- Default Settings (You can change)
+$circlesItemBtnHeight: ($circlesItemBtnWidth / 100) * 32.5;
+
+$circlesItemBtnFontSize: $circlesItemBtnHeight / 2.03125;
+$circlesItemBtnTextShadow: $circlesItemBtnFontSize / 16;
+
+// General Circle Size Styles
+$circlesItemBtnItemsCount: 5; // (!) <- Default Settings (You can change)
+$circlesItemBtnItemSize: $circlesItemBtnWidth / $circlesItemBtnItemsCount;
+$circlesItemBtnItemCircleSize: $circlesItemBtnItemSize / 2;
+$circlesItemBtnItemMarginSize: ($circlesItemBtnItemSize - $circlesItemBtnItemCircleSize) / 2;
+
+// Hover Circle Size Styles
+$circlesItemBtnItemHoverNumber: 2; // (!) <- Default Settings (You can change)
+$circlesItemBtnItemCircleHoverSize: $circlesItemBtnItemCircleSize / 2;
+$circlesItemBtnHalfHoverSize: ($circlesItemBtnWidth - $circlesItemBtnItemCircleHoverSize) / 2;
+$circlesItemBtnItemFirstMarginHoverSize: $circlesItemBtnHalfHoverSize - $circlesItemBtnItemCircleHoverSize;
+
+// Item Margin Formula
+$circlesItemBtnItemMarginHoverSize: $circlesItemBtnItemFirstMarginHoverSize - (($circlesItemBtnItemHoverNumber - 1) * $circlesItemBtnItemSize);
+
+// Time
+$circlesItemBtnSpeed: .4s;
+
+// Colors
+$palette-primary: #f66d6c;
+
+/*____________________________________________________________
+# Circle Item Button
+____________________________________________________________*/
+.circlesItemBtn {
+  position: relative;
+  margin: 20px;
+  width: $circlesItemBtnWidth;
+  height: $circlesItemBtnHeight;
+  background-color: $palette-primary;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: -50%;
+    left: 0;
+    background-color: #ff8f93;
+    transition: bottom $circlesItemBtnSpeed, box-shadow calc(#{$circlesItemBtnSpeed} / 1.333);
+    transition-delay: calc(#{$circlesItemBtnSpeed} / 4);
+    z-index: 2;
+  }
+  
+  &:hover {
+    .circlesItemBtn__item {
+      transform: translate(calc(50%), calc(50% + (#{$circlesItemBtnHeight} / 3.25)));
+      background-color: $palette-primary;
+      box-shadow: 0 0 0 rgba(0,0,0,0.16), 0 0 0 rgba(0,0,0,0.23);
+      
+      &:nth-child(#{$circlesItemBtnItemHoverNumber}) {
+        transform: translate($circlesItemBtnItemMarginHoverSize, calc(#{$circlesItemBtnHeight} / -6.5));
+        width: $circlesItemBtnItemCircleHoverSize;
+        height: $circlesItemBtnItemCircleHoverSize;
+        background-color: #10e7dc;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        
+        &:after {
+          width: calc(#{$circlesItemBtnWidth} + (#{$circlesItemBtnWidth} / 20));
+          height: calc(#{$circlesItemBtnWidth} + (#{$circlesItemBtnWidth} / 20));
+          transition-delay: calc(#{$circlesItemBtnSpeed} / .8);
+        }
+      }
+      
+      transition-delay: calc(#{$circlesItemBtnSpeed} / 4);
+    }
+    .circlesItemBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: calc(#{$circlesItemBtnSpeed} / .666);}
+    }
+    &:after {
+      bottom: 0;
+      box-shadow: 0 -2px 3px rgba(0,0,0,0.16), 0 -2px 3px rgba(0,0,0,0.23);
+      transition-delay: calc(#{$circlesItemBtnSpeed} / .8);
+    }
+  }
+}
+.circlesItemBtn__item {
+  position: relative;
+  float: left;
+  margin: 0 $circlesItemBtnItemMarginSize;
+  width: $circlesItemBtnItemCircleSize;
+  height: $circlesItemBtnItemCircleSize;
+  background-color: #f5e5c1;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: transform $circlesItemBtnSpeed, background-color $circlesItemBtnSpeed, box-shadow calc(#{$circlesItemBtnSpeed} / 2), width $circlesItemBtnSpeed, height $circlesItemBtnSpeed;
+  transition-delay: calc(#{$circlesItemBtnSpeed} / .8);
+  
+  &:nth-child(#{$circlesItemBtnItemHoverNumber}) {
+    z-index: 2;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: #10e7dc;
+      transition: width $circlesItemBtnSpeed, height $circlesItemBtnSpeed;
+      transition-delay: calc(#{$circlesItemBtnSpeed} / 4);
+    }
+  }
+}
+.circlesItemBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $circlesItemBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $circlesItemBtnFontSize;
+  font-weight: 900;
+  color: #84cdc9;
+  transition: opacity calc(#{$circlesItemBtnSpeed} / 2);
+  z-index: 3;
+  
+  &._start {transition-delay: calc(#{$circlesItemBtnSpeed} / .666); text-shadow: $circlesItemBtnTextShadow $circlesItemBtnTextShadow $circlesItemBtnTextShadow #b4416e;}
+  &._end {opacity: 0; transition-delay: 0s; text-shadow: $circlesItemBtnTextShadow $circlesItemBtnTextShadow $circlesItemBtnTextShadow #3f1c39;}
+}

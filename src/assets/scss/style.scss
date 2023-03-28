@@ -56,6 +56,8 @@
     ## @import trinityBtn.scss
     ## @import upperBtn.scss
     ## @import circlesCenterBtn.scss
+    ## @import balloonBtn.scss
+    ## @import circlesItemBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -342,3 +344,8 @@ ____________________________________________________________*/
 ## @import balloonBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/balloonBtn.scss';
+
+/*____________________________________________________________
+## @import circlesItemBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/circlesItemBtn.scss';
