@@ -58,6 +58,7 @@
     ## @import circlesCenterBtn.scss
     ## @import balloonBtn.scss
     ## @import circlesItemBtn.scss
+    ## @import snakeBorderBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -349,3 +350,8 @@ ____________________________________________________________*/
 ## @import circlesItemBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/circlesItemBtn.scss';
+
+/*____________________________________________________________
+## @import snakeBorderBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/snakeBorderBtn.scss';

@@ -1,0 +1,99 @@
+/*____________________________________________________________
+# Snake Border Buttons Variables
+____________________________________________________________*/
+$snakeBorderBtnWidth: 200px; // (!) <- Default Settings (You can change)
+$snakeBorderBtnHeight: calc($snakeBorderBtnWidth / 100) * 32.5;
+
+$snakeBorderBtnTextWrapWidth: calc($snakeBorderBtnWidth / 1.25);
+$snakeBorderBtnTextWrapHeight: calc($snakeBorderBtnHeight / 1.444);
+
+$snakeBorderBtnBorder: calc($snakeBorderBtnHeight / 43.333);
+
+$snakeBorderBtnFontSize: calc($snakeBorderBtnHeight / 2.03125);
+$snakeBorderBtnTextShadow: calc($snakeBorderBtnFontSize / 16);
+
+// Time
+$snakeBorderBtnSpeed: .3s;
+
+// Colors
+$palette-primary: #f66d6c;
+$palette-secondary: #84cdc9;
+
+/*____________________________________________________________
+# Snake Border Buttons
+____________________________________________________________*/
+.snakeBorderBtn {
+  position: relative;
+  margin: 20px;
+  width: $snakeBorderBtnWidth;
+  height: $snakeBorderBtnHeight;
+  background-color: $palette-primary;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color calc(#{$snakeBorderBtnSpeed} / 3);
+  
+  &._rl {
+    .snakeBorderBtn__border {
+      &:nth-child(1) {}
+      &:nth-child(2) {bottom: 0;}
+      &:nth-child(3) {bottom: 0; right: 0;}
+      &:nth-child(4) {right: 0;}
+    }
+  }
+  &._lr {
+    .snakeBorderBtn__border {
+      &:nth-child(1) {right: 0;}
+      &:nth-child(2) {bottom: 0; right: 0;}
+      &:nth-child(3) {bottom: 0; left: 0;}
+      &:nth-child(4) {left: 0;}
+    }
+  }
+  
+  &:hover {
+    background-color: $palette-secondary;
+    transition-delay: $snakeBorderBtnSpeed;
+    
+    .snakeBorderBtn__border {
+      &:nth-child(1) {height: 100%; transition-delay: 0s;}
+      &:nth-child(2) {width: 100%; transition-delay: calc(#{$snakeBorderBtnSpeed} / 3);}
+      &:nth-child(3) {height: 100%; transition-delay: calc(#{$snakeBorderBtnSpeed} / 1.5);}
+      &:nth-child(4) {width: 100%; transition-delay: $snakeBorderBtnSpeed;}
+    }
+    .snakeBorderBtn__text {
+      &._start {opacity: 0;}
+      &._end {opacity: 1;}
+    }
+  }
+}
+.snakeBorderBtn__textWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $snakeBorderBtnTextWrapWidth;
+  height: $snakeBorderBtnTextWrapHeight;
+}
+.snakeBorderBtn__border {
+  position: absolute;
+  background-color: #f5e5c1;
+  transition: width calc(#{$snakeBorderBtnSpeed} / 3), height calc(#{$snakeBorderBtnSpeed} / 3);
+  
+  &:nth-child(1) {width: $snakeBorderBtnBorder; height: 0; transition-delay: $snakeBorderBtnSpeed;}
+  &:nth-child(2) {width: 0; height: $snakeBorderBtnBorder; transition-delay: calc(#{$snakeBorderBtnSpeed} / 1.5);}
+  &:nth-child(3) {width: $snakeBorderBtnBorder; height: 0; transition-delay: calc(#{$snakeBorderBtnSpeed} / 3);}
+  &:nth-child(4) {width: 0; height: $snakeBorderBtnBorder; transition-delay: 0s;}
+}
+.snakeBorderBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $snakeBorderBtnTextWrapHeight;
+  font-family: 'Roboto Slab';
+  font-size: $snakeBorderBtnFontSize;
+  font-weight: 900;
+  transition: opacity calc(#{$snakeBorderBtnSpeed} / 1.5);
+  
+  &._start {color: $palette-secondary; transition-delay: $snakeBorderBtnSpeed; text-shadow: $snakeBorderBtnTextShadow $snakeBorderBtnTextShadow $snakeBorderBtnTextShadow #b4416e;}
+  &._end {color: $palette-primary; opacity: 0; transition-delay: $snakeBorderBtnSpeed; text-shadow: $snakeBorderBtnTextShadow $snakeBorderBtnTextShadow $snakeBorderBtnTextShadow #3f1c39;}
+}

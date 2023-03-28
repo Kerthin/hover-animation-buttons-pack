@@ -1,0 +1,14 @@
+section.presentWrap
+  h1.presentWrap__title Snake Border Buttons
+  .presentWrap__buttonsBlock
+
+    mixin snakeBorderBtnMix(snakeBorderButtonMod, startName, endName)
+      button.snakeBorderBtn(class=`_${snakeBorderButtonMod}`)
+        .snakeBorderBtn__textWrap
+          - var snakeBordersCount = 1;
+          while snakeBordersCount <= 4
+            .snakeBorderBtn__border(id=`_${snakeBordersCount++}`)
+          .snakeBorderBtn__text._start #{startName}
+          .snakeBorderBtn__text._end #{endName}
+    +snakeBorderBtnMix('rl', 'Hover', 'Button')
+    +snakeBorderBtnMix('lr', 'Hover', 'Button')

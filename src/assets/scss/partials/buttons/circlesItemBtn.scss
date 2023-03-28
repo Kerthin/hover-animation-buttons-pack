@@ -2,25 +2,25 @@
 # Circle Item Button Variables
 ____________________________________________________________*/
 $circlesItemBtnWidth: 200px; // (!) <- Default Settings (You can change)
-$circlesItemBtnHeight: ($circlesItemBtnWidth / 100) * 32.5;
+$circlesItemBtnHeight: calc($circlesItemBtnWidth / 100) * 32.5;
 
-$circlesItemBtnFontSize: $circlesItemBtnHeight / 2.03125;
-$circlesItemBtnTextShadow: $circlesItemBtnFontSize / 16;
+$circlesItemBtnFontSize: calc($circlesItemBtnHeight / 2.03125);
+$circlesItemBtnTextShadow: calc($circlesItemBtnFontSize / 16);
 
 // General Circle Size Styles
 $circlesItemBtnItemsCount: 5; // (!) <- Default Settings (You can change)
-$circlesItemBtnItemSize: $circlesItemBtnWidth / $circlesItemBtnItemsCount;
-$circlesItemBtnItemCircleSize: $circlesItemBtnItemSize / 2;
-$circlesItemBtnItemMarginSize: ($circlesItemBtnItemSize - $circlesItemBtnItemCircleSize) / 2;
+$circlesItemBtnItemSize: calc($circlesItemBtnWidth / $circlesItemBtnItemsCount);
+$circlesItemBtnItemCircleSize: calc($circlesItemBtnItemSize / 2);
+$circlesItemBtnItemMarginSize: calc($circlesItemBtnItemSize - $circlesItemBtnItemCircleSize) / 2;
 
 // Hover Circle Size Styles
 $circlesItemBtnItemHoverNumber: 2; // (!) <- Default Settings (You can change)
-$circlesItemBtnItemCircleHoverSize: $circlesItemBtnItemCircleSize / 2;
+$circlesItemBtnItemCircleHoverSize: calc($circlesItemBtnItemCircleSize / 2);
 $circlesItemBtnHalfHoverSize: ($circlesItemBtnWidth - $circlesItemBtnItemCircleHoverSize) / 2;
 $circlesItemBtnItemFirstMarginHoverSize: $circlesItemBtnHalfHoverSize - $circlesItemBtnItemCircleHoverSize;
 
 // Item Margin Formula
-$circlesItemBtnItemMarginHoverSize: $circlesItemBtnItemFirstMarginHoverSize - (($circlesItemBtnItemHoverNumber - 1) * $circlesItemBtnItemSize);
+$circlesItemBtnItemMarginHoverSize: $circlesItemBtnItemFirstMarginHoverSize - calc(($circlesItemBtnItemHoverNumber - 1) * $circlesItemBtnItemSize);
 
 // Time
 $circlesItemBtnSpeed: .4s;
