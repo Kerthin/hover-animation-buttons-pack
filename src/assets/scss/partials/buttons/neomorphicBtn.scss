@@ -2,12 +2,12 @@
 # Neomorphic Button Variables
 ____________________________________________________________*/
 $neomorphicBtnWidth: 200px;
-$neomorphicBtnHeight: ($neomorphicBtnWidth / 100) * 32.5;
+$neomorphicBtnHeight: calc($neomorphicBtnWidth / 100) * 32.5;
 
-$neomorphicKeyInnerWidth: ($neomorphicBtnWidth / 100) * 94;
-$neomorphicKeyInnerHeight: ($neomorphicBtnHeight / 100) * 85;
+$neomorphicKeyInnerWidth: calc($neomorphicBtnWidth / 100) * 94;
+$neomorphicKeyInnerHeight: calc($neomorphicBtnHeight / 100) * 85;
 
-$neomorphicBtnFontSize: $neomorphicBtnHeight / 4;
+$neomorphicBtnFontSize: calc($neomorphicBtnHeight / 4);
 
 /*____________________________________________________________
 # Neomorphic Button

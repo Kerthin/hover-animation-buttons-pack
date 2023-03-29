@@ -1,0 +1,169 @@
+/*____________________________________________________________
+# Letter Block Buttons Variables
+____________________________________________________________*/
+$startLettersNumber: 5; // (!) <- Letters Number (You can change if you have added or removed letters in HTML)
+$endLettersNumber: 6; // (!) <- Letters Number (You can change if you have added or removed letters in HTML)
+
+$letterBlockBtnWidth: 200px; // (!) <- Default Settings (You can change)
+$letterBlockBtnHeight: ($letterBlockBtnWidth / 100) * 32.5;
+
+// Letter Wrap Size
+@function letterMarginSize($startName, $endName) {
+  @if ($startName > $endName) {
+    $letterWrapMarginRight: ($letterBlockBtnWidth / $startName) / 6.666;
+    @return $letterWrapMarginRight;
+  } @else if ($startName < $endName) {
+    $letterWrapMarginRight: ($letterBlockBtnWidth / $endName) / 6.666;
+    @return $letterWrapMarginRight;
+  } @else {
+    $letterWrapMarginRight: ($letterBlockBtnWidth / $startName) / 6.666;
+    @return $letterWrapMarginRight;
+  }
+}
+
+@function letterWidthSize($startName, $endName) {
+  @if ($startName > $endName) {
+    $letterWrapWidth: ($letterBlockBtnWidth / $startName) / 1.333;
+    @return $letterWrapWidth;
+  } @else if ($startName < $endName) {
+    $letterWrapWidth: ($letterBlockBtnWidth / $endName) / 1.333;
+    @return $letterWrapWidth;
+  } @else {
+    $letterWrapWidth: ($letterBlockBtnWidth / $startName) / 1.333;
+    @return $letterWrapWidth;
+  }
+}
+
+$letterWrapHeight: calc($letterBlockBtnHeight / 2.1666);
+
+$letterBlockBtnFontSize: calc($letterWrapHeight / 1.3636);
+$letterBlockBtnTextShadow: calc($letterBlockBtnFontSize / 15);
+
+$cellWrapMarginTop_hover: ($letterWrapHeight * -1) - calc(($letterBlockBtnHeight - $letterWrapHeight) / 2);
+
+// Cells Wrap Size
+@mixin cellsWrapWidthMix($lettersNumber) {
+  @if ($startLettersNumber > $endLettersNumber) {
+    $letterWrapMarginRight: calc(($letterBlockBtnWidth / $startLettersNumber) / 6.666);
+    $letterWrapWidth: calc(($letterBlockBtnWidth / $startLettersNumber) / 1.333);
+    min-width: calc((#{$letterWrapWidth} * #{$lettersNumber}) + (#{$letterWrapMarginRight} * (#{$lettersNumber} - 1)));
+  } @else if ($startLettersNumber < $endLettersNumber) {
+    $letterWrapMarginRight: calc(($letterBlockBtnWidth / $endLettersNumber) / 6.666);
+    $letterWrapWidth: calc(($letterBlockBtnWidth / $endLettersNumber) / 1.333);
+    min-width: calc((#{$letterWrapWidth} * #{$lettersNumber}) + (#{$letterWrapMarginRight} * (#{$lettersNumber} - 1)));
+  } @else {
+    $letterWrapMarginRight: calc(($letterBlockBtnWidth / $startLettersNumber) / 6.666);
+    $letterWrapWidth: calc(($letterBlockBtnWidth / $startLettersNumber) / 1.333);
+    min-width: calc((#{$letterWrapWidth} * #{$lettersNumber}) + (#{$letterWrapMarginRight} * (#{$lettersNumber} - 1)));
+  }
+}
+
+// Time
+$letterBlockBtnSpeed: .3s;
+
+@function bgChangeColorDelayFn($startName, $endName) {
+  @if ($startName > $endName) {
+    $bgChangeColorDelay: $startName * calc($letterBlockBtnSpeed / 3);
+    @return $bgChangeColorDelay;
+  } @else if ($startName < $endName) {
+    $bgChangeColorDelay: $endName * calc($letterBlockBtnSpeed / 3);
+    @return $bgChangeColorDelay;
+  } @else {
+    $letterWrapWidth: $startName * calc($letterBlockBtnSpeed / 3);
+    @return $bgChangeColorDelay;
+  }
+}
+
+// Colors
+$palette-primary: #f00557;
+
+$palette-letter-bg: #f0e1b9;
+$palette-letter-color: #66ccb7;
+
+/*____________________________________________________________
+# Letter Block Buttons
+____________________________________________________________*/
+.letterBlockBtn {
+  position: relative;
+  margin: 20px;
+  width: $letterBlockBtnWidth;
+  height: $letterBlockBtnHeight;
+  background-color: $palette-primary;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color calc(#{$letterBlockBtnSpeed} / 3);
+  transition-delay: bgChangeColorDelayFn($startLettersNumber, $endLettersNumber);
+  
+  &:nth-child(2) {
+    &:hover {
+      background-color: $palette-letter-color;
+    }
+  }
+  
+  &:hover {
+    
+    .letterBlockBtn__letterWrap {
+      top: $cellWrapMarginTop_hover;
+    }
+  }
+}
+.letterBlockBtn__cellWrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: $letterWrapHeight;
+  
+  &:nth-child(1) {top: 50%; transform: translate(-50%, -50%); @include cellsWrapWidthMix($startLettersNumber)}
+  &:nth-child(2) {bottom: -$letterWrapHeight; @include cellsWrapWidthMix($endLettersNumber)}
+}
+.letterBlockBtn__cell {
+  position: relative;
+  float: left;
+  margin-right: letterMarginSize($startLettersNumber, $endLettersNumber);
+  width: letterWidthSize($startLettersNumber, $endLettersNumber);
+  height: $letterWrapHeight;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  @mixin letterDelayLoop($startName, $endName) {
+    @if ($startName > $endName) {
+      @for $i from 1 through $startName {
+        &:nth-child(#{$i}) {.letterBlockBtn__letterWrap{transition-delay: $i * .1s - .1s;}}
+      }
+    } @else if ($startName < $endName) {
+      @for $i from 1 through $endName {
+        &:nth-child(#{$i}) {.letterBlockBtn__letterWrap{transition-delay: $i * .1s - .1s;}}
+      }
+    } @else {
+      @for $i from 1 through $startName {
+        &:nth-child(#{$i}) {.letterBlockBtn__letterWrap{transition-delay: $i * .1s - .1s;}}
+      }
+    }
+  }
+  
+  @include letterDelayLoop($startLettersNumber, $endLettersNumber);
+}
+.letterBlockBtn__letterWrap {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(#{$letterWrapHeight} / 10);
+  background-color: $palette-letter-bg;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: top $letterBlockBtnSpeed;
+}
+.letterBlockBtn__letter {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: calc(#{$letterWrapHeight} + (#{$letterWrapHeight} / -15));
+  margin-left: calc(#{letterWidthSize($startLettersNumber, $endLettersNumber)} / -12.5);
+  font-family: 'Roboto Slab';
+  font-size: $letterBlockBtnFontSize;
+  font-weight: 900;
+  color: $palette-letter-color;
+  text-shadow: $letterBlockBtnTextShadow $letterBlockBtnTextShadow $letterBlockBtnTextShadow #000;
+}

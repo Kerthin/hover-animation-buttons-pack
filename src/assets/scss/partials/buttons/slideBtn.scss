@@ -10,7 +10,7 @@ $slideInnerHeight: calc($slideInnerWidth / 100) * 29;
 $slideInnerWidthMargin: $slideBtnWidth - $slideInnerWidth;
 $slideInnerHeightMargin: $slideBtnHeight - $slideInnerHeight;
 
-$slideBtnFontSize: $slideBtnHeight / 3.14;
+$slideBtnFontSize: calc($slideBtnHeight / 3.14);
 
 $slideBtnTime: .3s;
 

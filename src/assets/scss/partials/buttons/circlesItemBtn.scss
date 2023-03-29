@@ -11,7 +11,7 @@ $circlesItemBtnTextShadow: calc($circlesItemBtnFontSize / 16);
 $circlesItemBtnItemsCount: 5; // (!) <- Default Settings (You can change)
 $circlesItemBtnItemSize: calc($circlesItemBtnWidth / $circlesItemBtnItemsCount);
 $circlesItemBtnItemCircleSize: calc($circlesItemBtnItemSize / 2);
-$circlesItemBtnItemMarginSize: calc($circlesItemBtnItemSize - $circlesItemBtnItemCircleSize) / 2;
+$circlesItemBtnItemMarginSize: ($circlesItemBtnItemSize - $circlesItemBtnItemCircleSize) / 2;
 
 // Hover Circle Size Styles
 $circlesItemBtnItemHoverNumber: 2; // (!) <- Default Settings (You can change)

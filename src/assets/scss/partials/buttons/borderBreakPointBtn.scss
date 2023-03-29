@@ -2,10 +2,10 @@
 # Border Break Point Button Variables
 ____________________________________________________________*/
 $borderPointBtnWidth: 200px;
-$borderPointBtnHeight: ($borderPointBtnWidth / 100) * 32.5;
+$borderPointBtnHeight: calc($borderPointBtnWidth / 100) * 32.5;
 
 $borderPointWidth: 5px;
-$borderPointBtnFontSize: $borderPointBtnHeight / 3.14;
+$borderPointBtnFontSize: calc($borderPointBtnHeight / 3.14);
 
 $borderPointBtnTime: .3s;
 

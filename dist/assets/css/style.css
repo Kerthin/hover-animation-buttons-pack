@@ -766,141 +766,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(22, 200px, 50px, 0);
+        clip: rect(37, 200px, 52px, 0);
     }
 
     6.25% {
-        clip: rect(40, 200px, 31px, 0);
+        clip: rect(9, 200px, 9px, 0);
     }
 
     12.5% {
-        clip: rect(22, 200px, 4px, 0);
+        clip: rect(3, 200px, 65px, 0);
     }
 
     18.75% {
-        clip: rect(25, 200px, 45px, 0);
+        clip: rect(45, 200px, 33px, 0);
     }
 
     25% {
-        clip: rect(46, 200px, 19px, 0);
+        clip: rect(64, 200px, 5px, 0);
     }
 
     31.25% {
-        clip: rect(38, 200px, 12px, 0);
+        clip: rect(62, 200px, 31px, 0);
     }
 
     37.5% {
-        clip: rect(17, 200px, 62px, 0);
+        clip: rect(17, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(31, 200px, 56px, 0);
+        clip: rect(20, 200px, 2px, 0);
     }
 
     50% {
-        clip: rect(30, 200px, 30px, 0);
+        clip: rect(31, 200px, 48px, 0);
     }
 
     56.25% {
-        clip: rect(55, 200px, 41px, 0);
+        clip: rect(58, 200px, 41px, 0);
     }
 
     62.5% {
-        clip: rect(57, 200px, 64px, 0);
+        clip: rect(43, 200px, 21px, 0);
     }
 
     68.75% {
-        clip: rect(53, 200px, 45px, 0);
+        clip: rect(25, 200px, 31px, 0);
     }
 
     75% {
-        clip: rect(34, 200px, 64px, 0);
+        clip: rect(49, 200px, 64px, 0);
     }
 
     81.25% {
-        clip: rect(54, 200px, 49px, 0);
+        clip: rect(64, 200px, 48px, 0);
     }
 
     87.5% {
-        clip: rect(5, 200px, 2px, 0);
+        clip: rect(7, 200px, 3px, 0);
     }
 
     93.75% {
-        clip: rect(30, 200px, 24px, 0);
+        clip: rect(64, 200px, 38px, 0);
     }
 
     100% {
-        clip: rect(43, 200px, 48px, 0);
+        clip: rect(28, 200px, 34px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(22, 200px, 50px, 0);
+        clip: rect(37, 200px, 52px, 0);
     }
 
     6.25% {
-        clip: rect(40, 200px, 31px, 0);
+        clip: rect(9, 200px, 9px, 0);
     }
 
     12.5% {
-        clip: rect(22, 200px, 4px, 0);
+        clip: rect(3, 200px, 65px, 0);
     }
 
     18.75% {
-        clip: rect(25, 200px, 45px, 0);
+        clip: rect(45, 200px, 33px, 0);
     }
 
     25% {
-        clip: rect(46, 200px, 19px, 0);
+        clip: rect(64, 200px, 5px, 0);
     }
 
     31.25% {
-        clip: rect(38, 200px, 12px, 0);
+        clip: rect(62, 200px, 31px, 0);
     }
 
     37.5% {
-        clip: rect(17, 200px, 62px, 0);
+        clip: rect(17, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(31, 200px, 56px, 0);
+        clip: rect(20, 200px, 2px, 0);
     }
 
     50% {
-        clip: rect(30, 200px, 30px, 0);
+        clip: rect(31, 200px, 48px, 0);
     }
 
     56.25% {
-        clip: rect(55, 200px, 41px, 0);
+        clip: rect(58, 200px, 41px, 0);
     }
 
     62.5% {
-        clip: rect(57, 200px, 64px, 0);
+        clip: rect(43, 200px, 21px, 0);
     }
 
     68.75% {
-        clip: rect(53, 200px, 45px, 0);
+        clip: rect(25, 200px, 31px, 0);
     }
 
     75% {
-        clip: rect(34, 200px, 64px, 0);
+        clip: rect(49, 200px, 64px, 0);
     }
 
     81.25% {
-        clip: rect(54, 200px, 49px, 0);
+        clip: rect(64, 200px, 48px, 0);
     }
 
     87.5% {
-        clip: rect(5, 200px, 2px, 0);
+        clip: rect(7, 200px, 3px, 0);
     }
 
     93.75% {
-        clip: rect(30, 200px, 24px, 0);
+        clip: rect(64, 200px, 38px, 0);
     }
 
     100% {
-        clip: rect(43, 200px, 48px, 0);
+        clip: rect(28, 200px, 34px, 0);
     }
 }
 /*____________________________________________________________
@@ -10342,4 +10342,134 @@ ____________________________________________________________*/
     -o-transition-delay: 0.3s;
     transition-delay: 0.3s;
     text-shadow: 2px 2px 2px #3f1c39;
+}
+
+/*____________________________________________________________
+## @import letterBlockBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Letter Block Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Letter Block Buttons
+____________________________________________________________*/
+.letterBlockBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #f00557;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: background-color calc(0.3s / 3);
+    -o-transition: background-color calc(0.3s / 3);
+    transition: background-color calc(0.3s / 3);
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.letterBlockBtn:nth-child(2):hover {
+    background-color: #66ccb7;
+}
+
+.letterBlockBtn:hover .letterBlockBtn__letterWrap {
+    top: -47.5004615527px;
+}
+
+.letterBlockBtn__cellWrap {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    min-height: 30.0009231053px;
+}
+
+.letterBlockBtn__cellWrap:nth-child(1) {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: calc((25.0062515629px * 5) + (5.00050005px * (5 - 1)));
+}
+
+.letterBlockBtn__cellWrap:nth-child(2) {
+    bottom: -30.0009231053px;
+    min-width: calc((25.0062515629px * 6) + (5.00050005px * (6 - 1)));
+}
+
+.letterBlockBtn__cell {
+    position: relative;
+    float: left;
+    margin-right: 5.00050005px;
+    width: 25.0062515629px;
+    height: 30.0009231053px;
+}
+
+.letterBlockBtn__cell:last-child {
+    margin-right: 0;
+}
+
+.letterBlockBtn__cell:nth-child(1) .letterBlockBtn__letterWrap {
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.letterBlockBtn__cell:nth-child(2) .letterBlockBtn__letterWrap {
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.letterBlockBtn__cell:nth-child(3) .letterBlockBtn__letterWrap {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.letterBlockBtn__cell:nth-child(4) .letterBlockBtn__letterWrap {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.letterBlockBtn__cell:nth-child(5) .letterBlockBtn__letterWrap {
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.letterBlockBtn__cell:nth-child(6) .letterBlockBtn__letterWrap {
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.letterBlockBtn__letterWrap {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: calc(30.0009231053px / 10);
+    background-color: #f0e1b9;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -webkit-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    transition: top 0.3s;
+}
+
+.letterBlockBtn__letter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: calc(30.0009231053px + (30.0009231053px / -15));
+    margin-left: calc(25.0062515629px / -12.5);
+    font-family: "Roboto Slab";
+    font-size: 22.0012636443px;
+    font-weight: 900;
+    color: #66ccb7;
+    text-shadow: 1.4667509096px 1.4667509096px 1.4667509096px #000;
 }

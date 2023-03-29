@@ -1,0 +1,22 @@
+section.presentWrap
+  h1.presentWrap__title Letter Block Buttons
+  .presentWrap__buttonsBlock
+
+    - var START_LETTERS_ARRAY = ['H' + 'O' + 'V' + 'E' + 'R'];
+    - var END_LETTERS_ARRAY = ['B' + 'U' + 'T' + 'T' + 'O' + 'N'];
+
+    mixin letterBlockBtnMix(startNameArray, endNameArray)
+      button.letterBlockBtn
+        .letterBlockBtn__cellWrap._clearfix
+          each val in `${startNameArray}`
+            .letterBlockBtn__cell
+              .letterBlockBtn__letterWrap
+                span.letterBlockBtn__letter= val
+        .letterBlockBtn__cellWrap._clearfix
+          each val in `${endNameArray}`
+            .letterBlockBtn__cell
+              .letterBlockBtn__letterWrap
+                span.letterBlockBtn__letter= val
+
+    +letterBlockBtnMix(START_LETTERS_ARRAY, END_LETTERS_ARRAY)
+    +letterBlockBtnMix(START_LETTERS_ARRAY, END_LETTERS_ARRAY)
