@@ -1,0 +1,15 @@
+section.presentWrap
+  h1.presentWrap__title Popup Buttons
+  .presentWrap__buttonsBlock
+
+    mixin popupBtnMix(buttonMod, startName, endName)
+      button.popupBtn(class=`_${buttonMod}`)
+        .popupBtn__square
+        .popupBtn__block
+          .popupBtn__blockSquare
+        .popupBtn__text._start #{startName}
+        .popupBtn__text._end #{endName}
+    +popupBtnMix('square', 'Hover', 'Button')
+    +popupBtnMix('rectangle', 'Hover', 'Button')
+    +popupBtnMix('squareRotate', 'Hover', 'Button')
+    +popupBtnMix('rectangleRotate', 'Hover', 'Button')

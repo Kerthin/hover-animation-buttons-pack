@@ -59,6 +59,8 @@
     ## @import balloonBtn.scss
     ## @import circlesItemBtn.scss
     ## @import snakeBorderBtn.scss
+    ## @import letterBlockBtn.scss
+    ## @import popupBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -766,141 +768,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(37, 200px, 52px, 0);
-    }
-
-    6.25% {
-        clip: rect(9, 200px, 9px, 0);
-    }
-
-    12.5% {
-        clip: rect(3, 200px, 65px, 0);
-    }
-
-    18.75% {
-        clip: rect(45, 200px, 33px, 0);
-    }
-
-    25% {
-        clip: rect(64, 200px, 5px, 0);
-    }
-
-    31.25% {
-        clip: rect(62, 200px, 31px, 0);
-    }
-
-    37.5% {
-        clip: rect(17, 200px, 38px, 0);
-    }
-
-    43.75% {
-        clip: rect(20, 200px, 2px, 0);
-    }
-
-    50% {
-        clip: rect(31, 200px, 48px, 0);
-    }
-
-    56.25% {
-        clip: rect(58, 200px, 41px, 0);
-    }
-
-    62.5% {
-        clip: rect(43, 200px, 21px, 0);
-    }
-
-    68.75% {
-        clip: rect(25, 200px, 31px, 0);
-    }
-
-    75% {
-        clip: rect(49, 200px, 64px, 0);
-    }
-
-    81.25% {
-        clip: rect(64, 200px, 48px, 0);
-    }
-
-    87.5% {
-        clip: rect(7, 200px, 3px, 0);
-    }
-
-    93.75% {
         clip: rect(64, 200px, 38px, 0);
     }
 
+    6.25% {
+        clip: rect(26, 200px, 36px, 0);
+    }
+
+    12.5% {
+        clip: rect(26, 200px, 3px, 0);
+    }
+
+    18.75% {
+        clip: rect(6, 200px, 62px, 0);
+    }
+
+    25% {
+        clip: rect(6, 200px, 57px, 0);
+    }
+
+    31.25% {
+        clip: rect(23, 200px, 47px, 0);
+    }
+
+    37.5% {
+        clip: rect(60, 200px, 26px, 0);
+    }
+
+    43.75% {
+        clip: rect(15, 200px, 26px, 0);
+    }
+
+    50% {
+        clip: rect(18, 200px, 47px, 0);
+    }
+
+    56.25% {
+        clip: rect(25, 200px, 15px, 0);
+    }
+
+    62.5% {
+        clip: rect(65, 200px, 4px, 0);
+    }
+
+    68.75% {
+        clip: rect(31, 200px, 37px, 0);
+    }
+
+    75% {
+        clip: rect(2, 200px, 65px, 0);
+    }
+
+    81.25% {
+        clip: rect(62, 200px, 37px, 0);
+    }
+
+    87.5% {
+        clip: rect(31, 200px, 28px, 0);
+    }
+
+    93.75% {
+        clip: rect(41, 200px, 34px, 0);
+    }
+
     100% {
-        clip: rect(28, 200px, 34px, 0);
+        clip: rect(23, 200px, 2px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(37, 200px, 52px, 0);
-    }
-
-    6.25% {
-        clip: rect(9, 200px, 9px, 0);
-    }
-
-    12.5% {
-        clip: rect(3, 200px, 65px, 0);
-    }
-
-    18.75% {
-        clip: rect(45, 200px, 33px, 0);
-    }
-
-    25% {
-        clip: rect(64, 200px, 5px, 0);
-    }
-
-    31.25% {
-        clip: rect(62, 200px, 31px, 0);
-    }
-
-    37.5% {
-        clip: rect(17, 200px, 38px, 0);
-    }
-
-    43.75% {
-        clip: rect(20, 200px, 2px, 0);
-    }
-
-    50% {
-        clip: rect(31, 200px, 48px, 0);
-    }
-
-    56.25% {
-        clip: rect(58, 200px, 41px, 0);
-    }
-
-    62.5% {
-        clip: rect(43, 200px, 21px, 0);
-    }
-
-    68.75% {
-        clip: rect(25, 200px, 31px, 0);
-    }
-
-    75% {
-        clip: rect(49, 200px, 64px, 0);
-    }
-
-    81.25% {
-        clip: rect(64, 200px, 48px, 0);
-    }
-
-    87.5% {
-        clip: rect(7, 200px, 3px, 0);
-    }
-
-    93.75% {
         clip: rect(64, 200px, 38px, 0);
     }
 
+    6.25% {
+        clip: rect(26, 200px, 36px, 0);
+    }
+
+    12.5% {
+        clip: rect(26, 200px, 3px, 0);
+    }
+
+    18.75% {
+        clip: rect(6, 200px, 62px, 0);
+    }
+
+    25% {
+        clip: rect(6, 200px, 57px, 0);
+    }
+
+    31.25% {
+        clip: rect(23, 200px, 47px, 0);
+    }
+
+    37.5% {
+        clip: rect(60, 200px, 26px, 0);
+    }
+
+    43.75% {
+        clip: rect(15, 200px, 26px, 0);
+    }
+
+    50% {
+        clip: rect(18, 200px, 47px, 0);
+    }
+
+    56.25% {
+        clip: rect(25, 200px, 15px, 0);
+    }
+
+    62.5% {
+        clip: rect(65, 200px, 4px, 0);
+    }
+
+    68.75% {
+        clip: rect(31, 200px, 37px, 0);
+    }
+
+    75% {
+        clip: rect(2, 200px, 65px, 0);
+    }
+
+    81.25% {
+        clip: rect(62, 200px, 37px, 0);
+    }
+
+    87.5% {
+        clip: rect(31, 200px, 28px, 0);
+    }
+
+    93.75% {
+        clip: rect(41, 200px, 34px, 0);
+    }
+
     100% {
-        clip: rect(28, 200px, 34px, 0);
+        clip: rect(23, 200px, 2px, 0);
     }
 }
 /*____________________________________________________________
@@ -3558,7 +3560,9 @@ ____________________________________________________________*/
 
 .moveBorderBtn__border {
     position: absolute;
-} /*____________________________________________________________
+}
+
+/*____________________________________________________________
 ## @import movingStripesBtn.scss
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -10472,4 +10476,162 @@ ____________________________________________________________*/
     font-weight: 900;
     color: #66ccb7;
     text-shadow: 1.4667509096px 1.4667509096px 1.4667509096px #000;
+}
+
+/*____________________________________________________________
+## @import popupBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Popup Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Popup Buttons
+____________________________________________________________*/
+.popupBtn {
+    position: relative;
+    margin: 20px 25px;
+    width: 200px;
+    height: 65px;
+    background-color: #f00557;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.popupBtn._rectangle:hover .popupBtn__square {
+    width: calc(45.0138504155px * 3);
+}
+
+.popupBtn._rectangle:hover .popupBtn__blockSquare {
+    width: calc(45.0138504155px * 3);
+}
+
+.popupBtn._squareRotate:hover .popupBtn__square {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+    -ms-transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.popupBtn._squareRotate:hover .popupBtn__blockSquare {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+    -ms-transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.popupBtn._rectangleRotate:hover .popupBtn__square {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+    -ms-transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
+    width: calc(45.0138504155px * 3);
+}
+
+.popupBtn._rectangleRotate:hover .popupBtn__blockSquare {
+    -webkit-transform: translateX(-50%) rotate(180deg);
+    -ms-transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
+    width: calc(45.0138504155px * 3);
+}
+
+.popupBtn:hover .popupBtn__square {
+    bottom: calc((65px - 45.0138504155px) / 2);
+}
+
+.popupBtn:hover .popupBtn__block {
+    bottom: -50%;
+}
+
+.popupBtn:hover .popupBtn__blockSquare {
+    bottom: 45.0138504155px;
+}
+
+.popupBtn:hover .popupBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.popupBtn:hover .popupBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: calc(0.4s / 1.333);
+    -o-transition-delay: calc(0.4s / 1.333);
+    transition-delay: calc(0.4s / 1.333);
+}
+
+.popupBtn__square,
+.popupBtn__blockSquare {
+    position: absolute;
+    bottom: -45.0138504155px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(0);
+    -ms-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+    width: 45.0138504155px;
+    height: 45.0138504155px;
+    border-radius: calc(45.0138504155px / 15);
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    -webkit-transition: bottom 0.4s, width 0.4s, height 0.4s, -webkit-transform 0.4s;
+    transition: bottom 0.4s, width 0.4s, height 0.4s, -webkit-transform 0.4s;
+    -o-transition: bottom 0.4s, transform 0.4s, width 0.4s, height 0.4s;
+    transition: bottom 0.4s, transform 0.4s, width 0.4s, height 0.4s;
+    transition: bottom 0.4s, transform 0.4s, width 0.4s, height 0.4s, -webkit-transform 0.4s;
+    -webkit-transition-delay: calc(0.4s / 4);
+    -o-transition-delay: calc(0.4s / 4);
+    transition-delay: calc(0.4s / 4);
+}
+
+.popupBtn__square {
+    background-color: #f0e1b9;
+}
+
+.popupBtn__blockSquare {
+    background-color: #f00557;
+}
+
+.popupBtn__block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #f0e1b9;
+    -webkit-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.16), 0 -2px 3px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.16), 0 -2px 3px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+    -webkit-transition: bottom 0.4s;
+    -o-transition: bottom 0.4s;
+    transition: bottom 0.4s;
+    -webkit-transition-delay: calc(0.4s / 4);
+    -o-transition-delay: calc(0.4s / 4);
+    transition-delay: calc(0.4s / 4);
+}
+
+.popupBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #F7B32D;
+    -webkit-transition: opacity calc(0.4s / 2);
+    -o-transition: opacity calc(0.4s / 2);
+    transition: opacity calc(0.4s / 2);
+}
+
+.popupBtn__text._start {
+    -webkit-transition-delay: calc(0.4s / 1.333);
+    -o-transition-delay: calc(0.4s / 1.333);
+    transition-delay: calc(0.4s / 1.333);
+    text-shadow: 2px 2px 2px #b4416e;
+}
+
+.popupBtn__text._end {
+    color: #f66d6c;
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    text-shadow: 2px 2px 2px #3f1c39;
 }

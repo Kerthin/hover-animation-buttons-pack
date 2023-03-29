@@ -1,0 +1,125 @@
+/*____________________________________________________________
+# Popup Buttons Variables
+____________________________________________________________*/
+$popupBtnWidth: 200px; // (!) <- Default Settings (You can change)
+$popupBtnHeight: calc($popupBtnWidth / 100) * 32.5;
+
+$popupBtnSquareSize: calc($popupBtnHeight / 1.444);
+
+// Font
+$popupBtnFontSize: calc($popupBtnHeight / 2.03125);
+$popupBtnTextShadow: calc($popupBtnFontSize / 16);
+
+// Time
+$popupBtnSpeed: .4s;
+
+/*____________________________________________________________
+# Popup Buttons
+____________________________________________________________*/
+.popupBtn {
+  position: relative;
+  margin: 20px 25px;
+  width: $popupBtnWidth;
+  height: $popupBtnHeight;
+  background-color: #f00557;
+  overflow: hidden;
+  cursor: pointer;
+  
+  // (&) Rectangle Style Mod
+  &._rectangle {
+    &:hover {
+      .popupBtn__square {
+        width: calc(#{$popupBtnSquareSize} * 3);
+      }
+      .popupBtn__blockSquare {
+        width: calc(#{$popupBtnSquareSize} * 3);
+      }
+    }
+  }
+  
+  // (&) Square Rotate Style Mod
+  &._squareRotate {
+    &:hover {
+      .popupBtn__square {
+        transform: translateX(-50%) rotate(180deg);
+      }
+      .popupBtn__blockSquare {
+        transform: translateX(-50%) rotate(180deg);
+      }
+    }
+  }
+  
+  // (&) Rectangle Rotate Style Mod
+  &._rectangleRotate {
+    &:hover {
+      .popupBtn__square {
+        transform: translateX(-50%) rotate(180deg);
+        width: calc(#{$popupBtnSquareSize} * 3);
+      }
+      .popupBtn__blockSquare {
+        transform: translateX(-50%) rotate(180deg);
+        width: calc(#{$popupBtnSquareSize} * 3);
+      }
+    }
+  }
+  
+  // (#) General Classic Hover Style (for all buttons)
+  &:hover {
+    .popupBtn__square {
+      bottom: calc((#{$popupBtnHeight} - #{$popupBtnSquareSize}) / 2);
+    }
+    .popupBtn__block {
+      bottom: -50%;
+    }
+    .popupBtn__blockSquare {
+      bottom: $popupBtnSquareSize;
+    }
+    .popupBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: calc(#{$popupBtnSpeed} / 1.333);}
+    }
+  }
+}
+.popupBtn__square,
+.popupBtn__blockSquare {
+  position: absolute;
+  bottom: -$popupBtnSquareSize;
+  left: 50%;
+  transform: translateX(-50%) rotate(0);
+  width: $popupBtnSquareSize;
+  height: $popupBtnSquareSize;
+  border-radius: calc(#{$popupBtnSquareSize} / 15);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: bottom $popupBtnSpeed, transform $popupBtnSpeed, width $popupBtnSpeed, height $popupBtnSpeed;
+  transition-delay: calc(#{$popupBtnSpeed} / 4);
+}
+.popupBtn__square {background-color: #f0e1b9;}
+.popupBtn__blockSquare {background-color: #f00557;}
+
+.popupBtn__block {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #f0e1b9;
+  box-shadow: 0 -2px 3px rgba(0,0,0,0.16), 0 -2px 3px rgba(0,0,0,0.23);
+  overflow: hidden;
+  transition: bottom $popupBtnSpeed;
+  transition-delay: calc(#{$popupBtnSpeed} / 4);
+}
+
+.popupBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $popupBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $popupBtnFontSize;
+  font-weight: 900;
+  color: #F7B32D;
+  transition: opacity calc(#{$popupBtnSpeed} / 2);
+  
+  &._start {transition-delay: calc(#{$popupBtnSpeed} / 1.333); text-shadow: $popupBtnTextShadow $popupBtnTextShadow $popupBtnTextShadow #b4416e;}
+  &._end {color: #f66d6c; opacity: 0; transition-delay: 0s; text-shadow: $popupBtnTextShadow $popupBtnTextShadow $popupBtnTextShadow #3f1c39;}
+}

@@ -59,6 +59,8 @@
     ## @import balloonBtn.scss
     ## @import circlesItemBtn.scss
     ## @import snakeBorderBtn.scss
+    ## @import letterBlockBtn.scss
+    ## @import popupBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -360,3 +362,8 @@ ____________________________________________________________*/
 ## @import letterBlockBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/letterBlockBtn.scss';
+
+/*____________________________________________________________
+## @import popupBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/popupBtn.scss';
