@@ -62,6 +62,7 @@
     ## @import letterBlockBtn.scss
     ## @import popupBtn.scss
     ## @import petalWordBtn.scss
+    ## @import sunBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -769,141 +770,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(40, 200px, 58px, 0);
+        clip: rect(57, 200px, 57px, 0);
     }
 
     6.25% {
-        clip: rect(39, 200px, 55px, 0);
+        clip: rect(33, 200px, 33px, 0);
     }
 
     12.5% {
-        clip: rect(51, 200px, 16px, 0);
+        clip: rect(46, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(14, 200px, 63px, 0);
+        clip: rect(42, 200px, 51px, 0);
     }
 
     25% {
-        clip: rect(26, 200px, 62px, 0);
+        clip: rect(39, 200px, 43px, 0);
     }
 
     31.25% {
-        clip: rect(33, 200px, 65px, 0);
+        clip: rect(32, 200px, 12px, 0);
     }
 
     37.5% {
-        clip: rect(21, 200px, 20px, 0);
+        clip: rect(63, 200px, 47px, 0);
     }
 
     43.75% {
-        clip: rect(34, 200px, 23px, 0);
+        clip: rect(54, 200px, 11px, 0);
     }
 
     50% {
-        clip: rect(62, 200px, 40px, 0);
+        clip: rect(28, 200px, 53px, 0);
     }
 
     56.25% {
-        clip: rect(58, 200px, 24px, 0);
+        clip: rect(60, 200px, 17px, 0);
     }
 
     62.5% {
-        clip: rect(33, 200px, 35px, 0);
+        clip: rect(56, 200px, 13px, 0);
     }
 
     68.75% {
-        clip: rect(4, 200px, 25px, 0);
+        clip: rect(6, 200px, 49px, 0);
     }
 
     75% {
-        clip: rect(15, 200px, 9px, 0);
+        clip: rect(56, 200px, 18px, 0);
     }
 
     81.25% {
-        clip: rect(34, 200px, 38px, 0);
+        clip: rect(47, 200px, 41px, 0);
     }
 
     87.5% {
-        clip: rect(47, 200px, 27px, 0);
+        clip: rect(33, 200px, 20px, 0);
     }
 
     93.75% {
-        clip: rect(56, 200px, 58px, 0);
+        clip: rect(25, 200px, 41px, 0);
     }
 
     100% {
-        clip: rect(23, 200px, 43px, 0);
+        clip: rect(10, 200px, 31px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(40, 200px, 58px, 0);
+        clip: rect(57, 200px, 57px, 0);
     }
 
     6.25% {
-        clip: rect(39, 200px, 55px, 0);
+        clip: rect(33, 200px, 33px, 0);
     }
 
     12.5% {
-        clip: rect(51, 200px, 16px, 0);
+        clip: rect(46, 200px, 10px, 0);
     }
 
     18.75% {
-        clip: rect(14, 200px, 63px, 0);
+        clip: rect(42, 200px, 51px, 0);
     }
 
     25% {
-        clip: rect(26, 200px, 62px, 0);
+        clip: rect(39, 200px, 43px, 0);
     }
 
     31.25% {
-        clip: rect(33, 200px, 65px, 0);
+        clip: rect(32, 200px, 12px, 0);
     }
 
     37.5% {
-        clip: rect(21, 200px, 20px, 0);
+        clip: rect(63, 200px, 47px, 0);
     }
 
     43.75% {
-        clip: rect(34, 200px, 23px, 0);
+        clip: rect(54, 200px, 11px, 0);
     }
 
     50% {
-        clip: rect(62, 200px, 40px, 0);
+        clip: rect(28, 200px, 53px, 0);
     }
 
     56.25% {
-        clip: rect(58, 200px, 24px, 0);
+        clip: rect(60, 200px, 17px, 0);
     }
 
     62.5% {
-        clip: rect(33, 200px, 35px, 0);
+        clip: rect(56, 200px, 13px, 0);
     }
 
     68.75% {
-        clip: rect(4, 200px, 25px, 0);
+        clip: rect(6, 200px, 49px, 0);
     }
 
     75% {
-        clip: rect(15, 200px, 9px, 0);
+        clip: rect(56, 200px, 18px, 0);
     }
 
     81.25% {
-        clip: rect(34, 200px, 38px, 0);
+        clip: rect(47, 200px, 41px, 0);
     }
 
     87.5% {
-        clip: rect(47, 200px, 27px, 0);
+        clip: rect(33, 200px, 20px, 0);
     }
 
     93.75% {
-        clip: rect(56, 200px, 58px, 0);
+        clip: rect(25, 200px, 41px, 0);
     }
 
     100% {
-        clip: rect(23, 200px, 43px, 0);
+        clip: rect(10, 200px, 31px, 0);
     }
 }
 /*____________________________________________________________
@@ -10781,4 +10782,131 @@ ____________________________________________________________*/
 .petalWordBtn__lastLetter {
     width: 21px;
     right: 47px;
+}
+
+/*____________________________________________________________
+## @import sunBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Sun Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Sun Buttons
+____________________________________________________________*/
+.sunBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #003049;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sunBtn._sunrise .sunBtn__sun {
+    bottom: -65px;
+}
+
+.sunBtn._sunrise .sunBtn__sun:after {
+    bottom: 97px;
+}
+
+.sunBtn._sunrise:hover .sunBtn__sun {
+    bottom: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.sunBtn._sunrise:hover .sunBtn__sun:after {
+    bottom: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.sunBtn._sunset .sunBtn__sun {
+    top: -65px;
+}
+
+.sunBtn._sunset .sunBtn__sun:after {
+    top: 97px;
+}
+
+.sunBtn._sunset:hover .sunBtn__sun {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sunBtn._sunset:hover .sunBtn__sun:after {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sunBtn:hover .sunBtn__sun {
+    -webkit-transition-delay: 0.01s;
+    -o-transition-delay: 0.01s;
+    transition-delay: 0.01s;
+}
+
+.sunBtn:hover .sunBtn__sun:after {
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sunBtn__sun {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0) rotate(0);
+    -ms-transform: translate(-50%, 0) rotate(0);
+    transform: translate(-50%, 0) rotate(0);
+    width: 60.0015px;
+    height: 60.0015px;
+    border-radius: 50%;
+    background-color: #ff2400;
+    -webkit-box-shadow: 0 0 10.00025px rgb(255, 36, 0), 0 0 10.00025px rgb(255, 36, 0);
+    box-shadow: 0 0 10.00025px rgb(255, 36, 0), 0 0 10.00025px rgb(255, 36, 0);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sunBtn__sun:after {
+    content: "Button";
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0) rotate(0);
+    -ms-transform: translate(-50%, 0) rotate(0);
+    transform: translate(-50%, 0) rotate(0);
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.sunBtn__sun,
+.sunBtn__sun:after {
+    -webkit-transition: top 0.3s, bottom 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, bottom 0.3s, -webkit-transform 0.3s;
+    -o-transition: top 0.3s, bottom 0.3s, transform 0.3s;
+    transition: top 0.3s, bottom 0.3s, transform 0.3s;
+    transition: top 0.3s, bottom 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.sunBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #F7B32D;
+    text-shadow: 2px 2px 2px #b4416e;
 }

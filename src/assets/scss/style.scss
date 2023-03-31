@@ -62,6 +62,7 @@
     ## @import letterBlockBtn.scss
     ## @import popupBtn.scss
     ## @import petalWordBtn.scss
+    ## @import sunBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -373,3 +374,8 @@ ____________________________________________________________*/
 ## @import petalWordBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/petalWordBtn.scss';
+
+/*____________________________________________________________
+## @import sunBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/sunBtn.scss';

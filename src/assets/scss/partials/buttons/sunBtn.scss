@@ -1,0 +1,118 @@
+/*____________________________________________________________
+# Sun Buttons Variables
+____________________________________________________________*/
+$sunBtnWidth: 200px;
+$sunBtnHeight: ($sunBtnWidth / 100) * 32.5;
+
+$sunFontSize: $sunBtnHeight / 2.03125;
+$sunTextShadowSize: ($sunFontSize / 100) * 6.25;
+$sunFontLineHeight: $sunBtnHeight - ($sunBtnHeight / 13);
+
+$sunSize: ($sunBtnHeight / 100) * 92.31;
+$sunShadow: $sunSize / 6;
+$sunTransitionTime: .3s;
+$sunTransitionDelay: $sunTransitionTime / 30;
+
+/*____________________________________________________________
+# Sun Buttons
+____________________________________________________________*/
+.sunBtn {
+  position: relative;
+  margin: 20px;
+  width: $sunBtnWidth;
+  height: $sunBtnHeight;
+  background-color: #003049;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._sunrise {
+    .sunBtn__sun {
+      bottom: -$sunBtnHeight;
+      &:after {
+        bottom: $sunBtnHeight + $sunFontSize;
+      }
+    }
+    
+    &:hover {
+      .sunBtn__sun {
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        
+        &:after {
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+    }
+  }
+  &._sunset {
+    .sunBtn__sun {
+      top: -$sunBtnHeight;
+      &:after {
+        top: $sunBtnHeight + $sunFontSize;
+      }
+    }
+    
+    &:hover {
+      .sunBtn__sun {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        &:after {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  
+  &:hover {
+    .sunBtn__sun {
+      transition-delay: $sunTransitionDelay;
+      
+      &:after {
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+.sunBtn__sun {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(0);
+  width: $sunSize;
+  height: $sunSize;
+  border-radius: 50%;
+  background-color: #ff2400;
+  box-shadow: 0 0 $sunShadow rgba(255,36,0, 1), 0 0 $sunShadow rgba(255,36,0, 1);
+  overflow: hidden;
+  z-index: 2;
+  
+  &:after {
+    content: 'Button';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(0);
+    font-family: 'Roboto Slab';
+    font-size: $sunFontSize;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: $sunTextShadowSize $sunTextShadowSize $sunTextShadowSize #000;
+  }
+}
+.sunBtn__sun,
+.sunBtn__sun:after {
+  transition: top $sunTransitionTime, bottom $sunTransitionTime, transform $sunTransitionTime;
+}
+.sunBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $sunBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $sunFontSize;
+  font-weight: 900;
+  color: #F7B32D;
+  text-shadow: $sunTextShadowSize $sunTextShadowSize $sunTextShadowSize #b4416e;
+}

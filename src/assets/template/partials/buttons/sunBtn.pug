@@ -1,0 +1,10 @@
+section.presentWrap
+  h1.presentWrap__title Sun Buttons
+  .presentWrap__buttonsBlock
+
+    mixin sunBtnMix(btnMod, btnName)
+      button.sunBtn(class=`_${btnMod}`)
+        .sunBtn__sun
+        .sunBtn__text #{btnName}
+    +sunBtnMix('sunrise', 'Button')
+    +sunBtnMix('sunset', 'Button')
