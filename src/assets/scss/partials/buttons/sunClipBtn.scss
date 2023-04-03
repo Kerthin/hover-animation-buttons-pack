@@ -2,13 +2,13 @@
 # Sun Clip Variables
 ____________________________________________________________*/
 $sunClipBtnWidth: 200px;
-$sunClipBtnHeight: ($sunClipBtnWidth / 100) * 32.5;
+$sunClipBtnHeight: calc($sunClipBtnWidth / 100) * 32.5;
 
-$sunClipFontSize: $sunClipBtnHeight / 2.03125;
-$sunClipTextShadowSize: ($sunClipFontSize / 100) * 6.25;
+$sunClipFontSize: calc($sunClipBtnHeight / 2.03125);
+$sunClipTextShadowSize: calc($sunClipFontSize / 100) * 6.25;
 
-$sunClipSize: (($sunClipBtnHeight / 100) * 92.31) / 2;
-$sunClipShadow: $sunClipSize / 6;
+$sunClipSize: calc((calc($sunClipBtnHeight / 100) * 92.31) / 2);
+$sunClipShadow: calc($sunClipSize / 6);
 
 $sunClipMarginRight: $sunClipSize + $sunClipBtnWidth;
 $sunClipMarginLeft: -1 * $sunClipSize;

@@ -1,0 +1,95 @@
+/*____________________________________________________________
+# Sun Clip Blow Buttons Variables
+____________________________________________________________*/
+$sunBlowBtnWidth: 200px;
+$sunBlowBtnHeight: calc($sunBlowBtnWidth / 100) * 32.5;
+
+$sunBlowFontSize: calc($sunBlowBtnHeight / 2.03125);
+$sunBlowTextShadowSize: calc($sunBlowFontSize / 100) * 6.25;
+
+$sunBlowSize: calc((calc($sunBlowBtnHeight / 100) * 92.31) / 2);
+$sunBlowShadow: calc($sunBlowSize / 6);
+
+$sunBlowTransitionTime: .4s;
+
+$palette-front-font-color: #F7B32D;
+$palette-front-font-shadow-color: #b4416e;
+
+/*____________________________________________________________
+# Sun Clip Blow Buttons
+____________________________________________________________*/
+.sunClipBlowBtn {
+  position: relative;
+  margin: 20px 25px;
+  width: $sunBlowBtnWidth;
+  height: $sunBlowBtnHeight;
+  background-color: #003049;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._lr {
+    &:before, .sunClipBlowBtn__sun:before {top: 50%; left: 100%; transform: translate(0, -50%);}
+    &:hover {&:before, .sunClipBlowBtn__sun:before {left: 50%; transform: translate(-50%, -50%);}}
+  }
+  &._rl {
+    &:before, .sunClipBlowBtn__sun:before {top: 50%; right: 100%; transform: translate(0, -50%);}
+    &:hover {&:before, .sunClipBlowBtn__sun:before {right: 50%; transform: translate(50%, -50%);}}
+  }
+  &._tb {
+    &:before, .sunClipBlowBtn__sun:before {bottom: 100%; left: 50%; transform: translate(-50%, 0);}
+    &:hover {&:before, .sunClipBlowBtn__sun:before {bottom: 50%; transform: translate(-50%, 50%);}}
+  }
+  &._bt {
+    &:before, .sunClipBlowBtn__sun:before {top: 100%; left: 50%; transform: translate(-50%, 0);}
+    &:hover {&:before, .sunClipBlowBtn__sun:before {top: 50%; transform: translate(-50%, -50%);}}
+  }
+  
+  &:after,
+  &:before,
+  .sunClipBlowBtn__sun:before {
+    content: attr(data-clip);
+    position: absolute;
+    font-family: 'Roboto Slab';
+    font-size: $sunBlowFontSize;
+    font-weight: 900;
+    transition: top $sunBlowTransitionTime, bottom $sunBlowTransitionTime, left $sunBlowTransitionTime, right $sunBlowTransitionTime, transform $sunBlowTransitionTime;
+  }
+  &:before {
+    color: $palette-front-font-color;
+    text-shadow: $sunBlowTextShadowSize $sunBlowTextShadowSize $sunBlowTextShadowSize $palette-front-font-shadow-color;
+  }
+  &:after {
+    content: attr(data-name);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $palette-front-font-color;
+    text-shadow: $sunBlowTextShadowSize $sunBlowTextShadowSize $sunBlowTextShadowSize $palette-front-font-shadow-color;
+    opacity: 1;
+    transition: opacity $sunBlowTransitionTime;
+    transition-delay: $sunBlowTransitionTime;
+  }
+  
+  &:hover {
+    &:before {transition-delay: calc(#{$sunBlowTransitionTime} / 4);}
+    &:after {opacity: 0; transition-delay: 0s;}
+    
+    .sunClipBlowBtn__sun {
+      clip-path: circle($sunBlowSize at 50% 50%);
+      &:before {transition-delay: calc(#{$sunBlowTransitionTime} / 4);}
+    }
+  }
+}
+
+.sunClipBlowBtn__sun {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff2400;
+  clip-path: circle(0 at 50% 50%);
+  transition: clip-path $sunBlowTransitionTime;
+  
+  &:before {color: #fff; text-shadow: $sunBlowTextShadowSize $sunBlowTextShadowSize $sunBlowTextShadowSize #000;}
+}

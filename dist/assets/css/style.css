@@ -64,6 +64,7 @@
     ## @import petalWordBtn.scss
     ## @import sunBtn.scss
     ## @import sunClipBtn.scss
+    ## @import sunClipBlowBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -771,141 +772,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(2, 200px, 40px, 0);
+        clip: rect(62, 200px, 15px, 0);
     }
 
     6.25% {
-        clip: rect(56, 200px, 44px, 0);
+        clip: rect(13, 200px, 64px, 0);
     }
 
     12.5% {
-        clip: rect(32, 200px, 5px, 0);
+        clip: rect(2, 200px, 45px, 0);
     }
 
     18.75% {
-        clip: rect(57, 200px, 49px, 0);
+        clip: rect(51, 200px, 30px, 0);
     }
 
     25% {
-        clip: rect(32, 200px, 37px, 0);
+        clip: rect(5, 200px, 25px, 0);
     }
 
     31.25% {
-        clip: rect(41, 200px, 28px, 0);
+        clip: rect(62, 200px, 44px, 0);
     }
 
     37.5% {
-        clip: rect(19, 200px, 12px, 0);
+        clip: rect(21, 200px, 11px, 0);
     }
 
     43.75% {
-        clip: rect(31, 200px, 32px, 0);
+        clip: rect(41, 200px, 51px, 0);
     }
 
     50% {
-        clip: rect(36, 200px, 47px, 0);
+        clip: rect(61, 200px, 51px, 0);
     }
 
     56.25% {
-        clip: rect(30, 200px, 26px, 0);
+        clip: rect(29, 200px, 24px, 0);
     }
 
     62.5% {
-        clip: rect(39, 200px, 55px, 0);
+        clip: rect(36, 200px, 29px, 0);
     }
 
     68.75% {
-        clip: rect(27, 200px, 63px, 0);
+        clip: rect(59, 200px, 23px, 0);
     }
 
     75% {
-        clip: rect(41, 200px, 41px, 0);
+        clip: rect(62, 200px, 47px, 0);
     }
 
     81.25% {
-        clip: rect(57, 200px, 10px, 0);
+        clip: rect(24, 200px, 13px, 0);
     }
 
     87.5% {
-        clip: rect(19, 200px, 48px, 0);
+        clip: rect(47, 200px, 19px, 0);
     }
 
     93.75% {
-        clip: rect(14, 200px, 43px, 0);
+        clip: rect(21, 200px, 18px, 0);
     }
 
     100% {
-        clip: rect(42, 200px, 25px, 0);
+        clip: rect(34, 200px, 6px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(2, 200px, 40px, 0);
+        clip: rect(62, 200px, 15px, 0);
     }
 
     6.25% {
-        clip: rect(56, 200px, 44px, 0);
+        clip: rect(13, 200px, 64px, 0);
     }
 
     12.5% {
-        clip: rect(32, 200px, 5px, 0);
+        clip: rect(2, 200px, 45px, 0);
     }
 
     18.75% {
-        clip: rect(57, 200px, 49px, 0);
+        clip: rect(51, 200px, 30px, 0);
     }
 
     25% {
-        clip: rect(32, 200px, 37px, 0);
+        clip: rect(5, 200px, 25px, 0);
     }
 
     31.25% {
-        clip: rect(41, 200px, 28px, 0);
+        clip: rect(62, 200px, 44px, 0);
     }
 
     37.5% {
-        clip: rect(19, 200px, 12px, 0);
+        clip: rect(21, 200px, 11px, 0);
     }
 
     43.75% {
-        clip: rect(31, 200px, 32px, 0);
+        clip: rect(41, 200px, 51px, 0);
     }
 
     50% {
-        clip: rect(36, 200px, 47px, 0);
+        clip: rect(61, 200px, 51px, 0);
     }
 
     56.25% {
-        clip: rect(30, 200px, 26px, 0);
+        clip: rect(29, 200px, 24px, 0);
     }
 
     62.5% {
-        clip: rect(39, 200px, 55px, 0);
+        clip: rect(36, 200px, 29px, 0);
     }
 
     68.75% {
-        clip: rect(27, 200px, 63px, 0);
+        clip: rect(59, 200px, 23px, 0);
     }
 
     75% {
-        clip: rect(41, 200px, 41px, 0);
+        clip: rect(62, 200px, 47px, 0);
     }
 
     81.25% {
-        clip: rect(57, 200px, 10px, 0);
+        clip: rect(24, 200px, 13px, 0);
     }
 
     87.5% {
-        clip: rect(19, 200px, 48px, 0);
+        clip: rect(47, 200px, 19px, 0);
     }
 
     93.75% {
-        clip: rect(14, 200px, 43px, 0);
+        clip: rect(21, 200px, 18px, 0);
     }
 
     100% {
-        clip: rect(42, 200px, 25px, 0);
+        clip: rect(34, 200px, 6px, 0);
     }
 }
 /*____________________________________________________________
@@ -10982,4 +10983,165 @@ ____________________________________________________________*/
     background-color: #ff2400;
     -webkit-clip-path: circle(30.00075px at 230.00075px 50%);
     clip-path: circle(30.00075px at 230.00075px 50%);
+}
+
+/*____________________________________________________________
+## @import sunClipBlowBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Sun Clip Blow Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Sun Clip Blow Buttons
+____________________________________________________________*/
+.sunClipBlowBtn {
+    position: relative;
+    margin: 20px 25px;
+    width: 200px;
+    height: 65px;
+    background-color: #003049;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sunClipBlowBtn._lr:before, .sunClipBlowBtn._lr .sunClipBlowBtn__sun:before {
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.sunClipBlowBtn._lr:hover:before, .sunClipBlowBtn._lr:hover .sunClipBlowBtn__sun:before {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sunClipBlowBtn._rl:before, .sunClipBlowBtn._rl .sunClipBlowBtn__sun:before {
+    top: 50%;
+    right: 100%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.sunClipBlowBtn._rl:hover:before, .sunClipBlowBtn._rl:hover .sunClipBlowBtn__sun:before {
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+.sunClipBlowBtn._tb:before, .sunClipBlowBtn._tb .sunClipBlowBtn__sun:before {
+    bottom: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.sunClipBlowBtn._tb:hover:before, .sunClipBlowBtn._tb:hover .sunClipBlowBtn__sun:before {
+    bottom: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.sunClipBlowBtn._bt:before, .sunClipBlowBtn._bt .sunClipBlowBtn__sun:before {
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.sunClipBlowBtn._bt:hover:before, .sunClipBlowBtn._bt:hover .sunClipBlowBtn__sun:before {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sunClipBlowBtn:after, .sunClipBlowBtn:before,
+.sunClipBlowBtn .sunClipBlowBtn__sun:before {
+    content: attr(data-clip);
+    position: absolute;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    -webkit-transition: top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, -webkit-transform 0.4s;
+    transition: top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, -webkit-transform 0.4s;
+    -o-transition: top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, transform 0.4s;
+    transition: top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, transform 0.4s;
+    transition: top 0.4s, bottom 0.4s, left 0.4s, right 0.4s, transform 0.4s, -webkit-transform 0.4s;
+}
+
+.sunClipBlowBtn:before {
+    color: #F7B32D;
+    text-shadow: 2px 2px 2px #b4416e;
+}
+
+.sunClipBlowBtn:after {
+    content: attr(data-name);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #F7B32D;
+    text-shadow: 2px 2px 2px #b4416e;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sunClipBlowBtn:hover:before {
+    -webkit-transition-delay: calc(0.4s / 4);
+    -o-transition-delay: calc(0.4s / 4);
+    transition-delay: calc(0.4s / 4);
+}
+
+.sunClipBlowBtn:hover:after {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sunClipBlowBtn:hover .sunClipBlowBtn__sun {
+    -webkit-clip-path: circle(30.00075px at 50% 50%);
+    clip-path: circle(30.00075px at 50% 50%);
+}
+
+.sunClipBlowBtn:hover .sunClipBlowBtn__sun:before {
+    -webkit-transition-delay: calc(0.4s / 4);
+    -o-transition-delay: calc(0.4s / 4);
+    transition-delay: calc(0.4s / 4);
+}
+
+.sunClipBlowBtn__sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff2400;
+    -webkit-clip-path: circle(0 at 50% 50%);
+    clip-path: circle(0 at 50% 50%);
+    -webkit-transition: -webkit-clip-path 0.4s;
+    transition: -webkit-clip-path 0.4s;
+    -o-transition: clip-path 0.4s;
+    transition: clip-path 0.4s;
+    transition: clip-path 0.4s, -webkit-clip-path 0.4s;
+}
+
+.sunClipBlowBtn__sun:before {
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
 }

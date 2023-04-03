@@ -1,0 +1,11 @@
+section.presentWrap
+  h1.presentWrap__title Sun Clip Blow Buttons
+  .presentWrap__buttonsBlock
+
+    mixin sunClipBlowBtnMix(btnMod, btnName, btnClipName)
+      button.sunClipBlowBtn(class=`_${btnMod}` data-name=`${btnName}` data-clip=`${btnClipName}`)
+        .sunClipBlowBtn__sun(data-clip=`${btnClipName}`)
+    +sunClipBlowBtnMix('lr', 'Hover', 'Button')
+    +sunClipBlowBtnMix('rl', 'Hover', 'Button')
+    +sunClipBlowBtnMix('tb', 'Hover', 'Button')
+    +sunClipBlowBtnMix('bt', 'Hover', 'Button')

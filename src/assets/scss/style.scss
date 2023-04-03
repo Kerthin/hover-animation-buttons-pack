@@ -64,6 +64,7 @@
     ## @import petalWordBtn.scss
     ## @import sunBtn.scss
     ## @import sunClipBtn.scss
+    ## @import sunClipBlowBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -385,3 +386,8 @@ ____________________________________________________________*/
 ## @import sunClipBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/sunClipBtn.scss';
+
+/*____________________________________________________________
+## @import sunClipBlowBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/sunClipBlowBtn.scss';
