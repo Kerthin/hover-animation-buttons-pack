@@ -1,0 +1,75 @@
+/*____________________________________________________________
+# Sun Clip Variables
+____________________________________________________________*/
+$sunClipBtnWidth: 200px;
+$sunClipBtnHeight: ($sunClipBtnWidth / 100) * 32.5;
+
+$sunClipFontSize: $sunClipBtnHeight / 2.03125;
+$sunClipTextShadowSize: ($sunClipFontSize / 100) * 6.25;
+
+$sunClipSize: (($sunClipBtnHeight / 100) * 92.31) / 2;
+$sunClipShadow: $sunClipSize / 6;
+
+$sunClipMarginRight: $sunClipSize + $sunClipBtnWidth;
+$sunClipMarginLeft: -1 * $sunClipSize;
+
+$sunClipBtnTime: .4s;
+
+/*____________________________________________________________
+# Sun Clip
+____________________________________________________________*/
+.sunClipBtn {
+  position: relative;
+  margin: 20px;
+  width: $sunClipBtnWidth;
+  height: $sunClipBtnHeight;
+  background-color: #003049;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .sunClipBtn__text {
+      &:before {
+        clip-path: circle($sunClipSize at 60% 50%);
+      }
+      &:after {
+        clip-path: circle($sunClipSize at 40% 50%);
+      }
+    }
+  }
+}
+
+.sunClipBtn__text,
+.sunClipBtn__text:before,
+.sunClipBtn__text:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $sunClipBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $sunClipFontSize;
+  font-weight: 900;
+}
+.sunClipBtn__text {
+  color: #F7B32D;
+  text-shadow: $sunClipTextShadowSize $sunClipTextShadowSize $sunClipTextShadowSize #b4416e;
+  
+  &:before,
+  &:after {
+    content: attr(data-clip);
+    text-shadow: $sunClipTextShadowSize $sunClipTextShadowSize $sunClipTextShadowSize #000;
+    transition: clip-path $sunClipBtnTime;
+  }
+  &:before {
+    color: #fff;
+    background-color: #F7B32D;
+    clip-path: circle($sunClipSize at $sunClipMarginLeft 50%);
+  }
+  &:after {
+    color: #fff;
+    background-color: #ff2400;
+    clip-path: circle($sunClipSize at $sunClipMarginRight 50%);
+  }
+}

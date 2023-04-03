@@ -63,6 +63,7 @@
     ## @import popupBtn.scss
     ## @import petalWordBtn.scss
     ## @import sunBtn.scss
+    ## @import sunClipBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -770,141 +771,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(57, 200px, 57px, 0);
+        clip: rect(2, 200px, 40px, 0);
     }
 
     6.25% {
-        clip: rect(33, 200px, 33px, 0);
+        clip: rect(56, 200px, 44px, 0);
     }
 
     12.5% {
-        clip: rect(46, 200px, 10px, 0);
+        clip: rect(32, 200px, 5px, 0);
     }
 
     18.75% {
-        clip: rect(42, 200px, 51px, 0);
+        clip: rect(57, 200px, 49px, 0);
     }
 
     25% {
-        clip: rect(39, 200px, 43px, 0);
+        clip: rect(32, 200px, 37px, 0);
     }
 
     31.25% {
-        clip: rect(32, 200px, 12px, 0);
+        clip: rect(41, 200px, 28px, 0);
     }
 
     37.5% {
-        clip: rect(63, 200px, 47px, 0);
+        clip: rect(19, 200px, 12px, 0);
     }
 
     43.75% {
-        clip: rect(54, 200px, 11px, 0);
+        clip: rect(31, 200px, 32px, 0);
     }
 
     50% {
-        clip: rect(28, 200px, 53px, 0);
+        clip: rect(36, 200px, 47px, 0);
     }
 
     56.25% {
-        clip: rect(60, 200px, 17px, 0);
+        clip: rect(30, 200px, 26px, 0);
     }
 
     62.5% {
-        clip: rect(56, 200px, 13px, 0);
+        clip: rect(39, 200px, 55px, 0);
     }
 
     68.75% {
-        clip: rect(6, 200px, 49px, 0);
+        clip: rect(27, 200px, 63px, 0);
     }
 
     75% {
-        clip: rect(56, 200px, 18px, 0);
+        clip: rect(41, 200px, 41px, 0);
     }
 
     81.25% {
-        clip: rect(47, 200px, 41px, 0);
+        clip: rect(57, 200px, 10px, 0);
     }
 
     87.5% {
-        clip: rect(33, 200px, 20px, 0);
+        clip: rect(19, 200px, 48px, 0);
     }
 
     93.75% {
-        clip: rect(25, 200px, 41px, 0);
+        clip: rect(14, 200px, 43px, 0);
     }
 
     100% {
-        clip: rect(10, 200px, 31px, 0);
+        clip: rect(42, 200px, 25px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(57, 200px, 57px, 0);
+        clip: rect(2, 200px, 40px, 0);
     }
 
     6.25% {
-        clip: rect(33, 200px, 33px, 0);
+        clip: rect(56, 200px, 44px, 0);
     }
 
     12.5% {
-        clip: rect(46, 200px, 10px, 0);
+        clip: rect(32, 200px, 5px, 0);
     }
 
     18.75% {
-        clip: rect(42, 200px, 51px, 0);
+        clip: rect(57, 200px, 49px, 0);
     }
 
     25% {
-        clip: rect(39, 200px, 43px, 0);
+        clip: rect(32, 200px, 37px, 0);
     }
 
     31.25% {
-        clip: rect(32, 200px, 12px, 0);
+        clip: rect(41, 200px, 28px, 0);
     }
 
     37.5% {
-        clip: rect(63, 200px, 47px, 0);
+        clip: rect(19, 200px, 12px, 0);
     }
 
     43.75% {
-        clip: rect(54, 200px, 11px, 0);
+        clip: rect(31, 200px, 32px, 0);
     }
 
     50% {
-        clip: rect(28, 200px, 53px, 0);
+        clip: rect(36, 200px, 47px, 0);
     }
 
     56.25% {
-        clip: rect(60, 200px, 17px, 0);
+        clip: rect(30, 200px, 26px, 0);
     }
 
     62.5% {
-        clip: rect(56, 200px, 13px, 0);
+        clip: rect(39, 200px, 55px, 0);
     }
 
     68.75% {
-        clip: rect(6, 200px, 49px, 0);
+        clip: rect(27, 200px, 63px, 0);
     }
 
     75% {
-        clip: rect(56, 200px, 18px, 0);
+        clip: rect(41, 200px, 41px, 0);
     }
 
     81.25% {
-        clip: rect(47, 200px, 41px, 0);
+        clip: rect(57, 200px, 10px, 0);
     }
 
     87.5% {
-        clip: rect(33, 200px, 20px, 0);
+        clip: rect(19, 200px, 48px, 0);
     }
 
     93.75% {
-        clip: rect(25, 200px, 41px, 0);
+        clip: rect(14, 200px, 43px, 0);
     }
 
     100% {
-        clip: rect(10, 200px, 31px, 0);
+        clip: rect(42, 200px, 25px, 0);
     }
 }
 /*____________________________________________________________
@@ -10909,4 +10910,76 @@ ____________________________________________________________*/
     font-weight: 900;
     color: #F7B32D;
     text-shadow: 2px 2px 2px #b4416e;
+}
+
+/*____________________________________________________________
+## @import sunClipBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Sun Clip Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Sun Clip
+____________________________________________________________*/
+.sunClipBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #003049;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sunClipBtn:hover .sunClipBtn__text:before {
+    -webkit-clip-path: circle(30.00075px at 60% 50%);
+    clip-path: circle(30.00075px at 60% 50%);
+}
+
+.sunClipBtn:hover .sunClipBtn__text:after {
+    -webkit-clip-path: circle(30.00075px at 40% 50%);
+    clip-path: circle(30.00075px at 40% 50%);
+}
+
+.sunClipBtn__text,
+.sunClipBtn__text:before,
+.sunClipBtn__text:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.sunClipBtn__text {
+    color: #F7B32D;
+    text-shadow: 2px 2px 2px #b4416e;
+}
+
+.sunClipBtn__text:before, .sunClipBtn__text:after {
+    content: attr(data-clip);
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: -webkit-clip-path 0.4s;
+    transition: -webkit-clip-path 0.4s;
+    -o-transition: clip-path 0.4s;
+    transition: clip-path 0.4s;
+    transition: clip-path 0.4s, -webkit-clip-path 0.4s;
+}
+
+.sunClipBtn__text:before {
+    color: #fff;
+    background-color: #F7B32D;
+    -webkit-clip-path: circle(30.00075px at -30.00075px 50%);
+    clip-path: circle(30.00075px at -30.00075px 50%);
+}
+
+.sunClipBtn__text:after {
+    color: #fff;
+    background-color: #ff2400;
+    -webkit-clip-path: circle(30.00075px at 230.00075px 50%);
+    clip-path: circle(30.00075px at 230.00075px 50%);
 }
