@@ -65,6 +65,7 @@
     ## @import sunBtn.scss
     ## @import sunClipBtn.scss
     ## @import sunClipBlowBtn.scss
+    ## @import gradientTxtBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -391,3 +392,8 @@ ____________________________________________________________*/
 ## @import sunClipBlowBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/sunClipBlowBtn.scss';
+
+/*____________________________________________________________
+## @import gradientTxtBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/gradientTxtBtn.scss';

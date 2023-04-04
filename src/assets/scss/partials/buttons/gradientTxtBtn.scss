@@ -1,0 +1,68 @@
+/*____________________________________________________________
+# Gradient Text Button Variables
+____________________________________________________________*/
+:root {
+  --color-1: #186cb8;
+  --color-2: #2a9a9f;
+  --color-3: #f1b211;
+  --color-4: #e83611;
+  --color-5: #f9002f;
+}
+
+$gradientTxtBtnWidth: 200px;
+$gradientTxtBtnHeight: calc($gradientTxtBtnWidth / 100) * 32.5;
+
+$gradientTxtFontSize: calc($gradientTxtBtnHeight / 2.03125);
+$gradientTxtShadowSize: calc($gradientTxtFontSize / 100) * 6.25;
+
+$gradientTxtBtnTime: .3s;
+
+/*____________________________________________________________
+# Gradient Text Button
+____________________________________________________________*/
+.gradientTxtBtn {
+  position: relative;
+  margin: 20px;
+  width: $gradientTxtBtnWidth;
+  height: $gradientTxtBtnHeight;
+  background: #add8e6;
+  cursor: pointer;
+  transition: background $gradientTxtBtnTime;
+  
+  &:hover {
+    background: #000;
+    .gradientTxtBtn__text {color: transparent; text-shadow: 0 0 0 transparent;}
+  }
+}
+
+$gradient-1: var(--color-1) 19%, transparent 19%,transparent 20%;
+$gradient-2: var(--color-2) 20%, var(--color-2) 39%, transparent 39%,transparent 40%;
+$gradient-3: var(--color-3) 40%, var(--color-3) 59%, transparent 59%,transparent 60%;
+$gradient-4: var(--color-4) 60%, var(--color-4) 79%, transparent 79%, transparent 80%;
+$gradient-5: var(--color-5) 80%;
+
+.gradientTxtBtn__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Exo", sans-serif;
+  font-size: $gradientTxtFontSize;
+  font-weight: 900;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+  text-transform: uppercase;
+  color: #F7B32D;
+  text-shadow: $gradientTxtShadowSize $gradientTxtShadowSize $gradientTxtShadowSize #b4416e;
+  background: linear-gradient(219deg, 
+                              $gradient-1, 
+                              $gradient-2, 
+                              $gradient-3, 
+                              $gradient-4, 
+                              $gradient-5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: color $gradientTxtBtnTime, text-shadow $gradientTxtBtnTime;
+}

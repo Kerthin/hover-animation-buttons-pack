@@ -65,6 +65,7 @@
     ## @import sunBtn.scss
     ## @import sunClipBtn.scss
     ## @import sunClipBlowBtn.scss
+    ## @import gradientTxtBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -772,141 +773,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(62, 200px, 15px, 0);
+        clip: rect(38, 200px, 19px, 0);
     }
 
     6.25% {
-        clip: rect(13, 200px, 64px, 0);
+        clip: rect(49, 200px, 36px, 0);
     }
 
     12.5% {
-        clip: rect(2, 200px, 45px, 0);
+        clip: rect(17, 200px, 22px, 0);
     }
 
     18.75% {
-        clip: rect(51, 200px, 30px, 0);
+        clip: rect(65, 200px, 31px, 0);
     }
 
     25% {
-        clip: rect(5, 200px, 25px, 0);
+        clip: rect(58, 200px, 52px, 0);
     }
 
     31.25% {
-        clip: rect(62, 200px, 44px, 0);
+        clip: rect(31, 200px, 56px, 0);
     }
 
     37.5% {
-        clip: rect(21, 200px, 11px, 0);
+        clip: rect(23, 200px, 10px, 0);
     }
 
     43.75% {
-        clip: rect(41, 200px, 51px, 0);
+        clip: rect(19, 200px, 58px, 0);
     }
 
     50% {
-        clip: rect(61, 200px, 51px, 0);
+        clip: rect(24, 200px, 5px, 0);
     }
 
     56.25% {
-        clip: rect(29, 200px, 24px, 0);
+        clip: rect(53, 200px, 3px, 0);
     }
 
     62.5% {
-        clip: rect(36, 200px, 29px, 0);
+        clip: rect(51, 200px, 45px, 0);
     }
 
     68.75% {
-        clip: rect(59, 200px, 23px, 0);
+        clip: rect(29, 200px, 60px, 0);
     }
 
     75% {
-        clip: rect(62, 200px, 47px, 0);
+        clip: rect(2, 200px, 62px, 0);
     }
 
     81.25% {
-        clip: rect(24, 200px, 13px, 0);
+        clip: rect(11, 200px, 35px, 0);
     }
 
     87.5% {
-        clip: rect(47, 200px, 19px, 0);
+        clip: rect(21, 200px, 13px, 0);
     }
 
     93.75% {
-        clip: rect(21, 200px, 18px, 0);
+        clip: rect(11, 200px, 31px, 0);
     }
 
     100% {
-        clip: rect(34, 200px, 6px, 0);
+        clip: rect(52, 200px, 30px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(62, 200px, 15px, 0);
+        clip: rect(38, 200px, 19px, 0);
     }
 
     6.25% {
-        clip: rect(13, 200px, 64px, 0);
+        clip: rect(49, 200px, 36px, 0);
     }
 
     12.5% {
-        clip: rect(2, 200px, 45px, 0);
+        clip: rect(17, 200px, 22px, 0);
     }
 
     18.75% {
-        clip: rect(51, 200px, 30px, 0);
+        clip: rect(65, 200px, 31px, 0);
     }
 
     25% {
-        clip: rect(5, 200px, 25px, 0);
+        clip: rect(58, 200px, 52px, 0);
     }
 
     31.25% {
-        clip: rect(62, 200px, 44px, 0);
+        clip: rect(31, 200px, 56px, 0);
     }
 
     37.5% {
-        clip: rect(21, 200px, 11px, 0);
+        clip: rect(23, 200px, 10px, 0);
     }
 
     43.75% {
-        clip: rect(41, 200px, 51px, 0);
+        clip: rect(19, 200px, 58px, 0);
     }
 
     50% {
-        clip: rect(61, 200px, 51px, 0);
+        clip: rect(24, 200px, 5px, 0);
     }
 
     56.25% {
-        clip: rect(29, 200px, 24px, 0);
+        clip: rect(53, 200px, 3px, 0);
     }
 
     62.5% {
-        clip: rect(36, 200px, 29px, 0);
+        clip: rect(51, 200px, 45px, 0);
     }
 
     68.75% {
-        clip: rect(59, 200px, 23px, 0);
+        clip: rect(29, 200px, 60px, 0);
     }
 
     75% {
-        clip: rect(62, 200px, 47px, 0);
+        clip: rect(2, 200px, 62px, 0);
     }
 
     81.25% {
-        clip: rect(24, 200px, 13px, 0);
+        clip: rect(11, 200px, 35px, 0);
     }
 
     87.5% {
-        clip: rect(47, 200px, 19px, 0);
+        clip: rect(21, 200px, 13px, 0);
     }
 
     93.75% {
-        clip: rect(21, 200px, 18px, 0);
+        clip: rect(11, 200px, 31px, 0);
     }
 
     100% {
-        clip: rect(34, 200px, 6px, 0);
+        clip: rect(52, 200px, 30px, 0);
     }
 }
 /*____________________________________________________________
@@ -11144,4 +11145,68 @@ ____________________________________________________________*/
 .sunClipBlowBtn__sun:before {
     color: #fff;
     text-shadow: 2px 2px 2px #000;
+}
+
+/*____________________________________________________________
+## @import gradientTxtBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Gradient Text Button Variables
+____________________________________________________________*/
+:root {
+    --color-1: #186cb8;
+    --color-2: #2a9a9f;
+    --color-3: #f1b211;
+    --color-4: #e83611;
+    --color-5: #f9002f;
+}
+
+/*____________________________________________________________
+# Gradient Text Button
+____________________________________________________________*/
+.gradientTxtBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background: #add8e6;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.gradientTxtBtn:hover {
+    background: #000;
+}
+
+.gradientTxtBtn:hover .gradientTxtBtn__text {
+    color: transparent;
+    text-shadow: 0 0 0 transparent;
+}
+
+.gradientTxtBtn__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Exo", sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: auto;
+    text-transform: uppercase;
+    color: #F7B32D;
+    text-shadow: 2px 2px 2px #b4416e;
+    background: -o-linear-gradient(231deg, var(--color-1) 19%, transparent 19%, transparent 20%, var(--color-2) 20%, var(--color-2) 39%, transparent 39%, transparent 40%, var(--color-3) 40%, var(--color-3) 59%, transparent 59%, transparent 60%, var(--color-4) 60%, var(--color-4) 79%, transparent 79%, transparent 80%, var(--color-5) 80%);
+    background: linear-gradient(219deg, var(--color-1) 19%, transparent 19%, transparent 20%, var(--color-2) 20%, var(--color-2) 39%, transparent 39%, transparent 40%, var(--color-3) 40%, var(--color-3) 59%, transparent 59%, transparent 60%, var(--color-4) 60%, var(--color-4) 79%, transparent 79%, transparent 80%, var(--color-5) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-transition: color 0.3s, text-shadow 0.3s;
+    -o-transition: color 0.3s, text-shadow 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
