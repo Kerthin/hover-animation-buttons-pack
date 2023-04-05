@@ -1,0 +1,162 @@
+/*____________________________________________________________
+# Follow Buttons Variables
+____________________________________________________________*/
+$followItemsColor: (#F2385A,
+                    #F5A503,
+                    #FFF5C3,
+                    #4AD9D9,
+                    #36B1BF,
+                    #F2385A,
+                    #F5A503,
+                    #FFF5C3,
+                    #4AD9D9,
+                    #36B1BF);
+
+$followBtnWidth: 200px;
+$followBtnHeight: calc($followBtnWidth / 100) * 32.5;
+
+$followBtnFontSize: calc($followBtnHeight / 2.03125);
+$followBtnShadowSize: calc($followBtnFontSize / 100) * 6.25;
+
+$followSocialItemSize: calc($followBtnHeight / 3.25);
+
+$followBtnTime: .3s;
+$followItemDelay: calc($followBtnTime / 6);
+
+/*____________________________________________________________
+# Follow Buttons
+____________________________________________________________*/
+.followBtn {
+  position: relative;
+  margin: 20px;
+  width: $followBtnWidth;
+  height: $followBtnHeight;
+  background-color: #003049;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._shadow {
+    .followBtn__item {
+      &:after {box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 6px rgba(0,0,0,0.23);}
+    }
+  }
+  
+  &:hover {
+    .followBtn__line {
+      &:nth-child(1) {.followBtn__item:after{top: 0;}}
+      &:nth-child(2) {.followBtn__item:after{bottom: 0;}}
+    }
+    .followBtn__text {
+      opacity: 0;
+      transition-delay: 0s;
+    }
+    .followBtn__socialWrap {
+      z-index: 4;
+      transition-delay: calc(#{$followItemDelay} * #{length($followItemsColor)});
+    }
+  }
+}
+.followBtn__line {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: 2;
+  
+  &:nth-child(1) {
+    top: -50%;
+    
+    .followBtn__item {&:after{top: 100%;}}
+  }
+  &:nth-child(2) {
+    bottom: -50%;
+    
+    .followBtn__item {&:after{bottom: 100%;}}
+  }
+}
+.followBtn__item {
+  position: relative;
+  float: left;
+  width: calc(100% / #{length($followItemsColor)});
+  height: 100%;
+  
+  &:after {
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: top $followBtnTime, bottom $followBtnTime;
+  }
+  
+  @for $i from 1 through length($followItemsColor) {
+    &:nth-child(#{$i}) {
+      &:after {
+        background-color: nth($followItemsColor, $i);
+        transition-delay: $i * $followItemDelay;
+      }
+    }
+  }
+}
+.followBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $followBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $followBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $followBtnShadowSize $followBtnShadowSize $followBtnShadowSize #000;
+  transition: opacity calc(#{$followBtnTime} / 1.5);
+  transition-delay: calc(#{$followItemDelay} * (#{length($followItemsColor)} - 2));
+  z-index: 3;
+}
+
+.followBtn__socialWrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: $followSocialItemSize;
+  z-index: 1;
+  transition-delay: 0s;
+}
+.followBtn__linkWrap {
+  position: relative;
+  float: left;
+  width: $followSocialItemSize;
+  height: $followSocialItemSize;
+  margin: 0 calc(#{$followSocialItemSize} / 2);
+  transition: transform calc(#{$followBtnTime} / 1.5);
+  
+  .socialList__icon {
+    fill: none;
+    stroke: #FFF5C3;
+
+    &._fillOn {
+      fill: #FFF5C3;
+    }
+    &._fillTwitter {
+      fill: #03A9F4;
+    }
+    &._fillGmail {
+      fill: #F44336;
+    }
+  }
+	
+	&:hover {
+		transform: translateY(-3px);
+		
+		.socialList__icon {
+			stroke: #F5A503;
+      
+      &._fillOn,
+      &._fillTwitter,
+      &._fillGmail {
+        fill: #F5A503;
+      }
+		}
+	}
+}
