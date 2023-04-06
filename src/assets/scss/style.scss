@@ -67,6 +67,7 @@
     ## @import sunClipBlowBtn.scss
     ## @import gradientTxtBtn.scss
     ## @import followBtn.scss
+    ## @import verticalItemMoveBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -403,3 +404,8 @@ ____________________________________________________________*/
 ## @import followBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/followBtn.scss';
+
+/*____________________________________________________________
+## @import verticalItemMoveBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/verticalItemMoveBtn.scss';

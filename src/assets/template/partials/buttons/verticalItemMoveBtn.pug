@@ -1,0 +1,11 @@
+section.presentWrap
+  h1.presentWrap__title Vertical Item Move Button
+  .presentWrap__buttonsBlock
+
+    button.verticalItemMoveBtn
+      .verticalItemMoveBtn__text._start Hover
+      .verticalItemMoveBtn__text._end Button
+      .verticalItemMoveBtn__itemsWrap
+        - var varticalItemMoveNumber = 1;
+        while varticalItemMoveNumber <= 10
+          .verticalItemMoveBtn__item(id=`_${varticalItemMoveNumber++}`)

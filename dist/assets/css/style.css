@@ -67,6 +67,7 @@
     ## @import sunClipBlowBtn.scss
     ## @import gradientTxtBtn.scss
     ## @import followBtn.scss
+    ## @import verticalItemMoveBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -774,141 +775,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(5, 200px, 38px, 0);
+        clip: rect(12, 200px, 44px, 0);
     }
 
     6.25% {
-        clip: rect(4, 200px, 35px, 0);
+        clip: rect(11, 200px, 24px, 0);
     }
 
     12.5% {
-        clip: rect(1, 200px, 64px, 0);
+        clip: rect(4, 200px, 53px, 0);
     }
 
     18.75% {
-        clip: rect(16, 200px, 63px, 0);
+        clip: rect(10, 200px, 41px, 0);
     }
 
     25% {
-        clip: rect(12, 200px, 38px, 0);
+        clip: rect(34, 200px, 32px, 0);
     }
 
     31.25% {
-        clip: rect(35, 200px, 58px, 0);
+        clip: rect(45, 200px, 3px, 0);
     }
 
     37.5% {
-        clip: rect(62, 200px, 8px, 0);
+        clip: rect(62, 200px, 12px, 0);
     }
 
     43.75% {
-        clip: rect(48, 200px, 41px, 0);
+        clip: rect(34, 200px, 48px, 0);
     }
 
     50% {
-        clip: rect(20, 200px, 56px, 0);
+        clip: rect(46, 200px, 58px, 0);
     }
 
     56.25% {
-        clip: rect(6, 200px, 38px, 0);
+        clip: rect(61, 200px, 32px, 0);
     }
 
     62.5% {
-        clip: rect(31, 200px, 45px, 0);
+        clip: rect(45, 200px, 30px, 0);
     }
 
     68.75% {
-        clip: rect(51, 200px, 8px, 0);
+        clip: rect(26, 200px, 12px, 0);
     }
 
     75% {
-        clip: rect(4, 200px, 48px, 0);
+        clip: rect(12, 200px, 65px, 0);
     }
 
     81.25% {
-        clip: rect(23, 200px, 44px, 0);
+        clip: rect(65, 200px, 1px, 0);
     }
 
     87.5% {
-        clip: rect(47, 200px, 65px, 0);
+        clip: rect(26, 200px, 55px, 0);
     }
 
     93.75% {
-        clip: rect(58, 200px, 48px, 0);
+        clip: rect(24, 200px, 57px, 0);
     }
 
     100% {
-        clip: rect(7, 200px, 7px, 0);
+        clip: rect(40, 200px, 61px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(5, 200px, 38px, 0);
+        clip: rect(12, 200px, 44px, 0);
     }
 
     6.25% {
-        clip: rect(4, 200px, 35px, 0);
+        clip: rect(11, 200px, 24px, 0);
     }
 
     12.5% {
-        clip: rect(1, 200px, 64px, 0);
+        clip: rect(4, 200px, 53px, 0);
     }
 
     18.75% {
-        clip: rect(16, 200px, 63px, 0);
+        clip: rect(10, 200px, 41px, 0);
     }
 
     25% {
-        clip: rect(12, 200px, 38px, 0);
+        clip: rect(34, 200px, 32px, 0);
     }
 
     31.25% {
-        clip: rect(35, 200px, 58px, 0);
+        clip: rect(45, 200px, 3px, 0);
     }
 
     37.5% {
-        clip: rect(62, 200px, 8px, 0);
+        clip: rect(62, 200px, 12px, 0);
     }
 
     43.75% {
-        clip: rect(48, 200px, 41px, 0);
+        clip: rect(34, 200px, 48px, 0);
     }
 
     50% {
-        clip: rect(20, 200px, 56px, 0);
+        clip: rect(46, 200px, 58px, 0);
     }
 
     56.25% {
-        clip: rect(6, 200px, 38px, 0);
+        clip: rect(61, 200px, 32px, 0);
     }
 
     62.5% {
-        clip: rect(31, 200px, 45px, 0);
+        clip: rect(45, 200px, 30px, 0);
     }
 
     68.75% {
-        clip: rect(51, 200px, 8px, 0);
+        clip: rect(26, 200px, 12px, 0);
     }
 
     75% {
-        clip: rect(4, 200px, 48px, 0);
+        clip: rect(12, 200px, 65px, 0);
     }
 
     81.25% {
-        clip: rect(23, 200px, 44px, 0);
+        clip: rect(65, 200px, 1px, 0);
     }
 
     87.5% {
-        clip: rect(47, 200px, 65px, 0);
+        clip: rect(26, 200px, 55px, 0);
     }
 
     93.75% {
-        clip: rect(58, 200px, 48px, 0);
+        clip: rect(24, 200px, 57px, 0);
     }
 
     100% {
-        clip: rect(7, 200px, 7px, 0);
+        clip: rect(40, 200px, 61px, 0);
     }
 }
 /*____________________________________________________________
@@ -11446,4 +11447,138 @@ ____________________________________________________________*/
 
 .followBtn__linkWrap:hover .socialList__icon._fillOn, .followBtn__linkWrap:hover .socialList__icon._fillTwitter, .followBtn__linkWrap:hover .socialList__icon._fillGmail {
     fill: #F5A503;
+}
+
+/*____________________________________________________________
+## @import verticalItemMoveBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Vertical Item Move Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Vertical Item Move Button
+____________________________________________________________*/
+.verticalItemMoveBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #b9267b;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.verticalItemMoveBtn:hover .verticalItemMoveBtn__item:nth-child(odd):after {
+    bottom: calc(65px * 2);
+}
+
+.verticalItemMoveBtn:hover .verticalItemMoveBtn__item:nth-child(even):after {
+    top: calc(65px * 2);
+}
+
+.verticalItemMoveBtn:hover .verticalItemMoveBtn__text._start {
+    opacity: 0;
+}
+
+.verticalItemMoveBtn:hover .verticalItemMoveBtn__text._end {
+    opacity: 1;
+}
+
+.verticalItemMoveBtn__itemsWrap {
+    position: absolute;
+    top: calc(65px * -1);
+    width: 100%;
+    height: 195px;
+}
+
+.verticalItemMoveBtn__item {
+    position: relative;
+    float: left;
+    width: calc(200px / 10);
+    height: 65px;
+}
+
+.verticalItemMoveBtn__item:nth-child(odd) {
+    margin-top: calc(65px * 2);
+}
+
+.verticalItemMoveBtn__item:nth-child(odd):after {
+    bottom: 0;
+}
+
+.verticalItemMoveBtn__item:nth-child(even):after {
+    top: 0;
+}
+
+.verticalItemMoveBtn__item:nth-child(1):after {
+    background-color: #F2385A;
+}
+
+.verticalItemMoveBtn__item:nth-child(2):after {
+    background-color: #F5A503;
+}
+
+.verticalItemMoveBtn__item:nth-child(3):after {
+    background-color: #FFF5C3;
+}
+
+.verticalItemMoveBtn__item:nth-child(4):after {
+    background-color: #4AD9D9;
+}
+
+.verticalItemMoveBtn__item:nth-child(5):after {
+    background-color: #36B1BF;
+}
+
+.verticalItemMoveBtn__item:nth-child(6):after {
+    background-color: #F2385A;
+}
+
+.verticalItemMoveBtn__item:nth-child(7):after {
+    background-color: #F5A503;
+}
+
+.verticalItemMoveBtn__item:nth-child(8):after {
+    background-color: #FFF5C3;
+}
+
+.verticalItemMoveBtn__item:nth-child(9):after {
+    background-color: #4AD9D9;
+}
+
+.verticalItemMoveBtn__item:nth-child(10):after {
+    background-color: #36B1BF;
+}
+
+.verticalItemMoveBtn__item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+    -webkit-transition: top 0.5s, bottom 0.5s;
+    -o-transition: top 0.5s, bottom 0.5s;
+    transition: top 0.5s, bottom 0.5s;
+}
+
+.verticalItemMoveBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition-delay: calc(0.5s / 2.5);
+    -o-transition-delay: calc(0.5s / 2.5);
+    transition-delay: calc(0.5s / 2.5);
+}
+
+.verticalItemMoveBtn__text._end {
+    opacity: 0;
 }
