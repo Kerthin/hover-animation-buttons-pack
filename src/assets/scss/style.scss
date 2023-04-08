@@ -68,6 +68,7 @@
     ## @import gradientTxtBtn.scss
     ## @import followBtn.scss
     ## @import verticalItemMoveBtn.scss
+    ## @import honeycombsBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -409,3 +410,8 @@ ____________________________________________________________*/
 ## @import verticalItemMoveBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/verticalItemMoveBtn.scss';
+
+/*____________________________________________________________
+## @import honeycombsBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/honeycombsBtn.scss';

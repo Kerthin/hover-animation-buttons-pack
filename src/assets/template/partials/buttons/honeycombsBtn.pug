@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Honeycombs Button
+  .presentWrap__buttonsBlock
+
+    button.honeycombsBtn
+      - var honeycombsLineNumber = 1;
+      while honeycombsLineNumber <= 9
+        .honeycombsBtn__lines(id=`_${honeycombsLineNumber++}`)
+          - var honeycombsNumber = 1;
+          while honeycombsNumber <= 7
+            .honeycombsBtn__honeycomb(id=`_${honeycombsNumber++}`)
+      .honeycombsBtn__text._start Hover
+      .honeycombsBtn__text._end Button

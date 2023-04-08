@@ -1,0 +1,124 @@
+/*____________________________________________________________
+# Honeycombs Button Variables
+____________________________________________________________*/
+$honeycombLineCount: 9;
+$honeycombCount: 7;
+
+$honeycombsBtnWidth: 200px;
+$honeycombsBtnHeight: calc($honeycombsBtnWidth / 100) * 32.5;
+
+$honeycombsBtnFontSize: calc($honeycombsBtnHeight / 2.03125);
+$honeycombsBtnShadowSize: calc($honeycombsBtnFontSize / 100) * 6.25;
+
+$honeycombWidth: calc($honeycombsBtnWidth / 100) * 3.75;
+$honeycombHeight: calc($honeycombsBtnHeight / 100) * 23.0769;
+$honeycombMarginLeft: calc($honeycombsBtnWidth / 100) * 12.5;
+$honeycombLineTopMargin: calc($honeycombsBtnWidth / 100) * 4.25;
+$honeycombLineEvenMargin: calc($honeycombsBtnWidth / 100) * 8;
+
+$honeycombLineWidth: (($honeycombMarginLeft + $honeycombWidth) * $honeycombCount) - $honeycombWidth;
+
+/*____________________________________________________________
+# Honeycombs Button
+____________________________________________________________*/
+.honeycombsBtn {
+  position: relative;
+  margin: 20px;
+  width: $honeycombsBtnWidth;
+  height: $honeycombsBtnHeight;
+  background-color: #36B1BF;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .honeycombsBtn__honeycomb {
+      background-color: #F5A503;
+      
+      &:before {
+        border-right: $honeycombWidth solid #F5A503;
+      }
+      &:after {
+        border-left: $honeycombWidth solid #F5A503;
+      }
+    }
+    .honeycombsBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: .5s;}
+    }
+  }
+}
+.honeycombsBtn__lines {
+  position: absolute;
+  width: $honeycombLineWidth;
+  height: $honeycombHeight;
+  
+  &:nth-child(even) {
+    left: -$honeycombLineEvenMargin;
+  }
+  
+  @for $i from 1 through $honeycombLineCount {
+    &:nth-child(#{$i}) {
+      top: calc((#{$honeycombWidth} * -1) + ((#{$i} - 1) * #{$honeycombLineTopMargin}));
+    }
+  }
+}
+.honeycombsBtn__honeycomb {
+  position: relative;
+  float: left;
+  margin-left: $honeycombMarginLeft;
+  width: $honeycombWidth;
+  height: $honeycombHeight;
+  background-color: transparent;
+  transition: background-color .3s;
+  
+  &:nth-child(1) {
+    margin-left: $honeycombWidth;
+  }
+  
+//   To determine the sequence We use the formula  a(n) = a(1) + d(n − 1), to define an arithmetic sequence. a(n) = 0.5 * n + 0.5
+  @for $i from 1 through $honeycombCount {
+    &:nth-child(#{$i}) {
+      transition-delay: calc((.05s * #{$i}) + .05s);
+      &:before,
+      &:after {
+        transition-delay: calc((.05s * #{$i}) + .05s);
+      }
+    }
+  }
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+  }
+  &:before {
+    border-top: $honeycombWidth solid transparent;
+    border-bottom: $honeycombWidth solid transparent;
+    border-right: $honeycombWidth solid transparent;
+    left: -$honeycombWidth;
+    transition: border-right .3s;
+  }
+  &:after {
+    border-top: $honeycombWidth solid transparent;
+    border-bottom: $honeycombWidth solid transparent;
+    border-left: $honeycombWidth solid transparent;
+    right: -$honeycombWidth;
+    transition: border-left .3s;
+  }
+}
+.honeycombsBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $honeycombsBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $honeycombsBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $honeycombsBtnShadowSize $honeycombsBtnShadowSize $honeycombsBtnShadowSize #000;
+  transition: opacity .2s;
+  
+  &._start {color: #F5A503; transition-delay: .5s;}
+  &._end {color: #36B1BF; opacity: 0;}
+}
