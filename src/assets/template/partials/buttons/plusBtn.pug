@@ -1,0 +1,11 @@
+section.presentWrap
+  h1.presentWrap__title Plus Button
+  .presentWrap__buttonsBlock
+
+    button.plusBtn
+      .plusBtn__plusWrap
+        - var plusItem = 1;
+        while plusItem <= 4
+          .plusBtn__plus(id=`_${plusItem++}`)
+      .plusBtn__text._start Hover
+      .plusBtn__text._end Button

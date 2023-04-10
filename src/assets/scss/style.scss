@@ -69,6 +69,7 @@
     ## @import followBtn.scss
     ## @import verticalItemMoveBtn.scss
     ## @import honeycombsBtn.scss
+    ## @import plusBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -415,3 +416,8 @@ ____________________________________________________________*/
 ## @import honeycombsBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/honeycombsBtn.scss';
+
+/*____________________________________________________________
+## @import plusBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/plusBtn.scss';

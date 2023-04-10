@@ -1,0 +1,109 @@
+/*____________________________________________________________
+# Plus Button Variables
+____________________________________________________________*/
+$plusBtnWidth: 200px;
+$plusBtnHeight: calc($plusBtnWidth / 100) * 32.5;
+
+$plusBtnFontSize: calc($plusBtnHeight / 2.03125);
+$plusBtnShadowSize: calc($plusBtnFontSize / 100) * 6.25;
+
+$plusWrapWidth: calc($plusBtnWidth / 100) * 75;
+$plusWrapHeight: calc($plusBtnHeight / 100) * 70;
+
+$plusSize: calc($plusBtnHeight / 100) * 18.5;
+$plusWidth: calc($plusBtnHeight / 100) * 3.1;
+$plusMargin: calc(($plusSize - $plusWidth) / -2) - $plusWidth;
+
+$plusBtnTime: .3s;
+
+/*____________________________________________________________
+# Plus Button
+____________________________________________________________*/
+.plusBtn {
+  position: relative;
+  margin: 20px;
+  width: $plusBtnWidth;
+  height: $plusBtnHeight;
+  background-color: #facf6f;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .plusBtn__plusWrap {
+      width: $plusWrapWidth;
+      height: $plusWrapHeight;
+      border-width: $plusWidth;
+      transition-delay: calc(#{$plusBtnTime} / .75);
+    }
+    .plusBtn__plus {
+      transform: rotate(0);
+      opacity: 1;
+      transition-delay: calc(#{$plusBtnTime} / 3);
+    }
+    .plusBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: calc(#{$plusBtnTime} * 2);}
+    }
+  }
+}
+.plusBtn__plusWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #292c2c;
+  transition: width $plusBtnTime, height $plusBtnTime, border-width $plusBtnTime;
+  transition-delay: calc(#{$plusBtnTime} / 3);
+}
+.plusBtn__plus {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: $plusSize;
+  height: $plusSize;
+  opacity: 0;
+  transition: transform $plusBtnTime, opacity $plusBtnTime;
+  transition-delay: calc(#{$plusBtnTime} / .75);
+
+  &:nth-child(1) {top: $plusMargin; left: $plusMargin;}
+  &:nth-child(2) {top: $plusMargin; right: $plusMargin;}
+  &:nth-child(3) {bottom: $plusMargin; right: $plusMargin;}
+  &:nth-child(4) {bottom: $plusMargin; left: $plusMargin;}
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #292c2c;
+  }
+  &:before {
+    width: 100%;
+    height: $plusWidth;
+  }
+  &:after {
+    width: $plusWidth;
+    height: 100%;
+  }
+}
+.plusBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $plusBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $plusBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $plusBtnShadowSize $plusBtnShadowSize $plusBtnShadowSize #000;
+  transition: opacity calc(#{$plusBtnTime} / 1.5);
+  
+  &._start {transition-delay: calc(#{$plusBtnTime} * 2);}
+  &._end {opacity: 0;}
+}
