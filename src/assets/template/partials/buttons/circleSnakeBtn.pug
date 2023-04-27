@@ -1,0 +1,21 @@
+section.presentWrap
+  h1.presentWrap__title Circle Snake Buttons
+  .presentWrap__buttonsBlock
+
+    mixin circleSnakeBtnMix(firstLine, lastLine, circleSteps)
+      button.circleSnakeBtn
+        .sircleSnake__wrap(class=`_${firstLine}`)
+          - var circleSnakeItem = 1;
+          while circleSnakeItem <= `${circleSteps}`
+            .circleSnake__itemBox
+              .circleSnake__item(id=`_${circleSnakeItem++}`)
+        .sircleSnake__wrap(class=`_${lastLine}`)
+          - var circleSnakeItem = 1;
+          while circleSnakeItem <= `${circleSteps}`
+            .circleSnake__itemBox
+              .circleSnake__item(id=`_${circleSnakeItem++}`)
+        .circleSnakeBtn__text._start Hover
+        .circleSnakeBtn__text._end Button
+
+    +circleSnakeBtnMix('rightStep', 'leftStep', 5)
+    +circleSnakeBtnMix('rightStepInv', 'leftStepInv', 5)
