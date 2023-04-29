@@ -779,141 +779,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(6, 200px, 13px, 0);
+        clip: rect(29, 200px, 50px, 0);
     }
 
     6.25% {
-        clip: rect(61, 200px, 11px, 0);
+        clip: rect(25, 200px, 22px, 0);
     }
 
     12.5% {
-        clip: rect(4, 200px, 26px, 0);
+        clip: rect(2, 200px, 2px, 0);
     }
 
     18.75% {
-        clip: rect(58, 200px, 37px, 0);
+        clip: rect(46, 200px, 18px, 0);
     }
 
     25% {
-        clip: rect(51, 200px, 62px, 0);
+        clip: rect(2, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(44, 200px, 10px, 0);
+        clip: rect(26, 200px, 30px, 0);
     }
 
     37.5% {
-        clip: rect(32, 200px, 38px, 0);
+        clip: rect(42, 200px, 23px, 0);
     }
 
     43.75% {
-        clip: rect(16, 200px, 28px, 0);
+        clip: rect(29, 200px, 13px, 0);
     }
 
     50% {
-        clip: rect(10, 200px, 26px, 0);
+        clip: rect(50, 200px, 24px, 0);
     }
 
     56.25% {
-        clip: rect(20, 200px, 20px, 0);
+        clip: rect(19, 200px, 38px, 0);
     }
 
     62.5% {
-        clip: rect(61, 200px, 48px, 0);
+        clip: rect(63, 200px, 6px, 0);
     }
 
     68.75% {
-        clip: rect(34, 200px, 63px, 0);
+        clip: rect(49, 200px, 57px, 0);
     }
 
     75% {
-        clip: rect(8, 200px, 14px, 0);
+        clip: rect(25, 200px, 12px, 0);
     }
 
     81.25% {
-        clip: rect(6, 200px, 52px, 0);
+        clip: rect(34, 200px, 37px, 0);
     }
 
     87.5% {
-        clip: rect(59, 200px, 35px, 0);
+        clip: rect(19, 200px, 41px, 0);
     }
 
     93.75% {
-        clip: rect(35, 200px, 53px, 0);
+        clip: rect(41, 200px, 42px, 0);
     }
 
     100% {
-        clip: rect(64, 200px, 28px, 0);
+        clip: rect(3, 200px, 7px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(6, 200px, 13px, 0);
+        clip: rect(29, 200px, 50px, 0);
     }
 
     6.25% {
-        clip: rect(61, 200px, 11px, 0);
+        clip: rect(25, 200px, 22px, 0);
     }
 
     12.5% {
-        clip: rect(4, 200px, 26px, 0);
+        clip: rect(2, 200px, 2px, 0);
     }
 
     18.75% {
-        clip: rect(58, 200px, 37px, 0);
+        clip: rect(46, 200px, 18px, 0);
     }
 
     25% {
-        clip: rect(51, 200px, 62px, 0);
+        clip: rect(2, 200px, 3px, 0);
     }
 
     31.25% {
-        clip: rect(44, 200px, 10px, 0);
+        clip: rect(26, 200px, 30px, 0);
     }
 
     37.5% {
-        clip: rect(32, 200px, 38px, 0);
+        clip: rect(42, 200px, 23px, 0);
     }
 
     43.75% {
-        clip: rect(16, 200px, 28px, 0);
+        clip: rect(29, 200px, 13px, 0);
     }
 
     50% {
-        clip: rect(10, 200px, 26px, 0);
+        clip: rect(50, 200px, 24px, 0);
     }
 
     56.25% {
-        clip: rect(20, 200px, 20px, 0);
+        clip: rect(19, 200px, 38px, 0);
     }
 
     62.5% {
-        clip: rect(61, 200px, 48px, 0);
+        clip: rect(63, 200px, 6px, 0);
     }
 
     68.75% {
-        clip: rect(34, 200px, 63px, 0);
+        clip: rect(49, 200px, 57px, 0);
     }
 
     75% {
-        clip: rect(8, 200px, 14px, 0);
+        clip: rect(25, 200px, 12px, 0);
     }
 
     81.25% {
-        clip: rect(6, 200px, 52px, 0);
+        clip: rect(34, 200px, 37px, 0);
     }
 
     87.5% {
-        clip: rect(59, 200px, 35px, 0);
+        clip: rect(19, 200px, 41px, 0);
     }
 
     93.75% {
-        clip: rect(35, 200px, 53px, 0);
+        clip: rect(41, 200px, 42px, 0);
     }
 
     100% {
-        clip: rect(64, 200px, 28px, 0);
+        clip: rect(3, 200px, 7px, 0);
     }
 }
 /*____________________________________________________________
@@ -12007,155 +12007,155 @@ ____________________________________________________________*/
     cursor: pointer;
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(odd) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(odd) .circleSnake__item {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(odd) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(odd) .circleSnake__item {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(even) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(even) .circleSnake__item {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(even) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(even) .circleSnake__item {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(odd) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(odd) .circleSnake__item {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(odd) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(odd) .circleSnake__item {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(even) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(even) .circleSnake__item {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(even) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(even) .circleSnake__item {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1), .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1), .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) {
     -webkit-transition-delay: calc((-0.3s * 1) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 1) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 1) + ((0.3s * 5) + 0.3s));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 1) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 1) + (0.3s * 5));
     transition-delay: calc((-0.3s * 1) + (0.3s * 5));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2), .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2), .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) {
     -webkit-transition-delay: calc((-0.3s * 2) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 2) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 2) + ((0.3s * 5) + 0.3s));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 2) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 2) + (0.3s * 5));
     transition-delay: calc((-0.3s * 2) + (0.3s * 5));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3), .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3), .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) {
     -webkit-transition-delay: calc((-0.3s * 3) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 3) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 3) + ((0.3s * 5) + 0.3s));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 3) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 3) + (0.3s * 5));
     transition-delay: calc((-0.3s * 3) + (0.3s * 5));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4), .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4), .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) {
     -webkit-transition-delay: calc((-0.3s * 4) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 4) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 4) + ((0.3s * 5) + 0.3s));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 4) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 4) + (0.3s * 5));
     transition-delay: calc((-0.3s * 4) + (0.3s * 5));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5), .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5), .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) {
     -webkit-transition-delay: calc((-0.3s * 5) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 5) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 5) + ((0.3s * 5) + 0.3s));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item,
-.circleSnakeBtn:hover .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item,
+.circleSnakeBtn:hover .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 5) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 5) + (0.3s * 5));
     transition-delay: calc((-0.3s * 5) + (0.3s * 5));
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1), .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1), .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) {
     -webkit-transition-delay: calc(1 * 0.3s);
     -o-transition-delay: calc(1 * 0.3s);
     transition-delay: calc(1 * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
     -webkit-transition-delay: calc((1 - 1) * 0.3s);
     -o-transition-delay: calc((1 - 1) * 0.3s);
     transition-delay: calc((1 - 1) * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2), .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2), .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) {
     -webkit-transition-delay: calc(2 * 0.3s);
     -o-transition-delay: calc(2 * 0.3s);
     transition-delay: calc(2 * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
     -webkit-transition-delay: calc((2 - 1) * 0.3s);
     -o-transition-delay: calc((2 - 1) * 0.3s);
     transition-delay: calc((2 - 1) * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3), .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3), .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) {
     -webkit-transition-delay: calc(3 * 0.3s);
     -o-transition-delay: calc(3 * 0.3s);
     transition-delay: calc(3 * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
     -webkit-transition-delay: calc((3 - 1) * 0.3s);
     -o-transition-delay: calc((3 - 1) * 0.3s);
     transition-delay: calc((3 - 1) * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4), .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4), .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) {
     -webkit-transition-delay: calc(4 * 0.3s);
     -o-transition-delay: calc(4 * 0.3s);
     transition-delay: calc(4 * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
     -webkit-transition-delay: calc((4 - 1) * 0.3s);
     -o-transition-delay: calc((4 - 1) * 0.3s);
     transition-delay: calc((4 - 1) * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5), .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5), .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) {
     -webkit-transition-delay: calc(5 * 0.3s);
     -o-transition-delay: calc(5 * 0.3s);
     transition-delay: calc(5 * 0.3s);
 }
 
-.circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item, .circleSnakeBtn:hover .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
+.circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item, .circleSnakeBtn:hover .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
     -webkit-transition-delay: calc((5 - 1) * 0.3s);
     -o-transition-delay: calc((5 - 1) * 0.3s);
     transition-delay: calc((5 - 1) * 0.3s);
@@ -12183,7 +12183,7 @@ ____________________________________________________________*/
     transition-delay: calc((0.3s * 5) / 2);
 }
 
-.sircleSnake__wrap {
+.circleSnake__wrap {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -12193,191 +12193,191 @@ ____________________________________________________________*/
     height: calc(200px / 5);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1), .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1), .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) {
     -webkit-transition-delay: calc((1 - 1) * 0.3s);
     -o-transition-delay: calc((1 - 1) * 0.3s);
     transition-delay: calc((1 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item {
     -webkit-transition-delay: calc((1 - 1) * 0.3s);
     -o-transition-delay: calc((1 - 1) * 0.3s);
     transition-delay: calc((1 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
     -webkit-transition-delay: calc(1 * 0.3s);
     -o-transition-delay: calc(1 * 0.3s);
     transition-delay: calc(1 * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2), .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2), .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) {
     -webkit-transition-delay: calc((2 - 1) * 0.3s);
     -o-transition-delay: calc((2 - 1) * 0.3s);
     transition-delay: calc((2 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item {
     -webkit-transition-delay: calc((2 - 1) * 0.3s);
     -o-transition-delay: calc((2 - 1) * 0.3s);
     transition-delay: calc((2 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
     -webkit-transition-delay: calc(2 * 0.3s);
     -o-transition-delay: calc(2 * 0.3s);
     transition-delay: calc(2 * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3), .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3), .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) {
     -webkit-transition-delay: calc((3 - 1) * 0.3s);
     -o-transition-delay: calc((3 - 1) * 0.3s);
     transition-delay: calc((3 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item {
     -webkit-transition-delay: calc((3 - 1) * 0.3s);
     -o-transition-delay: calc((3 - 1) * 0.3s);
     transition-delay: calc((3 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
     -webkit-transition-delay: calc(3 * 0.3s);
     -o-transition-delay: calc(3 * 0.3s);
     transition-delay: calc(3 * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4), .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4), .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) {
     -webkit-transition-delay: calc((4 - 1) * 0.3s);
     -o-transition-delay: calc((4 - 1) * 0.3s);
     transition-delay: calc((4 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item {
     -webkit-transition-delay: calc((4 - 1) * 0.3s);
     -o-transition-delay: calc((4 - 1) * 0.3s);
     transition-delay: calc((4 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
     -webkit-transition-delay: calc(4 * 0.3s);
     -o-transition-delay: calc(4 * 0.3s);
     transition-delay: calc(4 * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5), .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5), .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) {
     -webkit-transition-delay: calc((5 - 1) * 0.3s);
     -o-transition-delay: calc((5 - 1) * 0.3s);
     transition-delay: calc((5 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item {
     -webkit-transition-delay: calc((5 - 1) * 0.3s);
     -o-transition-delay: calc((5 - 1) * 0.3s);
     transition-delay: calc((5 - 1) * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .sircleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
+.circleSnake__wrap._rightStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .circleSnake__wrap._rightStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
     -webkit-transition-delay: calc(5 * 0.3s);
     -o-transition-delay: calc(5 * 0.3s);
     transition-delay: calc(5 * 0.3s);
 }
 
-.sircleSnake__wrap._rightStep .circleSnake__item:after, .sircleSnake__wrap._rightStepInv .circleSnake__item:after {
+.circleSnake__wrap._rightStep .circleSnake__item:after, .circleSnake__wrap._rightStepInv .circleSnake__item:after {
     right: -12.5%;
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1), .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1), .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) {
     -webkit-transition-delay: calc((-0.3s * 1) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 1) + (0.3s * 5));
     transition-delay: calc((-0.3s * 1) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item {
     -webkit-transition-delay: calc((-0.3s * 1) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 1) + (0.3s * 5));
     transition-delay: calc((-0.3s * 1) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(1) .circleSnake__item:after, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(1) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 1) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 1) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 1) + ((0.3s * 5) + 0.3s));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2), .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2), .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) {
     -webkit-transition-delay: calc((-0.3s * 2) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 2) + (0.3s * 5));
     transition-delay: calc((-0.3s * 2) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item {
     -webkit-transition-delay: calc((-0.3s * 2) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 2) + (0.3s * 5));
     transition-delay: calc((-0.3s * 2) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(2) .circleSnake__item:after, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(2) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 2) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 2) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 2) + ((0.3s * 5) + 0.3s));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3), .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3), .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) {
     -webkit-transition-delay: calc((-0.3s * 3) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 3) + (0.3s * 5));
     transition-delay: calc((-0.3s * 3) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item {
     -webkit-transition-delay: calc((-0.3s * 3) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 3) + (0.3s * 5));
     transition-delay: calc((-0.3s * 3) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(3) .circleSnake__item:after, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(3) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 3) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 3) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 3) + ((0.3s * 5) + 0.3s));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4), .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4), .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) {
     -webkit-transition-delay: calc((-0.3s * 4) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 4) + (0.3s * 5));
     transition-delay: calc((-0.3s * 4) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item {
     -webkit-transition-delay: calc((-0.3s * 4) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 4) + (0.3s * 5));
     transition-delay: calc((-0.3s * 4) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(4) .circleSnake__item:after, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(4) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 4) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 4) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 4) + ((0.3s * 5) + 0.3s));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5), .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5), .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) {
     -webkit-transition-delay: calc((-0.3s * 5) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 5) + (0.3s * 5));
     transition-delay: calc((-0.3s * 5) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item {
     -webkit-transition-delay: calc((-0.3s * 5) + (0.3s * 5));
     -o-transition-delay: calc((-0.3s * 5) + (0.3s * 5));
     transition-delay: calc((-0.3s * 5) + (0.3s * 5));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .sircleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
+.circleSnake__wrap._leftStep .circleSnake__itemBox:nth-child(5) .circleSnake__item:after, .circleSnake__wrap._leftStepInv .circleSnake__itemBox:nth-child(5) .circleSnake__item:after {
     -webkit-transition-delay: calc((-0.3s * 5) + ((0.3s * 5) + 0.3s));
     -o-transition-delay: calc((-0.3s * 5) + ((0.3s * 5) + 0.3s));
     transition-delay: calc((-0.3s * 5) + ((0.3s * 5) + 0.3s));
 }
 
-.sircleSnake__wrap._leftStep .circleSnake__item:after, .sircleSnake__wrap._leftStepInv .circleSnake__item:after {
+.circleSnake__wrap._leftStep .circleSnake__item:after, .circleSnake__wrap._leftStepInv .circleSnake__item:after {
     left: -12.5%;
 }
 

@@ -4,12 +4,12 @@ section.presentWrap
 
     mixin circleSnakeBtnMix(firstLine, lastLine, circleSteps)
       button.circleSnakeBtn
-        .sircleSnake__wrap(class=`_${firstLine}`)
+        .circleSnake__wrap(class=`_${firstLine}`)
           - var circleSnakeItem = 1;
           while circleSnakeItem <= `${circleSteps}`
             .circleSnake__itemBox
               .circleSnake__item(id=`_${circleSnakeItem++}`)
-        .sircleSnake__wrap(class=`_${lastLine}`)
+        .circleSnake__wrap(class=`_${lastLine}`)
           - var circleSnakeItem = 1;
           while circleSnakeItem <= `${circleSteps}`
             .circleSnake__itemBox

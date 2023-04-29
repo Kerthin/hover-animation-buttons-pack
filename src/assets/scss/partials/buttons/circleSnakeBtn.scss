@@ -24,7 +24,7 @@ ____________________________________________________________*/
   cursor: pointer;
   
   &:hover {
-    .sircleSnake__wrap {
+    .circleSnake__wrap {
       &._rightStep,
       &._leftStep {
         .circleSnake__itemBox {
@@ -81,7 +81,7 @@ ____________________________________________________________*/
     }
   }
 }
-.sircleSnake__wrap {
+.circleSnake__wrap {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
