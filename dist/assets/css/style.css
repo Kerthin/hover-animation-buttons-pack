@@ -70,6 +70,8 @@
     ## @import verticalItemMoveBtn.scss
     ## @import honeycombsBtn.scss
     ## @import plusBtn.scss
+    ## @import circleSnakeBtn.scss
+    ## @import orbitBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -777,141 +779,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 24px, 0);
+        clip: rect(6, 200px, 13px, 0);
     }
 
     6.25% {
-        clip: rect(52, 200px, 26px, 0);
+        clip: rect(61, 200px, 11px, 0);
     }
 
     12.5% {
-        clip: rect(21, 200px, 43px, 0);
+        clip: rect(4, 200px, 26px, 0);
     }
 
     18.75% {
-        clip: rect(3, 200px, 60px, 0);
+        clip: rect(58, 200px, 37px, 0);
     }
 
     25% {
-        clip: rect(59, 200px, 23px, 0);
+        clip: rect(51, 200px, 62px, 0);
     }
 
     31.25% {
-        clip: rect(56, 200px, 9px, 0);
+        clip: rect(44, 200px, 10px, 0);
     }
 
     37.5% {
-        clip: rect(11, 200px, 62px, 0);
+        clip: rect(32, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(31, 200px, 38px, 0);
+        clip: rect(16, 200px, 28px, 0);
     }
 
     50% {
-        clip: rect(5, 200px, 33px, 0);
+        clip: rect(10, 200px, 26px, 0);
     }
 
     56.25% {
-        clip: rect(18, 200px, 65px, 0);
+        clip: rect(20, 200px, 20px, 0);
     }
 
     62.5% {
-        clip: rect(48, 200px, 24px, 0);
+        clip: rect(61, 200px, 48px, 0);
     }
 
     68.75% {
-        clip: rect(26, 200px, 55px, 0);
+        clip: rect(34, 200px, 63px, 0);
     }
 
     75% {
-        clip: rect(53, 200px, 51px, 0);
+        clip: rect(8, 200px, 14px, 0);
     }
 
     81.25% {
-        clip: rect(52, 200px, 19px, 0);
+        clip: rect(6, 200px, 52px, 0);
     }
 
     87.5% {
-        clip: rect(1, 200px, 57px, 0);
+        clip: rect(59, 200px, 35px, 0);
     }
 
     93.75% {
-        clip: rect(51, 200px, 27px, 0);
+        clip: rect(35, 200px, 53px, 0);
     }
 
     100% {
-        clip: rect(29, 200px, 15px, 0);
+        clip: rect(64, 200px, 28px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(15, 200px, 24px, 0);
+        clip: rect(6, 200px, 13px, 0);
     }
 
     6.25% {
-        clip: rect(52, 200px, 26px, 0);
+        clip: rect(61, 200px, 11px, 0);
     }
 
     12.5% {
-        clip: rect(21, 200px, 43px, 0);
+        clip: rect(4, 200px, 26px, 0);
     }
 
     18.75% {
-        clip: rect(3, 200px, 60px, 0);
+        clip: rect(58, 200px, 37px, 0);
     }
 
     25% {
-        clip: rect(59, 200px, 23px, 0);
+        clip: rect(51, 200px, 62px, 0);
     }
 
     31.25% {
-        clip: rect(56, 200px, 9px, 0);
+        clip: rect(44, 200px, 10px, 0);
     }
 
     37.5% {
-        clip: rect(11, 200px, 62px, 0);
+        clip: rect(32, 200px, 38px, 0);
     }
 
     43.75% {
-        clip: rect(31, 200px, 38px, 0);
+        clip: rect(16, 200px, 28px, 0);
     }
 
     50% {
-        clip: rect(5, 200px, 33px, 0);
+        clip: rect(10, 200px, 26px, 0);
     }
 
     56.25% {
-        clip: rect(18, 200px, 65px, 0);
+        clip: rect(20, 200px, 20px, 0);
     }
 
     62.5% {
-        clip: rect(48, 200px, 24px, 0);
+        clip: rect(61, 200px, 48px, 0);
     }
 
     68.75% {
-        clip: rect(26, 200px, 55px, 0);
+        clip: rect(34, 200px, 63px, 0);
     }
 
     75% {
-        clip: rect(53, 200px, 51px, 0);
+        clip: rect(8, 200px, 14px, 0);
     }
 
     81.25% {
-        clip: rect(52, 200px, 19px, 0);
+        clip: rect(6, 200px, 52px, 0);
     }
 
     87.5% {
-        clip: rect(1, 200px, 57px, 0);
+        clip: rect(59, 200px, 35px, 0);
     }
 
     93.75% {
-        clip: rect(51, 200px, 27px, 0);
+        clip: rect(35, 200px, 53px, 0);
     }
 
     100% {
-        clip: rect(29, 200px, 15px, 0);
+        clip: rect(64, 200px, 28px, 0);
     }
 }
 /*____________________________________________________________
@@ -12441,5 +12443,282 @@ ____________________________________________________________*/
 }
 
 .circleSnakeBtn__text._end {
+    opacity: 0;
+}
+
+/*____________________________________________________________
+## @import orbitBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Orbit Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Orbit Button
+____________________________________________________________*/
+.orbitBtn {
+    position: relative;
+    margin: 20px;
+    width: 195px;
+    height: 65px;
+    background-color: #F2385A;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:before {
+    width: 54%;
+    height: 54%;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem .orbitBtn__orbitInner {
+    top: 4%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem .orbitBtn__orbitInner:before {
+    width: 100%;
+    height: 100%;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(1) {
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(1):before {
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(1) .orbitBtn__orbitInner {
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(1) .orbitBtn__orbitInner:before {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(2) {
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(2):before {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(2) .orbitBtn__orbitInner {
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(2) .orbitBtn__orbitInner:before {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(3) {
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(3):before {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(3) .orbitBtn__orbitInner {
+    -webkit-transition-delay: 0.7s;
+    -o-transition-delay: 0.7s;
+    transition-delay: 0.7s;
+}
+
+.orbitBtn:hover .orbitBtn__orbitItem:nth-child(3) .orbitBtn__orbitInner:before {
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.orbitBtn:hover .orbitBtn__text._start {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.orbitBtn:hover .orbitBtn__text._end {
+    opacity: 1;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+.orbitBtn__orbitItem {
+    position: relative;
+    float: left;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    width: 65px;
+    height: 65px;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.orbitBtn__orbitItem:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #36B1BF;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+    -webkit-transition: width 0.3s, height 0.3s;
+    -o-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
+}
+
+.orbitBtn__orbitItem:nth-child(1):before {
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.orbitBtn__orbitItem:nth-child(1) .orbitBtn__orbitInner {
+    -webkit-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.orbitBtn__orbitItem:nth-child(1) .orbitBtn__orbitInner:before {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.orbitBtn__orbitItem:nth-child(2):before {
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+.orbitBtn__orbitItem:nth-child(2) .orbitBtn__orbitInner {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.orbitBtn__orbitItem:nth-child(2) .orbitBtn__orbitInner:before {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.orbitBtn__orbitItem:nth-child(3):before {
+    -webkit-transition-delay: 0.7s;
+    -o-transition-delay: 0.7s;
+    transition-delay: 0.7s;
+}
+
+.orbitBtn__orbitItem:nth-child(3) .orbitBtn__orbitInner {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.orbitBtn__orbitItem:nth-child(3) .orbitBtn__orbitInner:before {
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.orbitBtn__orbitInner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 15%;
+    -webkit-transition: top 0.3s, -webkit-transform 0.3s;
+    transition: top 0.3s, -webkit-transform 0.3s;
+    -o-transition: top 0.3s, transform 0.3s;
+    transition: top 0.3s, transform 0.3s;
+    transition: top 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.orbitBtn__orbitInner:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #FFF5C3;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 0 6px rgba(0, 0, 0, 0.23);
+    -webkit-transition: width 0.3s, height 0.3s;
+    -o-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
+}
+
+.orbitBtn__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 65px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFF5C3;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.orbitBtn__text._start {
+    -webkit-transition-delay: calc((0.3s * 2) + (0.3s / 3));
+    -o-transition-delay: calc((0.3s * 2) + (0.3s / 3));
+    transition-delay: calc((0.3s * 2) + (0.3s / 3));
+}
+
+.orbitBtn__text._end {
     opacity: 0;
 }

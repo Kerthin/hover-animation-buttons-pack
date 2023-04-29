@@ -1,0 +1,14 @@
+section.presentWrap
+  h1.presentWrap__title Orbit Button
+  .presentWrap__buttonsBlock
+
+    mixin orbitBtnMix(orbitItemNumber, orbitStartName, orbitEndName)
+      button.orbitBtn
+        - var orbitItem = 1;
+        while orbitItem <= `${orbitItemNumber}`
+          .orbitBtn__orbitItem(id=`_${orbitItem++}`)
+            .orbitBtn__orbitInner
+        .orbitBtn__text._start #{orbitStartName}
+        .orbitBtn__text._end #{orbitEndName}
+
+    +orbitBtnMix(3, 'Hover', 'Button')

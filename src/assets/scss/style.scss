@@ -70,6 +70,8 @@
     ## @import verticalItemMoveBtn.scss
     ## @import honeycombsBtn.scss
     ## @import plusBtn.scss
+    ## @import circleSnakeBtn.scss
+    ## @import orbitBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -426,3 +428,8 @@ ____________________________________________________________*/
 ## @import circleSnakeBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/circleSnakeBtn.scss';
+
+/*____________________________________________________________
+## @import orbitBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/orbitBtn.scss';

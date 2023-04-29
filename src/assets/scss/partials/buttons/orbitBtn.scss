@@ -1,0 +1,131 @@
+/*____________________________________________________________
+# Orbit Button Variables
+____________________________________________________________*/
+$orbitItemCount: 3;
+
+$orbitBtnWidth: 195px;
+$orbitBtnHeight: calc($orbitBtnWidth / $orbitItemCount);
+
+$orbitBtnFontSize: calc($orbitBtnHeight / 2.03125);
+$orbitBtnShadowSize: calc($orbitBtnFontSize / 100) * 6.25;
+
+$orbitTime: .3s;
+$mainCircleRotateDelay: ($orbitItemCount * .1s) + .1s + ($orbitTime * 2);
+
+/*____________________________________________________________
+# Orbit Button
+____________________________________________________________*/
+.orbitBtn {
+  position: relative;
+  margin: 20px;
+  width: $orbitBtnWidth;
+  height: $orbitBtnHeight;
+  background-color: #F2385A;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:hover {
+    .orbitBtn__orbitItem {
+      transform: rotate(180deg);
+      
+      &:before {
+        width: 54%;
+        height: 54%;
+      }
+      .orbitBtn__orbitInner {
+        top: 4%;
+        transform: translate(-50%, 0);
+        
+        &:before {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @for $i from 1 through $orbitItemCount {
+        $mainCircleDelay: $i * calc($orbitTime / 3);
+        $littleCircleDelay: $mainCircleDelay + calc($orbitTime / 3);
+        $littleCircleMoveDelay: $littleCircleDelay + $orbitTime;
+        
+        &:nth-child(#{$i}) {
+          transition-delay: $mainCircleRotateDelay; &:before{transition-delay: $mainCircleDelay;}
+          .orbitBtn__orbitInner{transition-delay: $littleCircleMoveDelay; &:before{transition-delay: $littleCircleDelay;}}
+        }
+      }
+    }
+    .orbitBtn__text {
+      &._start {opacity: 0; transition-delay: 0s;}
+      &._end {opacity: 1; transition-delay: $mainCircleRotateDelay;}
+    }
+  }
+}
+.orbitBtn__orbitItem {
+  position: relative;
+  float: left;
+  transform: rotate(0);
+  width: $orbitBtnHeight;
+  height: $orbitBtnHeight;
+  transition: transform $orbitTime;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #36B1BF;
+    box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 6px rgba(0,0,0,0.23);
+    transition: width $orbitTime, height $orbitTime;
+  }
+  @for $i from 1 through $orbitItemCount {
+    $littleCircleMoveDelay: $i * calc($orbitTime / 3);
+    $littleCircleDelay: $littleCircleMoveDelay + calc($orbitTime / 3);
+    $mainCircleDelay: $littleCircleDelay + $orbitTime;
+
+    &:nth-child(#{$i}) {
+      &:before{transition-delay: $mainCircleDelay;}
+      .orbitBtn__orbitInner{transition-delay: $littleCircleMoveDelay; &:before{transition-delay: $littleCircleDelay;}}
+    }
+  }
+}
+.orbitBtn__orbitInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  height: 15%;
+  transition: top $orbitTime, transform $orbitTime;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #FFF5C3;
+    box-shadow: 0 0 6px rgba(0,0,0,0.16), 0 0 6px rgba(0,0,0,0.23);
+    transition: width $orbitTime, height $orbitTime;
+  }
+}
+.orbitBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $orbitBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $orbitBtnFontSize;
+  font-weight: 900;
+  color: #FFF5C3;
+  text-shadow: $orbitBtnShadowSize $orbitBtnShadowSize $orbitBtnShadowSize #000;
+  transition: opacity $orbitTime;
+  
+  &._start {transition-delay: calc((#{$orbitTime} * 2) + (#{$orbitTime} / 3));}
+  &._end {opacity: 0;}
+}
