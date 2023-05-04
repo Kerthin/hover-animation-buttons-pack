@@ -1,0 +1,82 @@
+/*____________________________________________________________
+# Stripes Buttons Variables
+____________________________________________________________*/
+$stripesCount: 4;
+
+$stripesBtnWidth: 200px;
+$stripesBtnHeight: calc($stripesBtnWidth / 100) * 32.5;
+
+$stripesBtnFontSize: calc($stripesBtnHeight / 2.03125);
+$stripesBtnShadowSize: calc($stripesBtnFontSize / 100) * 6.25;
+
+$stripesTime: .2s;
+
+/*____________________________________________________________
+# Stripes Buttons
+____________________________________________________________*/
+.stripesBtn {
+  position: relative;
+  margin: 20px;
+  width: $stripesBtnWidth;
+  height: $stripesBtnHeight;
+  background-color: #F2385A;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &._coloresed {
+    .stripesBtn__item {
+      $stripesColor: (#FFF5C3,
+                      #F5A503,
+                      #4AD9D9,
+                      #36B1BF);
+  
+      @for $i from 1 through length($stripesColor) {
+        &:nth-child(#{$i}) {
+          background-color: nth($stripesColor, $i);
+        }
+      }
+    }
+  }
+  
+  &:hover {
+    .stripesBtn__item {
+      @for $i from 1 through $stripesCount {
+        &:nth-child(#{$i}) {
+          transition-delay: calc((#{$stripesTime} * #{$i}) - 0.1s);
+        }
+      }
+
+      &:nth-child(odd) {left: 0;}
+      &:nth-child(even) {right: 0;}
+    }
+  }
+}
+.stripesBtn__item {
+  position: absolute;
+  width: 100%;
+  height: calc(100% / #{$stripesCount});
+  background: #F5A503;
+  transition: left $stripesTime, right $stripesTime;
+  
+  @for $i from 1 through $stripesCount {
+    &:nth-child(#{$i}) {
+      top: calc((#{$i} - 1) * (100% / #{$stripesCount}));
+      transition-delay: calc((-#{$stripesTime} * #{$i}) + ((#{$stripesTime} * #{$stripesCount}) + 0.1s));
+    }
+  }
+  
+  &:nth-child(odd) {left: -100%;}
+  &:nth-child(even) {right: -100%;}
+}
+.stripesBtn__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: $stripesBtnHeight;
+  font-family: 'Roboto Slab';
+  font-size: $stripesBtnFontSize;
+  font-weight: 900;
+  color: #36B1BF;
+  text-shadow: $stripesBtnShadowSize $stripesBtnShadowSize $stripesBtnShadowSize #000;
+}

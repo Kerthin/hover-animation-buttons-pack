@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Stripes Buttons
+  .presentWrap__buttonsBlock
+
+    mixin stripesBtnMix(btnMod, stripesCount, btnStartName)
+      button.stripesBtn(class=`${btnMod}`)
+        - var stripesNumber = 1;
+        while stripesNumber <= `${stripesCount}`
+          .stripesBtn__item(id=`${stripesNumber++}`)
+        .stripesBtn__text._start #{btnStartName}
+
+    +stripesBtnMix('', 4, 'Hover')
+    +stripesBtnMix('_coloresed', 4, 'Hover')
