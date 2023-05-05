@@ -1,0 +1,13 @@
+section.presentWrap
+  h1.presentWrap__title Slice Text Buttons
+  .presentWrap__buttonsBlock
+
+    mixin sliceTextBtnMix(fontFamilyClass, attrSliceName)
+      button.sliceTextBtn(class=`${fontFamilyClass}`)
+        .sliceTextBtn__wrap(sliceName=`${attrSliceName}`)
+        .sliceTextBtn__wrap(sliceName=`${attrSliceName}`)
+
+    +sliceTextBtnMix('', 'Hover')
+    +sliceTextBtnMix('_timesNewRoman', 'Hover')
+    +sliceTextBtnMix('_robotoSlab', 'Hover')
+    +sliceTextBtnMix('_nabla', 'Hover')

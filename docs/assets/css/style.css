@@ -73,6 +73,7 @@
     ## @import circleSnakeBtn.scss
     ## @import orbitBtn.scss
     ## @import stripesBtn.scss
+    ## @import sliceTextBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -780,141 +781,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(22, 200px, 14px, 0);
+        clip: rect(1, 200px, 15px, 0);
     }
 
     6.25% {
-        clip: rect(34, 200px, 63px, 0);
+        clip: rect(39, 200px, 61px, 0);
     }
 
     12.5% {
-        clip: rect(4, 200px, 9px, 0);
+        clip: rect(3, 200px, 57px, 0);
     }
 
     18.75% {
-        clip: rect(29, 200px, 34px, 0);
+        clip: rect(36, 200px, 32px, 0);
     }
 
     25% {
-        clip: rect(20, 200px, 59px, 0);
+        clip: rect(24, 200px, 25px, 0);
     }
 
     31.25% {
-        clip: rect(15, 200px, 24px, 0);
+        clip: rect(13, 200px, 8px, 0);
     }
 
     37.5% {
-        clip: rect(31, 200px, 50px, 0);
+        clip: rect(51, 200px, 10px, 0);
     }
 
     43.75% {
-        clip: rect(33, 200px, 44px, 0);
+        clip: rect(16, 200px, 41px, 0);
     }
 
     50% {
-        clip: rect(60, 200px, 19px, 0);
+        clip: rect(14, 200px, 25px, 0);
     }
 
     56.25% {
-        clip: rect(62, 200px, 25px, 0);
+        clip: rect(60, 200px, 58px, 0);
     }
 
     62.5% {
-        clip: rect(21, 200px, 15px, 0);
+        clip: rect(42, 200px, 29px, 0);
     }
 
     68.75% {
-        clip: rect(52, 200px, 52px, 0);
+        clip: rect(36, 200px, 12px, 0);
     }
 
     75% {
-        clip: rect(52, 200px, 26px, 0);
+        clip: rect(8, 200px, 65px, 0);
     }
 
     81.25% {
-        clip: rect(30, 200px, 12px, 0);
+        clip: rect(53, 200px, 21px, 0);
     }
 
     87.5% {
-        clip: rect(25, 200px, 56px, 0);
+        clip: rect(14, 200px, 6px, 0);
     }
 
     93.75% {
-        clip: rect(23, 200px, 35px, 0);
+        clip: rect(2, 200px, 51px, 0);
     }
 
     100% {
-        clip: rect(25, 200px, 59px, 0);
+        clip: rect(6, 200px, 3px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(22, 200px, 14px, 0);
+        clip: rect(1, 200px, 15px, 0);
     }
 
     6.25% {
-        clip: rect(34, 200px, 63px, 0);
+        clip: rect(39, 200px, 61px, 0);
     }
 
     12.5% {
-        clip: rect(4, 200px, 9px, 0);
+        clip: rect(3, 200px, 57px, 0);
     }
 
     18.75% {
-        clip: rect(29, 200px, 34px, 0);
+        clip: rect(36, 200px, 32px, 0);
     }
 
     25% {
-        clip: rect(20, 200px, 59px, 0);
+        clip: rect(24, 200px, 25px, 0);
     }
 
     31.25% {
-        clip: rect(15, 200px, 24px, 0);
+        clip: rect(13, 200px, 8px, 0);
     }
 
     37.5% {
-        clip: rect(31, 200px, 50px, 0);
+        clip: rect(51, 200px, 10px, 0);
     }
 
     43.75% {
-        clip: rect(33, 200px, 44px, 0);
+        clip: rect(16, 200px, 41px, 0);
     }
 
     50% {
-        clip: rect(60, 200px, 19px, 0);
+        clip: rect(14, 200px, 25px, 0);
     }
 
     56.25% {
-        clip: rect(62, 200px, 25px, 0);
+        clip: rect(60, 200px, 58px, 0);
     }
 
     62.5% {
-        clip: rect(21, 200px, 15px, 0);
+        clip: rect(42, 200px, 29px, 0);
     }
 
     68.75% {
-        clip: rect(52, 200px, 52px, 0);
+        clip: rect(36, 200px, 12px, 0);
     }
 
     75% {
-        clip: rect(52, 200px, 26px, 0);
+        clip: rect(8, 200px, 65px, 0);
     }
 
     81.25% {
-        clip: rect(30, 200px, 12px, 0);
+        clip: rect(53, 200px, 21px, 0);
     }
 
     87.5% {
-        clip: rect(25, 200px, 56px, 0);
+        clip: rect(14, 200px, 6px, 0);
     }
 
     93.75% {
-        clip: rect(23, 200px, 35px, 0);
+        clip: rect(2, 200px, 51px, 0);
     }
 
     100% {
-        clip: rect(25, 200px, 59px, 0);
+        clip: rect(6, 200px, 3px, 0);
     }
 }
 /*____________________________________________________________
@@ -12848,4 +12849,145 @@ ____________________________________________________________*/
     font-weight: 900;
     color: #36B1BF;
     text-shadow: 2px 2px 2px #000;
+}
+
+/*____________________________________________________________
+## @import sliceTextBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Slice Text Buttons Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Slice Text Buttons
+____________________________________________________________*/
+.sliceTextBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: #2a9d8f;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sliceTextBtn._timesNewRoman:after {
+    background-color: #ffb703;
+}
+
+.sliceTextBtn._timesNewRoman .sliceTextBtn__wrap:before {
+    color: #ffb703;
+    font-family: Times New Roman;
+}
+
+.sliceTextBtn._timesNewRoman .sliceTextBtn__wrap:nth-child(1):before {
+    bottom: -56%;
+}
+
+.sliceTextBtn._timesNewRoman .sliceTextBtn__wrap:nth-child(2):before {
+    top: -56%;
+}
+
+.sliceTextBtn._robotoSlab:after {
+    background-color: #ffb703;
+}
+
+.sliceTextBtn._robotoSlab .sliceTextBtn__wrap:before {
+    color: #ffb703;
+    font-family: Roboto Slab;
+}
+
+.sliceTextBtn._robotoSlab .sliceTextBtn__wrap:nth-child(1):before {
+    bottom: -65%;
+}
+
+.sliceTextBtn._robotoSlab .sliceTextBtn__wrap:nth-child(2):before {
+    top: -65%;
+}
+
+.sliceTextBtn._nabla:after {
+    background-color: #ffb703;
+}
+
+.sliceTextBtn._nabla .sliceTextBtn__wrap:before {
+    color: #ffb703;
+    font-family: Nabla;
+}
+
+.sliceTextBtn._nabla .sliceTextBtn__wrap:nth-child(1):before {
+    bottom: -81%;
+}
+
+.sliceTextBtn._nabla .sliceTextBtn__wrap:nth-child(2):before {
+    top: -81%;
+}
+
+.sliceTextBtn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0;
+    height: calc(200px / 100);
+    background-color: #ffb703;
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+    z-index: 2;
+}
+
+.sliceTextBtn:hover:after {
+    width: 100%;
+}
+
+.sliceTextBtn:hover .sliceTextBtn__wrap:nth-child(1) {
+    top: calc(-200px / 40);
+}
+
+.sliceTextBtn:hover .sliceTextBtn__wrap:nth-child(2) {
+    bottom: calc(-200px / 40);
+}
+
+.sliceTextBtn__wrap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    -webkit-transition: top 0.15s, bottom 0.15s;
+    -o-transition: top 0.15s, bottom 0.15s;
+    transition: top 0.15s, bottom 0.15s;
+    -webkit-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.sliceTextBtn__wrap:before {
+    content: attr(sliceName);
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffb703;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.sliceTextBtn__wrap:nth-child(1) {
+    top: 0;
+}
+
+.sliceTextBtn__wrap:nth-child(1):before {
+    bottom: -56%;
+}
+
+.sliceTextBtn__wrap:nth-child(2) {
+    bottom: 0;
+}
+
+.sliceTextBtn__wrap:nth-child(2):before {
+    top: -56%;
 }
