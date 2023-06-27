@@ -74,6 +74,7 @@
     ## @import orbitBtn.scss
     ## @import stripesBtn.scss
     ## @import sliceTextBtn.scss
+    ## @import neobrutalBtn.scss
 
 ____________________________________________________________*/
 /*____________________________________________________________
@@ -781,141 +782,141 @@ ____________________________________________________________*/
 ____________________________________________________________*/
 @-webkit-keyframes glitch-effect {
     0% {
-        clip: rect(1, 200px, 15px, 0);
+        clip: rect(41, 200px, 4px, 0);
     }
 
     6.25% {
-        clip: rect(39, 200px, 61px, 0);
+        clip: rect(17, 200px, 59px, 0);
     }
 
     12.5% {
-        clip: rect(3, 200px, 57px, 0);
+        clip: rect(51, 200px, 42px, 0);
     }
 
     18.75% {
-        clip: rect(36, 200px, 32px, 0);
+        clip: rect(42, 200px, 57px, 0);
     }
 
     25% {
-        clip: rect(24, 200px, 25px, 0);
+        clip: rect(48, 200px, 35px, 0);
     }
 
     31.25% {
-        clip: rect(13, 200px, 8px, 0);
+        clip: rect(40, 200px, 65px, 0);
     }
 
     37.5% {
-        clip: rect(51, 200px, 10px, 0);
+        clip: rect(7, 200px, 43px, 0);
     }
 
     43.75% {
-        clip: rect(16, 200px, 41px, 0);
+        clip: rect(39, 200px, 45px, 0);
     }
 
     50% {
-        clip: rect(14, 200px, 25px, 0);
+        clip: rect(6, 200px, 48px, 0);
     }
 
     56.25% {
-        clip: rect(60, 200px, 58px, 0);
+        clip: rect(42, 200px, 16px, 0);
     }
 
     62.5% {
-        clip: rect(42, 200px, 29px, 0);
+        clip: rect(4, 200px, 7px, 0);
     }
 
     68.75% {
-        clip: rect(36, 200px, 12px, 0);
+        clip: rect(45, 200px, 48px, 0);
     }
 
     75% {
-        clip: rect(8, 200px, 65px, 0);
+        clip: rect(25, 200px, 54px, 0);
     }
 
     81.25% {
-        clip: rect(53, 200px, 21px, 0);
+        clip: rect(33, 200px, 5px, 0);
     }
 
     87.5% {
-        clip: rect(14, 200px, 6px, 0);
+        clip: rect(22, 200px, 36px, 0);
     }
 
     93.75% {
-        clip: rect(2, 200px, 51px, 0);
+        clip: rect(58, 200px, 4px, 0);
     }
 
     100% {
-        clip: rect(6, 200px, 3px, 0);
+        clip: rect(12, 200px, 42px, 0);
     }
 }
 
 @keyframes glitch-effect {
     0% {
-        clip: rect(1, 200px, 15px, 0);
+        clip: rect(41, 200px, 4px, 0);
     }
 
     6.25% {
-        clip: rect(39, 200px, 61px, 0);
+        clip: rect(17, 200px, 59px, 0);
     }
 
     12.5% {
-        clip: rect(3, 200px, 57px, 0);
+        clip: rect(51, 200px, 42px, 0);
     }
 
     18.75% {
-        clip: rect(36, 200px, 32px, 0);
+        clip: rect(42, 200px, 57px, 0);
     }
 
     25% {
-        clip: rect(24, 200px, 25px, 0);
+        clip: rect(48, 200px, 35px, 0);
     }
 
     31.25% {
-        clip: rect(13, 200px, 8px, 0);
+        clip: rect(40, 200px, 65px, 0);
     }
 
     37.5% {
-        clip: rect(51, 200px, 10px, 0);
+        clip: rect(7, 200px, 43px, 0);
     }
 
     43.75% {
-        clip: rect(16, 200px, 41px, 0);
+        clip: rect(39, 200px, 45px, 0);
     }
 
     50% {
-        clip: rect(14, 200px, 25px, 0);
+        clip: rect(6, 200px, 48px, 0);
     }
 
     56.25% {
-        clip: rect(60, 200px, 58px, 0);
+        clip: rect(42, 200px, 16px, 0);
     }
 
     62.5% {
-        clip: rect(42, 200px, 29px, 0);
+        clip: rect(4, 200px, 7px, 0);
     }
 
     68.75% {
-        clip: rect(36, 200px, 12px, 0);
+        clip: rect(45, 200px, 48px, 0);
     }
 
     75% {
-        clip: rect(8, 200px, 65px, 0);
+        clip: rect(25, 200px, 54px, 0);
     }
 
     81.25% {
-        clip: rect(53, 200px, 21px, 0);
+        clip: rect(33, 200px, 5px, 0);
     }
 
     87.5% {
-        clip: rect(14, 200px, 6px, 0);
+        clip: rect(22, 200px, 36px, 0);
     }
 
     93.75% {
-        clip: rect(2, 200px, 51px, 0);
+        clip: rect(58, 200px, 4px, 0);
     }
 
     100% {
-        clip: rect(6, 200px, 3px, 0);
+        clip: rect(12, 200px, 42px, 0);
     }
 }
 /*____________________________________________________________
@@ -12990,4 +12991,65 @@ ____________________________________________________________*/
 
 .sliceTextBtn__wrap:nth-child(2):before {
     top: -56%;
+}
+
+/*____________________________________________________________
+## @import neobrutalBtn.scss
+____________________________________________________________*/
+/*____________________________________________________________
+# Slide Button Variables
+____________________________________________________________*/
+/*____________________________________________________________
+# Slide Button
+____________________________________________________________*/
+.neobrutalBtn {
+    position: relative;
+    margin: 20px;
+    width: 200px;
+    height: 65px;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.neobrutalBtn:before, .neobrutalBtn:after {
+    position: absolute;
+    width: 190px;
+    height: 55.1px;
+    border-radius: calc(200px / 40);
+    line-height: 55.1px;
+    font-family: "Roboto Slab";
+    font-size: 32px;
+    font-weight: 900;
+    color: #36B1BF;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s;
+    -o-transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s;
+    transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s;
+}
+
+.neobrutalBtn:after {
+    content: attr(startName);
+    top: 0;
+    left: 0;
+    background-color: #e5989b;
+}
+
+.neobrutalBtn:before {
+    content: attr(endName);
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+}
+
+.neobrutalBtn:hover:after {
+    top: calc(65px - 55.1px);
+    left: calc(200px - 190px);
+    z-index: 1;
+}
+
+.neobrutalBtn:hover:before {
+    bottom: calc(65px - 55.1px);
+    right: calc(200px - 190px);
+    z-index: 2;
 }

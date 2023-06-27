@@ -74,6 +74,7 @@
     ## @import orbitBtn.scss
     ## @import stripesBtn.scss
     ## @import sliceTextBtn.scss
+    ## @import neobrutalBtn.scss
 
 ____________________________________________________________*/
 @use 'sass:math';
@@ -445,3 +446,8 @@ ____________________________________________________________*/
 ## @import sliceTextBtn.scss
 ____________________________________________________________*/
 @import 'partials/buttons/sliceTextBtn.scss';
+
+/*____________________________________________________________
+## @import neobrutalBtn.scss
+____________________________________________________________*/
+@import 'partials/buttons/neobrutalBtn.scss';

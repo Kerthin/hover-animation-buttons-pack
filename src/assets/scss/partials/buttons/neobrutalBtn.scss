@@ -1,0 +1,68 @@
+/*____________________________________________________________
+# Slide Button Variables
+____________________________________________________________*/
+$neobrutalBtnWidth: 200px;
+$neobrutalBtnHeight: calc($neobrutalBtnWidth / 100) * 32.5;
+
+$pseudoWidth: calc($neobrutalBtnWidth / 100) * 95;
+$pseudoHeight: calc($pseudoWidth / 100) * 29;
+
+$neobrutalBtnFontSize: calc($neobrutalBtnHeight / 2.03125);
+$neobrutalBtnShadowSize: calc($neobrutalBtnFontSize / 100) * 6.25;
+
+$neobrutalBtnSpeed: .3s;
+
+/*____________________________________________________________
+# Slide Button
+____________________________________________________________*/
+.neobrutalBtn {
+  position: relative;
+  margin: 20px;
+  width: $neobrutalBtnWidth;
+  height: $neobrutalBtnHeight;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    width: $pseudoWidth;
+    height: $pseudoHeight;
+    border-radius: calc(#{$neobrutalBtnWidth} / 40);
+    line-height: $pseudoHeight;
+    font-family: 'Roboto Slab';
+    font-size: $neobrutalBtnFontSize;
+    font-weight: 900;
+    color: #36B1BF;
+    text-shadow: $neobrutalBtnShadowSize $neobrutalBtnShadowSize $neobrutalBtnShadowSize #000;
+    transition: top $neobrutalBtnSpeed, bottom $neobrutalBtnSpeed, left $neobrutalBtnSpeed, right $neobrutalBtnSpeed;
+  }
+  
+  &:after {
+    content: attr(startName);
+    top: 0;
+    left: 0;
+    background-color: #e5989b;
+    
+  }
+  &:before {
+    content: attr(endName);
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+  }
+  
+  &:hover {
+    &:after {
+      top: calc(#{$neobrutalBtnHeight} - #{$pseudoHeight});
+      left: calc(#{$neobrutalBtnWidth} - #{$pseudoWidth});
+      z-index: 1;
+    }
+    &:before {
+      bottom: calc(#{$neobrutalBtnHeight} - #{$pseudoHeight});
+      right: calc(#{$neobrutalBtnWidth} - #{$pseudoWidth});
+      z-index: 2;
+    }
+  }
+}
